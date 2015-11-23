@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RSMeHeaderCell" id="KGk-i7-Jjw" customClass="RSMeHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="NvO-8K-Fs4" userLabel="leftImageView">
+                        <rect key="frame" x="14" y="10" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="aKb-Dj-Yje"/>
+                            <constraint firstAttribute="height" constant="65" id="hdT-Ha-rs9"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting_myQR" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-3B-61a">
+                        <rect key="frame" x="270" y="35" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="KtC-np-RtX"/>
+                            <constraint firstAttribute="width" constant="17" id="Z2u-HE-Wqc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SeaMonster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzm-ln-2aR" userLabel="topLabel">
+                        <rect key="frame" x="84" y="20" width="186" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Ysx-pB-PNi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信号：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-Wp-37d">
+                        <rect key="frame" x="84" y="46" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="OTb-AU-Sn2"/>
+                            <constraint firstAttribute="height" constant="20" id="eQC-kz-eeA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="riversea2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l7-Za-sVO" userLabel="bottomLabel">
+                        <rect key="frame" x="144" y="46" width="126" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="4Ts-jB-Lqw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5l7-Za-sVO" firstAttribute="leading" secondItem="K6L-Wp-37d" secondAttribute="trailing" id="0f3-Lg-cq3"/>
+                    <constraint firstAttribute="trailing" secondItem="pzm-ln-2aR" secondAttribute="trailing" id="3xi-sI-T4r"/>
+                    <constraint firstAttribute="centerY" secondItem="CSz-3B-61a" secondAttribute="centerY" id="IVp-kr-2RK"/>
+                    <constraint firstAttribute="bottom" secondItem="5l7-Za-sVO" secondAttribute="bottom" constant="20" id="Z3T-24-4cK"/>
+                    <constraint firstItem="CSz-3B-61a" firstAttribute="leading" secondItem="5l7-Za-sVO" secondAttribute="trailing" id="Z4P-np-G6q"/>
+                    <constraint firstAttribute="centerY" secondItem="NvO-8K-Fs4" secondAttribute="centerY" id="apc-wd-H0u"/>
+                    <constraint firstItem="CSz-3B-61a" firstAttribute="leading" secondItem="pzm-ln-2aR" secondAttribute="trailing" id="cPX-Db-4rj"/>
+                    <constraint firstAttribute="bottom" secondItem="K6L-Wp-37d" secondAttribute="bottom" constant="20" id="eDR-uV-vOc"/>
+                    <constraint firstItem="pzm-ln-2aR" firstAttribute="leading" secondItem="NvO-8K-Fs4" secondAttribute="trailing" constant="5" id="fhL-SC-f0r"/>
+                    <constraint firstItem="pzm-ln-2aR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="jZc-F1-fpC"/>
+                    <constraint firstItem="K6L-Wp-37d" firstAttribute="leading" secondItem="NvO-8K-Fs4" secondAttribute="trailing" constant="5" id="mXZ-bA-arm"/>
+                    <constraint firstAttribute="trailing" secondItem="CSz-3B-61a" secondAttribute="trailing" id="xL5-oP-Dxg"/>
+                    <constraint firstItem="NvO-8K-Fs4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="zX6-sm-GhW"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="3xi-sI-T4r"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLabel" destination="5l7-Za-sVO" id="eNe-Ud-THw"/>
+                <outlet property="leftImageView" destination="NvO-8K-Fs4" id="33P-Xl-NLt"/>
+                <outlet property="topLabel" destination="pzm-ln-2aR" id="xga-W3-BpC"/>
+            </connections>
+            <point key="canvasLocation" x="319" y="211.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SeaMonster" width="220" height="220"/>
+        <image name="setting_myQR" width="18" height="18"/>
+    </resources>
+</document>

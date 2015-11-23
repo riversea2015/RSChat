@@ -1,0 +1,32 @@
+####### 这是一个仿微信的练习项目 ########
+
+记录：
+
+1.Utilities/UIViewController+RSExts.h 只是为了验证runtime中可以做的事
+
+2.搜索框的实现
+
+3.点击后，popUp功能的实现
+
+4.separator长度设置
+
+5.添加搜索框？
+
+6.badgeNum的数字位数变化时向左延伸，同时，红色背景也随之向左侧拉长，如何实现？
+初步实现，但还有bug
+
+7.在运行时进行设置好友头像的圆角
+
+8.使用MBProgressHUD实现加载动画
+
+9.1 使用NSURLConnection发送网络请求，使用代理
+
+9.2 使用AFNetworking发送网络请求
+
+10.使用SDWebImage下载、缓存图片
+
+11.使用MJRefresh实现下拉刷新，上拉加载
+
+12.APPDelegate中的代码再简化
+
+
