@@ -10,13 +10,14 @@
 #import "RSHomeCell.h"
 #import "RSHomeModel.h"
 #import "RSNewsTableViewController.h"
+#import "RSMessageViewController.h"
 
 // 测试运行时使用
 #import "UIViewController+RSExts.h"
 
 @interface RSHomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) RSHomeModel *model;
+@property (nonatomic, strong) NSMutableArray *allDatas;
 
 @end
 
@@ -40,6 +41,8 @@
 
     [self.view addSubview:self.tableView];
     
+    
+    
 }
 
 #pragma mark - private method
@@ -53,13 +56,13 @@
 #pragma mark - tableView dataSource delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.model.homeArr.count;
+    return self.allDatas.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellID = [RSHomeCell cellID];
     RSHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    RSHomeModel *model = self.model.homeArr[indexPath.row];
+    RSHomeModel *model = self.allDatas[indexPath.row];
     [cell setCellWithModel:model];
     
     return cell;
@@ -75,6 +78,19 @@
     if (indexPath.row == 0) {
         RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] init];
         [self.navigationController pushViewController:newsVC animated:YES];
+
+    } else if (indexPath.row == 1 || indexPath.row == 2) {
+        NSLog(@"点击了Bugly或订阅号。。。");
+    } else {
+        self.hidesBottomBarWhenPushed = YES;
+        
+        RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
+        RSHomeModel *model = self.allDatas[indexPath.row];
+        messageVC.homeModel = model;
+        
+        [self.navigationController pushViewController:messageVC animated:YES];
+        
+        self.hidesBottomBarWhenPushed = NO;
     }
 }
 
@@ -89,11 +105,11 @@
     return _tableView;
 }
 
-- (RSHomeModel *)model {
-    if (!_model) {
-        _model = [[RSHomeModel alloc] init];
+- (NSMutableArray *)allDatas {
+    if (!_allDatas) {
+        _allDatas = [[RSHomeModel demoData] mutableCopy];
     }
-    return _model;
+    return _allDatas;
 }
 
 @end

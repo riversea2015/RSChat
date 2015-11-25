@@ -13,7 +13,7 @@
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) RSDiscoverModel *model;
+@property (nonatomic, strong) NSMutableArray *allDatas;
 
 @end
 
@@ -55,27 +55,27 @@
     RSDiscoverModel *model = [RSDiscoverModel new];
     switch (indexPath.section) {
         case 0:
-            model = self.model.modelArr[0];
+            model = self.allDatas[0];
             break;
         case 1:
             if (indexPath.row == 0) {
-                model = self.model.modelArr[1];
+                model = self.allDatas[1];
             } else {
-                model = self.model.modelArr[2];
+                model = self.allDatas[2];
             }
             break;
         case 2:
             if (indexPath.row == 0) {
-                model = self.model.modelArr[3];
+                model = self.allDatas[3];
             } else {
-                model = self.model.modelArr[4];
+                model = self.allDatas[4];
             }
             break;
         default:
             if (indexPath.row == 0) {
-                model = self.model.modelArr[5];
+                model = self.allDatas[5];
             } else {
-                model = self.model.modelArr[6];
+                model = self.allDatas[6];
             }
             break;
     }
@@ -110,11 +110,11 @@
     return _tableView;
 }
 
-- (RSDiscoverModel *)model {
-    if (!_model) {
-        _model = [RSDiscoverModel new];
+- (NSMutableArray *)allDatas {
+    if (!_allDatas) {
+        _allDatas = [[RSDiscoverModel demoData] mutableCopy];
     }
-    return _model;
+    return _allDatas;
 }
 
 @end

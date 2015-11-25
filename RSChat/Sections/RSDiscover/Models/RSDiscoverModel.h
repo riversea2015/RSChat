@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSString *rightImageName;
 @property (nonatomic, strong) NSString *rightText;
 
-@property (nonatomic, strong) NSArray *modelArr;
++ (NSArray *)demoData;
 
 @end

@@ -10,14 +10,14 @@
 	<string>RSChat</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E3068B9D58FA1D4C27B5D812D98A859E76854D98</key>
+		<key>12C504717D4AAF57776DB7670C064A92E41D76B4</key>
 		<string>github.com:riversea2015/RSChat.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>RSChat.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E3068B9D58FA1D4C27B5D812D98A859E76854D98</key>
+		<key>12C504717D4AAF57776DB7670C064A92E41D76B4</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E3068B9D58FA1D4C27B5D812D98A859E76854D98</string>
+	<string>12C504717D4AAF57776DB7670C064A92E41D76B4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E3068B9D58FA1D4C27B5D812D98A859E76854D98</string>
+			<string>12C504717D4AAF57776DB7670C064A92E41D76B4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RSChat</string>
 		</dict>

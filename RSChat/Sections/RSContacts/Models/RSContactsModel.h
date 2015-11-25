@@ -12,6 +12,6 @@
 @property (nonatomic, strong) NSString *contactImageName;
 @property (nonatomic, strong) NSString *contactName;
 
-@property (nonatomic, strong) NSArray *contactArr;
++ (NSArray *)demoData;
 
 @end

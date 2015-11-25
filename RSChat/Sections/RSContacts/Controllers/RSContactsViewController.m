@@ -12,7 +12,7 @@
 
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) RSContactsModel *model;
+@property (nonatomic, strong) NSMutableArray *allDatas;
 @property (nonatomic, strong) NSMutableArray *indexArr;
 @property (nonatomic, strong) CALayer *layer;
 
@@ -114,7 +114,7 @@
     NSString *cellID = [RSContactCell cellID];
     RSContactCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
-    RSContactsModel *model = self.model.contactArr[indexPath.row];
+    RSContactsModel *model = self.allDatas[indexPath.row];
     [cell setCellWithModel:model];
     
     return cell;
@@ -136,11 +136,11 @@
     return _tableView;
 }
 
-- (RSContactsModel *)model {
-    if (!_model) {
-        _model = [[RSContactsModel alloc] init];
+- (NSMutableArray *)allDatas {
+    if (!_allDatas) {
+        _allDatas = [[RSContactsModel demoData] mutableCopy];
     }
-    return _model;
+    return _allDatas;
 }
 
 @end

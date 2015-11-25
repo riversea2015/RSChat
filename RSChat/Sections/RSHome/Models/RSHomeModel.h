@@ -16,6 +16,6 @@
 //@property (nonatomic, strong) NSString *badgeNumberImageName;
 @property (nonatomic, strong) NSString *badgeNumberText;
 
-@property (nonatomic, strong) NSArray *homeArr;
++ (NSArray *)demoData;
 
 @end
