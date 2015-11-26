@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>87406523-BC1F-40EC-987C-45A51D0A6886</string>
 	<key>IDESourceControlProjectName</key>
-	<string>RSChat</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>12C504717D4AAF57776DB7670C064A92E41D76B4</key>
 		<string>github.com:riversea2015/RSChat.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>RSChat.xcodeproj</string>
+	<string>RSChat.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>12C504717D4AAF57776DB7670C064A92E41D76B4</key>

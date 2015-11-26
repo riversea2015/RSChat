@@ -9,6 +9,7 @@
 #import "RSContactsViewController.h"
 #import "RSContactsModel.h"
 #import "RSContactCell.h"
+#import "RSDetailTableViewController.h"
 
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -41,11 +42,8 @@
 //    searchBar.showsCancelButton = YES;
 //    [searchBar sizeToFit];
 //    [self.tableView setTableHeaderView:searchBar];
-    
-    UIView *contentView = self.view;
-    [contentView addSubview:self.tableView];
-    
-    self.indexArr = [NSMutableArray array];
+
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - private method
@@ -53,31 +51,6 @@
 #warning TODO 实现 navigationBar 下拉列表功能
 - (void)popUp {
     NSLog(@"下拉列表...");
-}
-
-#pragma mark - indexList
-
-#warning TODO 索引尚未关联
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return nil;
-    }
-    return [@[@"1", @"2", @"3"] objectAtIndex:section];
-}
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return @[@"1", @"2", @"3"];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return CGFLOAT_MIN;
-    }
-    return 30;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return CGFLOAT_MIN;
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,32 +70,92 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-}
-
 #pragma mark - tableView dataSource delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 4;
     }
-    return 2;
+    if (section == 7) {
+        return 2;
+    }
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellID = [RSContactCell cellID];
     RSContactCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-
-    RSContactsModel *model = self.allDatas[indexPath.row];
-    [cell setCellWithModel:model];
     
+    // 显示好友逻辑
+    RSContactsModel *model = [[RSContactsModel alloc] init];
+    if (indexPath.section == 0) {
+        model = self.allDatas[indexPath.row];
+    }
+    
+    if (indexPath.section <= 7 && indexPath.section > 0) {
+        model = self.allDatas[3 + indexPath.section + indexPath.row];
+    }
+    
+    if (indexPath.section > 7) {
+        model = self.allDatas[3 + indexPath.section + indexPath.row + 1];
+    }
+    
+    [cell setCellWithModel:model];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        NSLog(@"点击了新的朋友、群聊、标签、公众号");
+        return;
+    }
+    
+    RSContactsModel *model = [[RSContactsModel alloc] init];
+    if (indexPath.section == 0) {
+        model = self.allDatas[indexPath.row];
+    }
+    if (indexPath.section <= 7 && indexPath.section > 0) {
+        model = self.allDatas[3 + indexPath.section + indexPath.row];
+    }
+    if (indexPath.section > 7) {
+        model = self.allDatas[3 + indexPath.section + indexPath.row + 1];
+    }
+    
+    RSDetailTableViewController *detailVC = [[RSDetailTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    detailVC.contactMdel = model;
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+#pragma mark - indexList
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return nil;
+    }
+    NSLog(@"%@", self.indexArr);
+    return [self.indexArr objectAtIndex:section - 1];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.indexArr;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return CGFLOAT_MIN;
+    }
+    return 30;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
 }
 
 #pragma mark - setter & getter
@@ -146,6 +179,23 @@
         _allDatas = [[RSContactsModel demoData] mutableCopy];
     }
     return _allDatas;
+}
+
+- (NSMutableArray *)indexArr {
+    if (!_indexArr) {
+        _indexArr = [NSMutableArray array];
+        for (RSContactsModel *model in self.allDatas) {
+            static NSString *tmpStr = nil;
+            if (model.indexStr == tmpStr || model.indexStr.length < 1) {
+                continue;
+            }
+
+            [_indexArr addObject:model.indexStr];
+            
+            tmpStr = model.indexStr;
+        }
+    }
+    return _indexArr;
 }
 
 @end

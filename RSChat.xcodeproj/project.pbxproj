@@ -88,6 +88,13 @@
 		729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729139EB1BF1EC8B00CEFD64 /* Memo.txt */; };
 		72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */; };
 		72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */; };
+		72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */; };
+		72A334F71C06EDE800112FC0 /* RSDetailFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */; };
+		72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */; };
+		72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A335091C06F2A800112FC0 /* RSDetailSecondCell.m */; };
+		72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A3350A1C06F2A800112FC0 /* RSDetailSecondCell.xib */; };
+		72A335101C07035000112FC0 /* RSMessageVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A3350E1C07035000112FC0 /* RSMessageVideoCell.m */; };
+		72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A3350F1C07035000112FC0 /* RSMessageVideoCell.xib */; };
 		72AB93A41BF708DD005A212C /* RSContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB93A21BF708DD005A212C /* RSContactCell.m */; };
 		72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AB93A31BF708DD005A212C /* RSContactCell.xib */; };
 		72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */; };
@@ -260,6 +267,17 @@
 		72A334EA1C069B1D00112FC0 /* RSNewsDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsDateView.h; sourceTree = "<group>"; };
 		72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsDateView.m; sourceTree = "<group>"; };
 		72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsDateView.xib; sourceTree = "<group>"; };
+		72A334F11C06E9AA00112FC0 /* RSDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailTableViewController.h; sourceTree = "<group>"; };
+		72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailTableViewController.m; sourceTree = "<group>"; };
+		72A334F41C06EDE800112FC0 /* RSDetailFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailFirstCell.h; sourceTree = "<group>"; };
+		72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailFirstCell.m; sourceTree = "<group>"; };
+		72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSDetailFirstCell.xib; sourceTree = "<group>"; };
+		72A335081C06F2A800112FC0 /* RSDetailSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailSecondCell.h; sourceTree = "<group>"; };
+		72A335091C06F2A800112FC0 /* RSDetailSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailSecondCell.m; sourceTree = "<group>"; };
+		72A3350A1C06F2A800112FC0 /* RSDetailSecondCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSDetailSecondCell.xib; sourceTree = "<group>"; };
+		72A3350D1C07035000112FC0 /* RSMessageVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMessageVideoCell.h; sourceTree = "<group>"; };
+		72A3350E1C07035000112FC0 /* RSMessageVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMessageVideoCell.m; sourceTree = "<group>"; };
+		72A3350F1C07035000112FC0 /* RSMessageVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMessageVideoCell.xib; sourceTree = "<group>"; };
 		72AB93A11BF708DD005A212C /* RSContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactCell.h; sourceTree = "<group>"; };
 		72AB93A21BF708DD005A212C /* RSContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactCell.m; sourceTree = "<group>"; };
 		72AB93A31BF708DD005A212C /* RSContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSContactCell.xib; sourceTree = "<group>"; };
@@ -580,6 +598,8 @@
 			children = (
 				729139CE1BF1D58E00CEFD64 /* RSContactsViewController.h */,
 				729139CF1BF1D58E00CEFD64 /* RSContactsViewController.m */,
+				72A334F11C06E9AA00112FC0 /* RSDetailTableViewController.h */,
+				72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -599,6 +619,15 @@
 				72AB93A11BF708DD005A212C /* RSContactCell.h */,
 				72AB93A21BF708DD005A212C /* RSContactCell.m */,
 				72AB93A31BF708DD005A212C /* RSContactCell.xib */,
+				72A334F41C06EDE800112FC0 /* RSDetailFirstCell.h */,
+				72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */,
+				72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */,
+				72A335081C06F2A800112FC0 /* RSDetailSecondCell.h */,
+				72A335091C06F2A800112FC0 /* RSDetailSecondCell.m */,
+				72A3350A1C06F2A800112FC0 /* RSDetailSecondCell.xib */,
+				72A3350D1C07035000112FC0 /* RSMessageVideoCell.h */,
+				72A3350E1C07035000112FC0 /* RSMessageVideoCell.m */,
+				72A3350F1C07035000112FC0 /* RSMessageVideoCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -850,9 +879,12 @@
 				729139AF1BF1D44B00CEFD64 /* Images.xcassets in Resources */,
 				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
+				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
 				727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */,
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
+				72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */,
 				727C1DC21BF2558300CE8AA6 /* RSDiscoverImages.xcassets in Resources */,
+				72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +905,7 @@
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				721223F61BFF5C6B00F06F84 /* MJRefreshFooter.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
+				72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */,
 				721223F91BFF5C6B00F06F84 /* MJRefreshAutoNormalFooter.m in Sources */,
 				72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */,
 				729066AF1C03711C00B64EA8 /* RSMessageModel.m in Sources */,
@@ -887,6 +920,7 @@
 				729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				721224051BFF5C6B00F06F84 /* UIView+MJExtension.m in Sources */,
+				72A335101C07035000112FC0 /* RSMessageVideoCell.m in Sources */,
 				7212242B1BFF5DA100F06F84 /* AFHTTPRequestOperationManager.m in Sources */,
 				721224071BFF5C6B00F06F84 /* NSData+ImageContentType.m in Sources */,
 				721224321BFF5DA100F06F84 /* AFURLSessionManager.m in Sources */,
@@ -925,6 +959,7 @@
 				7212240D1BFF5C6B00F06F84 /* SDWebImageManager.m in Sources */,
 				721223FB1BFF5C6B00F06F84 /* MJRefreshBackGifFooter.m in Sources */,
 				721224091BFF5C6B00F06F84 /* SDWebImageCompat.m in Sources */,
+				72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */,
 				7212242F1BFF5DA100F06F84 /* AFURLConnectionOperation.m in Sources */,
 				721224021BFF5C6B00F06F84 /* MJRefreshConst.m in Sources */,
 				721223F51BFF5C6B00F06F84 /* MJRefreshComponent.m in Sources */,
@@ -939,6 +974,7 @@
 				7212240F1BFF5C6B00F06F84 /* UIButton+WebCache.m in Sources */,
 				727C1DC91BF260AB00CE8AA6 /* RSDiscoverCell.m in Sources */,
 				721223FA1BFF5C6B00F06F84 /* MJRefreshAutoStateFooter.m in Sources */,
+				72A334F71C06EDE800112FC0 /* RSDetailFirstCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
