@@ -65,6 +65,8 @@
     RSHomeModel *model = self.allDatas[indexPath.row];
     [cell setCellWithModel:model];
     
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
 }
 
@@ -76,7 +78,7 @@
     NSLog(@"%@: section:%ld, row:%ld",self, indexPath.section, indexPath.row);
     
     if (indexPath.row == 0) {
-        RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] init];
+        RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:newsVC animated:YES];
 
     } else if (indexPath.row == 1 || indexPath.row == 2) {
@@ -92,6 +94,8 @@
         
         self.hidesBottomBarWhenPushed = NO;
     }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO]; // 选中后，取消选中状态（取消了选中时的颜色）
 }
 
 #pragma mark - setter getter

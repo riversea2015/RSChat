@@ -20,7 +20,7 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)cellHeight {
++ (CGFloat)rowHeight {
     return 60;
 }
 

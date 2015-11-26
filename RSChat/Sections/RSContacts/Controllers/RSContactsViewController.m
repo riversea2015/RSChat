@@ -97,6 +97,11 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 #pragma mark - tableView dataSource delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

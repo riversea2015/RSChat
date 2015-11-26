@@ -86,11 +86,15 @@
 		729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139E11BF1D58E00CEFD64 /* RSMeViewController.m */; };
 		729139EA1BF1DADE00CEFD64 /* TabbarImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729139E91BF1DADE00CEFD64 /* TabbarImages.xcassets */; };
 		729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729139EB1BF1EC8B00CEFD64 /* Memo.txt */; };
+		72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */; };
+		72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */; };
 		72AB93A41BF708DD005A212C /* RSContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB93A21BF708DD005A212C /* RSContactCell.m */; };
 		72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AB93A31BF708DD005A212C /* RSContactCell.xib */; };
 		72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */; };
 		72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3E31BFD78B100EC17C7 /* RSNewsContentCell.m */; };
 		72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ABF3E41BFD78B100EC17C7 /* RSNewsContentCell.xib */; };
+		72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADF3381C060F730002CB08 /* RSNewsHeaderCell.m */; };
+		72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +257,9 @@
 		729139E11BF1D58E00CEFD64 /* RSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeViewController.m; sourceTree = "<group>"; };
 		729139E91BF1DADE00CEFD64 /* TabbarImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabbarImages.xcassets; sourceTree = "<group>"; };
 		729139EB1BF1EC8B00CEFD64 /* Memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Memo.txt; sourceTree = "<group>"; };
+		72A334EA1C069B1D00112FC0 /* RSNewsDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsDateView.h; sourceTree = "<group>"; };
+		72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsDateView.m; sourceTree = "<group>"; };
+		72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsDateView.xib; sourceTree = "<group>"; };
 		72AB93A11BF708DD005A212C /* RSContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactCell.h; sourceTree = "<group>"; };
 		72AB93A21BF708DD005A212C /* RSContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactCell.m; sourceTree = "<group>"; };
 		72AB93A31BF708DD005A212C /* RSContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSContactCell.xib; sourceTree = "<group>"; };
@@ -261,6 +268,9 @@
 		72ABF3E21BFD78B100EC17C7 /* RSNewsContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsContentCell.h; sourceTree = "<group>"; };
 		72ABF3E31BFD78B100EC17C7 /* RSNewsContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsContentCell.m; sourceTree = "<group>"; };
 		72ABF3E41BFD78B100EC17C7 /* RSNewsContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsContentCell.xib; sourceTree = "<group>"; };
+		72ADF3371C060F730002CB08 /* RSNewsHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsHeaderCell.h; sourceTree = "<group>"; };
+		72ADF3381C060F730002CB08 /* RSNewsHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsHeaderCell.m; sourceTree = "<group>"; };
+		72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,6 +676,12 @@
 				72ABF3E21BFD78B100EC17C7 /* RSNewsContentCell.h */,
 				72ABF3E31BFD78B100EC17C7 /* RSNewsContentCell.m */,
 				72ABF3E41BFD78B100EC17C7 /* RSNewsContentCell.xib */,
+				72ADF3371C060F730002CB08 /* RSNewsHeaderCell.h */,
+				72ADF3381C060F730002CB08 /* RSNewsHeaderCell.m */,
+				72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */,
+				72A334EA1C069B1D00112FC0 /* RSNewsDateView.h */,
+				72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */,
+				72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */,
 				729066B01C03749700B64EA8 /* RSMessageCell.h */,
 				729066B11C03749700B64EA8 /* RSMessageCell.m */,
 			);
@@ -825,6 +841,7 @@
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
 				721224011BFF5C6B00F06F84 /* MJRefresh.bundle in Resources */,
 				7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */,
+				72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */,
 				729139B21BF1D44C00CEFD64 /* LaunchScreen.xib in Resources */,
 				729139EA1BF1DADE00CEFD64 /* TabbarImages.xcassets in Resources */,
 				727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */,
@@ -832,6 +849,7 @@
 				727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */,
 				729139AF1BF1D44B00CEFD64 /* Images.xcassets in Resources */,
 				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
+				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */,
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
 				727C1DC21BF2558300CE8AA6 /* RSDiscoverImages.xcassets in Resources */,
@@ -856,6 +874,7 @@
 				721223F61BFF5C6B00F06F84 /* MJRefreshFooter.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				721223F91BFF5C6B00F06F84 /* MJRefreshAutoNormalFooter.m in Sources */,
+				72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */,
 				729066AF1C03711C00B64EA8 /* RSMessageModel.m in Sources */,
 				729139A41BF1D44B00CEFD64 /* main.m in Sources */,
 				7212242D1BFF5DA100F06F84 /* AFNetworkReachabilityManager.m in Sources */,
@@ -899,6 +918,7 @@
 				721224141BFF5C6B00F06F84 /* UIImageView+WebCache.m in Sources */,
 				721223F21BFF5C6B00F06F84 /* MBProgressHUD.m in Sources */,
 				7212242E1BFF5DA100F06F84 /* AFSecurityPolicy.m in Sources */,
+				72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */,
 				721223FF1BFF5C6B00F06F84 /* MJRefreshNormalHeader.m in Sources */,
 				721224311BFF5DA100F06F84 /* AFURLResponseSerialization.m in Sources */,
 				721224001BFF5C6B00F06F84 /* MJRefreshStateHeader.m in Sources */,

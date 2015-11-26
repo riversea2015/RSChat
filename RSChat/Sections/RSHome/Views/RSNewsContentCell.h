@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
 
-+ (CGFloat)cellHeight;
++ (CGFloat)rowHeight;
 + (NSString *)cellID;
 
 @end

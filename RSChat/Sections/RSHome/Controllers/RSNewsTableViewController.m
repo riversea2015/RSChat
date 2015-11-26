@@ -7,10 +7,11 @@
 //
 
 #import "RSNewsTableViewController.h"
-//#import "RSNewsTitleCell.h"
-//#import "RSDateView.h"
+#import "RSNewsHeaderCell.h"
+#import "RSNewsDateView.h"
 #import "RSNewsContentCell.h"
 #import "RSNewsModel.h"
+
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "MJRefresh.h"
@@ -23,7 +24,6 @@
 
 @property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSURLRequest *request;
-
 @property (nonatomic, strong) AFHTTPRequestOperation *operation;
 
 @property (nonatomic, assign) NSUInteger pagesize;
@@ -31,6 +31,8 @@
 @property (nonatomic, strong) NSString *docurl;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, assign) NSInteger job;
+
+// NSString *const filterItemCityIDKey = @"filterItemCityIDKey"; 格式参考
 
 @end
 
@@ -45,35 +47,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 网络请求的原始参数，用于拼接url
-    self.pagesize = 20;
-    self.p = 1;
-    self.docurl = @"http%3A%2F%2Fnews.ifeng.com%2Fmainland%2Fspecial%2Fxjpg20%2F";
-    self.type = @"all";
-    self.job = 9;
     
-    self.title = @"腾讯新闻";
+    [self setBasicData];
     
-    self.tableView.backgroundColor = [UIColor lightGrayColor];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
-    self.navigationItem.rightBarButtonItem = item;
-
-    [self.tableView registerNib:[UINib nibWithNibName:[RSNewsContentCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsContentCell cellID]];
-
     self.newsArr = [[NSMutableArray alloc] init];
     
-    // 加载动画
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading";
-    hud.labelColor = [UIColor greenColor];
-    hud.xOffset = 0;
-    hud.yOffset = 20;
-    hud.color = [UIColor redColor];
+    [self startProgressAnimation];
     
+    [self setRequestParameters];
     [self sendRequestGetJSON];
     
-    // 下拉刷新，上拉加载更多数据
     [self headerRefresh];
     [self footerRefresh];
 }
@@ -82,6 +65,84 @@
 - (void)viewWillDisappear:(BOOL)animated {
     // [self.connection cancel]; // 使用 NSUURLConnection
     [self.operation cancel];     // 使用 AFNetworking
+}
+
+#pragma mark - private method
+
+- (void)setBasicData {
+    self.title = @"腾讯新闻";
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
+    self.navigationItem.rightBarButtonItem = item;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:[RSNewsContentCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsContentCell cellID]];
+    [self.tableView registerNib:[UINib nibWithNibName:[RSNewsHeaderCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsHeaderCell cellID]];
+}
+
+- (void)startProgressAnimation {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading";
+    hud.labelColor = [UIColor greenColor];
+    hud.xOffset = 0;
+    hud.yOffset = 20;
+    hud.color = [UIColor redColor];
+}
+
+#pragma mark - send request & parse data
+
+- (void)setRequestParameters {
+    // 网络请求的原始参数，用于拼接url
+    self.pagesize = 20;
+    self.p = 1;
+    self.docurl = @"http%3A%2F%2Fnews.ifeng.com%2Fmainland%2Fspecial%2Fxjpg20%2F";
+    self.type = @"all";
+    self.job = 9;
+}
+
+- (void)sendRequestGetJSON {
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%ld&p=%ld&docurl=%@&type=%@&job=%ld", self.pagesize, self.p, self.docurl, self.type, self.job];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    self.request = [NSURLRequest requestWithURL:url];
+    /**
+     发送网络请求：第一种方式 NSURLConnection，用到了代理：NSURLConnectionDataDelegate
+     */
+    //    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    
+    /**
+     发送网络请求：第二种方式 AFNetworking
+     */
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    WEAKSELF
+    self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"AFN json:%@", responseObject);
+        
+        [weakSelf getResult:responseObject];
+        
+    } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
+        NSLog(@"AFN 返回失败：%@", error.userInfo);
+    }];
+    
+}
+
+- (void)getResult:(NSDictionary *)jsonDic {
+    NSArray *testArr = jsonDic[@"comments"][@"hottest"];
+    for (NSDictionary *dic in testArr) {
+        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
+        [self.newsArr addObject:newsModel];
+    }
+    
+    testArr = jsonDic[@"comments"][@"newest"];
+    for (NSDictionary *dic in testArr) {
+        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
+        
+        [self.newsArr addObject:newsModel];
+    }
+    
+    [self.tableView reloadData];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 #pragma mark - headerRefresh footerRefresh
@@ -115,54 +176,6 @@
     [self sendRequestGetJSON];
     [self.tableView reloadData];
     [self.tableView.footer endRefreshing];
-}
-
-#pragma mark - send request & parse data
-
-- (void)sendRequestGetJSON {
-
-    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%ld&p=%ld&docurl=%@&type=%@&job=%ld", self.pagesize, self.p, self.docurl, self.type, self.job];
-    NSURL *url = [NSURL URLWithString:urlStr];
-    self.request = [NSURLRequest requestWithURL:url];
-/**
- 发送网络请求：第一种方式 NSURLConnection，用到了代理：NSURLConnectionDataDelegate
- */
-//    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
-
-/**
- 发送网络请求：第二种方式 AFNetworking
- */
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    WEAKSELF
-    self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"AFN json:%@", responseObject);
-        
-        [weakSelf getResult:responseObject];
-        
-    } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-        NSLog(@"AFN 返回失败：%@", error.userInfo);
-    }];
-    
-}
-
-
-- (void)getResult:(NSDictionary *)jsonDic {
-    NSArray *testArr = jsonDic[@"comments"][@"hottest"];
-    for (NSDictionary *dic in testArr) {
-        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
-        [self.newsArr addObject:newsModel];
-    }
-    
-    testArr = jsonDic[@"comments"][@"newest"];
-    for (NSDictionary *dic in testArr) {
-        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
-        
-        [self.newsArr addObject:newsModel];
-    }
-    
-    [self.tableView reloadData];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 #pragma mark - NSURLConnectionDataDelegate
@@ -227,20 +240,30 @@
 #pragma mark - Table view dataSource delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.newsArr.count / 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.newsArr.count;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    NSString *contentCellID = [RSNewsContentCell cellID];
-    RSNewsContentCell *cell = [tableView dequeueReusableCellWithIdentifier:contentCellID forIndexPath:indexPath];
+    NSInteger index = 4 * indexPath.section + indexPath.row;
     
-    if (indexPath.row < self.newsArr.count) {
-        RSNewsModel *model = self.newsArr[indexPath.row];
+    if (indexPath.row == 0) {
+        RSNewsHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSNewsHeaderCell cellID] forIndexPath:indexPath];
+        if (index < self.newsArr.count) {
+            RSNewsModel *model = self.newsArr[index];
+            [cell.headerImageView sd_setImageWithURL:model.faceurl placeholderImage:[UIImage imageNamed:@"test"]];
+            cell.headerTextLabel.text = [NSString stringWithFormat:@" %@", model.comment_contents];
+        }
+        return cell;
+    }
+    
+    RSNewsContentCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSNewsContentCell cellID] forIndexPath:indexPath];
+    
+    if (index < self.newsArr.count) {
+        RSNewsModel *model = self.newsArr[index];
         [cell.titleImageView sd_setImageWithURL:model.faceurl placeholderImage:[UIImage imageNamed:@"test"]];
         cell.contentLabel.text = model.comment_contents;
     }
@@ -249,7 +272,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [RSNewsContentCell cellHeight];
+    if (indexPath.row == 0) {
+        return [RSNewsHeaderCell rowHeight];
+    }
+    return [RSNewsContentCell rowHeight];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 // 设置分割线的长度
@@ -267,6 +298,25 @@
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 40;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    RSNewsDateView *dateView = [[[NSBundle mainBundle] loadNibNamed:@"RSNewsDateView" owner:self options:nil] lastObject];
+    [dateView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
+    dateView.backgroundColor = [UIColor clearColor];
+    
+    RSNewsModel *model = self.newsArr[4 * section + 0];
+    dateView.dateLabel.text = [NSString stringWithFormat:@" %@ ", model.comment_date];
+    return dateView;
 }
 
 #pragma mark - getter setter

@@ -14,6 +14,7 @@
     return [[self alloc] initWithJson:dic];
 }
 
+// 原版
 - (id)initWithJson:(NSDictionary *)dic {
     if (self = [super init]) {
         _comment_date = dic[@"comment_date"];
@@ -23,5 +24,16 @@
     }
     return self;
 }
+
+// 修订版
+//- (id)initWithJson:(NSDictionary *)dic {
+//    if (self = [super init]) {
+//        _comment_date = dic[@"comment_date"];
+//        _comment_contents = dic[@"comment_contents"];
+//        NSString *urlStr = dic[@"faceurl"];
+//        _faceurl = [NSURL URLWithString:urlStr];
+//    }
+//    return self;
+//}
 
 @end
