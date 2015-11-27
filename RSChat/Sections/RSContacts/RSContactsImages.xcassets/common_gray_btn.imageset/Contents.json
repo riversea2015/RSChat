@@ -8,19 +8,19 @@
       "resizing" : {
         "mode" : "9-part",
         "center" : {
-          "mode" : "tile",
+          "mode" : "fill",
           "width" : 1,
           "height" : 1
         },
-        "cap-insets" : {
-          "bottom" : 62,
-          "top" : 57,
-          "right" : 60,
-          "left" : 59
+        "capInsets" : {
+          "bottom" : 29,
+          "top" : 30,
+          "right" : 32,
+          "left" : 27
         }
       },
       "idiom" : "universal",
-      "filename" : "Action_Tap@2x.png",
+      "filename" : "common_gray_btn@2x.png",
       "scale" : "2x"
     },
     {

@@ -41,8 +41,6 @@
 
     [self.view addSubview:self.tableView];
     
-    
-    
 }
 
 #pragma mark - private method

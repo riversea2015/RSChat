@@ -10,8 +10,10 @@
 #import "RSDetailFirstCell.h"
 #import "RSDetailSecondCell.h"
 #import "RSMessageVideoCell.h"
+#import "RSActionView.h"
 
 @interface RSDetailTableViewController ()
+@property (nonatomic, strong) RSActionView *actionView;
 
 @end
 
@@ -28,26 +30,53 @@
     [super viewDidLoad];
     
     self.title = @"详细资料";
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"settings..." style:UIBarButtonItemStyleDone target:self action:@selector(setDetails)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailFirstCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailFirstCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailSecondCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailSecondCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMessageVideoCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMessageVideoCell cellID]];
+    
+    
+    [self SetTableFooterView];
 }
 
 #pragma mark - private method
 
+#warning 注意：tableFooterView默认为nil，所以使用时必须先给他一个View，然后将自己的View加到这个view下才行，不可以直接加自己的，否则无法显示！
+- (void)SetTableFooterView {
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 123)];
+    [view addSubview:self.actionView];
+    
+    [self.actionView.message addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
+    [self.actionView.videoChat addTarget:self action:@selector(videoChat) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.tableView setTableFooterView:view];
+}
+
+#warning TODO 怎么知道点击的是哪一个联系人的按钮？--> 用 self.contactModel
+- (void)sendMessage {
+    NSLog(@"发消息。。。");
+}
+
+- (void)videoChat {
+    NSLog(@"视频聊天。。。");
+}
+
+- (void)setDetails {
+    NSLog(@"资料设置。。。");
+}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-        case 3:
-        case 4:
             return 1;
         case 1:
             return 2;
@@ -89,19 +118,6 @@
         return cell;
     }
     
-    if (indexPath.section == 3 || indexPath.section == 4) {
-        RSMessageVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSMessageVideoCell cellID] forIndexPath:indexPath];
-        if (indexPath.section == 3) {
-            cell.nameLabel.text = @"发消息";
-            cell.bkIMageView.image = [UIImage imageNamed:@"Bg_hl"];
-        } else {
-            cell.nameLabel.text = @"视频聊天";
-            cell.bkIMageView.image = [UIImage imageNamed:@"Action_Tap"];
-        }
-        
-        return cell;
-    }
-    
     // section 2
     if (indexPath.row == 0 || indexPath.row == 2) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
@@ -139,13 +155,44 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return CGFLOAT_MIN;
+    return 15;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 30;
+    return 5;
+}
+
+// 设置分割线的长度
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    }
+
+    // Prevent the cell from inheriting the Table View's margin settings
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+    
+    // Explictly set your cell's layout margins
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"点击了详细资料中的某一行。。。");
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - setter getter
+
+- (RSActionView *)actionView {
+    if (!_actionView) {
+        _actionView = [[[NSBundle mainBundle] loadNibNamed:@"RSActionView" owner:self options:nil] lastObject];
+    }
+    return _actionView;
+}
 
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,14 +14,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AMA-lV-Mp4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="43" translatesAutoresizingMaskIntoConstraints="NO" id="Ecn-uM-jJV">
+                        <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yi-Ih-aFT">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-3s-rrS">
                         <rect key="frame" x="110" y="11" width="100" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="ZK7-Wl-uzu"/>
-                            <constraint firstAttribute="width" constant="100" id="apx-4Z-Zgp"/>
+                            <constraint firstAttribute="width" constant="100" id="485-70-i7X"/>
+                            <constraint firstAttribute="height" constant="21" id="qSz-bM-Ptr"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -29,21 +30,20 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="AMA-lV-Mp4" secondAttribute="trailing" id="5z1-7W-8Rz"/>
-                    <constraint firstAttribute="centerY" secondItem="AMA-lV-Mp4" secondAttribute="centerY" id="FvN-Nq-bWh"/>
-                    <constraint firstItem="AMA-lV-Mp4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gla-Ef-lhr"/>
-                    <constraint firstAttribute="centerY" secondItem="2Yi-Ih-aFT" secondAttribute="centerY" id="HN3-Cb-EHZ"/>
-                    <constraint firstItem="AMA-lV-Mp4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RZF-k3-vSr"/>
-                    <constraint firstAttribute="bottom" secondItem="AMA-lV-Mp4" secondAttribute="bottom" id="qic-a6-Npa"/>
-                    <constraint firstAttribute="centerX" secondItem="2Yi-Ih-aFT" secondAttribute="centerX" id="xmJ-fP-4In"/>
+                    <constraint firstAttribute="centerY" secondItem="sLY-3s-rrS" secondAttribute="centerY" id="6T2-Gt-TYm"/>
+                    <constraint firstAttribute="bottom" secondItem="Ecn-uM-jJV" secondAttribute="bottom" id="Qhi-G3-w29"/>
+                    <constraint firstItem="Ecn-uM-jJV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eMq-tv-IYk"/>
+                    <constraint firstItem="Ecn-uM-jJV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tyz-Bw-eBd"/>
+                    <constraint firstAttribute="centerX" secondItem="sLY-3s-rrS" secondAttribute="centerX" id="xNi-vQ-2Hd"/>
+                    <constraint firstAttribute="trailing" secondItem="Ecn-uM-jJV" secondAttribute="trailing" constant="10" id="xPC-Nn-I4z"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="bkIMageView" destination="AMA-lV-Mp4" id="NtI-sL-aAi"/>
-                <outlet property="nameLabel" destination="2Yi-Ih-aFT" id="Jki-Rr-j6E"/>
+                <outlet property="bkIMageView" destination="Ecn-uM-jJV" id="ifN-7b-sEt"/>
+                <outlet property="nameLabel" destination="sLY-3s-rrS" id="Bha-E9-B7e"/>
             </connections>
-            <point key="canvasLocation" x="283" y="208"/>
+            <point key="canvasLocation" x="384" y="187"/>
         </tableViewCell>
     </objects>
 </document>

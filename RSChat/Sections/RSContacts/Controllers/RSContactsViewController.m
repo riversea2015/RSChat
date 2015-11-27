@@ -56,7 +56,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, 10, 0, 0)];
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     }
     
     // Prevent the cell from inheriting the Table View's margin settings
@@ -112,6 +112,7 @@
     
     if (indexPath.section == 0) {
         NSLog(@"点击了新的朋友、群聊、标签、公众号");
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
         return;
     }
     

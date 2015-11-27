@@ -13,14 +13,14 @@
           "height" : 1
         },
         "capInsets" : {
-          "bottom" : 13,
-          "top" : 16,
-          "right" : 13,
-          "left" : 15
+          "bottom" : 30,
+          "top" : 29,
+          "right" : 31,
+          "left" : 28
         }
       },
       "idiom" : "universal",
-      "filename" : "Bg_hl@2x.png",
+      "filename" : "common_green_btn@2x.png",
       "scale" : "2x"
     },
     {
