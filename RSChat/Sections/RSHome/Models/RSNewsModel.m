@@ -25,7 +25,7 @@
     return self;
 }
 
-// 修订版
+// 修订版（新数据源）
 //- (id)initWithJson:(NSDictionary *)dic {
 //    if (self = [super init]) {
 //        _comment_date = dic[@"comment_date"];

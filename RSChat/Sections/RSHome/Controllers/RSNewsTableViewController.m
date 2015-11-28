@@ -314,8 +314,11 @@
     [dateView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
     dateView.backgroundColor = [UIColor clearColor];
     
-    RSNewsModel *model = self.newsArr[4 * section + 0];
-    dateView.dateLabel.text = [NSString stringWithFormat:@" %@ ", model.comment_date];
+    if (self.newsArr.count > 4 * section) {
+        RSNewsModel *model = self.newsArr[4 * section + 0];
+        dateView.dateLabel.text = [NSString stringWithFormat:@" %@ ", model.comment_date];
+    }
+    
     return dateView;
 }
 

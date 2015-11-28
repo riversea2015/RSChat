@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSMessageViewController">
@@ -20,7 +20,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdn-F4-EHw">
                     <rect key="frame" x="0.0" y="555" width="600" height="45"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ToolViewBkg_Black" translatesAutoresizingMaskIntoConstraints="NO" id="g3w-6h-GqE">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbumKeyboardTopBkg" translatesAutoresizingMaskIntoConstraints="NO" id="g3w-6h-GqE">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixY-Bl-YhL" userLabel="Left Button">
@@ -29,9 +29,10 @@
                                 <constraint firstAttribute="height" constant="35" id="3gK-0l-igp"/>
                                 <constraint firstAttribute="width" constant="35" id="bL5-Dz-tVk"/>
                             </constraints>
-                            <state key="normal" image="ToolViewEmotion">
+                            <state key="normal" image="ToolViewInputVoice">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="ToolViewInputVoiceHL"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6Y-R5-kq1" userLabel="Middle Button">
                             <rect key="frame" x="514" y="5" width="35" height="35"/>
@@ -39,9 +40,10 @@
                                 <constraint firstAttribute="height" constant="35" id="80I-8k-Q3E"/>
                                 <constraint firstAttribute="width" constant="35" id="Z3W-13-Y5l"/>
                             </constraints>
-                            <state key="normal" image="ToolViewInputVoice">
+                            <state key="normal" image="ToolViewEmotion">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="ToolViewEmotionHL"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quu-Qx-g0U">
                             <rect key="frame" x="557" y="5" width="35" height="35"/>
@@ -52,6 +54,7 @@
                             <state key="normal" image="TypeSelectorBtn_Black">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="TypeSelectorBtnHL_Black"/>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjL-BO-h9v">
                             <rect key="frame" x="51" y="8" width="455" height="30"/>
@@ -102,9 +105,12 @@
         </view>
     </objects>
     <resources>
-        <image name="ToolViewBkg_Black" width="23" height="45"/>
+        <image name="AlbumKeyboardTopBkg" width="30" height="30"/>
         <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewEmotionHL" width="35" height="35"/>
         <image name="ToolViewInputVoice" width="35" height="35"/>
+        <image name="ToolViewInputVoiceHL" width="35" height="35"/>
+        <image name="TypeSelectorBtnHL_Black" width="35" height="35"/>
         <image name="TypeSelectorBtn_Black" width="35" height="35"/>
     </resources>
 </document>

@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSString *leftText;
 @property (nonatomic, strong) NSString *rightText;
 @property (nonatomic, strong) NSString *bottomText;
-//@property (nonatomic, strong) NSString *badgeNumberImageName;
 @property (nonatomic, strong) NSString *badgeNumberText;
 
 + (NSArray *)demoData;

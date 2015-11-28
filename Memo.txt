@@ -2,35 +2,36 @@
 
 记录：
 
-1.Utilities/UIViewController+RSExts.h 只是为了验证runtime中可以做的事
+* Utilities/UIViewController+RSExts.h 只是为了验证runtime中可以做的事
 
-2.搜索框的实现
+* 添加搜索框 √
 
-3.点击后，popUp功能的实现
+* separator长度设置 √
 
-4.separator长度设置
+* 在运行时进行设置好友头像的圆角 √
 
-5.添加搜索框？
+* 使用MBProgressHUD实现加载动画 √
 
-6.badgeNum的数字位数变化时向左延伸，同时，红色背景也随之向左侧拉长，如何实现？
+* 使用NSURLConnection发送网络请求，使用代理 √
+
+* 使用AFNetworking发送网络请求 √
+
+* 使用SDWebImage下载、缓存图片 √
+
+* 使用MJRefresh实现下拉刷新，上拉加载 √
+
+* message完成后更换pop的图片，更换好友头像为当前好友  √
+
+* tableView取消选中 √
+
+* APPDelegate中的代码再简化
+
+* badgeNum的数字位数变化时向左延伸，同时，红色背景也随之向左侧拉长，如何实现？
 初步实现，但还有bug
 
-7.在运行时进行设置好友头像的圆角
+* 点击后，popUp功能的实现
 
-8.使用MBProgressHUD实现加载动画
+* 中英文混搜，英文可以搜中文内容
 
-9.1 使用NSURLConnection发送网络请求，使用代理
-
-9.2 使用AFNetworking发送网络请求
-
-10.使用SDWebImage下载、缓存图片
-
-11.使用MJRefresh实现下拉刷新，上拉加载
-
-12.APPDelegate中的代码再简化
-
-13.message完成后更换pop的图片
-
-14.tableView取消选中
 
 

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RSChat/Sections/RSHome/Controllers/RSMessageViewController.m"
-            timestampString = "470075064.489264"
+            timestampString = "470334405.272158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-allMessages"
             landmarkType = "5">
          </BreakpointContent>
