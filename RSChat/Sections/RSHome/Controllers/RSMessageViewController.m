@@ -32,10 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    // tabelView内容不会延伸至navigationBar和tabBar之下,默认为 UIRectEdgeAll 是延伸的
+    
+//    self.automaticallyAdjustsScrollViewInsets = YES;
+//    // automaticallyAdjustsScrollViewInsets 为YES 时，tableView 上下滑动时，是可以穿过导航栏&状态栏的，在他们下面有淡淡的浅浅红色,实际测试：YES和NO都有浅红色。
+    
     self.title = self.homeModel.leftText;
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_InfoSingle"] style:UIBarButtonItemStyleDone target:self action:@selector(showUserInfo)];
     self.navigationItem.rightBarButtonItem = rightItem;
-    
+        
     [self.tableView registerClass:[RSMessageCell class] forCellReuseIdentifier:[RSMessageCell cellID]];
     
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:[RSMessageCell cellID]];

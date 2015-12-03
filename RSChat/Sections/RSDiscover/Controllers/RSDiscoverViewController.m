@@ -11,6 +11,10 @@
 #import "RSDiscoverCell.h"
 #import "UIImage+RSSet.h"
 
+#import "RSScanViewController.h"
+#import "RSShakeViewController.h"
+#import "RSLocalViewController.h"
+
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
@@ -97,7 +101,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@: section:%ld, row:%ld",self, indexPath.section, indexPath.row);
+    self.hidesBottomBarWhenPushed = YES;
     
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        RSScanViewController *scanVC = [[RSScanViewController alloc] init];
+        [self.navigationController pushViewController:scanVC animated:NO];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        RSShakeViewController *shakeVC = [[RSShakeViewController alloc] initWithNibName:@"RSShakeViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:shakeVC animated:NO];
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        RSLocalViewController *localVC = [[RSLocalViewController alloc] initWithNibName:@"RSLocalViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:localVC animated:NO];
+    }
+    
+    
+    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface RSContactsModel : NSObject
-@property (nonatomic, strong) NSString *contactImageName;
-@property (nonatomic, strong) NSString *contactName;
-@property (nonatomic, strong) NSString *indexStr;
+@property (nonatomic, copy) NSString *contactImageName;
+@property (nonatomic, copy) NSString *contactName;
+@property (nonatomic, copy) NSString *indexStr;
 
-@property (nonatomic, strong) NSString *idStr;
-@property (nonatomic, strong) NSString *telNumStr;
-@property (nonatomic, strong) NSString *district;
+@property (nonatomic, copy) NSString *idStr;
+@property (nonatomic, copy) NSString *telNumStr;
+@property (nonatomic, copy) NSString *district;
 
 @property (nonatomic, assign) BOOL isMale;
 

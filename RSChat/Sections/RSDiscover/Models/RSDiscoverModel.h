@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface RSDiscoverModel : NSObject
-@property (nonatomic, strong) NSString *leftImageName; //
-@property (nonatomic, strong) NSString *leftText; //
-@property (nonatomic, strong) NSString *rightImageName;
-@property (nonatomic, strong) NSString *rightText;
+@property (nonatomic, copy) NSString *leftImageName; //
+@property (nonatomic, copy) NSString *leftText; //
+@property (nonatomic, copy) NSString *rightImageName;
+@property (nonatomic, copy) NSString *rightText;
 
 + (NSArray *)demoData;
 

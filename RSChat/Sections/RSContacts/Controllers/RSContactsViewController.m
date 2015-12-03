@@ -109,6 +109,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.hidesBottomBarWhenPushed = YES;
     
     if (indexPath.section == 0) {
         NSLog(@"点击了新的朋友、群聊、标签、公众号");
@@ -131,6 +132,7 @@
     detailVC.contactMdel = model;
     [self.navigationController pushViewController:detailVC animated:YES];
     
+    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

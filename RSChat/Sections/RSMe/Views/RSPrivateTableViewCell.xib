@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RSPrivateTableViewCell" id="KGk-i7-Jjw" customClass="RSPrivateTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-lP-SGT">
+                        <rect key="frame" x="223" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="teL-Nh-1HS"/>
+                            <constraint firstAttribute="height" constant="64" id="uV5-0b-Pgb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-ez-QgB">
+                        <rect key="frame" x="15" y="29" width="208" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ANk-1L-9X4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="SSL-lP-SGT" secondAttribute="centerY" id="9nk-Lz-gTT"/>
+                    <constraint firstItem="SSL-lP-SGT" firstAttribute="leading" secondItem="eMq-ez-QgB" secondAttribute="trailing" id="B9I-SQ-O3s"/>
+                    <constraint firstAttribute="centerY" secondItem="eMq-ez-QgB" secondAttribute="centerY" id="Bt6-M3-pB7"/>
+                    <constraint firstAttribute="trailing" secondItem="SSL-lP-SGT" secondAttribute="trailing" id="TAz-ZU-02N"/>
+                    <constraint firstItem="eMq-ez-QgB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="XJa-J4-X5M"/>
+                    <constraint firstAttribute="trailing" secondItem="SSL-lP-SGT" secondAttribute="trailing" id="zKP-Xc-bZz"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="zKP-Xc-bZz"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleImageView" destination="SSL-lP-SGT" id="TzG-X8-GdC"/>
+            </connections>
+            <point key="canvasLocation" x="782" y="207.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SeaMonster" width="220" height="220"/>
+    </resources>
+</document>

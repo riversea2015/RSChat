@@ -10,8 +10,8 @@
 
 @interface RSNewsModel : NSObject
 // 原版
-@property (nonatomic, strong) NSString *comment_date;
-@property (nonatomic, strong) NSString *comment_contents;
+@property (nonatomic, copy) NSString *comment_date;
+@property (nonatomic, copy) NSString *comment_contents;
 @property (nonatomic, strong) NSURL *faceurl;
 
 // 修订版

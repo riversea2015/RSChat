@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface RSHomeModel : NSObject
-@property (nonatomic, strong) NSString *leftImageName;
-@property (nonatomic, strong) NSString *leftText;
-@property (nonatomic, strong) NSString *rightText;
-@property (nonatomic, strong) NSString *bottomText;
-@property (nonatomic, strong) NSString *badgeNumberText;
+@property (nonatomic, copy) NSString *leftImageName;
+@property (nonatomic, copy) NSString *leftText;
+@property (nonatomic, copy) NSString *rightText;
+@property (nonatomic, copy) NSString *bottomText;
+@property (nonatomic, copy) NSString *badgeNumberText;
 
 + (NSArray *)demoData;
 

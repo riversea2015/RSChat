@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface RSMeModel : NSObject
-@property (nonatomic, strong) NSString *leftImageName; // 公用
-@property (nonatomic, strong) NSString *topText;
-@property (nonatomic, strong) NSString *bottomText;
+@property (nonatomic, copy) NSString *leftImageName; // 公用
+@property (nonatomic, copy) NSString *topText;
+@property (nonatomic, copy) NSString *bottomText;
 
-@property (nonatomic, strong) NSString *leftText;
-@property (nonatomic, strong) NSString *rightText;
-@property (nonatomic, strong) NSString *middleImageName;
-@property (nonatomic, strong) NSString *rightImageName;
+@property (nonatomic, copy) NSString *leftText;
+@property (nonatomic, copy) NSString *rightText;
+@property (nonatomic, copy) NSString *middleImageName;
+@property (nonatomic, copy) NSString *rightImageName;
 
 @property (nonatomic, strong) NSArray *headerArr;
 @property (nonatomic, strong) NSArray *otherArr;

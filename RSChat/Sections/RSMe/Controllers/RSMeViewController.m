@@ -10,6 +10,7 @@
 #import "RSMeHeaderCell.h"
 #import "RSMeOtherCell.h"
 #import "RSMeModel.h"
+#import "RSPrivateViewController.h"
 
 @interface RSMeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -99,6 +100,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@: section:%ld, row:%ld",self, (long)indexPath.section, (long)indexPath.row);
+    
+    if (indexPath.section == 0) {
+        // 打开个人信息页面
+        RSPrivateViewController *privateVC = [[RSPrivateViewController alloc] init];
+        [self.navigationController pushViewController:privateVC animated:NO];
+    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }

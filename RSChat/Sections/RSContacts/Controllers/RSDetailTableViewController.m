@@ -11,9 +11,13 @@
 #import "RSDetailSecondCell.h"
 #import "RSMessageVideoCell.h"
 #import "RSActionView.h"
+#import "RSMessageViewController.h"
+#import "RSHomeModel.h"
+#import "RSVideoViewController.h"
 
-@interface RSDetailTableViewController ()
+@interface RSDetailTableViewController ()<UIActionSheetDelegate>
 @property (nonatomic, strong) RSActionView *actionView;
+@property (nonatomic, strong) NSArray *homeModelArray;
 
 @end
 
@@ -55,20 +59,53 @@
     [self.tableView setTableFooterView:view];
 }
 
-#warning TODO 怎么知道点击的是哪一个联系人的按钮？--> 用 self.contactModel
 - (void)sendMessage {
     NSLog(@"发消息。。。");
+    self.hidesBottomBarWhenPushed = YES;
+    
+    RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
+    for (RSHomeModel *homeModel in self.homeModelArray) {
+        if ([self.contactMdel.contactName isEqualToString:homeModel.leftText]) {
+            messageVC.homeModel = homeModel;
+        }
+    }
+    [self.navigationController pushViewController:messageVC animated:YES];
+    
+    self.hidesBottomBarWhenPushed = NO;
 }
 
+#warning 在真机上无法显示xib的内容，在模拟器上可以
 - (void)videoChat {
-    NSLog(@"视频聊天。。。");
+    NSLog(@"视频或语音聊天。。。");
+
+    UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"视频聊天", @"语音聊天", nil];
+    [sheet showInView:self.view];
+    
+}
+
+#pragma mark - UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%ld",buttonIndex);
+    NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
+    NSLog(@"%@",title);
+    
+    if (buttonIndex == 0) {
+        self.hidesBottomBarWhenPushed = YES;
+        RSVideoViewController *videoVC = [[RSVideoViewController alloc] initWithNibName:@"RSVideoViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:videoVC animated:NO];
+        self.hidesBottomBarWhenPushed = NO;
+    } else {
+        NSLog(@"语音聊天。。。");
+    }
+    
 }
 
 - (void)setDetails {
     NSLog(@"资料设置。。。");
 }
 
-#pragma mark - Table view data source
+#pragma mark - TableView dataSource delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
@@ -193,6 +230,13 @@
         _actionView = [[[NSBundle mainBundle] loadNibNamed:@"RSActionView" owner:self options:nil] lastObject];
     }
     return _actionView;
+}
+
+- (NSArray *)homeModelArray {
+    if (!_homeModelArray) {
+        _homeModelArray = [RSHomeModel demoData];
+    }
+    return _homeModelArray;
 }
 
 @end

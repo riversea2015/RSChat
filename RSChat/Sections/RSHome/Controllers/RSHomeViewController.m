@@ -57,7 +57,13 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-#pragma mark - search
+
+- (void)popUp {
+    NSLog(@"下拉列表...");
+#warning TODO 实现 navigationBar 下拉列表功能
+}
+
+#pragma mark - search method
 
 - (void)startSearch {
 
@@ -65,26 +71,23 @@
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:self.resultTVC];
     self.searchVC = [[UISearchController alloc] initWithSearchResultsController:navi];
     
-    // 设置搜索控制器的结果更新代理对象
-    self.searchVC.searchResultsUpdater = self;
-    
     [self.searchVC.searchBar sizeToFit];
     [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"]; // 将searchBar的cancel按钮改成中文的
-    self.searchVC.searchBar.barTintColor = [UIColor colorWithWhite:0.9 alpha:0.5]; // 背景色
-    
     [self.searchVC.searchBar setBackgroundImage:[UIImage new]]; // 去除上下边界的黑线
-    
     self.searchVC.searchBar.placeholder = @"搜索";
     self.searchVC.searchBar.tintColor = [UIColor greenColor]; // 文字颜色
+    self.searchVC.searchBar.barTintColor = [UIColor colorWithWhite:0.9 alpha:0.5]; // 背景色
+    
+    self.searchVC.searchResultsUpdater = self; // 设置 搜索控制器 的结果更新代理对象
+    self.searchVC.searchBar.delegate = self;
     
     self.tableView.tableHeaderView = self.searchVC.searchBar;
     
     // 开启 在当前控制器中，允许切换另一个视图做呈现
     self.definesPresentationContext = YES;
-    
-    self.searchVC.searchBar.delegate = self;
-
 }
+
+#pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSString *searchText = searchController.searchBar.text;
@@ -101,19 +104,14 @@
     [self.resultTVC.tableView reloadData];
 }
 
+#pragma mark - UISearchBarDelegate
+
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar { // 点击搜索框时
     NSLog(@"方法调用 %s ", __func__);
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar { // 点击cancel按钮时
     NSLog(@"方法调用 %s ", __func__);
-}
-
-#pragma mark - UISearchBarDelegate Method
-
-#warning TODO 实现 navigationBar 下拉列表功能
-- (void)popUp {
-    NSLog(@"下拉列表...");
 }
 
 #pragma mark - tableView dataSource delegate
@@ -127,8 +125,6 @@
     RSHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     RSHomeModel *model = self.allDatas[indexPath.row];
     [cell setCellWithModel:model];
-    
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

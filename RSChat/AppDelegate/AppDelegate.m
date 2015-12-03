@@ -135,4 +135,25 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - 验证URL Scheme的方法
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // 1.所有知道我URL Scheme的应用都可以访问我的这个应用
+    NSLog(@"Calling Application Bundle ID:%@", sourceApplication);
+    NSLog(@"URL scheme:%@", [url scheme]);
+    NSLog(@"URL query:%@", [url query]);
+    return YES;
+    
+    // 2.只有我指定的应用（用Bundle ID区分）可以访问我的这个应用，
+    // Check the calling application Bundle ID
+//        if ([sourceApplication isEqualToString:@"com.hehai.Demo-URL-Scheme"]) {
+//            NSLog(@"Calling Application Bundle ID:%@", sourceApplication);
+//            NSLog(@"URL scheme:%@", [url scheme]);
+//            NSLog(@"URL query:%@", [url query]);
+//            return YES;
+//        }
+//        return NO;
+    
+}
+
 @end
