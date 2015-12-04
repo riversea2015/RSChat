@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"个人信息";
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateOtherCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateTableViewCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateTableViewCell cellID]];
     [self.view addSubview:self.tableView];

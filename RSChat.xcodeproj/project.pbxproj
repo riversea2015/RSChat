@@ -128,6 +128,12 @@
 		72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */; };
 		72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */; };
 		72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */; };
+		72C0AC301C11354900C817D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C0AC2F1C11354900C817D2 /* MapKit.framework */; };
+		72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC321C11489900C817D2 /* RSAnnotation.m */; };
+		72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC351C115B6200C817D2 /* RSBottleViewController.m */; };
+		72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */; };
+		72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC6D1C1174CB00C817D2 /* RSScanResultViewController.m */; };
+		72C0AC701C1174CB00C817D2 /* RSScanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C0AC6E1C1174CB00C817D2 /* RSScanResultViewController.xib */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
@@ -373,6 +379,15 @@
 		72AE23861C0B1C1C009CB1AF /* RSLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLocalViewController.h; sourceTree = "<group>"; };
 		72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLocalViewController.m; sourceTree = "<group>"; };
 		72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLocalViewController.xib; sourceTree = "<group>"; };
+		72C0AC2F1C11354900C817D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		72C0AC311C11489900C817D2 /* RSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAnnotation.h; sourceTree = "<group>"; };
+		72C0AC321C11489900C817D2 /* RSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAnnotation.m; sourceTree = "<group>"; };
+		72C0AC341C115B6200C817D2 /* RSBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBottleViewController.h; sourceTree = "<group>"; };
+		72C0AC351C115B6200C817D2 /* RSBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBottleViewController.m; sourceTree = "<group>"; };
+		72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSBottleViewController.xib; sourceTree = "<group>"; };
+		72C0AC6C1C1174CB00C817D2 /* RSScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSScanResultViewController.h; sourceTree = "<group>"; };
+		72C0AC6D1C1174CB00C817D2 /* RSScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSScanResultViewController.m; sourceTree = "<group>"; };
+		72C0AC6E1C1174CB00C817D2 /* RSScanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSScanResultViewController.xib; sourceTree = "<group>"; };
 		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -381,6 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C0AC301C11354900C817D2 /* MapKit.framework in Frameworks */,
 				72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */,
 				728ED8B01C0B063D00DE8639 /* QuartzCore.framework in Frameworks */,
 				728ED8D41C0B0E2800DE8639 /* libzbar.a in Frameworks */,
@@ -661,6 +677,7 @@
 		729139951BF1D44B00CEFD64 = {
 			isa = PBXGroup;
 			children = (
+				72C0AC2F1C11354900C817D2 /* MapKit.framework */,
 				729139EB1BF1EC8B00CEFD64 /* Memo.txt */,
 				729139A01BF1D44B00CEFD64 /* RSChat */,
 				729139BA1BF1D44C00CEFD64 /* RSChatTests */,
@@ -813,12 +830,18 @@
 				729139D51BF1D58E00CEFD64 /* RSDiscoverViewController.m */,
 				728ED87C1C0AF46900DE8639 /* RSScanViewController.h */,
 				728ED87D1C0AF46900DE8639 /* RSScanViewController.m */,
+				72C0AC6C1C1174CB00C817D2 /* RSScanResultViewController.h */,
+				72C0AC6D1C1174CB00C817D2 /* RSScanResultViewController.m */,
+				72C0AC6E1C1174CB00C817D2 /* RSScanResultViewController.xib */,
 				728ED8811C0AF62200DE8639 /* RSShakeViewController.h */,
 				728ED8821C0AF62200DE8639 /* RSShakeViewController.m */,
 				728ED8831C0AF62200DE8639 /* RSShakeViewController.xib */,
 				72AE23861C0B1C1C009CB1AF /* RSLocalViewController.h */,
 				72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */,
 				72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */,
+				72C0AC341C115B6200C817D2 /* RSBottleViewController.h */,
+				72C0AC351C115B6200C817D2 /* RSBottleViewController.m */,
+				72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -828,6 +851,8 @@
 			children = (
 				727C1DC31BF255FA00CE8AA6 /* RSDiscoverModel.h */,
 				727C1DC41BF255FA00CE8AA6 /* RSDiscoverModel.m */,
+				72C0AC311C11489900C817D2 /* RSAnnotation.h */,
+				72C0AC321C11489900C817D2 /* RSAnnotation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1016,7 +1041,6 @@
 				TargetAttributes = {
 					7291399D1BF1D44B00CEFD64 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 3723FBPC2J;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1058,6 +1082,7 @@
 				720CE92F1C080CEC00913C5A /* RSActionView.xib in Resources */,
 				729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */,
 				727C1DB51BF211CF00CE8AA6 /* RSMeOtherCell.xib in Resources */,
+				72C0AC701C1174CB00C817D2 /* RSScanResultViewController.xib in Resources */,
 				727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
 				721224011BFF5C6B00F06F84 /* MJRefresh.bundle in Resources */,
@@ -1071,6 +1096,7 @@
 				728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */,
 				729139AF1BF1D44B00CEFD64 /* Images.xcassets in Resources */,
 				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
+				72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */,
 				720CE8C01C07763B00913C5A /* tabBarImages.xcassets in Resources */,
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
@@ -1105,6 +1131,7 @@
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				721223F61BFF5C6B00F06F84 /* MJRefreshFooter.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
+				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
 				7288A54F1C10879D009936A7 /* RSPrivateViewController.m in Sources */,
 				720CE92D1C080CC200913C5A /* RSActionView.m in Sources */,
 				72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */,
@@ -1123,6 +1150,7 @@
 				729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				721224051BFF5C6B00F06F84 /* UIView+MJExtension.m in Sources */,
+				72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */,
 				72A335101C07035000112FC0 /* RSMessageVideoCell.m in Sources */,
 				7212242B1BFF5DA100F06F84 /* AFHTTPRequestOperationManager.m in Sources */,
 				721224071BFF5C6B00F06F84 /* NSData+ImageContentType.m in Sources */,
@@ -1160,6 +1188,7 @@
 				721223F21BFF5C6B00F06F84 /* MBProgressHUD.m in Sources */,
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
 				728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */,
+				72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */,
 				7212242E1BFF5DA100F06F84 /* AFSecurityPolicy.m in Sources */,
 				72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */,
 				721223FF1BFF5C6B00F06F84 /* MJRefreshNormalHeader.m in Sources */,

@@ -14,6 +14,7 @@
 #import "RSScanViewController.h"
 #import "RSShakeViewController.h"
 #import "RSLocalViewController.h"
+#import "RSBottleViewController.h"
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -118,6 +119,10 @@
         [self.navigationController pushViewController:localVC animated:NO];
     }
     
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        RSBottleViewController *bottleVC = [[RSBottleViewController alloc] initWithNibName:@"RSBottleViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:bottleVC animated:NO];
+    }
     
     self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

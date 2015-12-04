@@ -104,7 +104,7 @@
     if (indexPath.section == 0) {
         // 打开个人信息页面
         RSPrivateViewController *privateVC = [[RSPrivateViewController alloc] init];
-        [self.navigationController pushViewController:privateVC animated:NO];
+        [self.navigationController pushViewController:privateVC animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

@@ -8,6 +8,7 @@
 
 #import "RSScanViewController.h"
 #import "ZBarSDK.h"
+#import "RSScanResultViewController.h"
 
 #define SCREEN_WIDTH  [[UIScreen mainScreen] applicationFrame].size.width    //屏幕宽
 #define SCREEN_HEIGHT [[UIScreen mainScreen] applicationFrame].size.height   //屏幕高，去除状态栏
@@ -20,6 +21,8 @@ ZBarReaderViewDelegate>
 @property (nonatomic, strong) UIImageView * line;
 @property (nonatomic, assign) BOOL upOrDown;
 @property (nonatomic, assign) int num;
+
+@property (nonatomic, strong) UILabel *resultLabel;
 
 @end
 
@@ -54,7 +57,7 @@ ZBarReaderViewDelegate>
     view.backgroundColor = [UIColor clearColor];
     [_reader addSubview: view];
     
-    UIImageView * image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.view.frame.size.height - 64)];
+    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.view.frame.size.height - 64)];
     if(self.view.frame.size.height > 500)
     {
         image.image = [UIImage imageNamed:@"pick_bg"];
@@ -69,8 +72,10 @@ ZBarReaderViewDelegate>
     _line = [[UIImageView alloc] initWithFrame:CGRectMake(45, 60, 230, 2)];
     _line.image = [UIImage imageNamed:@"linetemp"];
     [image addSubview:_line];
+    
     //定时器，设定时间过1.5秒，
     _timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -112,10 +117,18 @@ ZBarReaderViewDelegate>
 }
 
 #pragma mark - ZBarReaderViewDelegate
-
+// 对扫到的数据进行处理
 - (void)readerView:(ZBarReaderView *)readerView didReadSymbols:(ZBarSymbolSet *)symbols fromImage:(UIImage *)image {
-#warning TODO 对扫到的数据进行处理。。。
+    self.hidesBottomBarWhenPushed = YES;
+    for (ZBarSymbol *symbol in symbols) {
+        NSLog(@"%@", symbol.data);
+        
+        RSScanResultViewController *resultVC = [[RSScanResultViewController alloc] initWithNibName:@"RSScanResultViewController" bundle:[NSBundle mainBundle]];
+        resultVC.openStr = symbol.data;
+        [self.navigationController pushViewController:resultVC animated:NO];
+    }
     
+    [self.reader stop];
 }
 
 
