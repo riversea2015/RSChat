@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+
+pod 'AFNetworking', '2.6.3'
+pod 'SDWebImage', '3.7.3'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'MJRefresh', '3.0.7'
+pod 'Mantle', '2.0.5'
+pod 'FMDB', '2.5'
+pod 'SSKeychain'
+pod 'UMengSocial', '~> 4.3'
