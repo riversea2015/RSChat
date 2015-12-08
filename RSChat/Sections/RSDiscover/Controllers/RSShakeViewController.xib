@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSShakeViewController">
             <connections>
+                <outlet property="resultLabel" destination="I6I-yi-kKL" id="X94-XC-zH1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,17 +16,53 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="建设中..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbC-aL-Wgi">
-                    <rect key="frame" x="135" y="93" width="49" height="319"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shake_Logo_Up" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-cp-CoF">
+                    <rect key="frame" x="85" y="200" width="150" height="83"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="RmI-24-pLd"/>
+                        <constraint firstAttribute="height" constant="83" id="tAY-LK-xCB"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shake_Logo_Down" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-eS-NS0">
+                    <rect key="frame" x="85" y="283" width="150" height="82"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="0Ma-3B-AIM"/>
+                        <constraint firstAttribute="height" constant="82" id="BHj-pU-nfL"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6I-yi-kKL">
+                    <rect key="frame" x="118" y="404" width="85" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShakeforsongBgshade" translatesAutoresizingMaskIntoConstraints="NO" id="nTd-kt-xvn">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="197" y="315"/>
+            <constraints>
+                <constraint firstItem="GQj-cp-CoF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="3qV-5D-evF"/>
+                <constraint firstAttribute="centerX" secondItem="cPw-eS-NS0" secondAttribute="centerX" id="4h2-Eh-hig"/>
+                <constraint firstItem="I6I-yi-kKL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="118" id="4zp-0G-wTo"/>
+                <constraint firstItem="nTd-kt-xvn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Uua-Rt-OHV"/>
+                <constraint firstItem="nTd-kt-xvn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aGz-P6-R8s"/>
+                <constraint firstItem="I6I-yi-kKL" firstAttribute="top" secondItem="cPw-eS-NS0" secondAttribute="bottom" constant="39" id="eEz-jY-poS"/>
+                <constraint firstAttribute="trailing" secondItem="I6I-yi-kKL" secondAttribute="trailing" constant="117" id="ics-Fy-2rU"/>
+                <constraint firstAttribute="bottom" secondItem="I6I-yi-kKL" secondAttribute="bottom" constant="143" id="nOX-ET-77a"/>
+                <constraint firstAttribute="centerX" secondItem="GQj-cp-CoF" secondAttribute="centerX" id="qo8-Ve-qmn"/>
+                <constraint firstAttribute="bottom" secondItem="nTd-kt-xvn" secondAttribute="bottom" id="r2B-Am-kYR"/>
+                <constraint firstItem="cPw-eS-NS0" firstAttribute="top" secondItem="GQj-cp-CoF" secondAttribute="bottom" id="vn3-R1-c9l"/>
+                <constraint firstAttribute="trailing" secondItem="nTd-kt-xvn" secondAttribute="trailing" id="wLR-fp-W9F"/>
+            </constraints>
+            <point key="canvasLocation" x="166" y="241"/>
         </view>
     </objects>
+    <resources>
+        <image name="Shake_Logo_Down" width="150" height="82"/>
+        <image name="Shake_Logo_Up" width="150" height="83"/>
+        <image name="ShakeforsongBgshade" width="320" height="416"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

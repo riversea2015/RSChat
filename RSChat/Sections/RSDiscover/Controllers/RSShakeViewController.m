@@ -9,29 +9,49 @@
 #import "RSShakeViewController.h"
 
 @interface RSShakeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
 @implementation RSShakeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.title = @"摇一摇";
-}
+#pragma mark - Life Cycle
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"摇一摇";
 }
-*/
+
+#pragma mark - 摇一摇
+
+/*开始摇一摇*/
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"motionBegan");
+    self.resultLabel.text = nil;
+
+}
+
+/*摇一摇结束(需要在这里处理摇晃动作结束后的代码)*/
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    //判断是否为 摇一摇事件
+    if (motion != UIEventSubtypeMotionShake) {
+        return;
+    }
+    NSLog(@"motionEnded");
+    self.resultLabel.text = @"摇一摇结束";
+}
+
+/*摇一摇取消(被中断，比如 突然来了电话)*/
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"motionCancel");
+}
 
 @end

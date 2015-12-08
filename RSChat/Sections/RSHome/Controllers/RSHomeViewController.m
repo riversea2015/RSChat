@@ -43,6 +43,9 @@
     [self.view addSubview:self.tableView];
     
     [self startSearch];
+    
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -76,7 +79,9 @@
     [self.searchVC.searchBar setBackgroundImage:[UIImage new]]; // 去除上下边界的黑线
     self.searchVC.searchBar.placeholder = @"搜索";
     self.searchVC.searchBar.tintColor = [UIColor greenColor]; // 文字颜色
-    self.searchVC.searchBar.barTintColor = [UIColor colorWithWhite:0.9 alpha:0.5]; // 背景色
+    
+    self.searchVC.searchBar.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
+//    self.searchVC.searchBar.barTintColor = [UIColor colorWithWhite:0.9 alpha:0.5];
     
     self.searchVC.searchResultsUpdater = self; // 设置 搜索控制器 的结果更新代理对象
     self.searchVC.searchBar.delegate = self;
@@ -136,24 +141,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@: section:%ld, row:%ld",self, indexPath.section, indexPath.row);
     
+    self.hidesBottomBarWhenPushed = YES;
+    
     if (indexPath.row == 0) {
         RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:newsVC animated:YES];
 
-    } else if (indexPath.row == 1 || indexPath.row == 2) {
-        NSLog(@"点击了Bugly或订阅号。。。");
     } else {
-        self.hidesBottomBarWhenPushed = YES;
         
         RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
         RSHomeModel *model = self.allDatas[indexPath.row];
         messageVC.homeModel = model;
-        
         [self.navigationController pushViewController:messageVC animated:YES];
-        
-        self.hidesBottomBarWhenPushed = NO;
     }
     
+    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO]; // 选中后，取消选中状态（取消了选中时的颜色）
 }
 
@@ -161,13 +163,33 @@
     return CGFLOAT_MIN;
 }
 
+// 设置分割线的长度
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsMake(0, 10, 0, 0)];
+    }
+    
+    // Prevent the cell from inheriting the Table View's margin settings
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+    
+    // Explictly set your cell's layout margins
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
 #pragma mark - setter getter
 
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.tableFooterView = [[UIView alloc] init];
     }
     return _tableView;
 }

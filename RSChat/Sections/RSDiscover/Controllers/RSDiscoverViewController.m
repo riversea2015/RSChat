@@ -15,6 +15,7 @@
 #import "RSShakeViewController.h"
 #import "RSLocalViewController.h"
 #import "RSBottleViewController.h"
+#import "RSFriendsViewController.h"
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -104,24 +105,29 @@
     NSLog(@"%@: section:%ld, row:%ld",self, indexPath.section, indexPath.row);
     self.hidesBottomBarWhenPushed = YES;
     
+    if (indexPath.section == 0) {
+        RSFriendsViewController *friendsVC = [[RSFriendsViewController alloc] init];
+        [self.navigationController pushViewController:friendsVC animated:YES];
+    }
+    
     if (indexPath.section == 1 && indexPath.row == 0) {
         RSScanViewController *scanVC = [[RSScanViewController alloc] init];
-        [self.navigationController pushViewController:scanVC animated:NO];
+        [self.navigationController pushViewController:scanVC animated:YES];
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
         RSShakeViewController *shakeVC = [[RSShakeViewController alloc] initWithNibName:@"RSShakeViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:shakeVC animated:NO];
+        [self.navigationController pushViewController:shakeVC animated:YES];
     }
     
     if (indexPath.section == 2 && indexPath.row == 0) {
         RSLocalViewController *localVC = [[RSLocalViewController alloc] initWithNibName:@"RSLocalViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:localVC animated:NO];
+        [self.navigationController pushViewController:localVC animated:YES];
     }
     
     if (indexPath.section == 2 && indexPath.row == 1) {
         RSBottleViewController *bottleVC = [[RSBottleViewController alloc] initWithNibName:@"RSBottleViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:bottleVC animated:NO];
+        [self.navigationController pushViewController:bottleVC animated:YES];
     }
     
     self.hidesBottomBarWhenPushed = NO;

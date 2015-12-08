@@ -20,6 +20,8 @@
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface RSNewsTableViewController () // <NSURLConnectionDataDelegate>
+
+#warning 这里决不能用copy，否则，后边addObject: 的时候会报错
 @property (nonatomic, strong) NSMutableArray *newsArr;
 
 @property (nonatomic, strong) NSURLConnection *connection;
@@ -28,8 +30,8 @@
 
 @property (nonatomic, assign) NSUInteger pagesize;
 @property (nonatomic, assign) NSUInteger p;
-@property (nonatomic, strong) NSString *docurl;
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, copy) NSString *docurl;
+@property (nonatomic, copy) NSString *type;
 @property (nonatomic, assign) NSInteger job;
 
 // NSString *const filterItemCityIDKey = @"filterItemCityIDKey"; 格式参考
@@ -47,7 +49,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setBasicData];
     
     self.newsArr = [[NSMutableArray alloc] init];
@@ -63,7 +64,6 @@
 
 // 跳出此界面时，撤销网络请求
 - (void)viewWillDisappear:(BOOL)animated {
-    // [self.connection cancel]; // 使用 NSUURLConnection
     [self.operation cancel];     // 使用 AFNetworking
 }
 
@@ -71,7 +71,7 @@
 
 - (void)setBasicData {
     self.title = @"腾讯新闻";
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
+    self.tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = item;
@@ -83,10 +83,10 @@
 - (void)startProgressAnimation {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading";
-    hud.labelColor = [UIColor greenColor];
+    hud.labelColor = [UIColor grayColor];
     hud.xOffset = 0;
     hud.yOffset = 20;
-    hud.color = [UIColor redColor];
+    hud.color = [UIColor greenColor];
 }
 
 #pragma mark - send request & parse data
@@ -100,22 +100,20 @@
     self.job = 9;
 }
 
+/**
+ * 发送网络请求：第二种方式 AFNetworking
+ */
 - (void)sendRequestGetJSON {
     
     NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%ld&p=%ld&docurl=%@&type=%@&job=%ld", self.pagesize, self.p, self.docurl, self.type, self.job];
     NSURL *url = [NSURL URLWithString:urlStr];
     self.request = [NSURLRequest requestWithURL:url];
-    /**
-     发送网络请求：第一种方式 NSURLConnection，用到了代理：NSURLConnectionDataDelegate
-     */
-    //    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
     
-    /**
-     发送网络请求：第二种方式 AFNetworking
-     */
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
     WEAKSELF
+    
     self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"AFN json:%@", responseObject);
         
@@ -124,13 +122,13 @@
     } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
         NSLog(@"AFN 返回失败：%@", error.userInfo);
     }];
-    
 }
 
 - (void)getResult:(NSDictionary *)jsonDic {
     NSArray *testArr = jsonDic[@"comments"][@"hottest"];
     for (NSDictionary *dic in testArr) {
         RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
+        NSLog(@"%@", newsModel.comment_contents);
         [self.newsArr addObject:newsModel];
     }
     
@@ -177,58 +175,6 @@
     [self.tableView reloadData];
     [self.tableView.footer endRefreshing];
 }
-
-#pragma mark - NSURLConnectionDataDelegate
-
-/**
- 发送网络请求：第一种方式用到的4个代理类方法
- */
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-//    NSLog(@"%s", __func__);
-//}
-//
-//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-//    NSLog(@"%s", __func__);
-//    
-//    if (data.length < 1) {
-//        NSLog(@"返回数据为空");
-//        return ;
-//    }
-//    
-//    NSError *error = nil;
-//    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-//    
-//    if (error) {
-//        NSLog(@"解析出错:%@", error.userInfo);
-//        return ;
-//    }
-//    
-//    NSLog(@"dic:%@", jsonDic);
-//
-//    NSArray *testArr = jsonDic[@"comments"][@"hottest"];
-//    for (NSDictionary *dic in testArr) {
-//        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
-//        [self.newsArr addObject:newsModel];
-//    }
-//    
-//    testArr = jsonDic[@"comments"][@"newest"];
-//    for (NSDictionary *dic in testArr) {
-//        RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
-//        
-//        [self.newsArr addObject:newsModel];
-//    }
-//}
-//
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-//    NSLog(@"%s", __func__);
-//    [self.tableView reloadData];
-//    [MBProgressHUD hideHUDForView:self.view animated:YES];
-//}
-//
-//- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-//    NSLog(@"%s", __func__);
-//    NSLog(@"请求失败：%@", error.userInfo);
-//}
 
 #pragma mark - private method
 

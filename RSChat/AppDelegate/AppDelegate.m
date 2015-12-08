@@ -12,6 +12,8 @@
 #import "RSDiscoverViewController.h"
 #import "RSMeViewController.h"
 
+#import "APService.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,17 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self setContentVC];
-// 1 远程推送
-// 1.1 注册通知
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] <= 8.0) {
-        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
-    } else {
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIRemoteNotificationTypeAlert |UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound categories:nil];
-        [application registerUserNotificationSettings:settings];
-        [application registerForRemoteNotifications];
-    }
+
+    [self registerJPushWithOptions:launchOptions];
     
-    // 测试:可以使 每次重新启动app（先从后台关掉），就让badgeNum减一
     NSInteger badgeNum = application.applicationIconBadgeNumber;
     badgeNum--;
     if (badgeNum > 0) {
@@ -42,21 +36,26 @@
     return YES;
 }
 
-// 1.2 获取到用户同意时，则接收从服务器端返回的 DeviceToken
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    NSLog(@"deviceToken:%@",deviceToken);
-}
-// 1.3 点击通知后的动作
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    NSLog(@"userInfo:%@",userInfo);
-    
-    NSInteger badgeNum = application.applicationIconBadgeNumber;
-    badgeNum--;
-    if (badgeNum > 0) {
-        [application setApplicationIconBadgeNumber:0];
-        [application setApplicationIconBadgeNumber:badgeNum];
+/**
+ * 配置JPush
+ */
+- (void)registerJPushWithOptions:(NSDictionary *)launchOptions {
+    // 设置JPush
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                       UIUserNotificationTypeSound |
+                                                       UIUserNotificationTypeAlert)
+                                           categories:nil];
+    } else {
+        //categories 必须为nil
+        [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                       UIRemoteNotificationTypeSound |
+                                                       UIRemoteNotificationTypeAlert)
+                                           categories:nil];
     }
+    
+    [APService setupWithOption:launchOptions];
 }
 
 - (void)setContentVC {
@@ -81,7 +80,6 @@
     UINavigationController *meNavi = [[UINavigationController alloc] initWithRootViewController:meController];
     
     UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:[UIImage imageNamed:@"tabbar_mainframe"] tag:0];
-
     // 选中时为图片本身颜色 : UIImageRenderingModeAlwaysOriginal
     homeItem.selectedImage = [[UIImage imageNamed:@"tabbar_mainframeHL"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
@@ -154,6 +152,32 @@
 //        }
 //        return NO;
     
+}
+
+#pragma mark - 以下为JPush必须
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [APService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Required
+    [APService handleRemoteNotification:userInfo];
+    
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // IOS 7 Support Required
+    [APService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+    NSInteger badgeNum = application.applicationIconBadgeNumber;
+    badgeNum--;
+    if (badgeNum > 0) {
+        [application setApplicationIconBadgeNumber:0];
+        [application setApplicationIconBadgeNumber:badgeNum];
+    }
 }
 
 @end

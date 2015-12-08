@@ -109,7 +109,7 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
+        _tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.dataSource = self;
         _tableView.delegate = self;

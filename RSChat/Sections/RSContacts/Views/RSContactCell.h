@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *contactNameLabel;
 
 + (NSString *)cellID;
++ (CGFloat)cellHeight;
+
 - (void)setCellWithModel:(RSContactsModel *)model;
 
 @end

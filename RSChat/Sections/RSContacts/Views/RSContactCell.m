@@ -24,6 +24,10 @@
     return NSStringFromClass([RSContactCell class]);
 }
 
++ (CGFloat)cellHeight {
+    return 55;
+}
+
 - (void)setCellWithModel:(RSContactsModel *)model {
     self.contactImageView.image = [UIImage imageNamed:model.contactImageName];
     self.contactNameLabel.text = model.contactName;

@@ -35,14 +35,14 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add_cube"] style:UIBarButtonItemStyleDone target:self action:@selector(popUp)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
-#warning TODO 添加搜索框，正在进行。。。
-//    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 0)];
-//    searchBar.translucent = YES;
-//    searchBar.barStyle = UIBarStyleBlackTranslucent;
-//    searchBar.showsCancelButton = YES;
-//    [searchBar sizeToFit];
-//    [self.tableView setTableHeaderView:searchBar];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor lightGrayColor];
+    label.text = @"9位联系人";
 
+    self.tableView.tableFooterView = label;
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -138,12 +138,25 @@
 
 #pragma mark - indexList
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    if (section == 0) {
+//        return nil;
+//    }
+//    NSLog(@"%@", self.indexArr);
+//    return [self.indexArr objectAtIndex:section - 1];
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return nil;
     }
-    NSLog(@"%@", self.indexArr);
-    return [self.indexArr objectAtIndex:section - 1];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 22)];
+    label.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+    label.text = [NSString stringWithFormat:@"  %@", [self.indexArr objectAtIndex:section - 1]];
+    label.textColor = [UIColor lightGrayColor];
+    
+    return label;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
@@ -154,11 +167,15 @@
     if (section == 0) {
         return CGFLOAT_MIN;
     }
-    return 30;
+    return 22;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [RSContactCell cellHeight];
 }
 
 #pragma mark - setter & getter
@@ -166,11 +183,14 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        
+        _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc] init];
         
-        _tableView.sectionIndexColor = [UIColor greenColor]; // 设置右侧索引列的文字颜色
+        // 索引列文字、背景颜色
+        _tableView.sectionIndexColor = [UIColor greenColor];
+        _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
         
         [_tableView registerNib:[UINib nibWithNibName:[RSContactCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSContactCell cellID]];
     }

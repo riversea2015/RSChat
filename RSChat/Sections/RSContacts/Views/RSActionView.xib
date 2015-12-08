@@ -50,7 +50,7 @@
         </view>
     </objects>
     <resources>
-        <image name="common_gray_btn" width="30" height="29"/>
+        <image name="common_gray_btn" width="30" height="30"/>
         <image name="common_green_btn" width="30" height="30"/>
     </resources>
 </document>
