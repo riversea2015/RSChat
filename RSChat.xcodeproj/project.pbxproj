@@ -22,9 +22,9 @@
 		7230312C1C1335A2005D9117 /* RSFriendsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7230312B1C1335A2005D9117 /* RSFriendsHeaderView.xib */; };
 		7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */; };
 		726E36AB1C147608003BE8FF /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 726E36AA1C147608003BE8FF /* libPushSDK-1.8.8.a */; };
-		726E36BF1C1478E1003BE8FF /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 726E36BE1C1478E1003BE8FF /* PushConfig.plist */; };
 		726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E37D91C16E94A003BE8FF /* RSFriendsModel.m */; };
 		726E37DC1C170224003BE8FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 726E37DB1C170224003BE8FF /* Podfile */; };
+		726E37DE1C171552003BE8FF /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 726E37DD1C171552003BE8FF /* PushConfig.plist */; };
 		727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DAD1BF211B600CE8AA6 /* RSMeHeaderCell.m */; };
 		727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DAE1BF211B600CE8AA6 /* RSMeHeaderCell.xib */; };
 		727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DB21BF211CF00CE8AA6 /* RSMeOtherCell.m */; };
@@ -138,10 +138,10 @@
 		7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeSearchResultController.m; sourceTree = "<group>"; };
 		726E36A91C147608003BE8FF /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		726E36AA1C147608003BE8FF /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
-		726E36BE1C1478E1003BE8FF /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		726E37D81C16E94A003BE8FF /* RSFriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsModel.h; sourceTree = "<group>"; };
 		726E37D91C16E94A003BE8FF /* RSFriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsModel.m; sourceTree = "<group>"; };
 		726E37DB1C170224003BE8FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		726E37DD1C171552003BE8FF /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		727C1DAC1BF211B600CE8AA6 /* RSMeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeHeaderCell.h; sourceTree = "<group>"; };
 		727C1DAD1BF211B600CE8AA6 /* RSMeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeHeaderCell.m; sourceTree = "<group>"; };
 		727C1DAE1BF211B600CE8AA6 /* RSMeHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMeHeaderCell.xib; sourceTree = "<group>"; };
@@ -226,7 +226,6 @@
 		729139A21BF1D44B00CEFD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729139A31BF1D44B00CEFD64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		729139AE1BF1D44B00CEFD64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		729139B11BF1D44C00CEFD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		729139B71BF1D44C00CEFD64 /* RSChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		729139BC1BF1D44C00CEFD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		729139BD1BF1D44C00CEFD64 /* RSChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSChatTests.m; sourceTree = "<group>"; };
@@ -335,6 +334,7 @@
 			children = (
 				726E36A91C147608003BE8FF /* APService.h */,
 				726E36AA1C147608003BE8FF /* libPushSDK-1.8.8.a */,
+				726E37DD1C171552003BE8FF /* PushConfig.plist */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -448,9 +448,7 @@
 				729066A31C0322C600B64EA8 /* Utilities */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				729139AE1BF1D44B00CEFD64 /* Images.xcassets */,
-				729139B01BF1D44C00CEFD64 /* LaunchScreen.xib */,
 				729139A11BF1D44B00CEFD64 /* Supporting Files */,
-				726E36BE1C1478E1003BE8FF /* PushConfig.plist */,
 			);
 			path = RSChat;
 			sourceTree = "<group>";
@@ -873,9 +871,9 @@
 				726E37DC1C170224003BE8FF /* Podfile in Resources */,
 				72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */,
 				727C1DC21BF2558300CE8AA6 /* RSDiscoverImages.xcassets in Resources */,
+				726E37DE1C171552003BE8FF /* PushConfig.plist in Resources */,
 				7288A5541C108BD6009936A7 /* RSPrivateTableViewCell.xib in Resources */,
 				728ED8D91C0B0E2800DE8639 /* zbar-samples.png in Resources */,
-				726E36BF1C1478E1003BE8FF /* PushConfig.plist in Resources */,
 				72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */,
 				728ED8D71C0B0E2800DE8639 /* zbar-help.html in Resources */,
 				723031271C13226E005D9117 /* RSFriendsACell.xib in Resources */,
@@ -1012,17 +1010,6 @@
 			targetProxy = 729139B81BF1D44C00CEFD64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		729139B01BF1D44C00CEFD64 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				729139B11BF1D44C00CEFD64 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		729139BF1BF1D44C00CEFD64 /* Debug */ = {
