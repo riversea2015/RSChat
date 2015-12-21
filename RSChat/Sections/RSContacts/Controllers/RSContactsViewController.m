@@ -9,7 +9,13 @@
 #import "RSContactsViewController.h"
 #import "RSContactsModel.h"
 #import "RSContactCell.h"
+
 #import "RSDetailTableViewController.h"
+#import "RSNewFriendViewController.h"
+#import "RSNewFriendCell.h"
+#import "RSGroupChatViewController.h"
+#import "RSLabelViewController.h"
+#import "RSOfficialAccountViewController.h"
 
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -44,6 +50,27 @@
     self.tableView.tableFooterView = label;
     
     [self.view addSubview:self.tableView];
+    
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+#pragma mark - 导航栏背景渐变
+/**
+ * 当手势向下滑动时，delta的值从1开始逐渐减小，甚至可能小于0，MAX()和MIN()，是为了保证只取0~1之间的值，小于0的都按0算。
+ */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    CGFloat offset = self.tableView.contentOffset.y;
+    CGFloat delta = offset / 64.f + 1.f;
+    delta = MAX(0, delta);
+    self.navigationController.navigationBar.alpha = MIN(1, delta);
+//    NSLog(@"屏幕发生滚动：%f", self.tableView.contentOffset.y);
 }
 
 #pragma mark - private method
@@ -112,15 +139,35 @@
     self.hidesBottomBarWhenPushed = YES;
     
     if (indexPath.section == 0) {
-        NSLog(@"点击了新的朋友、群聊、标签、公众号");
+        if (indexPath.row == 0) {
+            RSNewFriendViewController *newVC = [[RSNewFriendViewController alloc] init];            
+            [self.navigationController pushViewController:newVC animated:YES];
+        }
+        
+        if (indexPath.row == 1) {
+            RSGroupChatViewController *groupVC = [[RSGroupChatViewController alloc] init];
+            [self.navigationController pushViewController:groupVC animated:YES];
+        }
+        
+        if (indexPath.row == 2) {
+            RSLabelViewController *labelVC = [[RSLabelViewController alloc] init];
+            [self.navigationController pushViewController:labelVC animated:YES];
+        }
+        
+        if (indexPath.row == 3) {
+            RSOfficialAccountViewController *officialVC = [[RSOfficialAccountViewController alloc] init];
+            [self.navigationController pushViewController:officialVC animated:YES];
+        }
+        
+        self.hidesBottomBarWhenPushed = NO;
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
         return;
     }
     
     RSContactsModel *model = [[RSContactsModel alloc] init];
-    if (indexPath.section == 0) {
-        model = self.allDatas[indexPath.row];
-    }
+//    if (indexPath.section == 0) {
+//        model = self.allDatas[indexPath.row];
+//    }
     if (indexPath.section <= 7 && indexPath.section > 0) {
         model = self.allDatas[3 + indexPath.section + indexPath.row];
     }
@@ -137,14 +184,6 @@
 }
 
 #pragma mark - indexList
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-//    if (section == 0) {
-//        return nil;
-//    }
-//    NSLog(@"%@", self.indexArr);
-//    return [self.indexArr objectAtIndex:section - 1];
-//}
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
@@ -182,7 +221,8 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;

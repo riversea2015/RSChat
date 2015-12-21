@@ -23,6 +23,7 @@
 
 + (NSString *)cellID;
 + (CGFloat)rowHeight;
++ (void)registToTableView:(UITableView *)tableView;
 
 - (void)setCellWithModel:(RSHomeModel *)model;
 

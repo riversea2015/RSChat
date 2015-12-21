@@ -13,6 +13,8 @@
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
 
+#import "RSPopView.h"
+
 // 测试运行时使用
 #import "UIViewController+RSExts.h"
 
@@ -23,11 +25,13 @@
 @property (nonatomic, strong) UISearchController *searchVC;
 @property (nonatomic, strong) RSHomeSearchResultController *resultTVC;
 
+@property (nonatomic, strong) RSPopView *popView;
+
 @end
 
 @implementation RSHomeViewController
 
-#pragma mark - lifeCycle
+#pragma mark - LifeCycle
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,20 +43,28 @@
     
     [self setBisicInfo];
     
-    [self.tableView registerNib:[UINib nibWithNibName:[RSHomeCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSHomeCell cellID]];
+    [RSHomeCell registToTableView:self.tableView];
+    
     [self.view addSubview:self.tableView];
     
     [self startSearch];
-    
-//    self.edgesForExtendedLayout = UIRectEdgeNone;
-
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self.searchVC.searchBar resignFirstResponder];
 }
 
-#pragma mark - private method
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.popView.flag == 1) {
+        self.popView.flag = 0;
+        [self.popView removeFromSuperview];
+    }
+    // ...
+}
+
+#pragma mark - 
+
+#pragma mark - Private Method
 
 - (void)setBisicInfo {
     self.navigationItem.title = [NSString stringWithFormat:@"微信(%d)",3];
@@ -60,13 +72,18 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-
 - (void)popUp {
-    NSLog(@"下拉列表...");
-#warning TODO 实现 navigationBar 下拉列表功能
+    if (self.popView.flag == 1) {
+        self.popView.flag = 0;
+        [self.popView removeFromSuperview];
+        return;
+    }
+    
+    self.popView.flag = 1;
+    [self.view addSubview:self.popView];
 }
 
-#pragma mark - search method
+#pragma mark - Search method & UISearchResultsUpdating
 
 - (void)startSearch {
 
@@ -81,8 +98,7 @@
     self.searchVC.searchBar.tintColor = [UIColor greenColor]; // 文字颜色
     
     self.searchVC.searchBar.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
-//    self.searchVC.searchBar.barTintColor = [UIColor colorWithWhite:0.9 alpha:0.5];
-    
+
     self.searchVC.searchResultsUpdater = self; // 设置 搜索控制器 的结果更新代理对象
     self.searchVC.searchBar.delegate = self;
     
@@ -91,8 +107,6 @@
     // 开启 在当前控制器中，允许切换另一个视图做呈现
     self.definesPresentationContext = YES;
 }
-
-#pragma mark - UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSString *searchText = searchController.searchBar.text;
@@ -107,6 +121,7 @@
     
     self.resultTVC.resultArray = searchResultArray;
     [self.resultTVC.tableView reloadData];
+    
 }
 
 #pragma mark - UISearchBarDelegate
@@ -119,7 +134,7 @@
     NSLog(@"方法调用 %s ", __func__);
 }
 
-#pragma mark - tableView dataSource delegate
+#pragma mark - tableView DataSource & Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.allDatas.count;
@@ -156,7 +171,7 @@
     }
     
     self.hidesBottomBarWhenPushed = NO;
-    [tableView deselectRowAtIndexPath:indexPath animated:NO]; // 选中后，取消选中状态（取消了选中时的颜色）
+    [tableView deselectRowAtIndexPath:indexPath animated:NO]; // 取消选中状态
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -199,6 +214,15 @@
         _allDatas = [[RSHomeModel demoData] mutableCopy];
     }
     return _allDatas;
+}
+
+- (RSPopView *)popView {
+    if (!_popView) {
+        _popView = [[[NSBundle mainBundle] loadNibNamed:@"RSPopView" owner:self options:nil] lastObject];
+        _popView.frame = [UIScreen mainScreen].bounds;
+        _popView.flag = 0;
+    }
+    return _popView;
 }
 
 @end

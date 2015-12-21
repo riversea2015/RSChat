@@ -7,11 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RSHomeViewController.h"
-#import "RSContactsViewController.h"
-#import "RSDiscoverViewController.h"
-#import "RSMeViewController.h"
-
+#import "RSMainTabBarController.h"
 #import "APService.h"
 
 @interface AppDelegate ()
@@ -19,6 +15,8 @@
 @end
 
 @implementation AppDelegate
+
+#pragma mark - LifeCycle >> 1
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -36,9 +34,22 @@
     return YES;
 }
 
-/**
- * 配置JPush
- */
+#pragma mark - Private Method
+
+- (void)setContentVC {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
+    
+#warning TODO 增加首次打开软件时的登陆/注册页面。。。
+    
+    self.window.rootViewController = mainTabBarController;
+    [self.window makeKeyAndVisible];
+}
+
+#pragma mark - 配置 JPush
+
 - (void)registerJPushWithOptions:(NSDictionary *)launchOptions {
     // 设置JPush
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
@@ -58,58 +69,30 @@
     [APService setupWithOption:launchOptions];
 }
 
-- (void)setContentVC {
-    // 设置导航栏文字、左右按钮颜色
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
-    // 设置 tabbarItem 的颜色
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:0x09/255.0 green:0xbb/255.0 blue:0x07/255.0 alpha:1.0]} forState:UIControlStateSelected];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    RSHomeViewController *homeController = [[RSHomeViewController alloc] init];
-    RSContactsViewController *contactsController = [[RSContactsViewController alloc] init];
-    RSDiscoverViewController *discoverController = [[RSDiscoverViewController alloc] init];
-    RSMeViewController *meController = [[RSMeViewController alloc] init];
-    
-    UINavigationController *homeNavi = [[UINavigationController alloc] initWithRootViewController:homeController];
-    UINavigationController *contactsNavi = [[UINavigationController alloc] initWithRootViewController:contactsController];
-    UINavigationController *discoverNavi = [[UINavigationController alloc] initWithRootViewController:discoverController];
-    UINavigationController *meNavi = [[UINavigationController alloc] initWithRootViewController:meController];
-    
-    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:[UIImage imageNamed:@"tabbar_mainframe"] tag:0];
-    // 选中时为图片本身颜色 : UIImageRenderingModeAlwaysOriginal
-    homeItem.selectedImage = [[UIImage imageNamed:@"tabbar_mainframeHL"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    UITabBarItem *contactsItem = [[UITabBarItem alloc] initWithTitle:@"通讯录" image:[UIImage imageNamed:@"tabbar_contacts"] tag:1];
-    contactsItem.selectedImage = [[UIImage imageNamed:@"tabbar_contactsHL"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    UITabBarItem *discoverItem = [[UITabBarItem alloc] initWithTitle:@"发现" image:[UIImage imageNamed:@"tabbar_discover"] tag:2];
-    discoverItem.selectedImage = [[UIImage imageNamed:@"tabbar_discoverHL"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    UITabBarItem *meItem = [[UITabBarItem alloc] initWithTitle:@"我" image:[UIImage imageNamed:@"tabbar_me"] tag:3];
-    meItem.selectedImage = [[UIImage imageNamed:@"tabbar_meHL"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    homeNavi.tabBarItem = homeItem;
-    contactsNavi.tabBarItem = contactsItem;
-    discoverNavi.tabBarItem = discoverItem;
-    meNavi.tabBarItem = meItem;
-
-    UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    [tabbarController setViewControllers:@[homeNavi, contactsNavi, discoverNavi, meNavi]];
-    
-    [tabbarController setSelectedIndex:0];
-    
-    NSInteger badgeNum0 = 32;
-    UITabBarItem * item=[tabbarController.tabBar.items objectAtIndex:0];
-    item.badgeValue=[NSString stringWithFormat:@"%ld",badgeNum0];
-    
-    self.window.rootViewController = tabbarController;
-    
-    [self.window makeKeyAndVisible];
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [APService registerDeviceToken:deviceToken];
+    NSLog(@"deviceToken:%@", deviceToken);
 }
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Required
+    [APService handleRemoteNotification:userInfo];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // IOS 7 Support Required
+    [APService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+    NSInteger badgeNum = application.applicationIconBadgeNumber;
+    badgeNum--;
+    if (badgeNum > 0) {
+        [application setApplicationIconBadgeNumber:0];
+        [application setApplicationIconBadgeNumber:badgeNum];
+    }
+}
+
+#pragma mark - LifeCycle >> 2
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -133,7 +116,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark - 验证URL Scheme的方法
+#pragma mark - URL Scheme
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     // 1.所有知道我URL Scheme的应用都可以访问我的这个应用
@@ -152,32 +135,6 @@
 //        }
 //        return NO;
     
-}
-
-#pragma mark - 以下为JPush必须
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [APService registerDeviceToken:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    // Required
-    [APService handleRemoteNotification:userInfo];
-    
-    
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    // IOS 7 Support Required
-    [APService handleRemoteNotification:userInfo];
-    completionHandler(UIBackgroundFetchResultNewData);
-    
-    NSInteger badgeNum = application.applicationIconBadgeNumber;
-    badgeNum--;
-    if (badgeNum > 0) {
-        [application setApplicationIconBadgeNumber:0];
-        [application setApplicationIconBadgeNumber:badgeNum];
-    }
 }
 
 @end

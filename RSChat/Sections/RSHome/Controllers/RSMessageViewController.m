@@ -47,14 +47,6 @@
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:[RSMessageCell cellID]];
     if (self.navigationController && self.navigationController.viewControllers.count == 1) {
         UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
-        
-        // 自定义item，但是位置偏右
-//        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 44)];
-//        [button setImage:[UIImage imageNamed:@"barbuttonicon_back"] forState:UIControlStateNormal];
-//        [button setTitle:@"Back" forState:UIControlStateNormal];
-//        [button addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
-//        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-      
         self.navigationItem.leftBarButtonItem = leftItem; // leftItem;
     }
     

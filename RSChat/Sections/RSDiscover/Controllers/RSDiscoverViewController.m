@@ -16,6 +16,7 @@
 #import "RSLocalViewController.h"
 #import "RSBottleViewController.h"
 #import "RSFriendsViewController.h"
+#import "RSBuyViewController.h"
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -40,6 +41,14 @@
     [self.tableView registerNib:[UINib nibWithNibName:[RSDiscoverCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDiscoverCell cellID]];
     
     [contentView addSubview:self.tableView];
+    
+    // 确保View（此处是tableView）不会延伸至导航栏和tabBar的区域之内
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
 }
 
 #pragma mark - tableView dataSource delegate
@@ -128,6 +137,11 @@
     if (indexPath.section == 2 && indexPath.row == 1) {
         RSBottleViewController *bottleVC = [[RSBottleViewController alloc] initWithNibName:@"RSBottleViewController" bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:bottleVC animated:YES];
+    }
+    
+    if (indexPath.section == 3 && indexPath.row == 0) {
+        RSBuyViewController *buyVC = [[RSBuyViewController alloc] init];//WithNibName:@"RSBuyViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:buyVC animated:YES];
     }
     
     self.hidesBottomBarWhenPushed = NO;

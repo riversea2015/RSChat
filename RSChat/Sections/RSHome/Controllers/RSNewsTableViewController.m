@@ -111,7 +111,7 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     WEAKSELF
     
     self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -135,7 +135,6 @@
     testArr = jsonDic[@"comments"][@"newest"];
     for (NSDictionary *dic in testArr) {
         RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
-        
         [self.newsArr addObject:newsModel];
     }
     
@@ -147,7 +146,7 @@
 
 - (void)headerRefresh {
     __weak __typeof(self) weakSelf = self;
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadNewData];
     }];
 }
@@ -158,13 +157,13 @@
     [self sendRequestGetJSON];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
-        [self.tableView.header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     });
 }
 
 - (void)footerRefresh {
     __weak __typeof(self) weakSelf = self;
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [weakSelf loadMoreData];
     }];
 }
@@ -173,7 +172,7 @@
     self.p++;
     [self sendRequestGetJSON];
     [self.tableView reloadData];
-    [self.tableView.footer endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 #pragma mark - private method

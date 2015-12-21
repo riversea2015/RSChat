@@ -11,22 +11,16 @@
 
 @implementation RSHomeCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 + (NSString *)cellID {
     return NSStringFromClass([self class]);
 }
 
 + (CGFloat)rowHeight {
     return 65;
+}
+
++ (void)registToTableView:(UITableView *)tableView {
+    [tableView registerNib:[UINib nibWithNibName:[RSHomeCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSHomeCell cellID]];
 }
 
 - (void)setCellWithModel:(RSHomeModel *)model {
