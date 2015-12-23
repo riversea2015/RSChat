@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		23BAECD075209844428E52B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB51142B6FE086787A245 /* libPods.a */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
-		720CE8C01C07763B00913C5A /* tabBarImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* tabBarImages.xcassets */; };
+		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
 		720CE92D1C080CC200913C5A /* RSActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CE92C1C080CC200913C5A /* RSActionView.m */; };
 		720CE92F1C080CEC00913C5A /* RSActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720CE92E1C080CEC00913C5A /* RSActionView.xib */; };
 		72172F1C1BFE0FB700D6D2FD /* RSHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72172F1B1BFE0FB700D6D2FD /* RSHomeModel.m */; };
@@ -26,6 +26,9 @@
 		726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726A95281C21DF910065EA8D /* RSBuyViewController.m */; };
 		726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E37D91C16E94A003BE8FF /* RSFriendsModel.m */; };
 		726E37DC1C170224003BE8FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 726E37DB1C170224003BE8FF /* Podfile */; };
+		7271F9BE1C29282D00FD720B /* RSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */; };
+		7271F9C31C2928B400FD720B /* RSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271F9C11C2928B400FD720B /* RSLoginViewController.m */; };
+		7271F9C41C2928B400FD720B /* RSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7271F9C21C2928B400FD720B /* RSLoginViewController.xib */; };
 		727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DAD1BF211B600CE8AA6 /* RSMeHeaderCell.m */; };
 		727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DAE1BF211B600CE8AA6 /* RSMeHeaderCell.xib */; };
 		727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DB21BF211CF00CE8AA6 /* RSMeOtherCell.m */; };
@@ -40,7 +43,6 @@
 		727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */; };
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
-		727DD5501C25D968005650A5 /* RSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727DD54F1C25D968005650A5 /* RSMainTabBarController.m */; };
 		7288A54F1C10879D009936A7 /* RSPrivateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7288A54E1C10879D009936A7 /* RSPrivateViewController.m */; };
 		7288A5531C108BD6009936A7 /* RSPrivateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7288A5511C108BD6009936A7 /* RSPrivateTableViewCell.m */; };
 		7288A5541C108BD6009936A7 /* RSPrivateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7288A5521C108BD6009936A7 /* RSPrivateTableViewCell.xib */; };
@@ -78,6 +80,12 @@
 		729139E71BF1D58E00CEFD64 /* RSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */; };
 		729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139E11BF1D58E00CEFD64 /* RSMeViewController.m */; };
 		729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729139EB1BF1EC8B00CEFD64 /* Memo.txt */; };
+		729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */; };
+		729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */; };
+		729D5FFC1C296154000F8C69 /* RSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FFA1C296154000F8C69 /* RSSignUpViewController.m */; };
+		729D5FFD1C296154000F8C69 /* RSSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D5FFB1C296154000F8C69 /* RSSignUpViewController.xib */; };
+		729D60011C29B587000F8C69 /* RSConformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FFF1C29B587000F8C69 /* RSConformViewController.m */; };
+		729D60021C29B587000F8C69 /* RSConformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D60001C29B587000F8C69 /* RSConformViewController.xib */; };
 		72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */; };
 		72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */; };
 		72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */; };
@@ -96,6 +104,12 @@
 		72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */; };
 		72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */; };
 		72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */; };
+		72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */; };
+		72BDB3781C2A3584002AE29F /* RSOtherLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */; };
+		72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */; };
+		72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */; };
+		72BDB3811C2A592E002AE29F /* RSRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB37F1C2A592E002AE29F /* RSRuleViewController.m */; };
+		72BDB3821C2A592E002AE29F /* RSRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB3801C2A592E002AE29F /* RSRuleViewController.xib */; };
 		72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC321C11489900C817D2 /* RSAnnotation.m */; };
 		72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC351C115B6200C817D2 /* RSBottleViewController.m */; };
 		72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */; };
@@ -141,7 +155,7 @@
 		6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
-		720CE8BF1C07763B00913C5A /* tabBarImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = tabBarImages.xcassets; sourceTree = "<group>"; };
+		720CE8BF1C07763B00913C5A /* PublicImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PublicImages.xcassets; sourceTree = "<group>"; };
 		720CE92B1C080CC200913C5A /* RSActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSActionView.h; sourceTree = "<group>"; };
 		720CE92C1C080CC200913C5A /* RSActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSActionView.m; sourceTree = "<group>"; };
 		720CE92E1C080CEC00913C5A /* RSActionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSActionView.xib; sourceTree = "<group>"; };
@@ -168,6 +182,11 @@
 		726E37D81C16E94A003BE8FF /* RSFriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsModel.h; sourceTree = "<group>"; };
 		726E37D91C16E94A003BE8FF /* RSFriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsModel.m; sourceTree = "<group>"; };
 		726E37DB1C170224003BE8FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMainTabBarController.h; sourceTree = "<group>"; };
+		7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMainTabBarController.m; sourceTree = "<group>"; };
+		7271F9C01C2928B400FD720B /* RSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginViewController.h; sourceTree = "<group>"; };
+		7271F9C11C2928B400FD720B /* RSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLoginViewController.m; sourceTree = "<group>"; };
+		7271F9C21C2928B400FD720B /* RSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLoginViewController.xib; sourceTree = "<group>"; };
 		727C1DAC1BF211B600CE8AA6 /* RSMeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeHeaderCell.h; sourceTree = "<group>"; };
 		727C1DAD1BF211B600CE8AA6 /* RSMeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeHeaderCell.m; sourceTree = "<group>"; };
 		727C1DAE1BF211B600CE8AA6 /* RSMeHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMeHeaderCell.xib; sourceTree = "<group>"; };
@@ -188,8 +207,6 @@
 		727C1DCF1BF26B7600CE8AA6 /* RSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeCell.h; sourceTree = "<group>"; };
 		727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeCell.m; sourceTree = "<group>"; };
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
-		727DD54E1C25D968005650A5 /* RSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMainTabBarController.h; sourceTree = "<group>"; };
-		727DD54F1C25D968005650A5 /* RSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMainTabBarController.m; sourceTree = "<group>"; };
 		7288A54D1C10879D009936A7 /* RSPrivateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSPrivateViewController.h; sourceTree = "<group>"; };
 		7288A54E1C10879D009936A7 /* RSPrivateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSPrivateViewController.m; sourceTree = "<group>"; };
 		7288A5501C108BD6009936A7 /* RSPrivateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSPrivateTableViewCell.h; sourceTree = "<group>"; };
@@ -268,6 +285,15 @@
 		729139E01BF1D58E00CEFD64 /* RSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeViewController.h; sourceTree = "<group>"; };
 		729139E11BF1D58E00CEFD64 /* RSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeViewController.m; sourceTree = "<group>"; };
 		729139EB1BF1EC8B00CEFD64 /* Memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Memo.txt; sourceTree = "<group>"; };
+		729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWelcomeViewController.h; sourceTree = "<group>"; };
+		729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWelcomeViewController.m; sourceTree = "<group>"; };
+		729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSWelcomeViewController.xib; sourceTree = "<group>"; };
+		729D5FF91C296154000F8C69 /* RSSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSignUpViewController.h; sourceTree = "<group>"; };
+		729D5FFA1C296154000F8C69 /* RSSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSignUpViewController.m; sourceTree = "<group>"; };
+		729D5FFB1C296154000F8C69 /* RSSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSignUpViewController.xib; sourceTree = "<group>"; };
+		729D5FFE1C29B587000F8C69 /* RSConformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSConformViewController.h; sourceTree = "<group>"; };
+		729D5FFF1C29B587000F8C69 /* RSConformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSConformViewController.m; sourceTree = "<group>"; };
+		729D60001C29B587000F8C69 /* RSConformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSConformViewController.xib; sourceTree = "<group>"; };
 		72A334EA1C069B1D00112FC0 /* RSNewsDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsDateView.h; sourceTree = "<group>"; };
 		72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsDateView.m; sourceTree = "<group>"; };
 		72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsDateView.xib; sourceTree = "<group>"; };
@@ -296,6 +322,15 @@
 		72AE23861C0B1C1C009CB1AF /* RSLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLocalViewController.h; sourceTree = "<group>"; };
 		72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLocalViewController.m; sourceTree = "<group>"; };
 		72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLocalViewController.xib; sourceTree = "<group>"; };
+		72BDB3741C2A3584002AE29F /* RSOtherLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOtherLoginViewController.h; sourceTree = "<group>"; };
+		72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOtherLoginViewController.m; sourceTree = "<group>"; };
+		72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSOtherLoginViewController.xib; sourceTree = "<group>"; };
+		72BDB3791C2A52CA002AE29F /* RSQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSQuestionViewController.h; sourceTree = "<group>"; };
+		72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSQuestionViewController.m; sourceTree = "<group>"; };
+		72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSQuestionViewController.xib; sourceTree = "<group>"; };
+		72BDB37E1C2A592E002AE29F /* RSRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSRuleViewController.h; sourceTree = "<group>"; };
+		72BDB37F1C2A592E002AE29F /* RSRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSRuleViewController.m; sourceTree = "<group>"; };
+		72BDB3801C2A592E002AE29F /* RSRuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSRuleViewController.xib; sourceTree = "<group>"; };
 		72C0AC311C11489900C817D2 /* RSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAnnotation.h; sourceTree = "<group>"; };
 		72C0AC321C11489900C817D2 /* RSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAnnotation.m; sourceTree = "<group>"; };
 		72C0AC341C115B6200C817D2 /* RSBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBottleViewController.h; sourceTree = "<group>"; };
@@ -407,13 +442,41 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		727DD54D1C25D933005650A5 /* MainController */ = {
+		7271F9BB1C29282D00FD720B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				727DD54E1C25D968005650A5 /* RSMainTabBarController.h */,
-				727DD54F1C25D968005650A5 /* RSMainTabBarController.m */,
+				7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */,
+				7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */,
 			);
-			path = MainController;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7271F9BF1C29286C00FD720B /* RSLogIn */ = {
+			isa = PBXGroup;
+			children = (
+				729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */,
+				729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */,
+				729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */,
+				7271F9C01C2928B400FD720B /* RSLoginViewController.h */,
+				7271F9C11C2928B400FD720B /* RSLoginViewController.m */,
+				7271F9C21C2928B400FD720B /* RSLoginViewController.xib */,
+				729D5FF91C296154000F8C69 /* RSSignUpViewController.h */,
+				729D5FFA1C296154000F8C69 /* RSSignUpViewController.m */,
+				729D5FFB1C296154000F8C69 /* RSSignUpViewController.xib */,
+				729D5FFE1C29B587000F8C69 /* RSConformViewController.h */,
+				729D5FFF1C29B587000F8C69 /* RSConformViewController.m */,
+				729D60001C29B587000F8C69 /* RSConformViewController.xib */,
+				72BDB3741C2A3584002AE29F /* RSOtherLoginViewController.h */,
+				72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */,
+				72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */,
+				72BDB3791C2A52CA002AE29F /* RSQuestionViewController.h */,
+				72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */,
+				72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */,
+				72BDB37E1C2A592E002AE29F /* RSRuleViewController.h */,
+				72BDB37F1C2A592E002AE29F /* RSRuleViewController.m */,
+				72BDB3801C2A592E002AE29F /* RSRuleViewController.xib */,
+			);
+			path = RSLogIn;
 			sourceTree = "<group>";
 		};
 		728ED8B31C0B0E2800DE8639 /* ZBarSDK-master */ = {
@@ -524,7 +587,7 @@
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
 				729066A31C0322C600B64EA8 /* Utilities */,
-				727DD54D1C25D933005650A5 /* MainController */,
+				7271F9BB1C29282D00FD720B /* Main */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				722D5B0E1C240D17009F3574 /* Resource */,
 				729139AE1BF1D44B00CEFD64 /* Images.xcassets */,
@@ -575,7 +638,8 @@
 				729139CC1BF1D58E00CEFD64 /* RSContacts */,
 				729139D21BF1D58E00CEFD64 /* RSDiscover */,
 				729139DE1BF1D58E00CEFD64 /* RSMe */,
-				720CE8BF1C07763B00913C5A /* tabBarImages.xcassets */,
+				7271F9BF1C29286C00FD720B /* RSLogIn */,
+				720CE8BF1C07763B00913C5A /* PublicImages.xcassets */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -962,6 +1026,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729D5FFD1C296154000F8C69 /* RSSignUpViewController.xib in Resources */,
 				728ED8D51C0B0E2800DE8639 /* README in Resources */,
 				728ED8D61C0B0E2800DE8639 /* zbar-back.png in Resources */,
 				720CE92F1C080CEC00913C5A /* RSActionView.xib in Resources */,
@@ -970,12 +1035,14 @@
 				72C0AC701C1174CB00C817D2 /* RSScanResultViewController.xib in Resources */,
 				727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */,
 				72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */,
+				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
 				7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */,
 				7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */,
 				72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */,
 				727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */,
+				72BDB3821C2A592E002AE29F /* RSRuleViewController.xib in Resources */,
 				72C404791C2308F100852B71 /* RSNewFriendCell.xib in Resources */,
 				72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */,
 				728ED8D31C0B0E2800DE8639 /* .gitignore in Resources */,
@@ -983,12 +1050,14 @@
 				7230312C1C1335A2005D9117 /* RSFriendsHeaderView.xib in Resources */,
 				728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */,
 				729139AF1BF1D44B00CEFD64 /* Images.xcassets in Resources */,
+				7271F9C41C2928B400FD720B /* RSLoginViewController.xib in Resources */,
 				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
 				72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */,
-				720CE8C01C07763B00913C5A /* tabBarImages.xcassets in Resources */,
+				720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */,
 				722D5B081C23BFAF009F3574 /* RSOfficialCell.xib in Resources */,
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
+				729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */,
 				727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */,
 				728ED8851C0AF62200DE8639 /* RSShakeViewController.xib in Resources */,
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
@@ -1001,9 +1070,11 @@
 				7288A5541C108BD6009936A7 /* RSPrivateTableViewCell.xib in Resources */,
 				728ED8D91C0B0E2800DE8639 /* zbar-samples.png in Resources */,
 				72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */,
+				729D60021C29B587000F8C69 /* RSConformViewController.xib in Resources */,
 				728ED8D71C0B0E2800DE8639 /* zbar-help.html in Resources */,
 				723031271C13226E005D9117 /* RSFriendsACell.xib in Resources */,
 				728ED87B1C0AD36900DE8639 /* RSVideoViewController.xib in Resources */,
+				72BDB3781C2A3584002AE29F /* RSOtherLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,6 +1143,7 @@
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
+				72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */,
 				7288A54F1C10879D009936A7 /* RSPrivateViewController.m in Sources */,
 				720CE92D1C080CC200913C5A /* RSActionView.m in Sources */,
 				72C404711C226C3C00852B71 /* RSPopView.m in Sources */,
@@ -1084,18 +1156,24 @@
 				729139CA1BF1D56100CEFD64 /* AppDelegate.m in Sources */,
 				727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */,
 				72DC539F1C26F3FB00D74105 /* UIImage+RSOriginImage.m in Sources */,
+				729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */,
 				729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */,
 				72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */,
+				7271F9C31C2928B400FD720B /* RSLoginViewController.m in Sources */,
 				72A335101C07035000112FC0 /* RSMessageVideoCell.m in Sources */,
 				72C4047F1C23256A00852B71 /* RSLabelViewController.m in Sources */,
+				7271F9BE1C29282D00FD720B /* RSMainTabBarController.m in Sources */,
 				7288A5531C108BD6009936A7 /* RSPrivateTableViewCell.m in Sources */,
+				729D5FFC1C296154000F8C69 /* RSSignUpViewController.m in Sources */,
 				727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */,
 				72172F1C1BFE0FB700D6D2FD /* RSHomeModel.m in Sources */,
 				722D5B071C23BFAF009F3574 /* RSOfficialCell.m in Sources */,
 				7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */,
 				72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */,
+				729D60011C29B587000F8C69 /* RSConformViewController.m in Sources */,
+				72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */,
 				72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */,
 				727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */,
 				729139E71BF1D58E00CEFD64 /* RSHomeViewController.m in Sources */,
@@ -1107,6 +1185,7 @@
 				729066B21C03749700B64EA8 /* RSMessageCell.m in Sources */,
 				728ED87A1C0AD36900DE8639 /* RSVideoViewController.m in Sources */,
 				72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */,
+				72BDB3811C2A592E002AE29F /* RSRuleViewController.m in Sources */,
 				7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */,
 				729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */,
 				723031261C13226E005D9117 /* RSFriendsACell.m in Sources */,
@@ -1123,7 +1202,6 @@
 				727C1DC91BF260AB00CE8AA6 /* RSDiscoverCell.m in Sources */,
 				726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */,
 				72C404821C23261300852B71 /* RSLabelBlankView.m in Sources */,
-				727DD5501C25D968005650A5 /* RSMainTabBarController.m in Sources */,
 				72A334F71C06EDE800112FC0 /* RSDetailFirstCell.m in Sources */,
 				72C404781C2308F100852B71 /* RSNewFriendCell.m in Sources */,
 			);
@@ -1258,7 +1336,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.push123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";
@@ -1292,7 +1370,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.push123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.push;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";

@@ -10,6 +10,8 @@
 #import "RSMainTabBarController.h"
 #import "APService.h"
 
+#import "RSWelcomeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -40,11 +42,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
-    
-#warning TODO 增加首次打开软件时的登陆/注册页面。。。
-    
-    self.window.rootViewController = mainTabBarController;
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSInteger runCount = [ud integerForKey:@"runCount"];
+//    if (runCount == 0) {
+        [ud setInteger:++runCount forKey:@"runCount"];
+        [ud synchronize];
+        RSWelcomeViewController *welcomeController = [[RSWelcomeViewController alloc] initWithNibName:@"RSWelcomeViewController" bundle:[NSBundle mainBundle]];
+        self.window.rootViewController = welcomeController;
+        
+//    } else {
+//        RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
+//        self.window.rootViewController = mainTabBarController;
+//    }
+
     [self.window makeKeyAndVisible];
 }
 
