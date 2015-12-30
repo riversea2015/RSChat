@@ -7,9 +7,12 @@
 //
 
 #import "RSQuestionViewController.h"
+#import "MBProgressHUD.h"
 
 @interface RSQuestionViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *questionView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *alertLabel;
 
 @end
 
@@ -24,15 +27,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
     
-    if (url == nil) {
-        NSLog(@"域名有误");
-        return;
+    if (self.titleText.length != 0) {
+        self.titleLabel.text = self.titleText;
+    } else {
+        self.titleLabel.text = @"登录问题";
     }
+    
+    if (self.url == nil) {
+        self.url = [NSURL URLWithString:@"https://support.weixin.qq.com/security/readtemplate?t=page/login_optimized__w_index&lang=zh_CN"];
+    }
+
     self.questionView.delegate = self;
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.questionView loadRequest:request];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.questionView stopLoading];
 }
 
 #pragma mark - Action
@@ -44,15 +56,20 @@
 #pragma mark - webView Delegate
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-
+    // 开始加载动画，设置一个超时，如果超时会弹出警告，同时停止加载
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading...";
+    hud.color = [UIColor lightGrayColor];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-
+    // 移除动画
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
-
+    // 移除动画
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 @end

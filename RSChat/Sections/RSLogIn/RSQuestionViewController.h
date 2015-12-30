@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RSQuestionViewController : UIViewController
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, copy) NSString *titleText;
 
 @end

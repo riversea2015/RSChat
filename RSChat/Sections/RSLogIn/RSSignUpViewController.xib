@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSSignUpViewController">
             <connections>
                 <outlet property="constraint" destination="sr7-Ud-wnw" id="eII-N0-UgP"/>
+                <outlet property="countryCode" destination="3zd-wD-Skm" id="eTp-Wo-UFP"/>
                 <outlet property="errorLabel" destination="SvS-r3-4OQ" id="iON-aC-jb6"/>
                 <outlet property="signButton" destination="SFl-88-a6v" id="xKA-of-fVY"/>
                 <outlet property="telNumber" destination="DEJ-jX-Fh9" id="v2t-ca-A8s"/>

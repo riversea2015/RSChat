@@ -30,7 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = NO;
+
     self.telNumber.delegate = self;
     self.password.delegate = self;
     
@@ -41,7 +41,7 @@
     // 再次点击文本框时，清空之前的内容
 //    self.telNumber.clearsOnBeginEditing = YES;
 //    self.password.clearsOnBeginEditing = YES;
-    
+     
 }
 
 // regist notification
@@ -111,7 +111,7 @@
         return;
     }
     
-    if ([telNum isEqualToString:@"123456"] && [pwd isEqualToString:@"123456"]) {
+    if ([telNum isEqualToString:@"11111111111"] && [pwd isEqualToString:@"123456"]) {
         RSMainTabBarController *mainVC = [[RSMainTabBarController alloc] init];
         [self presentViewController:mainVC animated:YES completion:nil];
     } else {

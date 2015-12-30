@@ -11,6 +11,7 @@
 
 @interface RSConformViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *authCode;
+@property (weak, nonatomic) IBOutlet UITextField *telNumber;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
 @end
@@ -27,8 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.authCode.keyboardType = UIKeyboardTypeNumberPad;
-    
     self.authCode.clearButtonMode = UITextFieldViewModeAlways;
+    
+    NSString *telStr = [NSString stringWithFormat:@"%@ %@", self.countryCode, self.telNum];
+    self.telNumber.text = telStr;
 }
 
 #pragma mark - Private Method
@@ -43,6 +46,7 @@
     if (authCode.length == 0) {
         self.errorLabel.text = @"验证码不能为空！";
         return;
+        
     }
     
     if ([authCode isEqualToString:@"123456"]) {
@@ -53,6 +57,5 @@
         self.errorLabel.text = @"验证码错误，请重新输入！";
     }
 }
-
 
 @end

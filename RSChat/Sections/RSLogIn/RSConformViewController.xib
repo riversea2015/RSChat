@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="authCode" destination="hhh-kn-LLa" id="bWL-9O-nad"/>
                 <outlet property="errorLabel" destination="mlY-5v-O2Q" id="EFX-eJ-hcA"/>
+                <outlet property="telNumber" destination="rcw-tI-Fcj" id="rfR-M6-SAe"/>
                 <outlet property="view" destination="XZj-Qq-MMC" id="KjO-5S-bZx"/>
             </connections>
         </placeholder>

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSQuestionViewController">
             <connections>
                 <outlet property="questionView" destination="9pw-nd-43Y" id="JAu-hV-bUk"/>
+                <outlet property="titleLabel" destination="pCg-qj-IoV" id="b4q-WA-jC2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-nd-43Y">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                 </webView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzP-pL-ICB">
@@ -35,6 +36,12 @@
                         <action selector="goback:" destination="-1" eventType="touchUpInside" id="96C-Ew-Yqj"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCg-qj-IoV">
+                    <rect key="frame" x="160" y="26" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.039710711039999999" green="0.81689946339999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -42,8 +49,10 @@
                 <constraint firstItem="RzP-pL-ICB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Swf-N0-CvP"/>
                 <constraint firstItem="RzP-pL-ICB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZFT-xC-LRE"/>
                 <constraint firstItem="9pw-nd-43Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="byC-zm-eyb"/>
+                <constraint firstItem="pCg-qj-IoV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="dS1-fa-9hu"/>
                 <constraint firstAttribute="trailing" secondItem="9pw-nd-43Y" secondAttribute="trailing" id="kMj-gK-RfL"/>
-                <constraint firstItem="9pw-nd-43Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u3Q-Sh-7ah"/>
+                <constraint firstItem="pCg-qj-IoV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sSz-eY-zLP"/>
+                <constraint firstItem="9pw-nd-43Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="u3Q-Sh-7ah"/>
                 <constraint firstAttribute="bottom" secondItem="9pw-nd-43Y" secondAttribute="bottom" id="xpD-Ws-snf"/>
             </constraints>
             <point key="canvasLocation" x="253" y="252"/>

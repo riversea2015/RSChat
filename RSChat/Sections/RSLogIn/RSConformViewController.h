@@ -10,4 +10,7 @@
 
 @interface RSConformViewController : UIViewController
 
+@property (nonatomic, copy) NSString *countryCode;
+@property (nonatomic, copy) NSString *telNum;
+
 @end

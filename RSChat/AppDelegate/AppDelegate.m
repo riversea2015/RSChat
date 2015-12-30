@@ -44,18 +44,24 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSInteger runCount = [ud integerForKey:@"runCount"];
-//    if (runCount == 0) {
+    
+    if (runCount == 0) {
         [ud setInteger:++runCount forKey:@"runCount"];
         [ud synchronize];
         RSWelcomeViewController *welcomeController = [[RSWelcomeViewController alloc] initWithNibName:@"RSWelcomeViewController" bundle:[NSBundle mainBundle]];
-        self.window.rootViewController = welcomeController;
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+        self.window.rootViewController = navi;
         
-//    } else {
-//        RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
-//        self.window.rootViewController = mainTabBarController;
-//    }
+    } else {
+        RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
+        self.window.rootViewController = mainTabBarController;
+    }
 
     [self.window makeKeyAndVisible];
+}
+
+- (void)setWelcomeController {
+    
 }
 
 #pragma mark - 配置 JPush

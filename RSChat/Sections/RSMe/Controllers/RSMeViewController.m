@@ -7,10 +7,14 @@
 //
 
 #import "RSMeViewController.h"
+
 #import "RSMeHeaderCell.h"
 #import "RSMeOtherCell.h"
+
 #import "RSMeModel.h"
+
 #import "RSPrivateViewController.h"
+#import "RSSettingViewController.h"
 
 @interface RSMeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -31,7 +35,6 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeHeaderCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeHeaderCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeOtherCell cellID]];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +108,11 @@
         // 打开个人信息页面
         RSPrivateViewController *privateVC = [[RSPrivateViewController alloc] init];
         [self.navigationController pushViewController:privateVC animated:YES];
+    }
+    
+    if (indexPath.section == 3) {
+        RSSettingViewController *settingVC = [[RSSettingViewController alloc] init];
+        [self.navigationController pushViewController:settingVC animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
