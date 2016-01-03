@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BCE64D21C39153B002AC8D3 /* RSdhdjhfjhdfhj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */; };
 		23BAECD075209844428E52B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB51142B6FE086787A245 /* libPods.a */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
 		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
@@ -163,8 +162,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BCE64D01C39153B002AC8D3 /* RSdhdjhfjhdfhj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSdhdjhfjhdfhj.h; sourceTree = "<group>"; };
-		1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSdhdjhfjhdfhj.m; sourceTree = "<group>"; };
 		6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
@@ -838,8 +835,6 @@
 				7289179A1C03F346008B3030 /* RSMessageViewController.xib */,
 				7234C34F1C08491E00C9009C /* RSHomeSearchResultController.h */,
 				7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */,
-				1BCE64D01C39153B002AC8D3 /* RSdhdjhfjhdfhj.h */,
-				1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1244,7 +1239,6 @@
 				72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */,
 				7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */,
 				729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */,
-				1BCE64D21C39153B002AC8D3 /* RSdhdjhfjhdfhj.m in Sources */,
 				723031261C13226E005D9117 /* RSFriendsACell.m in Sources */,
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
 				728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */,
