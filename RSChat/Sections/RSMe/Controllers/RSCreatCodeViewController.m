@@ -7,6 +7,7 @@
 //
 
 #import "RSCreatCodeViewController.h"
+#import <CoreImage/CoreImage.h>
 
 @interface RSCreatCodeViewController ()
 
@@ -14,24 +15,32 @@
 
 @implementation RSCreatCodeViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
+#pragma mark - Life Cycle
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"我的二维码";
+    
+    [self showCode];
 }
-*/
+
+#pragma mark -
+
+- (void)showCode {
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [filter setDefaults];
+    
+    NSString *originStr = @"https://github.com/riversea2015";
+    NSData *data = [originStr dataUsingEncoding:NSUTF8StringEncoding];
+    [filter setValue:data forKey:@"inputMessage"];
+    
+    CIImage *outPutImage = [filter outputImage];
+    self.codeImageView.image = [UIImage imageWithCIImage:outPutImage];
+}
 
 @end

@@ -26,20 +26,20 @@
 
 #pragma mark - lifeCycle
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"我";
-    
+
     UIView *contentView = self.view;
     [contentView addSubview:self.tableView];
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeHeaderCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeHeaderCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeOtherCell cellID]];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableView datasource & delegate
@@ -102,7 +102,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@: section:%ld, row:%ld",self, (long)indexPath.section, (long)indexPath.row);
+    self.hidesBottomBarWhenPushed = YES;
     
     if (indexPath.section == 0) {
         // 打开个人信息页面
@@ -115,6 +115,7 @@
         [self.navigationController pushViewController:settingVC animated:YES];
     }
     
+    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

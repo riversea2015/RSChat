@@ -76,11 +76,8 @@
 
 #warning 在真机上无法显示xib的内容，在模拟器上可以
 - (void)videoChat {
-    NSLog(@"视频或语音聊天。。。");
-
     UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"视频聊天", @"语音聊天", nil];
     [sheet showInView:self.view];
-    
 }
 
 #pragma mark - UIActionSheetDelegate

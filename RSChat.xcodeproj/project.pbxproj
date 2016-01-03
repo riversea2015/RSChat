@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BCE64D21C39153B002AC8D3 /* RSdhdjhfjhdfhj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */; };
 		23BAECD075209844428E52B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB51142B6FE086787A245 /* libPods.a */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
 		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
@@ -26,6 +27,10 @@
 		726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726A95281C21DF910065EA8D /* RSBuyViewController.m */; };
 		726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E37D91C16E94A003BE8FF /* RSFriendsModel.m */; };
 		726E37DC1C170224003BE8FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 726E37DB1C170224003BE8FF /* Podfile */; };
+		726E86761C35553100B82094 /* RSCreatCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E86741C35553100B82094 /* RSCreatCodeViewController.m */; };
+		726E86771C35553100B82094 /* RSCreatCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726E86751C35553100B82094 /* RSCreatCodeViewController.xib */; };
+		726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E86791C35683D00B82094 /* RSScanCodeViewController.m */; };
+		726E867C1C35683D00B82094 /* RSScanCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726E867A1C35683D00B82094 /* RSScanCodeViewController.xib */; };
 		7271F9BE1C29282D00FD720B /* RSMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */; };
 		7271F9C31C2928B400FD720B /* RSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7271F9C11C2928B400FD720B /* RSLoginViewController.m */; };
 		7271F9C41C2928B400FD720B /* RSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7271F9C21C2928B400FD720B /* RSLoginViewController.xib */; };
@@ -111,6 +116,7 @@
 		72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ADF3391C060F730002CB08 /* RSNewsHeaderCell.xib */; };
 		72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */; };
 		72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */; };
+		72B6AB301C3848FB00EAFA27 /* RSAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B6AB2F1C3848FB00EAFA27 /* RSAddFriendViewController.m */; };
 		72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */; };
 		72BDB3781C2A3584002AE29F /* RSOtherLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */; };
 		72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */; };
@@ -157,6 +163,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BCE64D01C39153B002AC8D3 /* RSdhdjhfjhdfhj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSdhdjhfjhdfhj.h; sourceTree = "<group>"; };
+		1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSdhdjhfjhdfhj.m; sourceTree = "<group>"; };
 		6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
@@ -186,7 +194,13 @@
 		726A95281C21DF910065EA8D /* RSBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBuyViewController.m; sourceTree = "<group>"; };
 		726E37D81C16E94A003BE8FF /* RSFriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsModel.h; sourceTree = "<group>"; };
 		726E37D91C16E94A003BE8FF /* RSFriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsModel.m; sourceTree = "<group>"; };
-		726E37DB1C170224003BE8FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		726E37DB1C170224003BE8FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		726E86731C35553100B82094 /* RSCreatCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCreatCodeViewController.h; sourceTree = "<group>"; };
+		726E86741C35553100B82094 /* RSCreatCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCreatCodeViewController.m; sourceTree = "<group>"; };
+		726E86751C35553100B82094 /* RSCreatCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSCreatCodeViewController.xib; sourceTree = "<group>"; };
+		726E86781C35683D00B82094 /* RSScanCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSScanCodeViewController.h; sourceTree = "<group>"; };
+		726E86791C35683D00B82094 /* RSScanCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSScanCodeViewController.m; sourceTree = "<group>"; };
+		726E867A1C35683D00B82094 /* RSScanCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSScanCodeViewController.xib; sourceTree = "<group>"; };
 		7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMainTabBarController.h; sourceTree = "<group>"; };
 		7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMainTabBarController.m; sourceTree = "<group>"; };
 		7271F9C01C2928B400FD720B /* RSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLoginViewController.h; sourceTree = "<group>"; };
@@ -338,6 +352,8 @@
 		72AE23861C0B1C1C009CB1AF /* RSLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLocalViewController.h; sourceTree = "<group>"; };
 		72AE23871C0B1C1C009CB1AF /* RSLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLocalViewController.m; sourceTree = "<group>"; };
 		72AE23881C0B1C1C009CB1AF /* RSLocalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLocalViewController.xib; sourceTree = "<group>"; };
+		72B6AB2E1C3848FB00EAFA27 /* RSAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAddFriendViewController.h; sourceTree = "<group>"; };
+		72B6AB2F1C3848FB00EAFA27 /* RSAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAddFriendViewController.m; sourceTree = "<group>"; };
 		72BDB3741C2A3584002AE29F /* RSOtherLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOtherLoginViewController.h; sourceTree = "<group>"; };
 		72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOtherLoginViewController.m; sourceTree = "<group>"; };
 		72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSOtherLoginViewController.xib; sourceTree = "<group>"; };
@@ -683,6 +699,8 @@
 				72C4047E1C23256A00852B71 /* RSLabelViewController.m */,
 				72CA7E431C23B3070072C91E /* RSOfficialAccountViewController.h */,
 				72CA7E441C23B3070072C91E /* RSOfficialAccountViewController.m */,
+				72B6AB2E1C3848FB00EAFA27 /* RSAddFriendViewController.h */,
+				72B6AB2F1C3848FB00EAFA27 /* RSAddFriendViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -743,6 +761,9 @@
 			children = (
 				729139D41BF1D58E00CEFD64 /* RSDiscoverViewController.h */,
 				729139D51BF1D58E00CEFD64 /* RSDiscoverViewController.m */,
+				726E86781C35683D00B82094 /* RSScanCodeViewController.h */,
+				726E86791C35683D00B82094 /* RSScanCodeViewController.m */,
+				726E867A1C35683D00B82094 /* RSScanCodeViewController.xib */,
 				728ED87C1C0AF46900DE8639 /* RSScanViewController.h */,
 				728ED87D1C0AF46900DE8639 /* RSScanViewController.m */,
 				72C0AC6C1C1174CB00C817D2 /* RSScanResultViewController.h */,
@@ -817,6 +838,8 @@
 				7289179A1C03F346008B3030 /* RSMessageViewController.xib */,
 				7234C34F1C08491E00C9009C /* RSHomeSearchResultController.h */,
 				7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */,
+				1BCE64D01C39153B002AC8D3 /* RSdhdjhfjhdfhj.h */,
+				1BCE64D11C39153B002AC8D3 /* RSdhdjhfjhdfhj.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -863,6 +886,9 @@
 				729139E11BF1D58E00CEFD64 /* RSMeViewController.m */,
 				7288A54D1C10879D009936A7 /* RSPrivateViewController.h */,
 				7288A54E1C10879D009936A7 /* RSPrivateViewController.m */,
+				726E86731C35553100B82094 /* RSCreatCodeViewController.h */,
+				726E86741C35553100B82094 /* RSCreatCodeViewController.m */,
+				726E86751C35553100B82094 /* RSCreatCodeViewController.xib */,
 				7291B61F1C33CC4300EBE0E4 /* RSSettingViewController.h */,
 				7291B6201C33CC4300EBE0E4 /* RSSettingViewController.m */,
 				72881D7E1C33E2CD00447B85 /* RSReLoginViewController.h */,
@@ -1048,6 +1074,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72881D821C33E2CD00447B85 /* RSReLoginViewController.xib in Resources */,
+				726E867C1C35683D00B82094 /* RSScanCodeViewController.xib in Resources */,
 				729D5FFD1C296154000F8C69 /* RSSignUpViewController.xib in Resources */,
 				728ED8D51C0B0E2800DE8639 /* README in Resources */,
 				728ED8D61C0B0E2800DE8639 /* zbar-back.png in Resources */,
@@ -1087,6 +1114,7 @@
 				72C404841C23262000852B71 /* RSLabelBlankView.xib in Resources */,
 				72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */,
 				722D5B101C240D17009F3574 /* officialAccounts.plist in Resources */,
+				726E86771C35553100B82094 /* RSCreatCodeViewController.xib in Resources */,
 				726E37DC1C170224003BE8FF /* Podfile in Resources */,
 				72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */,
 				727C1DC21BF2558300CE8AA6 /* RSDiscoverImages.xcassets in Resources */,
@@ -1167,10 +1195,12 @@
 				72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
+				726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */,
 				72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */,
 				7288A54F1C10879D009936A7 /* RSPrivateViewController.m in Sources */,
 				720CE92D1C080CC200913C5A /* RSActionView.m in Sources */,
 				72C404711C226C3C00852B71 /* RSPopView.m in Sources */,
+				72B6AB301C3848FB00EAFA27 /* RSAddFriendViewController.m in Sources */,
 				7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */,
 				72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */,
 				72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */,
@@ -1207,12 +1237,14 @@
 				72C404741C23079000852B71 /* RSNewFriendViewController.m in Sources */,
 				72172F1F1BFE0FD000D6D2FD /* RSNewsModel.m in Sources */,
 				72AB93A41BF708DD005A212C /* RSContactCell.m in Sources */,
+				726E86761C35553100B82094 /* RSCreatCodeViewController.m in Sources */,
 				727C1DBA1BF232F400CE8AA6 /* RSMeModel.m in Sources */,
 				729066B21C03749700B64EA8 /* RSMessageCell.m in Sources */,
 				728ED87A1C0AD36900DE8639 /* RSVideoViewController.m in Sources */,
 				72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */,
 				7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */,
 				729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */,
+				1BCE64D21C39153B002AC8D3 /* RSdhdjhfjhdfhj.m in Sources */,
 				723031261C13226E005D9117 /* RSFriendsACell.m in Sources */,
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
 				728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */,
@@ -1376,7 +1408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MLTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>098DE10C7B428A4B0F88B57AF2A1BFED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>18A6781AFA8671F1B49CE27FC3EF33D9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1AC199EB96A0206BB625525645AF9833</key>
+		<key>18963E48DC4192515DB631F1CBF5AFDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,12 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>741A2923660E5E922CFD42B0B48D823A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACB1D9DD7352AA8C82AF496C457AB9B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F96121E3BAFAF0BBE42361339DD1C26A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

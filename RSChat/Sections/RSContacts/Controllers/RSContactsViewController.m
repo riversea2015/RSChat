@@ -17,6 +17,8 @@
 #import "RSLabelViewController.h"
 #import "RSOfficialAccountViewController.h"
 
+#import "RSAddFriendViewController.h"
+
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
@@ -38,7 +40,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"联系人";
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add_cube"] style:UIBarButtonItemStyleDone target:self action:@selector(popUp)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add_cube"] style:UIBarButtonItemStyleDone target:self action:@selector(addFriend)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
@@ -75,9 +77,11 @@
 
 #pragma mark - private method
 
-#warning TODO 实现 navigationBar 下拉列表功能
-- (void)popUp {
-    NSLog(@"下拉列表...");
+- (void)addFriend {
+    self.hidesBottomBarWhenPushed = YES;
+    RSAddFriendViewController *addVC = [[RSAddFriendViewController alloc] init];
+    [self.navigationController pushViewController:addVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -12,7 +12,9 @@
 #import "RSMePrivateModel.h"
 #import "UIImage+RSSet.h"
 
-@interface RSPrivateViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
+#import "RSCreatCodeViewController.h"
+
+@interface RSPrivateViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) NSArray *demoArray;
 
@@ -22,17 +24,17 @@
 
 #pragma mark - Life Cycle
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人信息";
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateOtherCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateTableViewCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateTableViewCell cellID]];
     [self.view addSubview:self.tableView];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableview dataSource delegate
@@ -63,7 +65,7 @@
     if (indexPath.section == 1) {
         model = self.demoArray[indexPath.row+4];
     }
-
+    
     cell.leftLabel.text = model.leftText;
     cell.rightLabel.text = model.rightText;
     cell.rightImageView.image = [UIImage imageName:model.rightImageName];
@@ -85,23 +87,59 @@
     }
 #warning TODO 应改为自动变高
     if (indexPath.section == 1 && indexPath.row == 2) {
-        return 80;
+        return 100;
     }
     return [RSPrivateOtherCell rowheight];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.hidesBottomBarWhenPushed = YES;
+    
     if (indexPath.section == 0 && indexPath.row == 0) {
         UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从手机相册选择", nil];
+        sheet.backgroundColor = [UIColor redColor];
         [sheet showInView:self.view];
     }
     
+    if (indexPath.section == 0 && indexPath.row == 3) {
+        RSCreatCodeViewController *codeVC = [[RSCreatCodeViewController alloc] init];
+        [self.navigationController pushViewController:codeVC animated:YES];
+    }
+  
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-#pragma mark - actionSheet delegate
+#pragma mark - ActionSheet Delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"点击了ActionSheet。。。");
+//    NSLog(@"点击了ActionSheet。。。");
+    if (buttonIndex == 1) {
+        UIImagePickerController *photoVC = [[UIImagePickerController alloc] init];
+        photoVC.delegate = self;
+        photoVC.allowsEditing = YES;
+        [self presentViewController:photoVC animated:YES completion:nil];
+        return;
+    }
+    
+    if (buttonIndex == 0) {
+        UIImagePickerController *cameraVC = [[UIImagePickerController alloc] init];
+        cameraVC.delegate = self;
+        cameraVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:cameraVC animated:YES completion:nil];
+    }
+}
+
+#pragma mark - ImagePiker
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+#warning TODO 替换数据，即头像图片？
+    UIImage *testImage = info[UIImagePickerControllerOriginalImage];
+    
+    if (picker.allowsEditing) {
+        testImage = info[UIImagePickerControllerEditedImage];
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - setter getter

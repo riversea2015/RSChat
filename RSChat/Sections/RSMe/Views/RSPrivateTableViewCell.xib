@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,24 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-lP-SGT">
-                        <rect key="frame" x="223" y="8" width="64" height="64"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="64" id="teL-Nh-1HS"/>
-                            <constraint firstAttribute="height" constant="64" id="uV5-0b-Pgb"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-ez-QgB">
-                        <rect key="frame" x="15" y="29" width="208" height="21"/>
+                        <rect key="frame" x="15" y="30" width="208" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="ANk-1L-9X4"/>
                         </constraints>
@@ -36,25 +23,33 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yk-sX-yuN">
+                        <rect key="frame" x="223" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="8N9-X3-e7S"/>
+                            <constraint firstAttribute="height" constant="64" id="i8W-zh-eCW"/>
+                        </constraints>
+                        <state key="normal" image="SeaMonster"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="centerY" secondItem="SSL-lP-SGT" secondAttribute="centerY" id="9nk-Lz-gTT"/>
-                    <constraint firstItem="SSL-lP-SGT" firstAttribute="leading" secondItem="eMq-ez-QgB" secondAttribute="trailing" id="B9I-SQ-O3s"/>
                     <constraint firstAttribute="centerY" secondItem="eMq-ez-QgB" secondAttribute="centerY" id="Bt6-M3-pB7"/>
-                    <constraint firstAttribute="trailing" secondItem="SSL-lP-SGT" secondAttribute="trailing" id="TAz-ZU-02N"/>
                     <constraint firstItem="eMq-ez-QgB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="XJa-J4-X5M"/>
-                    <constraint firstAttribute="trailing" secondItem="SSL-lP-SGT" secondAttribute="trailing" id="zKP-Xc-bZz"/>
+                    <constraint firstItem="4Yk-sX-yuN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ztk-uP-iYa"/>
+                    <constraint firstItem="4Yk-sX-yuN" firstAttribute="leading" secondItem="eMq-ez-QgB" secondAttribute="trailing" id="b09-tB-8yT"/>
+                    <constraint firstItem="eMq-ez-QgB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="c4Y-5k-lFP"/>
+                    <constraint firstAttribute="trailing" secondItem="4Yk-sX-yuN" secondAttribute="trailing" id="dkf-3s-yln"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="zKP-Xc-bZz"/>
+                        <exclude reference="Bt6-M3-pB7"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="titleImageView" destination="SSL-lP-SGT" id="TzG-X8-GdC"/>
+                <outlet property="titleButton" destination="4Yk-sX-yuN" id="yGC-bz-4FB"/>
             </connections>
-            <point key="canvasLocation" x="782" y="207.5"/>
+            <point key="canvasLocation" x="610" y="207.5"/>
         </tableViewCell>
     </objects>
     <resources>

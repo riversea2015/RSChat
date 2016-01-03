@@ -35,15 +35,16 @@
     }
 
     [self presentViewController:imagePicker animated:YES completion:^{
-        
     }];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
-
+// 图片捕捉
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     
 }
+
+// 视频捕捉
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [self dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"%@",info);

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RSPrivateTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
+@property (weak, nonatomic) IBOutlet UIButton *titleButton;
 
 + (CGFloat)rowheight;
 + (NSString *)cellID;

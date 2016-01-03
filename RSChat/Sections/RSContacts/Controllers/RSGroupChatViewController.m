@@ -26,7 +26,6 @@
     self.title = @"群聊";
     
     [self showBlankLabel];
-    
     // 添加群聊的逻辑。。。
 }
 

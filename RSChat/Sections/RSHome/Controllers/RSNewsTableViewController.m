@@ -60,6 +60,7 @@
     
     [self headerRefresh];
     [self footerRefresh];
+
 }
 
 // 跳出此界面时，撤销网络请求
@@ -105,7 +106,7 @@
  */
 - (void)sendRequestGetJSON {
     
-    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%ld&p=%ld&docurl=%@&type=%@&job=%ld", self.pagesize, self.p, self.docurl, self.type, self.job];
+    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%d&p=%d&docurl=%@&type=%@&job=%d", self.pagesize, self.p, self.docurl, self.type, self.job];
     NSURL *url = [NSURL URLWithString:urlStr];
     self.request = [NSURLRequest requestWithURL:url];
     

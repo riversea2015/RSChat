@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <MLTransition/MLTransition.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
+
 #import "RSMainTabBarController.h"
 #import "APService.h"
 
@@ -18,12 +22,16 @@
 
 @implementation AppDelegate
 
-#pragma mark - LifeCycle >> 1
+#pragma mark - Entrance
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // 启用手势滑屏(必须写在 添加VC 之前，否则没有效果)
+    [MLTransition validatePanPackWithMLTransitionGestureRecognizerType:MLTransitionGestureRecognizerTypePan];
+    
     [self setContentVC];
-
+    
+    // JPush注册
     [self registerJPushWithOptions:launchOptions];
     
     NSInteger badgeNum = application.applicationIconBadgeNumber;
@@ -33,7 +41,18 @@
         [application setApplicationIconBadgeNumber:badgeNum];
     }
     
+    // 打开网络监测
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
     return YES;
+}
+
+#pragma mark - 构造Crash
+
+- (void)crash{
+    NSArray *arr = [NSArray array];
+    [arr objectAtIndex:1000];
 }
 
 #pragma mark - Private Method
@@ -44,19 +63,18 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSInteger runCount = [ud integerForKey:@"runCount"];
-    
     if (runCount == 0) {
         [ud setInteger:++runCount forKey:@"runCount"];
         [ud synchronize];
         RSWelcomeViewController *welcomeController = [[RSWelcomeViewController alloc] initWithNibName:@"RSWelcomeViewController" bundle:[NSBundle mainBundle]];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:welcomeController];
         self.window.rootViewController = navi;
-        
-    } else {
-        RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
-        self.window.rootViewController = mainTabBarController;
+        [self.window makeKeyAndVisible];
+        return;
     }
-
+    
+    RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
+    self.window.rootViewController = mainTabBarController;
     [self.window makeKeyAndVisible];
 }
 

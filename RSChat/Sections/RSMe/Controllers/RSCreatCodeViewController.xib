@@ -1,19 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSCreatCodeViewController">
             <connections>
+                <outlet property="codeImageView" destination="etf-5R-qQV" id="bCI-cZ-OKB"/>
+                <outlet property="countryLabel" destination="soS-I0-G0a" id="ti0-cn-kyZ"/>
+                <outlet property="nameLabel" destination="Zfq-hH-j99" id="D0E-h4-KET"/>
+                <outlet property="sexImageView" destination="d9u-to-1aL" id="Kih-mA-0tD"/>
+                <outlet property="titleImageView" destination="5gU-we-lzX" id="Koy-hl-HQ0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8P-wJ-Sqj">
+                    <rect key="frame" x="22" y="124" width="276" height="390"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etf-5R-qQV">
+                            <rect key="frame" x="18" y="97" width="240" height="240"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="L0a-Uu-IxG"/>
+                                <constraint firstAttribute="height" constant="240" id="XUu-Z9-df8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫一扫上面的二维码图案，加我微信" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEt-Gl-Xv0">
+                            <rect key="frame" x="34" y="355" width="208" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-we-lzX">
+                            <rect key="frame" x="20" y="20" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="gOU-un-0kl"/>
+                                <constraint firstAttribute="width" constant="64" id="l0O-z4-JZR"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saemonster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfq-hH-j99">
+                            <rect key="frame" x="94" y="30" width="90" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact_Male" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-to-1aL">
+                            <rect key="frame" x="194" y="32" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="1Zr-q1-6LT"/>
+                                <constraint firstAttribute="height" constant="18" id="bkH-SM-sDZ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soS-I0-G0a">
+                            <rect key="frame" x="94" y="56" width="28" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="soS-I0-G0a" firstAttribute="leading" secondItem="5gU-we-lzX" secondAttribute="trailing" constant="10" id="2fC-R3-44F"/>
+                        <constraint firstAttribute="height" constant="390" id="9e9-1B-5X4"/>
+                        <constraint firstItem="Zfq-hH-j99" firstAttribute="leading" secondItem="5gU-we-lzX" secondAttribute="trailing" constant="10" id="GFA-YE-grL"/>
+                        <constraint firstItem="etf-5R-qQV" firstAttribute="centerX" secondItem="f8P-wJ-Sqj" secondAttribute="centerX" id="LhI-sd-0Mq"/>
+                        <constraint firstItem="d9u-to-1aL" firstAttribute="centerY" secondItem="Zfq-hH-j99" secondAttribute="centerY" id="PfC-2y-G38"/>
+                        <constraint firstItem="5gU-we-lzX" firstAttribute="top" secondItem="f8P-wJ-Sqj" secondAttribute="top" constant="20" id="R4j-Ua-hZw"/>
+                        <constraint firstItem="5gU-we-lzX" firstAttribute="leading" secondItem="f8P-wJ-Sqj" secondAttribute="leading" constant="20" id="TkE-0F-z1t"/>
+                        <constraint firstAttribute="width" constant="276" id="Utt-Gc-3X7"/>
+                        <constraint firstItem="soS-I0-G0a" firstAttribute="top" secondItem="Zfq-hH-j99" secondAttribute="bottom" constant="5" id="Z6N-kf-q1n"/>
+                        <constraint firstItem="Zfq-hH-j99" firstAttribute="top" secondItem="f8P-wJ-Sqj" secondAttribute="top" constant="30" id="dS1-ua-RG6"/>
+                        <constraint firstItem="cEt-Gl-Xv0" firstAttribute="centerX" secondItem="f8P-wJ-Sqj" secondAttribute="centerX" id="kBO-M6-BD5"/>
+                        <constraint firstItem="cEt-Gl-Xv0" firstAttribute="top" secondItem="etf-5R-qQV" secondAttribute="bottom" constant="18" id="oGZ-ri-3Li"/>
+                        <constraint firstItem="d9u-to-1aL" firstAttribute="leading" secondItem="Zfq-hH-j99" secondAttribute="trailing" constant="10" id="tpP-Qo-RlX"/>
+                        <constraint firstItem="etf-5R-qQV" firstAttribute="top" secondItem="f8P-wJ-Sqj" secondAttribute="top" constant="97" id="zeu-aN-xYS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" value="YES">
+                            <string key="keyPath">layer.cornerRadius
+layer.masksToBounds</string>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="f8P-wJ-Sqj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="124" id="PSV-tk-wmm"/>
+                <constraint firstItem="f8P-wJ-Sqj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wge-qe-Rum"/>
+            </constraints>
+            <point key="canvasLocation" x="446" y="180"/>
         </view>
     </objects>
+    <resources>
+        <image name="Contact_Male" width="18" height="18"/>
+        <image name="SeaMonster" width="220" height="220"/>
+    </resources>
 </document>

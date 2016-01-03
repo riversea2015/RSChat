@@ -12,14 +12,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoreFunctionFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-1f-PD2">
-                    <rect key="frame" x="180" y="64" width="130" height="180"/>
+                    <rect key="frame" x="188" y="64" width="130" height="180"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="180" id="5fu-0H-1iu"/>
                         <constraint firstAttribute="width" constant="130" id="pS7-oe-3KT"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IG-Wj-bXS">
-                    <rect key="frame" x="197" y="81" width="103" height="29"/>
+                    <rect key="frame" x="205" y="81" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="4zc-sc-4Tw"/>
@@ -29,7 +29,7 @@
                     <state key="normal" title="发起群聊" image="contacts_add_newmessage"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-jf-dpv">
-                    <rect key="frame" x="197" y="159" width="103" height="29"/>
+                    <rect key="frame" x="205" y="159" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="NkO-qj-DtU"/>
@@ -38,7 +38,7 @@
                     <state key="normal" title="扫一扫   " image="contacts_add_scan"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-x3-nTR">
-                    <rect key="frame" x="197" y="198" width="103" height="29"/>
+                    <rect key="frame" x="205" y="198" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="5j7-Kw-Pz1"/>
@@ -47,7 +47,7 @@
                     <state key="normal" title="收付款   " image="contacts_add_money"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-n0-KeV">
-                    <rect key="frame" x="197" y="120" width="103" height="29"/>
+                    <rect key="frame" x="205" y="120" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="29" id="kAK-J2-Plm"/>
@@ -56,21 +56,21 @@
                     <state key="normal" title="添加朋友" image="contacts_add_friend"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dm3-VS-vJU">
-                    <rect key="frame" x="195" y="114" width="100" height="1"/>
+                    <rect key="frame" x="203" y="114" width="100" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="sIx-7h-aew"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7u0-0E-X7L">
-                    <rect key="frame" x="195" y="154" width="100" height="1"/>
+                    <rect key="frame" x="203" y="154" width="100" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="pTP-7E-2zP"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jho-vO-xM0">
-                    <rect key="frame" x="195" y="193" width="100" height="1"/>
+                    <rect key="frame" x="203" y="193" width="100" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="leP-mc-p2N"/>
@@ -79,28 +79,28 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="7u0-0E-X7L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="195" id="0ay-2l-kCS"/>
                 <constraint firstItem="ji0-1f-PD2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="19W-SE-grw"/>
                 <constraint firstItem="a5Q-n0-KeV" firstAttribute="leading" secondItem="0IG-Wj-bXS" secondAttribute="leading" id="5Lu-gQ-xDj"/>
-                <constraint firstAttribute="trailing" secondItem="ji0-1f-PD2" secondAttribute="trailing" constant="10" id="7kj-Jt-a6S"/>
+                <constraint firstAttribute="trailing" secondItem="ji0-1f-PD2" secondAttribute="trailing" constant="2" id="7kj-Jt-a6S"/>
+                <constraint firstItem="7u0-0E-X7L" firstAttribute="trailing" secondItem="dm3-VS-vJU" secondAttribute="trailing" id="8JU-mo-NDw"/>
                 <constraint firstItem="a5Q-n0-KeV" firstAttribute="top" secondItem="0IG-Wj-bXS" secondAttribute="bottom" constant="10" id="CSO-TU-dVa"/>
                 <constraint firstItem="jf2-jf-dpv" firstAttribute="top" secondItem="a5Q-n0-KeV" secondAttribute="bottom" constant="10" id="JEs-D9-I7S"/>
                 <constraint firstItem="7u0-0E-X7L" firstAttribute="top" secondItem="a5Q-n0-KeV" secondAttribute="bottom" constant="4.5" id="K1O-pU-2CZ"/>
                 <constraint firstItem="0IG-Wj-bXS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="81" id="L7y-Iv-Jp4"/>
-                <constraint firstAttribute="trailing" secondItem="0IG-Wj-bXS" secondAttribute="trailing" constant="20" id="Mlm-vJ-ftm"/>
+                <constraint firstAttribute="trailing" secondItem="0IG-Wj-bXS" secondAttribute="trailing" constant="12" id="Mlm-vJ-ftm"/>
                 <constraint firstItem="a5Q-n0-KeV" firstAttribute="trailing" secondItem="0IG-Wj-bXS" secondAttribute="trailing" id="Mum-EQ-vTx"/>
-                <constraint firstItem="jho-vO-xM0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="195" id="QVW-Zq-Ljt"/>
                 <constraint firstItem="jf2-jf-dpv" firstAttribute="trailing" secondItem="0IG-Wj-bXS" secondAttribute="trailing" id="RQ7-P5-t5g"/>
                 <constraint firstItem="ECh-x3-nTR" firstAttribute="leading" secondItem="0IG-Wj-bXS" secondAttribute="leading" id="WMJ-O6-Xbm"/>
                 <constraint firstItem="jho-vO-xM0" firstAttribute="top" secondItem="jf2-jf-dpv" secondAttribute="bottom" constant="4.5" id="X78-Qq-mXb"/>
-                <constraint firstAttribute="trailing" secondItem="dm3-VS-vJU" secondAttribute="trailing" constant="25" id="ZLO-35-nnG"/>
-                <constraint firstAttribute="trailing" secondItem="jho-vO-xM0" secondAttribute="trailing" constant="25" id="aXP-YC-KgI"/>
-                <constraint firstAttribute="trailing" secondItem="7u0-0E-X7L" secondAttribute="trailing" constant="25" id="brI-34-Ekg"/>
+                <constraint firstAttribute="trailing" secondItem="dm3-VS-vJU" secondAttribute="trailing" constant="17" id="ZLO-35-nnG"/>
+                <constraint firstItem="jho-vO-xM0" firstAttribute="leading" secondItem="dm3-VS-vJU" secondAttribute="leading" id="ait-T9-elh"/>
                 <constraint firstItem="ECh-x3-nTR" firstAttribute="trailing" secondItem="0IG-Wj-bXS" secondAttribute="trailing" id="dZo-Gn-or2"/>
                 <constraint firstItem="dm3-VS-vJU" firstAttribute="top" secondItem="0IG-Wj-bXS" secondAttribute="bottom" constant="4.5" id="g5k-h2-t0T"/>
+                <constraint firstItem="7u0-0E-X7L" firstAttribute="leading" secondItem="dm3-VS-vJU" secondAttribute="leading" id="gKo-j8-N5y"/>
+                <constraint firstItem="jho-vO-xM0" firstAttribute="trailing" secondItem="dm3-VS-vJU" secondAttribute="trailing" id="kNF-1F-sLH"/>
                 <constraint firstItem="ECh-x3-nTR" firstAttribute="top" secondItem="jf2-jf-dpv" secondAttribute="bottom" constant="10" id="ljU-C5-Yko"/>
                 <constraint firstItem="jf2-jf-dpv" firstAttribute="leading" secondItem="0IG-Wj-bXS" secondAttribute="leading" id="nMO-xg-MuY"/>
-                <constraint firstItem="dm3-VS-vJU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="195" id="uNn-fh-W4r"/>
+                <constraint firstItem="dm3-VS-vJU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="203" id="uNn-fh-W4r"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
@@ -109,7 +109,7 @@
                 <outlet property="money" destination="ECh-x3-nTR" id="yfY-Mi-Mpe"/>
                 <outlet property="scan" destination="jf2-jf-dpv" id="o9r-5s-KzE"/>
             </connections>
-            <point key="canvasLocation" x="512" y="303"/>
+            <point key="canvasLocation" x="523" y="263"/>
         </view>
     </objects>
     <resources>

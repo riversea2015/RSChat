@@ -94,7 +94,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self.view endEditing:YES];
     
-    NSLog(@"%ld", buttonIndex);
+    NSLog(@"%ld", (long)buttonIndex);
     if (buttonIndex == 0) {
         return;
     }

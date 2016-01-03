@@ -67,7 +67,7 @@
 #pragma mark - Private Method
 
 - (void)setBisicInfo {
-    self.navigationItem.title = [NSString stringWithFormat:@"微信(%d)",3];
+    self.navigationItem.title = [NSString stringWithFormat:@"我信(%d)",3];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStyleDone target:self action:@selector(popUp)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
