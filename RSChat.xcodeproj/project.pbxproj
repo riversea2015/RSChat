@@ -15,6 +15,12 @@
 		1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B26D66E1C3ABC5C00BFC29C /* RSGameDetailACell.xib */; };
 		1B26D6741C3ABF7600BFC29C /* RSGameDetailBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D6721C3ABF7600BFC29C /* RSGameDetailBCell.m */; };
 		1B26D6751C3ABF7600BFC29C /* RSGameDetailBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B26D6731C3ABF7600BFC29C /* RSGameDetailBCell.xib */; };
+		1B8773541C3BD713000CCEAE /* RSAddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773521C3BD713000CCEAE /* RSAddFriendCell.m */; };
+		1B8773551C3BD713000CCEAE /* RSAddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773531C3BD713000CCEAE /* RSAddFriendCell.xib */; };
+		1B8773591C3BDB42000CCEAE /* RSSearchFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773571C3BDB42000CCEAE /* RSSearchFriendCell.m */; };
+		1B87735A1C3BDB42000CCEAE /* RSSearchFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773581C3BDB42000CCEAE /* RSSearchFriendCell.xib */; };
+		1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */; };
+		1B8773641C3BE3F9000CCEAE /* RSSearchTempView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */; };
 		1BCE64D51C3A3510002AC8D3 /* RSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */; };
 		1BCE64F51C3A64E3002AC8D3 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */; };
 		1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */; };
@@ -193,6 +199,15 @@
 		1B26D6711C3ABF7600BFC29C /* RSGameDetailBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameDetailBCell.h; sourceTree = "<group>"; };
 		1B26D6721C3ABF7600BFC29C /* RSGameDetailBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameDetailBCell.m; sourceTree = "<group>"; };
 		1B26D6731C3ABF7600BFC29C /* RSGameDetailBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSGameDetailBCell.xib; sourceTree = "<group>"; };
+		1B8773511C3BD713000CCEAE /* RSAddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAddFriendCell.h; sourceTree = "<group>"; };
+		1B8773521C3BD713000CCEAE /* RSAddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAddFriendCell.m; sourceTree = "<group>"; };
+		1B8773531C3BD713000CCEAE /* RSAddFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSAddFriendCell.xib; sourceTree = "<group>"; };
+		1B8773561C3BDB42000CCEAE /* RSSearchFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSearchFriendCell.h; sourceTree = "<group>"; };
+		1B8773571C3BDB42000CCEAE /* RSSearchFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSearchFriendCell.m; sourceTree = "<group>"; };
+		1B8773581C3BDB42000CCEAE /* RSSearchFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSearchFriendCell.xib; sourceTree = "<group>"; };
+		1B8773601C3BE3E9000CCEAE /* RSSearchTempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSearchTempView.h; sourceTree = "<group>"; };
+		1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSearchTempView.m; sourceTree = "<group>"; };
+		1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSearchTempView.xib; sourceTree = "<group>"; };
 		1BCE64D31C3A3510002AC8D3 /* RSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameViewController.h; sourceTree = "<group>"; };
 		1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameViewController.m; sourceTree = "<group>"; };
 		1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
@@ -765,6 +780,12 @@
 				72AB93A11BF708DD005A212C /* RSContactCell.h */,
 				72AB93A21BF708DD005A212C /* RSContactCell.m */,
 				72AB93A31BF708DD005A212C /* RSContactCell.xib */,
+				1B8773511C3BD713000CCEAE /* RSAddFriendCell.h */,
+				1B8773521C3BD713000CCEAE /* RSAddFriendCell.m */,
+				1B8773531C3BD713000CCEAE /* RSAddFriendCell.xib */,
+				1B8773561C3BDB42000CCEAE /* RSSearchFriendCell.h */,
+				1B8773571C3BDB42000CCEAE /* RSSearchFriendCell.m */,
+				1B8773581C3BDB42000CCEAE /* RSSearchFriendCell.xib */,
 				72A334F41C06EDE800112FC0 /* RSDetailFirstCell.h */,
 				72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */,
 				72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */,
@@ -936,6 +957,9 @@
 				72C4046F1C226C3C00852B71 /* RSPopView.h */,
 				72C404701C226C3C00852B71 /* RSPopView.m */,
 				72C4046D1C2267F200852B71 /* RSPopView.xib */,
+				1B8773601C3BE3E9000CCEAE /* RSSearchTempView.h */,
+				1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */,
+				1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1169,7 +1193,9 @@
 				727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */,
 				72C404791C2308F100852B71 /* RSNewFriendCell.xib in Resources */,
 				1BCE65321C3A65C7002AC8D3 /* RSFriendsACell.xib in Resources */,
+				1B8773551C3BD713000CCEAE /* RSAddFriendCell.xib in Resources */,
 				72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */,
+				1B87735A1C3BDB42000CCEAE /* RSSearchFriendCell.xib in Resources */,
 				728ED8D31C0B0E2800DE8639 /* .gitignore in Resources */,
 				727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */,
 				728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */,
@@ -1186,6 +1212,7 @@
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
 				729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */,
 				727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */,
+				1B8773641C3BE3F9000CCEAE /* RSSearchTempView.xib in Resources */,
 				1BCE65341C3A65C7002AC8D3 /* RSFriendsHeaderView.xib in Resources */,
 				7291B6261C33CD9B00EBE0E4 /* RSSettingCell.xib in Resources */,
 				728ED8851C0AF62200DE8639 /* RSShakeViewController.xib in Resources */,
@@ -1275,6 +1302,7 @@
 				1BCE65351C3A65C7002AC8D3 /* RSGameACell.m in Sources */,
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */,
+				1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
 				726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */,
@@ -1288,6 +1316,7 @@
 				7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */,
 				72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */,
 				72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */,
+				1B8773541C3BD713000CCEAE /* RSAddFriendCell.m in Sources */,
 				729066AF1C03711C00B64EA8 /* RSMessageModel.m in Sources */,
 				7288A55C1C1094A5009936A7 /* RSMePrivateModel.m in Sources */,
 				1B26D6741C3ABF7600BFC29C /* RSGameDetailBCell.m in Sources */,
@@ -1303,6 +1332,7 @@
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */,
 				72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */,
+				1B8773591C3BDB42000CCEAE /* RSSearchFriendCell.m in Sources */,
 				7271F9C31C2928B400FD720B /* RSLoginViewController.m in Sources */,
 				72A335101C07035000112FC0 /* RSMessageVideoCell.m in Sources */,
 				72C4047F1C23256A00852B71 /* RSLabelViewController.m in Sources */,

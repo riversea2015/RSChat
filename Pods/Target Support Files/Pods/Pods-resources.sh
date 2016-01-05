@@ -58,6 +58,7 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.4/UMSocial_Sdk_4.4/UMSocialSDKResourcesNew.bundle"
   install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"
@@ -74,6 +75,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.4/UMSocial_Sdk_4.4/zh-Hans.lproj"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.4/UMSocial_Sdk_4.4/UMSocialSDKResourcesNew.bundle"
   install_resource "UMengSocial/Umeng_SDK_Social_iOS_ARM64_4.4/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle"

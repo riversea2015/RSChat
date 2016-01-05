@@ -13,6 +13,8 @@
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
 
+#import "RSSearchTempView.h"
+
 #import "RSPopView.h"
 
 // 测试运行时使用
@@ -27,11 +29,13 @@
 
 @property (nonatomic, strong) RSPopView *popView;
 
+@property (nonatomic, strong) RSSearchTempView *tmpView;
+
 @end
 
 @implementation RSHomeViewController
 
-#pragma mark - LifeCycle
+#pragma mark - Life Cycle
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -44,7 +48,6 @@
     [self setBisicInfo];
     
     [RSHomeCell registToTableView:self.tableView];
-    
     [self.view addSubview:self.tableView];
     
     [self startSearch];
@@ -64,7 +67,7 @@
 
 #pragma mark - 
 
-#pragma mark - Private Method
+#pragma mark - NavigationBar
 
 - (void)setBisicInfo {
     self.navigationItem.title = [NSString stringWithFormat:@"我信(%d)",3];
@@ -78,12 +81,11 @@
         [self.popView removeFromSuperview];
         return;
     }
-    
     self.popView.flag = 1;
     [self.view addSubview:self.popView];
 }
 
-#pragma mark - Search method & UISearchResultsUpdating
+#pragma mark - SearchMethod & UISearchResultsUpdating
 
 - (void)startSearch {
 
@@ -128,10 +130,14 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar { // 点击搜索框时
     NSLog(@"方法调用 %s ", __func__);
+    
+    _tmpView = [[[NSBundle mainBundle] loadNibNamed:@"RSSearchTempView" owner:self options:nil] lastObject];
+    [self.view addSubview:_tmpView];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar { // 点击cancel按钮时
     NSLog(@"方法调用 %s ", __func__);
+    [_tmpView removeFromSuperview];
 }
 
 #pragma mark - tableView DataSource & Delegate
@@ -141,8 +147,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellID = [RSHomeCell cellID];
-    RSHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    RSHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSHomeCell cellID] forIndexPath:indexPath];
     RSHomeModel *model = self.allDatas[indexPath.row];
     [cell setCellWithModel:model];
     
