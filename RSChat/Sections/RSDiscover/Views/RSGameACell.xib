@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="3S2-it-zow">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hehai" translatesAutoresizingMaskIntoConstraints="NO" id="3S2-it-zow">
                         <rect key="frame" x="15" y="11" width="65" height="65"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="65" id="Lhq-Qo-wc8"/>
@@ -52,6 +52,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="SeaMonster" width="220" height="220"/>
+        <image name="hehai" width="834" height="834"/>
     </resources>
 </document>

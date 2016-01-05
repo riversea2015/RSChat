@@ -73,7 +73,7 @@
     model10.district = @"陕西 铜川";
     model10.isMale = YES;
     RSContactsModel *model11 = [RSContactsModel new];
-    model11.contactImageName = @"SeaMonster";
+    model11.contactImageName = @"hehai";
     model11.contactName = @"SeaMonster";
     model11.indexStr = @"S";
     model11.idStr = @"sea4678383";

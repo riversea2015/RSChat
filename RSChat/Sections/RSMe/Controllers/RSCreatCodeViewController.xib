@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
@@ -35,7 +36,7 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-we-lzX">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hehai" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-we-lzX">
                             <rect key="frame" x="20" y="20" width="64" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="gOU-un-0kl"/>
@@ -45,7 +46,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="saemonster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfq-hH-j99">
                             <rect key="frame" x="94" y="30" width="90" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact_Male" translatesAutoresizingMaskIntoConstraints="NO" id="d9u-to-1aL">
@@ -95,11 +96,11 @@ layer.masksToBounds</string>
                 <constraint firstItem="f8P-wJ-Sqj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="124" id="PSV-tk-wmm"/>
                 <constraint firstItem="f8P-wJ-Sqj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wge-qe-Rum"/>
             </constraints>
-            <point key="canvasLocation" x="446" y="180"/>
+            <point key="canvasLocation" x="99" y="165"/>
         </view>
     </objects>
     <resources>
         <image name="Contact_Male" width="18" height="18"/>
-        <image name="SeaMonster" width="220" height="220"/>
+        <image name="hehai" width="834" height="834"/>
     </resources>
 </document>

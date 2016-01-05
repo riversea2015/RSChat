@@ -1,49 +1,8 @@
 ####### 这是一个仿微信的练习项目 ########
 
-记录：
+记录：记录详见个人博客。。。
 
-* Utilities/UIViewController+RSExts.h 只是为了验证runtime中可以做的事
 
-* 添加搜索框 √
-
-* separator长度设置 √
-
-* 在运行时进行设置好友头像的圆角 √
-
-* 使用MBProgressHUD实现加载动画 √
-
-* 使用NSURLConnection发送网络请求，使用代理 √
-
-* 使用AFNetworking发送网络请求 √
-
-* 使用SDWebImage下载、缓存图片 √
-
-* 使用MJRefresh实现下拉刷新，上拉加载 √
-
-* message完成后更换pop的图片，更换好友头像为当前好友  √
-
-* tableView取消选中 √
-
-* 添加了URL Scheme ,此处设置为 RSChat ,用于验证的另一个应用程序是 Demo-URL-Scheme √
-
-* 二维码扫描，已经可以扫到相关数据 √
-
-* 地图定位，给大头针设置的图片无法显示，采用完全自定义方式时，已解决 √
-
-* 改用极光推送 JPush √
-
-* 使用CocoaPods管理第三方库 √
-
-* AFNetworking进行了小小的改动... √
-
-* APPDelegate中的代码再简化... 此项目暂不做更改，新闻项目会按照优化后的框架进行部署 √
-
-* badgeNum的数字位数变化时向左延伸，同时，红色背景也随之向左侧拉长，如何实现？
-  初步实现，但还有bug...
-
-* 点击后，popUp功能的实现...
-
-* 中英文混搜，英文可以搜中文内容...
 
 
 

@@ -10,6 +10,11 @@
 
 @implementation RSFriendsHeaderView
 
+- (void)awakeFromNib {
+    self.titleButton.layer.cornerRadius = 5;
+    self.titleButton.layer.masksToBounds = YES;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

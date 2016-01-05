@@ -149,7 +149,7 @@
     cell.message = message;
     
     if (cell.message.fromMe) {
-        cell.titleImageView.image = [UIImage imageNamed:@"SeaMonster"];
+        cell.titleImageView.image = [UIImage imageNamed:@"hehai"];
     } else {
         UIImage *image = [UIImage imageNamed:self.homeModel.leftImageName];
         cell.titleImageView.image = image;

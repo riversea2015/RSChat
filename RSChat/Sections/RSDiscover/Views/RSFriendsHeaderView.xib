@@ -26,9 +26,15 @@
                         <constraint firstAttribute="width" constant="75" id="D53-dN-1W1"/>
                         <constraint firstAttribute="height" constant="75" id="mhN-vz-iIK"/>
                     </constraints>
-                    <state key="normal" image="SeaMonster">
+                    <state key="normal" image="hehai">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seamonster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCZ-0M-Amg">
                     <rect key="frame" x="103" y="277" width="115" height="29"/>
@@ -40,8 +46,17 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人生无非是笑笑人家，再被人家笑笑而已！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfm-RC-39W">
+                    <rect key="frame" x="10" y="351" width="300" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="Lfm-RC-39W" secondAttribute="bottom" constant="12" id="60k-go-Rc6"/>
+                <constraint firstAttribute="trailing" secondItem="Lfm-RC-39W" secondAttribute="trailing" constant="10" id="6Nm-qS-Uri"/>
+                <constraint firstItem="Lfm-RC-39W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9wW-nu-mmV"/>
                 <constraint firstAttribute="trailing" secondItem="A5D-Iq-nAr" secondAttribute="trailing" id="Cgv-9i-oUG"/>
                 <constraint firstItem="yCZ-0M-Amg" firstAttribute="leading" secondItem="b0b-nS-5zZ" secondAttribute="leading" constant="-132" id="LXd-PF-d5o"/>
                 <constraint firstItem="A5D-Iq-nAr" firstAttribute="bottom" secondItem="b0b-nS-5zZ" secondAttribute="bottom" constant="-18" id="Rzh-sS-olu"/>
@@ -61,7 +76,7 @@
         </view>
     </objects>
     <resources>
-        <image name="SeaMonster" width="220" height="220"/>
         <image name="friendsHeader_icon" width="320" height="320"/>
+        <image name="hehai" width="834" height="834"/>
     </resources>
 </document>

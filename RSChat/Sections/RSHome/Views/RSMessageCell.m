@@ -89,7 +89,7 @@
         frameOfTitleImage.origin.x = self.bounds.size.width - IMAGE_MARGIN_L - IMAGE_WIDTH;
         frameOfTitleImage.origin.y = CELL_MARGIN_TB;
         self.titleImageView.frame = frameOfTitleImage;
-        self.titleImageView.image = [UIImage imageNamed:@"SeaMonster"];
+        self.titleImageView.image = [UIImage imageNamed:@"hehai"];
         
         // cell bounds
         CGRect bounds = self.bounds;
