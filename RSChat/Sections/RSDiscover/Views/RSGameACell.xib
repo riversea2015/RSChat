@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="88" id="KGk-i7-Jjw" customClass="RSGameACell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SeaMonster" translatesAutoresizingMaskIntoConstraints="NO" id="3S2-it-zow">
+                        <rect key="frame" x="15" y="11" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="Lhq-Qo-wc8"/>
+                            <constraint firstAttribute="width" constant="65" id="Qqx-Ei-vok"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seamonster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bts-Hw-Leu">
+                        <rect key="frame" x="96" y="18" width="90" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好，游戏是人类的天性！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElF-xG-tL0">
+                        <rect key="frame" x="96" y="51" width="204" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ElF-xG-tL0" secondAttribute="bottom" constant="15" id="1Lm-DL-KrQ"/>
+                    <constraint firstItem="3S2-it-zow" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1UK-X6-fVu"/>
+                    <constraint firstItem="bts-Hw-Leu" firstAttribute="leading" secondItem="3S2-it-zow" secondAttribute="trailing" constant="16" id="FgP-GY-RGB"/>
+                    <constraint firstItem="3S2-it-zow" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MBS-o1-J2m"/>
+                    <constraint firstItem="bts-Hw-Leu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="YEz-0x-hHO"/>
+                    <constraint firstItem="ElF-xG-tL0" firstAttribute="leading" secondItem="bts-Hw-Leu" secondAttribute="leading" id="cDA-tm-PBa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="ElF-xG-tL0" id="FLM-90-08H"/>
+                <outlet property="nameLabel" destination="bts-Hw-Leu" id="Oli-C7-I2G"/>
+                <outlet property="titleImageView" destination="3S2-it-zow" id="CVi-wd-xMw"/>
+            </connections>
+            <point key="canvasLocation" x="378" y="172"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="SeaMonster" width="220" height="220"/>
+    </resources>
+</document>

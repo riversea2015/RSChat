@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RSGameDetailViewController">
+            <connections>
+                <outlet property="tableView" destination="W5X-cK-Geo" id="dDL-Bk-XzT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-7T-BAX">
+                    <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVG-Lx-0Is">
+                            <rect key="frame" x="15" y="9" width="290" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="Pfs-If-0rg"/>
+                                <constraint firstAttribute="width" constant="290" id="wZG-qE-h8x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="进入游戏" backgroundImage="MyGameBtnGreen">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="enterItunesStore:" destination="-1" eventType="touchUpInside" id="m1E-kq-fsn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nVG-Lx-0Is" firstAttribute="centerY" secondItem="qBv-7T-BAX" secondAttribute="centerY" id="E9q-rQ-pO1"/>
+                        <constraint firstAttribute="height" constant="60" id="gtA-j1-xrT"/>
+                        <constraint firstItem="nVG-Lx-0Is" firstAttribute="centerX" secondItem="qBv-7T-BAX" secondAttribute="centerX" id="vXR-oC-kL3"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="W5X-cK-Geo">
+                    <rect key="frame" x="0.0" y="64" width="320" height="444"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="8gS-JW-u2O"/>
+                        <outlet property="delegate" destination="-1" id="eYH-xg-H2m"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qBv-7T-BAX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0PB-Hn-kq0"/>
+                <constraint firstItem="W5X-cK-Geo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="7cC-aR-3B7"/>
+                <constraint firstItem="qBv-7T-BAX" firstAttribute="top" secondItem="W5X-cK-Geo" secondAttribute="bottom" id="AOc-gu-rWh"/>
+                <constraint firstAttribute="trailing" secondItem="qBv-7T-BAX" secondAttribute="trailing" id="Omj-MY-Er1"/>
+                <constraint firstAttribute="bottom" secondItem="qBv-7T-BAX" secondAttribute="bottom" id="SLv-6U-ojX"/>
+                <constraint firstItem="W5X-cK-Geo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aIo-Xh-TBT"/>
+                <constraint firstAttribute="trailing" secondItem="W5X-cK-Geo" secondAttribute="trailing" id="xkr-yj-7OT"/>
+            </constraints>
+            <point key="canvasLocation" x="344" y="250"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MyGameBtnGreen" width="30" height="29"/>
+    </resources>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="413" id="KGk-i7-Jjw" customClass="RSGameDetailACell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="413"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="412"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-l9-Riy">
+                        <rect key="frame" x="0.0" y="15" width="320" height="284"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="284" id="R0t-xu-r88"/>
+                        </constraints>
+                    </scrollView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《我叫MT2》是腾讯与乐动卓越合作运营的精美3D手游，延续了传统《我叫MT》的经典特色。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQW-Xf-PiQ">
+                        <rect key="frame" x="15" y="314" width="290" height="51"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JV-Lf-oJj">
+                        <rect key="frame" x="15" y="373" width="30" height="30"/>
+                        <state key="normal" title="全文"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1JV-Lf-oJj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cQH-9x-xQd"/>
+                    <constraint firstItem="rQW-Xf-PiQ" firstAttribute="top" secondItem="qDl-l9-Riy" secondAttribute="bottom" constant="15" id="cyw-Wm-JnH"/>
+                    <constraint firstAttribute="trailing" secondItem="rQW-Xf-PiQ" secondAttribute="trailing" constant="15" id="eL6-0p-Zbo"/>
+                    <constraint firstItem="rQW-Xf-PiQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="k4J-VN-DfV"/>
+                    <constraint firstItem="1JV-Lf-oJj" firstAttribute="top" secondItem="rQW-Xf-PiQ" secondAttribute="bottom" constant="8" id="kw9-rw-6hj"/>
+                    <constraint firstItem="qDl-l9-Riy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="mvD-Jg-atY"/>
+                    <constraint firstItem="qDl-l9-Riy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tIO-K1-wdU"/>
+                    <constraint firstAttribute="trailing" secondItem="qDl-l9-Riy" secondAttribute="trailing" id="vp3-Bl-dvo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="scrollView" destination="qDl-l9-Riy" id="aNj-Tw-ZXY"/>
+            </connections>
+            <point key="canvasLocation" x="173" y="244.5"/>
+        </tableViewCell>
+    </objects>
+</document>

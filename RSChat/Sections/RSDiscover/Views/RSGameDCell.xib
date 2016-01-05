@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="MEq-Wc-6OL" customClass="RSGameDCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MEq-Wc-6OL" id="4kS-EJ-ymU">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_9" translatesAutoresizingMaskIntoConstraints="NO" id="9Bf-XG-Fqs">
+                        <rect key="frame" x="40" y="13" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="865-Zy-Cub"/>
+                            <constraint firstAttribute="height" constant="50" id="OKD-Gw-lXI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-EN-FjP">
+                        <rect key="frame" x="245" y="23" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Pfg-K0-krw"/>
+                            <constraint firstAttribute="height" constant="30" id="hQn-Ls-HkP"/>
+                        </constraints>
+                        <state key="normal" title="进入" backgroundImage="MyGameDefaultAppIcon">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="enterItunesStore:" destination="MEq-Wc-6OL" eventType="touchUpInside" id="gWX-Pk-oPK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢乐麻将" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIs-6p-FSk">
+                        <rect key="frame" x="100" y="18" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="官方正版手游" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-Z6-qdF">
+                        <rect key="frame" x="100" y="44" width="145" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfy-tx-ZhM">
+                        <rect key="frame" x="0.0" y="18" width="40" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcn-8l-Dkd">
+                        <rect key="frame" x="40" y="73" width="2" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="TIP-St-BS8"/>
+                            <constraint firstAttribute="width" constant="2" id="otK-b4-B8g"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近800万人在玩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeJ-Oe-REu">
+                        <rect key="frame" x="52" y="73" width="111" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100万人刚刚加入这款游戏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lei-5T-fSM">
+                        <rect key="frame" x="52" y="88" width="164" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yeJ-Oe-REu" firstAttribute="top" secondItem="bcn-8l-Dkd" secondAttribute="top" id="4Rb-K5-I6z"/>
+                    <constraint firstItem="9Bf-XG-Fqs" firstAttribute="centerY" secondItem="Wfy-tx-ZhM" secondAttribute="centerY" id="9HB-UW-L1G"/>
+                    <constraint firstItem="lei-5T-fSM" firstAttribute="height" secondItem="yeJ-Oe-REu" secondAttribute="height" id="Bk6-b1-Rjo"/>
+                    <constraint firstItem="lei-5T-fSM" firstAttribute="leading" secondItem="bcn-8l-Dkd" secondAttribute="trailing" constant="10" id="EKt-9C-ZRt"/>
+                    <constraint firstItem="9Bf-XG-Fqs" firstAttribute="top" secondItem="4kS-EJ-ymU" secondAttribute="top" constant="12.5" id="GMz-7O-V0l"/>
+                    <constraint firstItem="Fgu-EN-FjP" firstAttribute="centerY" secondItem="9Bf-XG-Fqs" secondAttribute="centerY" id="LMX-Bu-JWZ"/>
+                    <constraint firstItem="BIs-6p-FSk" firstAttribute="leading" secondItem="9Bf-XG-Fqs" secondAttribute="trailing" constant="10" id="MrM-mz-74V"/>
+                    <constraint firstItem="9Bf-XG-Fqs" firstAttribute="leading" secondItem="Wfy-tx-ZhM" secondAttribute="trailing" id="OJh-Z7-k1F"/>
+                    <constraint firstItem="yeJ-Oe-REu" firstAttribute="leading" secondItem="bcn-8l-Dkd" secondAttribute="trailing" constant="10" id="OTa-Lm-Esd"/>
+                    <constraint firstItem="bcn-8l-Dkd" firstAttribute="top" secondItem="9Bf-XG-Fqs" secondAttribute="bottom" constant="10" id="TQ7-pk-cMV"/>
+                    <constraint firstAttribute="trailing" secondItem="Fgu-EN-FjP" secondAttribute="trailing" constant="15" id="VvE-iA-Jre"/>
+                    <constraint firstItem="bcn-8l-Dkd" firstAttribute="leading" secondItem="9Bf-XG-Fqs" secondAttribute="leading" id="Wjt-gx-Adb"/>
+                    <constraint firstItem="Wfy-tx-ZhM" firstAttribute="leading" secondItem="4kS-EJ-ymU" secondAttribute="leading" id="ZPV-jJ-cNZ"/>
+                    <constraint firstItem="bQu-Z6-qdF" firstAttribute="top" secondItem="BIs-6p-FSk" secondAttribute="bottom" constant="5" id="cMl-1C-1Ut"/>
+                    <constraint firstItem="Fgu-EN-FjP" firstAttribute="leading" secondItem="bQu-Z6-qdF" secondAttribute="trailing" id="heW-tM-dUB"/>
+                    <constraint firstItem="BIs-6p-FSk" firstAttribute="top" secondItem="9Bf-XG-Fqs" secondAttribute="top" constant="5" id="ihd-Bg-iNl"/>
+                    <constraint firstItem="bQu-Z6-qdF" firstAttribute="leading" secondItem="BIs-6p-FSk" secondAttribute="leading" id="jcQ-em-Pcj"/>
+                    <constraint firstItem="9Bf-XG-Fqs" firstAttribute="leading" secondItem="4kS-EJ-ymU" secondAttribute="leading" constant="40" id="psO-KU-FOo"/>
+                    <constraint firstItem="lei-5T-fSM" firstAttribute="bottom" secondItem="bcn-8l-Dkd" secondAttribute="bottom" id="vdj-2H-ClR"/>
+                    <constraint firstItem="lei-5T-fSM" firstAttribute="top" secondItem="yeJ-Oe-REu" secondAttribute="bottom" id="wFh-Dl-ztQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="numLabel" destination="Wfy-tx-ZhM" id="f5a-j5-IWb"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="151"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MyGameDefaultAppIcon" width="46" height="45"/>
+        <image name="game_9" width="200" height="200"/>
+    </resources>
+</document>

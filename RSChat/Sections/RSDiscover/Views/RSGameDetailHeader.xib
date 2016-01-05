@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RSGameDetailHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_d" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-99-Tyb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MT2" translatesAutoresizingMaskIntoConstraints="NO" id="l03-lY-Nkt">
+                    <rect key="frame" x="15" y="130" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="9wx-G2-OZY"/>
+                        <constraint firstAttribute="height" constant="60" id="Twt-WU-PpZ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_a" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-1m-BiA">
+                    <rect key="frame" x="38" y="222" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="LoQ-P8-Ifr"/>
+                        <constraint firstAttribute="height" constant="50" id="ccA-oM-5ZU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大家都爱玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c9-RS-6SD">
+                    <rect key="frame" x="28" y="265" width="70" height="15"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="KEO-P5-5wF"/>
+                        <constraint firstAttribute="width" constant="70" id="Ky8-YM-pAg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超过一千万人热玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-qL-bx2">
+                    <rect key="frame" x="18" y="280" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="wxc-JT-gVB"/>
+                        <constraint firstAttribute="height" constant="15" id="xLM-md-Fah"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_b" translatesAutoresizingMaskIntoConstraints="NO" id="w0s-as-2Dk">
+                    <rect key="frame" x="135" y="222" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Gh3-Rg-EcE"/>
+                        <constraint firstAttribute="height" constant="50" id="ery-Cz-1fV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超过一千万人热玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-c6-e74">
+                    <rect key="frame" x="115" y="280" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="JTD-BD-mWv"/>
+                        <constraint firstAttribute="height" constant="15" id="Jpp-KU-knW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_c" translatesAutoresizingMaskIntoConstraints="NO" id="3lu-so-E6M">
+                    <rect key="frame" x="232" y="222" width="50" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Oc2-MA-wTu"/>
+                        <constraint firstAttribute="width" constant="50" id="o6T-TC-KR5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大家都爱玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AA3-u4-3US">
+                    <rect key="frame" x="222" y="265" width="70" height="15"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="pF7-Sw-3CD"/>
+                        <constraint firstAttribute="height" constant="15" id="zDT-m1-T84"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="超过一千万人热玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q05-kn-vJ1">
+                    <rect key="frame" x="212" y="280" width="90" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="f11-cG-VR6"/>
+                        <constraint firstAttribute="width" constant="90" id="pLb-Mq-cgD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我叫MT2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-Sl-rgf">
+                    <rect key="frame" x="85" y="135" width="93" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="焕新一代3D手游" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5l-jB-pRK">
+                    <rect key="frame" x="85" y="169" width="110" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大家都爱玩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsB-gB-WJO">
+                    <rect key="frame" x="125" y="265" width="70" height="15"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Exl-cT-Go1"/>
+                        <constraint firstAttribute="height" constant="15" id="GoQ-la-OqP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wte-1m-BiA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="6eJ-kC-W6q"/>
+                <constraint firstItem="l03-lY-Nkt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="7gi-rO-mLr"/>
+                <constraint firstAttribute="bottom" secondItem="hGV-99-Tyb" secondAttribute="bottom" constant="110" id="7tA-oT-BQz"/>
+                <constraint firstAttribute="trailing" secondItem="3lu-so-E6M" secondAttribute="trailing" constant="38" id="EfH-cG-d3L"/>
+                <constraint firstItem="Phg-c6-e74" firstAttribute="centerX" secondItem="w0s-as-2Dk" secondAttribute="centerX" id="ErB-z4-2l0"/>
+                <constraint firstItem="B5l-jB-pRK" firstAttribute="leading" secondItem="l03-lY-Nkt" secondAttribute="trailing" constant="10" id="IvZ-YD-dkr"/>
+                <constraint firstItem="hGV-99-Tyb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JK3-CN-lK3"/>
+                <constraint firstItem="LKI-qL-bx2" firstAttribute="centerX" secondItem="Wte-1m-BiA" secondAttribute="centerX" id="KLY-rW-D9P"/>
+                <constraint firstItem="Cyt-Sl-rgf" firstAttribute="top" secondItem="l03-lY-Nkt" secondAttribute="top" constant="5" id="KqN-Vl-3We"/>
+                <constraint firstItem="8c9-RS-6SD" firstAttribute="bottom" secondItem="Wte-1m-BiA" secondAttribute="bottom" constant="8" id="LBD-iZ-C9D"/>
+                <constraint firstItem="8c9-RS-6SD" firstAttribute="centerX" secondItem="Wte-1m-BiA" secondAttribute="centerX" id="Lhr-SG-lEK"/>
+                <constraint firstItem="Phg-c6-e74" firstAttribute="top" secondItem="KsB-gB-WJO" secondAttribute="bottom" id="Nfh-u6-dFP"/>
+                <constraint firstItem="Wte-1m-BiA" firstAttribute="top" secondItem="hGV-99-Tyb" secondAttribute="bottom" constant="17" id="PJf-Xt-CN7"/>
+                <constraint firstItem="w0s-as-2Dk" firstAttribute="top" secondItem="hGV-99-Tyb" secondAttribute="bottom" constant="17" id="Q1n-3m-Lav"/>
+                <constraint firstItem="LKI-qL-bx2" firstAttribute="top" secondItem="8c9-RS-6SD" secondAttribute="bottom" id="TFG-al-pRD"/>
+                <constraint firstItem="3lu-so-E6M" firstAttribute="top" secondItem="hGV-99-Tyb" secondAttribute="bottom" constant="17" id="Xum-Ha-bR3"/>
+                <constraint firstItem="q05-kn-vJ1" firstAttribute="centerX" secondItem="3lu-so-E6M" secondAttribute="centerX" id="YQh-I3-79q"/>
+                <constraint firstItem="KsB-gB-WJO" firstAttribute="bottom" secondItem="w0s-as-2Dk" secondAttribute="bottom" constant="8" id="ZVq-jB-nMw"/>
+                <constraint firstItem="hGV-99-Tyb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="akw-Ro-yR6"/>
+                <constraint firstItem="w0s-as-2Dk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cIR-KP-t5Q"/>
+                <constraint firstItem="AA3-u4-3US" firstAttribute="bottom" secondItem="3lu-so-E6M" secondAttribute="bottom" constant="8" id="fBx-q2-gaT"/>
+                <constraint firstItem="Cyt-Sl-rgf" firstAttribute="leading" secondItem="l03-lY-Nkt" secondAttribute="trailing" constant="10" id="gCj-uw-edg"/>
+                <constraint firstItem="AA3-u4-3US" firstAttribute="centerX" secondItem="3lu-so-E6M" secondAttribute="centerX" id="gXN-JE-A0G"/>
+                <constraint firstItem="l03-lY-Nkt" firstAttribute="bottom" secondItem="hGV-99-Tyb" secondAttribute="bottom" constant="-15" id="ltB-B0-wlc"/>
+                <constraint firstItem="KsB-gB-WJO" firstAttribute="centerX" secondItem="w0s-as-2Dk" secondAttribute="centerX" id="mak-yq-Dea"/>
+                <constraint firstAttribute="trailing" secondItem="hGV-99-Tyb" secondAttribute="trailing" id="oBb-WC-XNl"/>
+                <constraint firstItem="q05-kn-vJ1" firstAttribute="top" secondItem="AA3-u4-3US" secondAttribute="bottom" id="qMn-5Z-eah"/>
+                <constraint firstItem="B5l-jB-pRK" firstAttribute="bottom" secondItem="l03-lY-Nkt" secondAttribute="bottom" constant="-3" id="qr0-Od-1ZU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstImageView" destination="Wte-1m-BiA" id="V9E-34-YaJ"/>
+                <outlet property="firstLabel" destination="8c9-RS-6SD" id="FSS-cC-SKr"/>
+                <outlet property="secondImageView" destination="w0s-as-2Dk" id="m0S-Z9-6yw"/>
+                <outlet property="secondLabel" destination="KsB-gB-WJO" id="y2G-kj-ZDL"/>
+                <outlet property="thirdImageView" destination="3lu-so-E6M" id="NnK-JA-nah"/>
+                <outlet property="thirdLabel" destination="AA3-u4-3US" id="Re0-Su-CQn"/>
+            </connections>
+            <point key="canvasLocation" x="217" y="204.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MT2" width="150" height="150"/>
+        <image name="game_a" width="128" height="128"/>
+        <image name="game_b" width="128" height="128"/>
+        <image name="game_c" width="128" height="128"/>
+        <image name="game_d" width="640" height="410"/>
+    </resources>
+</document>

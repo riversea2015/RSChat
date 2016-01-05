@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="RSGameDetailBCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="技巧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-zu-ThQ">
+                        <rect key="frame" x="15" y="15" width="28" height="16"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="Vmc-bd-gV1"/>
+                            <constraint firstAttribute="height" constant="16" id="cMb-bs-3jm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_b" translatesAutoresizingMaskIntoConstraints="NO" id="7Fh-nK-fbI">
+                        <rect key="frame" x="245" y="15" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="GKm-ZN-Fb6"/>
+                            <constraint firstAttribute="width" constant="60" id="mSg-JC-WqM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢乐升级新玩家必会小技巧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG3-4u-0yU">
+                        <rect key="frame" x="51" y="13" width="186" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="欢乐升级新玩家必会小技巧轻松获取，如果大家是新手的话，对这款游戏的规则会非常适应。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-BA-CWr">
+                        <rect key="frame" x="15" y="42" width="222" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SG3-4u-0yU" firstAttribute="leading" secondItem="ADt-zu-ThQ" secondAttribute="trailing" constant="8" id="8U3-8M-KUG"/>
+                    <constraint firstAttribute="trailing" secondItem="7Fh-nK-fbI" secondAttribute="trailing" constant="15" id="8ny-hX-l0b"/>
+                    <constraint firstItem="sxe-BA-CWr" firstAttribute="top" secondItem="SG3-4u-0yU" secondAttribute="bottom" constant="10" id="Me8-9H-hCD"/>
+                    <constraint firstItem="sxe-BA-CWr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="c22-Ba-Utn"/>
+                    <constraint firstItem="SG3-4u-0yU" firstAttribute="centerY" secondItem="ADt-zu-ThQ" secondAttribute="centerY" id="dOY-eG-ESS"/>
+                    <constraint firstItem="7Fh-nK-fbI" firstAttribute="leading" secondItem="SG3-4u-0yU" secondAttribute="trailing" constant="8" id="fAZ-Uj-fZA"/>
+                    <constraint firstItem="ADt-zu-ThQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jdi-9W-jIj"/>
+                    <constraint firstItem="7Fh-nK-fbI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kxM-e2-l0w"/>
+                    <constraint firstItem="7Fh-nK-fbI" firstAttribute="leading" secondItem="sxe-BA-CWr" secondAttribute="trailing" constant="8" id="nwv-PI-mcf"/>
+                    <constraint firstItem="SG3-4u-0yU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="usb-1D-hNe"/>
+                    <constraint firstItem="ADt-zu-ThQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zBr-se-jFE"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="usb-1D-hNe"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="353" y="211"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="game_b" width="128" height="128"/>
+    </resources>
+</document>

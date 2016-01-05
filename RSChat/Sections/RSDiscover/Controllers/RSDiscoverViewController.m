@@ -17,6 +17,7 @@
 #import "RSBottleViewController.h"
 #import "RSFriendsViewController.h"
 #import "RSBuyViewController.h"
+#import "RSGameViewController.h"
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -142,6 +143,11 @@
     if (indexPath.section == 3 && indexPath.row == 0) {
         RSBuyViewController *buyVC = [[RSBuyViewController alloc] init];//WithNibName:@"RSBuyViewController" bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:buyVC animated:YES];
+    }
+    
+    if (indexPath.section == 3 && indexPath.row == 1) {
+        RSGameViewController *gameVC = [[RSGameViewController alloc] init];
+        [self.navigationController pushViewController:gameVC animated:YES];
     }
     
     self.hidesBottomBarWhenPushed = NO;
