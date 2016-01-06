@@ -11,6 +11,7 @@
 
 @interface RSAddFriendViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *naviContacts;
 
 @end
 
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"添加朋友";
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -46,11 +48,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-        cell.textLabel.text = @"ceshishuju";
+        cell.textLabel.text = @"To be continued...";
         return cell;
     }
     
     RSAddFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSAddFriendCell cellID] forIndexPath:indexPath];
+    
+    NSDictionary *dic = self.naviContacts[indexPath.row];
+    cell.rightImageView.image = [UIImage imageNamed:dic[@"imageName"]];
+    cell.topLabel.text = dic[@"titleText"];
+    cell.bottomLabel.text = dic[@"subtitleText"];
     return cell;
 }
 
@@ -67,6 +74,21 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section == 0) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 45)];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(55, -5, 180, view.frame.size.height)];
+        label.text = [NSString stringWithFormat:@"我的微信号：%@", @"riversea2015"];
+        label.textColor = [UIColor darkGrayColor];
+        label.font = [UIFont systemFontOfSize:15];
+        [view addSubview:label];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"add_friend_myQR"]];
+        imageView.frame = CGRectMake(label.frame.size.width + label.frame.origin.x + 5, 7, 20, 20);
+        [view addSubview:imageView];
+        
+        return view;
+    }
     return nil;
 }
 
@@ -84,6 +106,14 @@
         _tableView.delegate = self;
     }
     return _tableView;
+}
+
+- (NSArray *)naviContacts {
+    if (!_naviContacts) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"homeNaviContacts" ofType:@"plist"];
+        _naviContacts = [NSArray arrayWithContentsOfFile:filePath];
+    }
+    return _naviContacts;
 }
 
 @end

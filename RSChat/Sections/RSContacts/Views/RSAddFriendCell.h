@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RSAddFriendCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
 
 + (NSString *)cellID;
 + (CGFloat)cellHeight;

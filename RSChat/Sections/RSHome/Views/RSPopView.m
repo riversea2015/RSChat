@@ -7,6 +7,7 @@
 //
 
 #import "RSPopView.h"
+#import "RSScanViewController.h"
 
 @implementation RSPopView
 

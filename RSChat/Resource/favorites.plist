@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>topImageName</key>
+		<string>public_ios9</string>
+		<key>bottomImageName</key>
+		<string>favorite_0</string>
+		<key>nameText</key>
+		<string>iOS开发</string>
+		<key>timeText</key>
+		<string>16/01/06</string>
+		<key>contentText</key>
+		<string>当程序员遇到Bug，会发生什么？</string>
+	</dict>
+	<dict>
+		<key>topImageName</key>
+		<string>public_tencent</string>
+		<key>bottomImageName</key>
+		<string>favorite_1</string>
+		<key>nameText</key>
+		<string>微信团队</string>
+		<key>timeText</key>
+		<string>16/01/01</string>
+		<key>contentText</key>
+		<string>微信团队，随时解决您在使用中遇到的任何问题！</string>
+	</dict>
+	<dict>
+		<key>topImageName</key>
+		<string>public_bugly</string>
+		<key>bottomImageName</key>
+		<string>favorite_2</string>
+		<key>nameText</key>
+		<string>腾讯Bugly</string>
+		<key>timeText</key>
+		<string>15/12/30</string>
+		<key>contentText</key>
+		<string>专业的Bug收集、分析利器，为您的App保驾护航。</string>
+	</dict>
+	<dict>
+		<key>topImageName</key>
+		<string>public_umeng</string>
+		<key>bottomImageName</key>
+		<string>favorite_3</string>
+		<key>nameText</key>
+		<string>友盟分享</string>
+		<key>timeText</key>
+		<string>15/12/30</string>
+		<key>contentText</key>
+		<string>数据分享、统计、分析的专业工具。。。</string>
+	</dict>
+</array>
+</plist>

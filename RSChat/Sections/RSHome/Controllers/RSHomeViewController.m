@@ -12,6 +12,7 @@
 #import "RSNewsTableViewController.h"
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
+#import "RSScanViewController.h"
 
 #import "RSSearchTempView.h"
 
@@ -51,6 +52,24 @@
     [self.view addSubview:self.tableView];
     
     [self startSearch];
+    
+    for (UIButton *button in self.popView.popButtons) {
+        [button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+- (void)action:(UIButton *)button {
+    self.hidesBottomBarWhenPushed = YES;
+    
+    if (button.tag == 2) {
+        RSScanViewController *scanVC = [[RSScanViewController alloc] init];
+        [self.navigationController pushViewController:scanVC animated:YES];
+    }
+    
+    
+    self.popView.flag = 0;
+    [self.popView removeFromSuperview];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -229,5 +248,6 @@
     }
     return _popView;
 }
+
 
 @end

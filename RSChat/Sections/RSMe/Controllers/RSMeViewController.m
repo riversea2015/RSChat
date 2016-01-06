@@ -15,6 +15,10 @@
 
 #import "RSPrivateViewController.h"
 #import "RSSettingViewController.h"
+#import "RSEmotionViewController.h"
+#import "RSMoneyCollectionViewController.h"
+#import "RSAlbumViewController.h"
+#import "RSFavoritesViewController.h"
 
 @interface RSMeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -104,10 +108,30 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.hidesBottomBarWhenPushed = YES;
     
+    // 打开个人信息页面
     if (indexPath.section == 0) {
-        // 打开个人信息页面
         RSPrivateViewController *privateVC = [[RSPrivateViewController alloc] init];
         [self.navigationController pushViewController:privateVC animated:YES];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        RSAlbumViewController *albumVC = [[RSAlbumViewController alloc] init];
+        [self.navigationController pushViewController:albumVC animated:YES];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        RSFavoritesViewController *favoritesVC = [[RSFavoritesViewController alloc] init];
+        [self.navigationController pushViewController:favoritesVC animated:YES];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        RSMoneyCollectionViewController *moneyVC = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:moneyVC animated:YES];
+    }
+    
+    if (indexPath.section == 2) {
+        RSEmotionViewController *emotionVC = [[RSEmotionViewController alloc] init];
+        [self.navigationController pushViewController:emotionVC animated:YES];
     }
     
     if (indexPath.section == 3) {

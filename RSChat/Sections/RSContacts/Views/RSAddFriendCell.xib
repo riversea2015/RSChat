@@ -43,6 +43,11 @@
                     <constraint firstItem="yM5-cs-tDx" firstAttribute="bottom" secondItem="LEj-2k-SqP" secondAttribute="bottom" id="uJ7-tJ-7N8"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLabel" destination="yM5-cs-tDx" id="5Wp-69-L2A"/>
+                <outlet property="rightImageView" destination="LEj-2k-SqP" id="abu-UU-Wg7"/>
+                <outlet property="topLabel" destination="6E3-2p-p3O" id="FhL-KB-UMV"/>
+            </connections>
             <point key="canvasLocation" x="327" y="255.5"/>
         </tableViewCell>
     </objects>

@@ -34,20 +34,18 @@
     [super viewDidLoad];
     
     self.title = @"详细资料";
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"settings..." style:UIBarButtonItemStyleDone target:self action:@selector(setDetails)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(setDetails)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailFirstCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailFirstCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailSecondCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailSecondCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMessageVideoCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMessageVideoCell cellID]];
     
-    
     [self SetTableFooterView];
 }
 
 #pragma mark - private method
 
-#warning 注意：tableFooterView默认为nil，所以使用时必须先给他一个View，然后将自己的View加到这个view下才行，不可以直接加自己的，否则无法显示！
 - (void)SetTableFooterView {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 123)];

@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"设置";
     
     [RSSettingCell registToTableView:self.tableView];
     [RSLogoutCell registToTableView:self.tableView];

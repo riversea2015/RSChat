@@ -28,7 +28,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="发起群聊" image="contacts_add_newmessage"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-jf-dpv">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-jf-dpv">
                     <rect key="frame" x="205" y="159" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -37,7 +37,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="扫一扫   " image="contacts_add_scan"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-x3-nTR">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-x3-nTR">
                     <rect key="frame" x="205" y="198" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -46,7 +46,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="收付款   " image="contacts_add_money"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-n0-KeV">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-n0-KeV">
                     <rect key="frame" x="205" y="120" width="103" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -104,12 +104,12 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
-                <outlet property="friends" destination="a5Q-n0-KeV" id="bFQ-ca-Uce"/>
-                <outlet property="groupChat" destination="0IG-Wj-bXS" id="KRS-FL-qGl"/>
-                <outlet property="money" destination="ECh-x3-nTR" id="yfY-Mi-Mpe"/>
-                <outlet property="scan" destination="jf2-jf-dpv" id="o9r-5s-KzE"/>
+                <outletCollection property="popButtons" destination="0IG-Wj-bXS" id="Pm1-LN-CdN"/>
+                <outletCollection property="popButtons" destination="a5Q-n0-KeV" id="Z5m-hd-Cza"/>
+                <outletCollection property="popButtons" destination="jf2-jf-dpv" id="ejF-fc-YIQ"/>
+                <outletCollection property="popButtons" destination="ECh-x3-nTR" id="Zi1-B9-8Zv"/>
             </connections>
-            <point key="canvasLocation" x="523" y="263"/>
+            <point key="canvasLocation" x="449" y="249"/>
         </view>
     </objects>
     <resources>

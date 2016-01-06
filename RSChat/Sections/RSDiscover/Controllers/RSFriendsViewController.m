@@ -33,7 +33,7 @@
     [super viewDidLoad];
     self.title = @"朋友圈";
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(changePhoto)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_Camera"] style:UIBarButtonItemStyleDone target:self action:@selector(changePhoto)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
     // UIRectEdgeAll && NO 时，可以让tableView延伸至navigationBar下边去。

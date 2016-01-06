@@ -35,7 +35,13 @@
     
     [RSGameDetailACell registToTableView:self.tableView];
     [RSGameDetailBCell registToTableView:self.tableView];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
 
+- (void)settings {
+    // ...
 }
 
 #pragma mark - Navigation

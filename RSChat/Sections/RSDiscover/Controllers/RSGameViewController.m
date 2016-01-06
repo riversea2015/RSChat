@@ -40,6 +40,13 @@
     [RSGameCCell registToTableView:self.tableView];
     [RSGameDCell registToTableView:self.tableView];
     [RSGameECell registToTableView:self.tableView];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)settings {
+    // ...
 }
 
 #pragma mark - TableView delegate dataSource

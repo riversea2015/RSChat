@@ -20,6 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYI-LB-Vfk">
+                    <rect key="frame" x="145" y="528" width="30" height="30"/>
+                    <state key="normal" title="更多"/>
+                    <connections>
+                        <action selector="more:" destination="-1" eventType="touchUpInside" id="g5u-b7-mfc"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IES-H1-eTp">
                     <rect key="frame" x="15" y="80" width="290" height="320"/>
                     <subviews>
@@ -130,13 +137,6 @@
                         <constraint firstItem="dAt-At-rxy" firstAttribute="top" secondItem="Jh7-Vh-ljY" secondAttribute="top" id="z23-iw-r3c"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYI-LB-Vfk">
-                    <rect key="frame" x="145" y="528" width="30" height="30"/>
-                    <state key="normal" title="更多"/>
-                    <connections>
-                        <action selector="more:" destination="-1" eventType="touchUpInside" id="g5u-b7-mfc"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>

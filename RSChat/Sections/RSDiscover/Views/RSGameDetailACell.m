@@ -9,7 +9,6 @@
 #import "RSGameDetailACell.h"
 
 @interface RSGameDetailACell ()<UIScrollViewDelegate>
-@property (nonatomic, strong) NSArray *demoArr;
 @property (nonatomic, strong) UIPageControl *pageControl;
 
 @end

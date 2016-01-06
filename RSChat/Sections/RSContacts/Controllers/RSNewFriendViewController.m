@@ -8,6 +8,7 @@
 
 #import "RSNewFriendViewController.h"
 #import "RSNewFriendCell.h"
+#import "RSAddFriendViewController.h"
 
 @interface RSNewFriendViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -42,7 +43,9 @@
 }
 
 - (void)addFriends {
-    // To be continued...
+    self.hidesBottomBarWhenPushed = YES;
+    RSAddFriendViewController *addVC = [[RSAddFriendViewController alloc] init];
+    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 #pragma mark - tableView DataSource Delegate

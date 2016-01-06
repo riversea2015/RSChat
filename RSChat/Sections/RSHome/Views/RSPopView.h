@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RSPopView : UIView
-@property (weak, nonatomic) IBOutlet UIButton *groupChat;
-@property (weak, nonatomic) IBOutlet UIButton *friends;
-@property (weak, nonatomic) IBOutlet UIButton *scan;
-@property (weak, nonatomic) IBOutlet UIButton *money;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *popButtons;
 
 @property (nonatomic, assign) NSInteger flag;
 

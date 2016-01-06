@@ -21,6 +21,24 @@
 		1B87735A1C3BDB42000CCEAE /* RSSearchFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773581C3BDB42000CCEAE /* RSSearchFriendCell.xib */; };
 		1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */; };
 		1B8773641C3BE3F9000CCEAE /* RSSearchTempView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */; };
+		1B8773661C3C46BC000CCEAE /* homeNaviContacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773651C3C46BC000CCEAE /* homeNaviContacts.plist */; };
+		1B87736A1C3CB05E000CCEAE /* RSEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773681C3CB05E000CCEAE /* RSEmotionViewController.m */; };
+		1B87736F1C3CC2B1000CCEAE /* RSAutoDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87736D1C3CC2B1000CCEAE /* RSAutoDisplayCell.m */; };
+		1B8773701C3CC2B1000CCEAE /* RSAutoDisplayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B87736E1C3CC2B1000CCEAE /* RSAutoDisplayCell.xib */; };
+		1B8773771C3CF0E7000CCEAE /* RSEmotionACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773751C3CF0E7000CCEAE /* RSEmotionACell.m */; };
+		1B8773781C3CF0E7000CCEAE /* RSEmotionACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773761C3CF0E7000CCEAE /* RSEmotionACell.xib */; };
+		1B8773811C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87737F1C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m */; };
+		1B8773821C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773801C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib */; };
+		1B8773861C3D0029000CCEAE /* RSMoneyACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773841C3D0029000CCEAE /* RSMoneyACell.m */; };
+		1B8773871C3D0029000CCEAE /* RSMoneyACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773851C3D0029000CCEAE /* RSMoneyACell.xib */; };
+		1B87738B1C3D2785000CCEAE /* RSMoneyCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773891C3D2785000CCEAE /* RSMoneyCollectionView.m */; };
+		1B87738C1C3D2785000CCEAE /* RSMoneyCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B87738A1C3D2785000CCEAE /* RSMoneyCollectionView.xib */; };
+		1B8773901C3D3BF6000CCEAE /* RSAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B87738E1C3D3BF6000CCEAE /* RSAlbumViewController.m */; };
+		1B8773941C3D3C70000CCEAE /* RSFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773931C3D3C70000CCEAE /* RSFavoritesViewController.m */; };
+		1B8773981C3D3EAB000CCEAE /* RSFavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773961C3D3EAB000CCEAE /* RSFavoriteCell.m */; };
+		1B8773991C3D3EAB000CCEAE /* RSFavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773971C3D3EAB000CCEAE /* RSFavoriteCell.xib */; };
+		1B87739B1C3D52BA000CCEAE /* favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B87739A1C3D52BA000CCEAE /* favorites.plist */; };
+		1B87739F1C3D6C87000CCEAE /* RSAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B87739E1C3D6C87000CCEAE /* RSAlbumViewController.xib */; };
 		1BCE64D51C3A3510002AC8D3 /* RSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */; };
 		1BCE64F51C3A64E3002AC8D3 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */; };
 		1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */; };
@@ -208,6 +226,33 @@
 		1B8773601C3BE3E9000CCEAE /* RSSearchTempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSearchTempView.h; sourceTree = "<group>"; };
 		1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSearchTempView.m; sourceTree = "<group>"; };
 		1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSearchTempView.xib; sourceTree = "<group>"; };
+		1B8773651C3C46BC000CCEAE /* homeNaviContacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = homeNaviContacts.plist; sourceTree = "<group>"; };
+		1B8773671C3CB05E000CCEAE /* RSEmotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEmotionViewController.h; sourceTree = "<group>"; };
+		1B8773681C3CB05E000CCEAE /* RSEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEmotionViewController.m; sourceTree = "<group>"; };
+		1B87736C1C3CC2B1000CCEAE /* RSAutoDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAutoDisplayCell.h; sourceTree = "<group>"; };
+		1B87736D1C3CC2B1000CCEAE /* RSAutoDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAutoDisplayCell.m; sourceTree = "<group>"; };
+		1B87736E1C3CC2B1000CCEAE /* RSAutoDisplayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSAutoDisplayCell.xib; sourceTree = "<group>"; };
+		1B8773741C3CF0E7000CCEAE /* RSEmotionACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSEmotionACell.h; sourceTree = "<group>"; };
+		1B8773751C3CF0E7000CCEAE /* RSEmotionACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSEmotionACell.m; sourceTree = "<group>"; };
+		1B8773761C3CF0E7000CCEAE /* RSEmotionACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSEmotionACell.xib; sourceTree = "<group>"; };
+		1B87737E1C3CFEBE000CCEAE /* RSMoneyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMoneyCollectionViewController.h; sourceTree = "<group>"; };
+		1B87737F1C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMoneyCollectionViewController.m; sourceTree = "<group>"; };
+		1B8773801C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMoneyCollectionViewController.xib; sourceTree = "<group>"; };
+		1B8773831C3D0029000CCEAE /* RSMoneyACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMoneyACell.h; sourceTree = "<group>"; };
+		1B8773841C3D0029000CCEAE /* RSMoneyACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMoneyACell.m; sourceTree = "<group>"; };
+		1B8773851C3D0029000CCEAE /* RSMoneyACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMoneyACell.xib; sourceTree = "<group>"; };
+		1B8773881C3D2785000CCEAE /* RSMoneyCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMoneyCollectionView.h; sourceTree = "<group>"; };
+		1B8773891C3D2785000CCEAE /* RSMoneyCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMoneyCollectionView.m; sourceTree = "<group>"; };
+		1B87738A1C3D2785000CCEAE /* RSMoneyCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMoneyCollectionView.xib; sourceTree = "<group>"; };
+		1B87738D1C3D3BF6000CCEAE /* RSAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAlbumViewController.h; sourceTree = "<group>"; };
+		1B87738E1C3D3BF6000CCEAE /* RSAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAlbumViewController.m; sourceTree = "<group>"; };
+		1B8773921C3D3C70000CCEAE /* RSFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFavoritesViewController.h; sourceTree = "<group>"; };
+		1B8773931C3D3C70000CCEAE /* RSFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFavoritesViewController.m; sourceTree = "<group>"; };
+		1B8773951C3D3EAB000CCEAE /* RSFavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFavoriteCell.h; sourceTree = "<group>"; };
+		1B8773961C3D3EAB000CCEAE /* RSFavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFavoriteCell.m; sourceTree = "<group>"; };
+		1B8773971C3D3EAB000CCEAE /* RSFavoriteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSFavoriteCell.xib; sourceTree = "<group>"; };
+		1B87739A1C3D52BA000CCEAE /* favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = favorites.plist; sourceTree = "<group>"; };
+		1B87739E1C3D6C87000CCEAE /* RSAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSAlbumViewController.xib; sourceTree = "<group>"; };
 		1BCE64D31C3A3510002AC8D3 /* RSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameViewController.h; sourceTree = "<group>"; };
 		1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameViewController.m; sourceTree = "<group>"; };
 		1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
@@ -527,6 +572,8 @@
 			isa = PBXGroup;
 			children = (
 				722D5B0F1C240D17009F3574 /* officialAccounts.plist */,
+				1B8773651C3C46BC000CCEAE /* homeNaviContacts.plist */,
+				1B87739A1C3D52BA000CCEAE /* favorites.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -985,6 +1032,16 @@
 				726E86731C35553100B82094 /* RSCreatCodeViewController.h */,
 				726E86741C35553100B82094 /* RSCreatCodeViewController.m */,
 				726E86751C35553100B82094 /* RSCreatCodeViewController.xib */,
+				1B87738D1C3D3BF6000CCEAE /* RSAlbumViewController.h */,
+				1B87738E1C3D3BF6000CCEAE /* RSAlbumViewController.m */,
+				1B87739E1C3D6C87000CCEAE /* RSAlbumViewController.xib */,
+				1B8773921C3D3C70000CCEAE /* RSFavoritesViewController.h */,
+				1B8773931C3D3C70000CCEAE /* RSFavoritesViewController.m */,
+				1B87737E1C3CFEBE000CCEAE /* RSMoneyCollectionViewController.h */,
+				1B87737F1C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m */,
+				1B8773801C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib */,
+				1B8773671C3CB05E000CCEAE /* RSEmotionViewController.h */,
+				1B8773681C3CB05E000CCEAE /* RSEmotionViewController.m */,
 				7291B61F1C33CC4300EBE0E4 /* RSSettingViewController.h */,
 				7291B6201C33CC4300EBE0E4 /* RSSettingViewController.m */,
 				72881D7E1C33E2CD00447B85 /* RSReLoginViewController.h */,
@@ -1026,6 +1083,21 @@
 				72881D791C33E08D00447B85 /* RSLogoutCell.h */,
 				72881D7A1C33E08D00447B85 /* RSLogoutCell.m */,
 				72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */,
+				1B87736C1C3CC2B1000CCEAE /* RSAutoDisplayCell.h */,
+				1B87736D1C3CC2B1000CCEAE /* RSAutoDisplayCell.m */,
+				1B87736E1C3CC2B1000CCEAE /* RSAutoDisplayCell.xib */,
+				1B8773741C3CF0E7000CCEAE /* RSEmotionACell.h */,
+				1B8773751C3CF0E7000CCEAE /* RSEmotionACell.m */,
+				1B8773761C3CF0E7000CCEAE /* RSEmotionACell.xib */,
+				1B8773831C3D0029000CCEAE /* RSMoneyACell.h */,
+				1B8773841C3D0029000CCEAE /* RSMoneyACell.m */,
+				1B8773851C3D0029000CCEAE /* RSMoneyACell.xib */,
+				1B8773881C3D2785000CCEAE /* RSMoneyCollectionView.h */,
+				1B8773891C3D2785000CCEAE /* RSMoneyCollectionView.m */,
+				1B87738A1C3D2785000CCEAE /* RSMoneyCollectionView.xib */,
+				1B8773951C3D3EAB000CCEAE /* RSFavoriteCell.h */,
+				1B8773961C3D3EAB000CCEAE /* RSFavoriteCell.m */,
+				1B8773971C3D3EAB000CCEAE /* RSFavoriteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1193,20 +1265,27 @@
 				727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */,
 				72C404791C2308F100852B71 /* RSNewFriendCell.xib in Resources */,
 				1BCE65321C3A65C7002AC8D3 /* RSFriendsACell.xib in Resources */,
+				1B8773661C3C46BC000CCEAE /* homeNaviContacts.plist in Resources */,
 				1B8773551C3BD713000CCEAE /* RSAddFriendCell.xib in Resources */,
 				72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */,
 				1B87735A1C3BDB42000CCEAE /* RSSearchFriendCell.xib in Resources */,
 				728ED8D31C0B0E2800DE8639 /* .gitignore in Resources */,
+				1B87739F1C3D6C87000CCEAE /* RSAlbumViewController.xib in Resources */,
 				727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */,
 				728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */,
 				1BCE653C1C3A65C7002AC8D3 /* RSGameDCell.xib in Resources */,
+				1B8773821C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib in Resources */,
 				729139AF1BF1D44B00CEFD64 /* Images.xcassets in Resources */,
 				1BCE65381C3A65C7002AC8D3 /* RSGameBCell.xib in Resources */,
+				1B8773871C3D0029000CCEAE /* RSMoneyACell.xib in Resources */,
 				7271F9C41C2928B400FD720B /* RSLoginViewController.xib in Resources */,
 				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
+				1B87739B1C3D52BA000CCEAE /* favorites.plist in Resources */,
+				1B8773701C3CC2B1000CCEAE /* RSAutoDisplayCell.xib in Resources */,
 				72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */,
 				720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */,
 				722D5B081C23BFAF009F3574 /* RSOfficialCell.xib in Resources */,
+				1B8773781C3CF0E7000CCEAE /* RSEmotionACell.xib in Resources */,
 				1B26D66B1C3A9E3E00BFC29C /* RSGameDetailHeader.xib in Resources */,
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
@@ -1220,6 +1299,7 @@
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
 				72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */,
 				72C404841C23262000852B71 /* RSLabelBlankView.xib in Resources */,
+				1B8773991C3D3EAB000CCEAE /* RSFavoriteCell.xib in Resources */,
 				1BCE653A1C3A65C7002AC8D3 /* RSGameCCell.xib in Resources */,
 				72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */,
 				722D5B101C240D17009F3574 /* officialAccounts.plist in Resources */,
@@ -1233,6 +1313,7 @@
 				729D60021C29B587000F8C69 /* RSConformViewController.xib in Resources */,
 				728ED8D71C0B0E2800DE8639 /* zbar-help.html in Resources */,
 				728ED87B1C0AD36900DE8639 /* RSVideoViewController.xib in Resources */,
+				1B87738C1C3D2785000CCEAE /* RSMoneyCollectionView.xib in Resources */,
 				72BDB3781C2A3584002AE29F /* RSOtherLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1303,6 +1384,7 @@
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */,
 				1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */,
+				1B87738B1C3D2785000CCEAE /* RSMoneyCollectionView.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
 				726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */,
@@ -1310,6 +1392,7 @@
 				1BCE65371C3A65C7002AC8D3 /* RSGameBCell.m in Sources */,
 				7288A54F1C10879D009936A7 /* RSPrivateViewController.m in Sources */,
 				720CE92D1C080CC200913C5A /* RSActionView.m in Sources */,
+				1B8773941C3D3C70000CCEAE /* RSFavoritesViewController.m in Sources */,
 				72C404711C226C3C00852B71 /* RSPopView.m in Sources */,
 				72B6AB301C3848FB00EAFA27 /* RSAddFriendViewController.m in Sources */,
 				1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */,
@@ -1329,7 +1412,9 @@
 				72DC539F1C26F3FB00D74105 /* UIImage+RSOriginImage.m in Sources */,
 				729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */,
 				729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */,
+				1B8773901C3D3BF6000CCEAE /* RSAlbumViewController.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
+				1B87736A1C3CB05E000CCEAE /* RSEmotionViewController.m in Sources */,
 				72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */,
 				72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */,
 				1B8773591C3BDB42000CCEAE /* RSSearchFriendCell.m in Sources */,
@@ -1342,10 +1427,12 @@
 				727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */,
 				72172F1C1BFE0FB700D6D2FD /* RSHomeModel.m in Sources */,
 				722D5B071C23BFAF009F3574 /* RSOfficialCell.m in Sources */,
+				1B8773771C3CF0E7000CCEAE /* RSEmotionACell.m in Sources */,
 				7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */,
 				1B26D6651C3A91F200BFC29C /* RSGameDetailViewController.m in Sources */,
 				72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */,
 				1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */,
+				1B8773981C3D3EAB000CCEAE /* RSFavoriteCell.m in Sources */,
 				729D60011C29B587000F8C69 /* RSConformViewController.m in Sources */,
 				72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */,
 				72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */,
@@ -1363,9 +1450,12 @@
 				728ED87A1C0AD36900DE8639 /* RSVideoViewController.m in Sources */,
 				72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */,
 				7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */,
+				1B8773811C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m in Sources */,
 				1B26D66F1C3ABC5C00BFC29C /* RSGameDetailACell.m in Sources */,
+				1B87736F1C3CC2B1000CCEAE /* RSAutoDisplayCell.m in Sources */,
 				729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */,
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
+				1B8773861C3D0029000CCEAE /* RSMoneyACell.m in Sources */,
 				728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */,
 				72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */,
 				72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */,
