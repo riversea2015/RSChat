@@ -40,7 +40,6 @@
 		1B87739B1C3D52BA000CCEAE /* favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B87739A1C3D52BA000CCEAE /* favorites.plist */; };
 		1B87739F1C3D6C87000CCEAE /* RSAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B87739E1C3D6C87000CCEAE /* RSAlbumViewController.xib */; };
 		1BCE64D51C3A3510002AC8D3 /* RSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */; };
-		1BCE64F51C3A64E3002AC8D3 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */; };
 		1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */; };
 		1BCE65321C3A65C7002AC8D3 /* RSFriendsACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE651E1C3A65C7002AC8D3 /* RSFriendsACell.xib */; };
 		1BCE65331C3A65C7002AC8D3 /* RSFriendsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE65201C3A65C7002AC8D3 /* RSFriendsHeaderView.m */; };
@@ -55,6 +54,7 @@
 		1BCE653C1C3A65C7002AC8D3 /* RSGameDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE652D1C3A65C7002AC8D3 /* RSGameDCell.xib */; };
 		1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */; };
 		1BCE653E1C3A65C7002AC8D3 /* RSGameECell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */; };
+		1BDD2ADC1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */; };
 		23BAECD075209844428E52B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB51142B6FE086787A245 /* libPods.a */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
 		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
@@ -255,7 +255,6 @@
 		1B87739E1C3D6C87000CCEAE /* RSAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSAlbumViewController.xib; sourceTree = "<group>"; };
 		1BCE64D31C3A3510002AC8D3 /* RSGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameViewController.h; sourceTree = "<group>"; };
 		1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameViewController.m; sourceTree = "<group>"; };
-		1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
 		1BCE651C1C3A65C7002AC8D3 /* RSFriendsACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsACell.h; sourceTree = "<group>"; };
 		1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsACell.m; sourceTree = "<group>"; };
 		1BCE651E1C3A65C7002AC8D3 /* RSFriendsACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSFriendsACell.xib; sourceTree = "<group>"; };
@@ -277,6 +276,7 @@
 		1BCE652E1C3A65C7002AC8D3 /* RSGameECell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameECell.h; sourceTree = "<group>"; };
 		1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameECell.m; sourceTree = "<group>"; };
 		1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSGameECell.xib; sourceTree = "<group>"; };
+		1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
 		6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
@@ -864,6 +864,7 @@
 				729139D31BF1D58E00CEFD64 /* Controllers */,
 				729139D61BF1D58E00CEFD64 /* Models */,
 				729139D71BF1D58E00CEFD64 /* Views */,
+				1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */,
 			);
 			path = RSDiscover;
 			sourceTree = "<group>";
@@ -952,7 +953,6 @@
 				1B26D6711C3ABF7600BFC29C /* RSGameDetailBCell.h */,
 				1B26D6721C3ABF7600BFC29C /* RSGameDetailBCell.m */,
 				1B26D6731C3ABF7600BFC29C /* RSGameDetailBCell.xib */,
-				1BCE64F21C3A64E3002AC8D3 /* RSDiscoverImages.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1255,7 +1255,6 @@
 				72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */,
 				1B26D6661C3A91F200BFC29C /* RSGameDetailViewController.xib in Resources */,
 				1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */,
-				1BCE64F51C3A64E3002AC8D3 /* RSDiscoverImages.xcassets in Resources */,
 				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
@@ -1297,6 +1296,7 @@
 				728ED8851C0AF62200DE8639 /* RSShakeViewController.xib in Resources */,
 				1BCE653E1C3A65C7002AC8D3 /* RSGameECell.xib in Resources */,
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
+				1BDD2ADC1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets in Resources */,
 				72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */,
 				72C404841C23262000852B71 /* RSLabelBlankView.xib in Resources */,
 				1B8773991C3D3EAB000CCEAE /* RSFavoriteCell.xib in Resources */,

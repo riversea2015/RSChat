@@ -61,7 +61,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="public_clock" translatesAutoresizingMaskIntoConstraints="NO" id="QC9-4s-hGX">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hehai" translatesAutoresizingMaskIntoConstraints="NO" id="QC9-4s-hGX">
                             <rect key="frame" x="105" y="0.0" width="80" height="80"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="VjW-y7-Zja"/>
@@ -151,6 +151,6 @@
         </view>
     </objects>
     <resources>
-        <image name="public_clock" width="180" height="180"/>
+        <image name="hehai" width="834" height="834"/>
     </resources>
 </document>

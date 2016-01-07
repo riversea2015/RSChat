@@ -12,7 +12,9 @@
 #import "RSNewsTableViewController.h"
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
+
 #import "RSScanViewController.h"
+#import "RSAddFriendViewController.h"
 
 #import "RSSearchTempView.h"
 
@@ -61,11 +63,15 @@
 - (void)action:(UIButton *)button {
     self.hidesBottomBarWhenPushed = YES;
     
+    if (button.tag == 1) {
+        RSAddFriendViewController *addFriendVC = [[RSAddFriendViewController alloc] init];
+        [self.navigationController pushViewController:addFriendVC animated:YES];
+    }
+    
     if (button.tag == 2) {
         RSScanViewController *scanVC = [[RSScanViewController alloc] init];
         [self.navigationController pushViewController:scanVC animated:YES];
     }
-    
     
     self.popView.flag = 0;
     [self.popView removeFromSuperview];
@@ -84,12 +90,10 @@
     // ...
 }
 
-#pragma mark - 
-
 #pragma mark - NavigationBar
 
 - (void)setBisicInfo {
-    self.navigationItem.title = [NSString stringWithFormat:@"我信(%d)",3];
+    self.navigationItem.title = [NSString stringWithFormat:@"我信(%d)",32];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStyleDone target:self action:@selector(popUp)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
