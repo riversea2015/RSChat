@@ -11,6 +11,9 @@
 @interface RSAutoDisplayCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (nonatomic, assign) NSInteger flag; // 第几个imageView被点击
+@property (nonatomic, assign) NSInteger cellFlag ; // 是哪一个cell
+
 + (NSString *)cellID;
 + (CGFloat)cellHeight;
 + (void)registToTableView:(UITableView *)tableView;

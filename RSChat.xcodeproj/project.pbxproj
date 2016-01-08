@@ -546,6 +546,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B78C56F1C3ED1F30040781B /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
 		61AC69467B479BE0027D35E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +727,7 @@
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
 				729066A31C0322C600B64EA8 /* Utilities */,
+				1B78C56F1C3ED1F30040781B /* DBManager */,
 				7271F9BB1C29282D00FD720B /* Main */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				722D5B0E1C240D17009F3574 /* Resource */,

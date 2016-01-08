@@ -10,6 +10,10 @@
 #import "RSAutoDisplayCell.h"
 #import "RSEmotionACell.h"
 
+#import "RSAlbumViewController.h" // 临时借用占位
+#import "RSFavoritesViewController.h"
+#import "RSMoneyCollectionViewController.h"
+
 @interface RSEmotionViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UISegmentedControl *topSegmentControl;
 @property (nonatomic, strong) UITableView *tableView;
@@ -38,9 +42,8 @@
     
     [self.view addSubview:self.tableView];
     
-//    RSEmotionDelegate *delegate = [[RSEmotionDelegate alloc] init];
-    self.tableView.dataSource = self;//delegate;
-    self.tableView.delegate = self;//delegate;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     [RSAutoDisplayCell registToTableView:self.tableView];
     [RSEmotionACell registToTableView:self.tableView];
@@ -62,6 +65,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         RSAutoDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSAutoDisplayCell cellID] forIndexPath:indexPath];
+        cell.flag = 0;
+
+        // 监控哪一个ImageView被点击
+        [cell addObserver:self forKeyPath:@"flag" options:NSKeyValueObservingOptionNew context:@"image"];
         
         if (_topSegmentControl.selectedSegmentIndex == 0) {
             [cell setScrollWithArray:@[@"emotion_0", @"emotion_1", @"emotion_2"]];
@@ -83,6 +90,36 @@
         
         return cell;
     }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    self.hidesBottomBarWhenPushed = YES;
+    
+    NSNumber *number = [object valueForKeyPath:keyPath];
+    NSInteger num = [number integerValue];
+    NSLog(@"%ld", num);
+    NSLog(@"%@", keyPath);
+    
+    if (num == 1) {
+        RSAlbumViewController *album = [[RSAlbumViewController alloc] init];
+        [self.navigationController pushViewController:album animated:YES];
+        return;
+    }
+    
+    if (num == 2) {
+        RSFavoritesViewController *album = [[RSFavoritesViewController alloc] init];
+        [self.navigationController pushViewController:album animated:YES];
+        return;
+    }
+    
+    if (num == 3) {
+        RSMoneyCollectionViewController *album = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:nil];
+        [self.navigationController pushViewController:album animated:YES];
+        return;
+    }
+    
+#warning TODO cell 重用，就会出现问题？--- 会连续推出多个相同的界面，重用几次，就推出几个。
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
