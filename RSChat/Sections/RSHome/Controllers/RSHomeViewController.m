@@ -12,26 +12,19 @@
 #import "RSNewsTableViewController.h"
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
-
 #import "RSScanViewController.h"
 #import "RSAddFriendViewController.h"
-
 #import "RSSearchTempView.h"
-
 #import "RSPopView.h"
-
-// 测试运行时使用
-#import "UIViewController+RSExts.h"
+#import "UIViewController+RSExts.h" // 测试/调试
+#import <sys/utsname.h>
 
 @interface RSHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, UIBarPositioningDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
-
 @property (nonatomic, strong) UISearchController *searchVC;
 @property (nonatomic, strong) RSHomeSearchResultController *resultTVC;
-
 @property (nonatomic, strong) RSPopView *popView;
-
 @property (nonatomic, strong) RSSearchTempView *tmpView;
 
 @end
@@ -47,6 +40,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *modelStr = [UIDevice currentDevice].model;
+    NSLog(@"当前设备：%@", modelStr);
+    
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    NSLog(@"设备型号：%@", deviceString);
     
     [self setBisicInfo];
     
