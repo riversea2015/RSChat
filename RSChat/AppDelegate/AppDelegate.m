@@ -42,11 +42,47 @@
     }
     
     // 打开网络监测
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未识别的网络
+                NSLog(@"网络状态未知");
+                //
+                break;
+            case AFNetworkReachabilityStatusNotReachable: // 不可达网络
+                NSLog(@"网络未连接");
+                // alertView 提示网络无法连接，停止发送请求
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 2G, 3G, 4G...的网络
+                NSLog(@"2G, 3G, 4G...的网络");
+                // alertView 提示当前网络，询问是否同意使用：是，继续发送请求；否，终止请求。
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi: // wifi打开 或 WiFi和移动网络同时打开
+                NSLog(@"WiFi网络");
+                break;
+            default:
+                break;
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NetWorkDidChange" object:nil userInfo:@{}];
+        
+    }];
+    
+    [manager startMonitoring];
     
     return YES;
 }
+
+/**
+ typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) {
+    AFNetworkReachabilityStatusUnknown          = -1,
+    AFNetworkReachabilityStatusNotReachable     = 0,
+    AFNetworkReachabilityStatusReachableViaWWAN = 1,
+    AFNetworkReachabilityStatusReachableViaWiFi = 2,
+ };
+ */
 
 #pragma mark - 构造Crash
 
@@ -79,7 +115,7 @@
 }
 
 - (void)setWelcomeController {
-    
+    // liuyong
 }
 
 #pragma mark - 配置 JPush
@@ -126,7 +162,7 @@
     }
 }
 
-#pragma mark - LifeCycle >> 2
+#pragma mark -
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

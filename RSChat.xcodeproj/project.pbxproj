@@ -15,8 +15,6 @@
 		1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B26D66E1C3ABC5C00BFC29C /* RSGameDetailACell.xib */; };
 		1B26D6741C3ABF7600BFC29C /* RSGameDetailBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B26D6721C3ABF7600BFC29C /* RSGameDetailBCell.m */; };
 		1B26D6751C3ABF7600BFC29C /* RSGameDetailBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B26D6731C3ABF7600BFC29C /* RSGameDetailBCell.xib */; };
-		1B78C57A1C4029CD0040781B /* RSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B78C5771C4029CD0040781B /* RSDBManager.m */; };
-		1B78C57B1C4029CD0040781B /* RSFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B78C5791C4029CD0040781B /* RSFileTools.m */; };
 		1B8773541C3BD713000CCEAE /* RSAddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773521C3BD713000CCEAE /* RSAddFriendCell.m */; };
 		1B8773551C3BD713000CCEAE /* RSAddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B8773531C3BD713000CCEAE /* RSAddFriendCell.xib */; };
 		1B8773591C3BDB42000CCEAE /* RSSearchFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B8773571C3BDB42000CCEAE /* RSSearchFriendCell.m */; };
@@ -219,10 +217,6 @@
 		1B26D6711C3ABF7600BFC29C /* RSGameDetailBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameDetailBCell.h; sourceTree = "<group>"; };
 		1B26D6721C3ABF7600BFC29C /* RSGameDetailBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameDetailBCell.m; sourceTree = "<group>"; };
 		1B26D6731C3ABF7600BFC29C /* RSGameDetailBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSGameDetailBCell.xib; sourceTree = "<group>"; };
-		1B78C5761C4029CD0040781B /* RSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDBManager.h; sourceTree = "<group>"; };
-		1B78C5771C4029CD0040781B /* RSDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDBManager.m; sourceTree = "<group>"; };
-		1B78C5781C4029CD0040781B /* RSFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFileTools.h; sourceTree = "<group>"; };
-		1B78C5791C4029CD0040781B /* RSFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFileTools.m; sourceTree = "<group>"; };
 		1B8773511C3BD713000CCEAE /* RSAddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAddFriendCell.h; sourceTree = "<group>"; };
 		1B8773521C3BD713000CCEAE /* RSAddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAddFriendCell.m; sourceTree = "<group>"; };
 		1B8773531C3BD713000CCEAE /* RSAddFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSAddFriendCell.xib; sourceTree = "<group>"; };
@@ -552,17 +546,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B78C56F1C3ED1F30040781B /* DBManager */ = {
-			isa = PBXGroup;
-			children = (
-				1B78C5761C4029CD0040781B /* RSDBManager.h */,
-				1B78C5771C4029CD0040781B /* RSDBManager.m */,
-				1B78C5781C4029CD0040781B /* RSFileTools.h */,
-				1B78C5791C4029CD0040781B /* RSFileTools.m */,
-			);
-			path = DBManager;
-			sourceTree = "<group>";
-		};
 		61AC69467B479BE0027D35E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,7 +720,6 @@
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
 				729066A31C0322C600B64EA8 /* Utilities */,
-				1B78C56F1C3ED1F30040781B /* DBManager */,
 				7271F9BB1C29282D00FD720B /* Main */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				722D5B0E1C240D17009F3574 /* Resource */,
@@ -1467,12 +1449,10 @@
 				729066B21C03749700B64EA8 /* RSMessageCell.m in Sources */,
 				728ED87A1C0AD36900DE8639 /* RSVideoViewController.m in Sources */,
 				72AE23891C0B1C1C009CB1AF /* RSLocalViewController.m in Sources */,
-				1B78C57A1C4029CD0040781B /* RSDBManager.m in Sources */,
 				7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */,
 				1B8773811C3CFEBE000CCEAE /* RSMoneyCollectionViewController.m in Sources */,
 				1B26D66F1C3ABC5C00BFC29C /* RSGameDetailACell.m in Sources */,
 				1B87736F1C3CC2B1000CCEAE /* RSAutoDisplayCell.m in Sources */,
-				1B78C57B1C4029CD0040781B /* RSFileTools.m in Sources */,
 				729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */,
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
 				1B8773861C3D0029000CCEAE /* RSMoneyACell.m in Sources */,

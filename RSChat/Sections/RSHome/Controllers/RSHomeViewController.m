@@ -78,6 +78,8 @@
     self.hidesBottomBarWhenPushed = NO;
 }
 
+
+
 - (void)viewWillDisappear:(BOOL)animated {
     [self.searchVC.searchBar resignFirstResponder];
 }
