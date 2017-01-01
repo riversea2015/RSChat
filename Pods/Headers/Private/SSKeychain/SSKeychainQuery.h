@@ -1,1 +1,1 @@
-../../../SSKeychain/SSKeychain/SSKeychainQuery.h
+../../../SSKeychain/Sources/SSKeychainQuery.h

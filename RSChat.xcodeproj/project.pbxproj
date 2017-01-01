@@ -55,7 +55,6 @@
 		1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */; };
 		1BCE653E1C3A65C7002AC8D3 /* RSGameECell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */; };
 		1BDD2ADC1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */; };
-		23BAECD075209844428E52B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFB51142B6FE086787A245 /* libPods.a */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
 		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
 		720CE92D1C080CC200913C5A /* RSActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CE92C1C080CC200913C5A /* RSActionView.m */; };
@@ -192,6 +191,7 @@
 		72DC53A41C2711F800D74105 /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */; };
 		72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72DC53A31C2711F800D74105 /* PushConfig.plist */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
+		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,7 +277,7 @@
 		1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameECell.m; sourceTree = "<group>"; };
 		1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSGameECell.xib; sourceTree = "<group>"; };
 		1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
-		6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		65DB0C84EB353A54948878F1 /* Pods-RSChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.release.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
 		720CE8BF1C07763B00913C5A /* PublicImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PublicImages.xcassets; sourceTree = "<group>"; };
@@ -506,8 +506,8 @@
 		72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
 		72DC53A31C2711F800D74105 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		A7EFB51142B6FE086787A245 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFBB55521C1061A832945810 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
+		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,7 +532,7 @@
 				728ED8AE1C0B062B00DE8639 /* CoreVideo.framework in Frameworks */,
 				728ED8AC1C0B061B00DE8639 /* CoreMedia.framework in Frameworks */,
 				728ED8AA1C0B05F200DE8639 /* AVFoundation.framework in Frameworks */,
-				23BAECD075209844428E52B4 /* libPods.a in Frameworks */,
+				9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,15 +546,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61AC69467B479BE0027D35E7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */,
-				DFBB55521C1061A832945810 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		72172F191BFE0FB700D6D2FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,8 +690,8 @@
 				729139A01BF1D44B00CEFD64 /* RSChat */,
 				729139BA1BF1D44C00CEFD64 /* RSChatTests */,
 				7291399F1BF1D44B00CEFD64 /* Products */,
-				61AC69467B479BE0027D35E7 /* Pods */,
 				940B36A99488C9CF0C658FAC /* Frameworks */,
+				8FBAA1737F82DE84B2DB5479 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1133,6 +1124,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		8FBAA1737F82DE84B2DB5479 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */,
+				65DB0C84EB353A54948878F1 /* Pods-RSChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		940B36A99488C9CF0C658FAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1146,7 +1146,7 @@
 				72DC538B1C25E8C500D74105 /* CoreFoundation.framework */,
 				72DC53891C25E8B500D74105 /* CFNetwork.framework */,
 				72C4046B1C22611E00852B71 /* libiconv.tbd */,
-				A7EFB51142B6FE086787A245 /* libPods.a */,
+				C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1158,12 +1158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 729139C11BF1D44C00CEFD64 /* Build configuration list for PBXNativeTarget "RSChat" */;
 			buildPhases = (
-				97B4E65BB8D2166760D3B3BA /* Check Pods Manifest.lock */,
+				852BB7E9C5504C2C191B2325 /* [CP] Check Pods Manifest.lock */,
 				7291399A1BF1D44B00CEFD64 /* Sources */,
 				7291399B1BF1D44B00CEFD64 /* Frameworks */,
 				7291399C1BF1D44B00CEFD64 /* Resources */,
-				3FC5CF5D07A130D51638AE0B /* Embed Pods Frameworks */,
-				8D931DC6110DCEEE4E4BCE2C /* Copy Pods Resources */,
+				E6CF33CEECA2F8E900B1252A /* [CP] Embed Pods Frameworks */,
+				C8A758540F884144CED6577C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1328,49 +1328,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3FC5CF5D07A130D51638AE0B /* Embed Pods Frameworks */ = {
+		852BB7E9C5504C2C191B2325 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8D931DC6110DCEEE4E4BCE2C /* Copy Pods Resources */ = {
+		C8A758540F884144CED6577C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSChat/Pods-RSChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97B4E65BB8D2166760D3B3BA /* Check Pods Manifest.lock */ = {
+		E6CF33CEECA2F8E900B1252A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSChat/Pods-RSChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1579,7 +1579,7 @@
 		};
 		729139C21BF1D44C00CEFD64 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6ABAF29E3A8523E28295DAFC /* Pods.debug.xcconfig */;
+			baseConfigurationReference = A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1613,7 +1613,7 @@
 		};
 		729139C31BF1D44C00CEFD64 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFBB55521C1061A832945810 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 65DB0C84EB353A54948878F1 /* Pods-RSChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

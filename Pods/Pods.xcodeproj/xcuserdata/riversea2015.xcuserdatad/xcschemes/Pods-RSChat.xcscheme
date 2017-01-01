@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6AA3CE6EEC15D127BCDFC27242935943'
-               BlueprintName = 'SSKeychain'
+               BlueprintIdentifier = '77456A883D5D364E831D90C444E623E3'
+               BlueprintName = 'Pods-RSChat'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSSKeychain.a'>
+               BuildableName = 'libPods-RSChat.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
