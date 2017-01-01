@@ -31,10 +31,10 @@ PODS:
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.0.7)
   - MLTransition (2.0.1)
+  - SAMKeychain (1.5.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
-  - SSKeychain (1.4.1)
   - UMengSocial (4.4)
 
 DEPENDENCIES:
@@ -44,8 +44,8 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.1)
   - MJRefresh (= 3.0.7)
   - MLTransition (= 2.0.1)
+  - SAMKeychain
   - SDWebImage (= 3.7.3)
-  - SSKeychain
   - UMengSocial (~> 4.3)
 
 SPEC CHECKSUMS:
@@ -55,10 +55,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
   MLTransition: 47b87b8bc6077540919dcfc3e0adcc0b4a589910
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
-  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   UMengSocial: aba7296602310385114d82c255539a7bef3b7ab0
 
-PODFILE CHECKSUM: a958cd1e8cfff0317a6d566cd621cc57b9581f91
+PODFILE CHECKSUM: 391250eff0dc42926d5d03cd2ef3f25c3198311c
 
 COCOAPODS: 1.1.1

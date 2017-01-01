@@ -1,48 +1,48 @@
 //
-//  SSKeychain.m
-//  SSKeychain
+//  SAMKeychain.m
+//  SAMKeychain
 //
 //  Created by Sam Soffes on 5/19/10.
 //  Copyright (c) 2010-2014 Sam Soffes. All rights reserved.
 //
 
-#import "SSKeychain.h"
-#import "SSKeychainQuery.h"
+#import "SAMKeychain.h"
+#import "SAMKeychainQuery.h"
 
-NSString *const kSSKeychainErrorDomain = @"com.samsoffes.sskeychain";
-NSString *const kSSKeychainAccountKey = @"acct";
-NSString *const kSSKeychainCreatedAtKey = @"cdat";
-NSString *const kSSKeychainClassKey = @"labl";
-NSString *const kSSKeychainDescriptionKey = @"desc";
-NSString *const kSSKeychainLabelKey = @"labl";
-NSString *const kSSKeychainLastModifiedKey = @"mdat";
-NSString *const kSSKeychainWhereKey = @"svce";
+NSString *const kSAMKeychainErrorDomain = @"com.samsoffes.samkeychain";
+NSString *const kSAMKeychainAccountKey = @"acct";
+NSString *const kSAMKeychainCreatedAtKey = @"cdat";
+NSString *const kSAMKeychainClassKey = @"labl";
+NSString *const kSAMKeychainDescriptionKey = @"desc";
+NSString *const kSAMKeychainLabelKey = @"labl";
+NSString *const kSAMKeychainLastModifiedKey = @"mdat";
+NSString *const kSAMKeychainWhereKey = @"svce";
 
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
-	static CFTypeRef SSKeychainAccessibilityType = NULL;
+	static CFTypeRef SAMKeychainAccessibilityType = NULL;
 #endif
 
-@implementation SSKeychain
+@implementation SAMKeychain
 
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account {
++ (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account {
 	return [self passwordForService:serviceName account:account error:nil];
 }
 
 
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError *__autoreleasing *)error {
-	SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
++ (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError *__autoreleasing *)error {
+	SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
 	query.service = serviceName;
 	query.account = account;
 	[query fetch:error];
 	return query.password;
 }
 
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account {
++ (nullable NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account {
 	return [self passwordDataForService:serviceName account:account error:nil];
 }
 
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error {
-    SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
++ (nullable NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error {
+    SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
     query.service = serviceName;
     query.account = account;
     [query fetch:error];
@@ -57,7 +57,7 @@ NSString *const kSSKeychainWhereKey = @"svce";
 
 
 + (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account error:(NSError *__autoreleasing *)error {
-	SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+	SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
 	query.service = serviceName;
 	query.account = account;
 	return [query deleteItem:error];
@@ -70,7 +70,7 @@ NSString *const kSSKeychainWhereKey = @"svce";
 
 
 + (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError *__autoreleasing *)error {
-	SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+	SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
 	query.service = serviceName;
 	query.account = account;
 	query.password = password;
@@ -83,30 +83,30 @@ NSString *const kSSKeychainWhereKey = @"svce";
 
 
 + (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error {
-    SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
+    SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
     query.service = serviceName;
     query.account = account;
     query.passwordData = password;
     return [query save:error];
 }
 
-+ (NSArray *)allAccounts {
++ (nullable NSArray *)allAccounts {
 	return [self allAccounts:nil];
 }
 
 
-+ (NSArray *)allAccounts:(NSError *__autoreleasing *)error {
++ (nullable NSArray *)allAccounts:(NSError *__autoreleasing *)error {
     return [self accountsForService:nil error:error];
 }
 
 
-+ (NSArray *)accountsForService:(NSString *)serviceName {
++ (nullable NSArray *)accountsForService:(nullable NSString *)serviceName {
 	return [self accountsForService:serviceName error:nil];
 }
 
 
-+ (NSArray *)accountsForService:(NSString *)serviceName error:(NSError *__autoreleasing *)error {
-    SSKeychainQuery *query = [[SSKeychainQuery alloc] init];
++ (nullable NSArray *)accountsForService:(nullable NSString *)serviceName error:(NSError *__autoreleasing *)error {
+    SAMKeychainQuery *query = [[SAMKeychainQuery alloc] init];
     query.service = serviceName;
     return [query fetchAll:error];
 }
@@ -114,16 +114,16 @@ NSString *const kSSKeychainWhereKey = @"svce";
 
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
 + (CFTypeRef)accessibilityType {
-	return SSKeychainAccessibilityType;
+	return SAMKeychainAccessibilityType;
 }
 
 
 + (void)setAccessibilityType:(CFTypeRef)accessibilityType {
 	CFRetain(accessibilityType);
-	if (SSKeychainAccessibilityType) {
-		CFRelease(SSKeychainAccessibilityType);
+	if (SAMKeychainAccessibilityType) {
+		CFRelease(SAMKeychainAccessibilityType);
 	}
-	SSKeychainAccessibilityType = accessibilityType;
+	SAMKeychainAccessibilityType = accessibilityType;
 }
 #endif
 

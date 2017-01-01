@@ -39,12 +39,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>SAMKeychain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SSKeychain.xcscheme</key>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,16 +67,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6AA3CE6EEC15D127BCDFC27242935943</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>77456A883D5D364E831D90C444E623E3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
@@ -87,12 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>906F96451203E5DF78ECB727F30ADF0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AE1B18C64208114ADAC370BEB110BBB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AFAFB55453D161D2BB5CFB30C68A54D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9ECC3EFFF06D49EA23AB8055845AABB</key>
+		<key>D056347161A7B67116A6C45ABCF2B609</key>
 		<dict>
 			<key>primary</key>
 			<true/>

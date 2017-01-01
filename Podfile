@@ -7,7 +7,7 @@ pod 'MBProgressHUD', '~> 0.9.1'
 pod 'MJRefresh', '3.0.7'
 pod 'Mantle', '2.0.5'
 pod 'FMDB', '2.5'
-pod 'SSKeychain'
+pod 'SAMKeychain'
 pod 'UMengSocial', '~> 4.3'
 pod 'MLTransition', '2.0.1'
 end

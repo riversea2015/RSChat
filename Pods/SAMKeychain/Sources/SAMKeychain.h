@@ -1,6 +1,6 @@
 //
-//  SSKeychain.h
-//  SSKeychain
+//  SAMKeychain.h
+//  SAMKeychain
 //
 //  Created by Sam Soffes on 5/19/10.
 //  Copyright (c) 2010-2014 Sam Soffes. All rights reserved.
@@ -12,55 +12,57 @@
 	#import <Foundation/Foundation.h>
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
- Error code specific to SSKeychain that can be returned in NSError objects.
+ Error code specific to SAMKeychain that can be returned in NSError objects.
  For codes returned by the operating system, refer to SecBase.h for your
  platform.
  */
-typedef NS_ENUM(OSStatus, SSKeychainErrorCode) {
+typedef NS_ENUM(OSStatus, SAMKeychainErrorCode) {
 	/** Some of the arguments were invalid. */
-	SSKeychainErrorBadArguments = -1001,
+	SAMKeychainErrorBadArguments = -1001,
 };
 
-/** SSKeychain error domain */
-extern NSString *const kSSKeychainErrorDomain;
+/** SAMKeychain error domain */
+extern NSString *const kSAMKeychainErrorDomain;
 
 /** Account name. */
-extern NSString *const kSSKeychainAccountKey;
+extern NSString *const kSAMKeychainAccountKey;
 
 /**
  Time the item was created.
 
  The value will be a string.
  */
-extern NSString *const kSSKeychainCreatedAtKey;
+extern NSString *const kSAMKeychainCreatedAtKey;
 
 /** Item class. */
-extern NSString *const kSSKeychainClassKey;
+extern NSString *const kSAMKeychainClassKey;
 
 /** Item description. */
-extern NSString *const kSSKeychainDescriptionKey;
+extern NSString *const kSAMKeychainDescriptionKey;
 
 /** Item label. */
-extern NSString *const kSSKeychainLabelKey;
+extern NSString *const kSAMKeychainLabelKey;
 
 /** Time the item was last modified.
 
  The value will be a string.
  */
-extern NSString *const kSSKeychainLastModifiedKey;
+extern NSString *const kSAMKeychainLastModifiedKey;
 
 /** Where the item was created. */
-extern NSString *const kSSKeychainWhereKey;
+extern NSString *const kSAMKeychainWhereKey;
 
 /**
  Simple wrapper for accessing accounts, getting passwords, setting passwords, and deleting passwords using the system
  Keychain on Mac OS X and iOS.
 
  This was originally inspired by EMKeychain and SDKeychain (both of which are now gone). Thanks to the authors.
- SSKeychain has since switched to a simpler implementation that was abstracted from [SSToolkit](http://sstoolk.it).
+ SAMKeychain has since switched to a simpler implementation that was abstracted from [SSToolkit](http://sstoolk.it).
  */
-@interface SSKeychain : NSObject
+@interface SAMKeychain : NSObject
 
 #pragma mark - Classic methods
 
@@ -75,8 +77,8 @@ extern NSString *const kSSKeychainWhereKey;
  @return Returns a string containing the password for a given account and service, or `nil` if the Keychain doesn't
  have a password for the given parameters.
  */
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account;
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
++ (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account;
++ (nullable NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
 /**
  Returns a nsdata containing the password for a given account and service, or `nil` if the Keychain doesn't have a
@@ -89,8 +91,8 @@ extern NSString *const kSSKeychainWhereKey;
  @return Returns a nsdata containing the password for a given account and service, or `nil` if the Keychain doesn't
  have a password for the given parameters.
  */
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account;
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
++ (nullable NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account;
++ (nullable NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error __attribute__((swift_error(none)));
 
 
 /**
@@ -137,21 +139,21 @@ extern NSString *const kSSKeychainWhereKey;
 /**
  Returns an array containing the Keychain's accounts, or `nil` if the Keychain has no accounts.
 
- See the `NSString` constants declared in SSKeychain.h for a list of keys that can be used when accessing the
+ See the `NSString` constants declared in SAMKeychain.h for a list of keys that can be used when accessing the
  dictionaries returned by this method.
 
  @return An array of dictionaries containing the Keychain's accounts, or `nil` if the Keychain doesn't have any
  accounts. The order of the objects in the array isn't defined.
  */
-+ (NSArray<NSDictionary<NSString *, id> *> *)allAccounts;
-+ (NSArray<NSDictionary<NSString *, id> *> *)allAccounts:(NSError *__autoreleasing *)error __attribute__((swift_error(none)));
++ (nullable NSArray<NSDictionary<NSString *, id> *> *)allAccounts;
++ (nullable NSArray<NSDictionary<NSString *, id> *> *)allAccounts:(NSError *__autoreleasing *)error __attribute__((swift_error(none)));
 
 
 /**
  Returns an array containing the Keychain's accounts for a given service, or `nil` if the Keychain doesn't have any
  accounts for the given service.
 
- See the `NSString` constants declared in SSKeychain.h for a list of keys that can be used when accessing the
+ See the `NSString` constants declared in SAMKeychain.h for a list of keys that can be used when accessing the
  dictionaries returned by this method.
 
  @param serviceName The service for which to return the corresponding accounts.
@@ -159,8 +161,8 @@ extern NSString *const kSSKeychainWhereKey;
  @return An array of dictionaries containing the Keychain's accounts for a given `serviceName`, or `nil` if the Keychain
  doesn't have any accounts for the given `serviceName`. The order of the objects in the array isn't defined.
  */
-+ (NSArray<NSDictionary<NSString *, id> *> *)accountsForService:(NSString *)serviceName;
-+ (NSArray<NSDictionary<NSString *, id> *> *)accountsForService:(NSString *)serviceName error:(NSError *__autoreleasing *)error __attribute__((swift_error(none)));
++ (nullable NSArray<NSDictionary<NSString *, id> *> *)accountsForService:(nullable NSString *)serviceName;
++ (nullable NSArray<NSDictionary<NSString *, id> *> *)accountsForService:(nullable NSString *)serviceName error:(NSError *__autoreleasing *)error __attribute__((swift_error(none)));
 
 
 #pragma mark - Configuration
@@ -196,4 +198,6 @@ extern NSString *const kSSKeychainWhereKey;
 
 @end
 
-#import <SSKeychain/SSKeychainQuery.h>
+NS_ASSUME_NONNULL_END
+
+#import <SAMKeychain/SAMKeychainQuery.h>
