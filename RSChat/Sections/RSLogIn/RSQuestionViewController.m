@@ -67,7 +67,7 @@
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error {
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     // 移除动画
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
