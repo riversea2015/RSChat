@@ -68,7 +68,6 @@
 		7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */; };
 		726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726A95281C21DF910065EA8D /* RSBuyViewController.m */; };
 		726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E37D91C16E94A003BE8FF /* RSFriendsModel.m */; };
-		726E37DC1C170224003BE8FF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 726E37DB1C170224003BE8FF /* Podfile */; };
 		726E86761C35553100B82094 /* RSCreatCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E86741C35553100B82094 /* RSCreatCodeViewController.m */; };
 		726E86771C35553100B82094 /* RSCreatCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 726E86751C35553100B82094 /* RSCreatCodeViewController.xib */; };
 		726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E86791C35683D00B82094 /* RSScanCodeViewController.m */; };
@@ -89,6 +88,7 @@
 		727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */; };
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
+		728134651FD3DCE600057646 /* Memo.md in Resources */ = {isa = PBXBuildFile; fileRef = 728134641FD3DCE600057646 /* Memo.md */; };
 		72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7A1C33E08D00447B85 /* RSLogoutCell.m */; };
 		72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */; };
 		72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7F1C33E2CD00447B85 /* RSReLoginViewController.m */; };
@@ -129,7 +129,6 @@
 		729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139D51BF1D58E00CEFD64 /* RSDiscoverViewController.m */; };
 		729139E71BF1D58E00CEFD64 /* RSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */; };
 		729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139E11BF1D58E00CEFD64 /* RSMeViewController.m */; };
-		729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729139EB1BF1EC8B00CEFD64 /* Memo.txt */; };
 		7291B6211C33CC4300EBE0E4 /* RSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7291B6201C33CC4300EBE0E4 /* RSSettingViewController.m */; };
 		7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7291B6231C33CD9B00EBE0E4 /* RSSettingCell.m */; };
 		7291B6261C33CD9B00EBE0E4 /* RSSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7291B6241C33CD9B00EBE0E4 /* RSSettingCell.xib */; };
@@ -300,7 +299,6 @@
 		726A95281C21DF910065EA8D /* RSBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBuyViewController.m; sourceTree = "<group>"; };
 		726E37D81C16E94A003BE8FF /* RSFriendsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsModel.h; sourceTree = "<group>"; };
 		726E37D91C16E94A003BE8FF /* RSFriendsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsModel.m; sourceTree = "<group>"; };
-		726E37DB1C170224003BE8FF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		726E86731C35553100B82094 /* RSCreatCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCreatCodeViewController.h; sourceTree = "<group>"; };
 		726E86741C35553100B82094 /* RSCreatCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCreatCodeViewController.m; sourceTree = "<group>"; };
 		726E86751C35553100B82094 /* RSCreatCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSCreatCodeViewController.xib; sourceTree = "<group>"; };
@@ -331,6 +329,7 @@
 		727C1DCF1BF26B7600CE8AA6 /* RSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeCell.h; sourceTree = "<group>"; };
 		727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeCell.m; sourceTree = "<group>"; };
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
+		728134641FD3DCE600057646 /* Memo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Memo.md; sourceTree = "<group>"; };
 		72881D791C33E08D00447B85 /* RSLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLogoutCell.h; sourceTree = "<group>"; };
 		72881D7A1C33E08D00447B85 /* RSLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLogoutCell.m; sourceTree = "<group>"; };
 		72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLogoutCell.xib; sourceTree = "<group>"; };
@@ -414,7 +413,6 @@
 		729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeViewController.m; sourceTree = "<group>"; };
 		729139E01BF1D58E00CEFD64 /* RSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeViewController.h; sourceTree = "<group>"; };
 		729139E11BF1D58E00CEFD64 /* RSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeViewController.m; sourceTree = "<group>"; };
-		729139EB1BF1EC8B00CEFD64 /* Memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Memo.txt; sourceTree = "<group>"; };
 		7291B61F1C33CC4300EBE0E4 /* RSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSettingViewController.h; sourceTree = "<group>"; };
 		7291B6201C33CC4300EBE0E4 /* RSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSettingViewController.m; sourceTree = "<group>"; };
 		7291B6221C33CD9B00EBE0E4 /* RSSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSettingCell.h; sourceTree = "<group>"; };
@@ -685,8 +683,7 @@
 		729139951BF1D44B00CEFD64 = {
 			isa = PBXGroup;
 			children = (
-				726E37DB1C170224003BE8FF /* Podfile */,
-				729139EB1BF1EC8B00CEFD64 /* Memo.txt */,
+				728134641FD3DCE600057646 /* Memo.md */,
 				729139A01BF1D44B00CEFD64 /* RSChat */,
 				729139BA1BF1D44C00CEFD64 /* RSChatTests */,
 				7291399F1BF1D44B00CEFD64 /* Products */,
@@ -1248,7 +1245,6 @@
 				728ED8D61C0B0E2800DE8639 /* zbar-back.png in Resources */,
 				720CE92F1C080CEC00913C5A /* RSActionView.xib in Resources */,
 				1B26D6751C3ABF7600BFC29C /* RSGameDetailBCell.xib in Resources */,
-				729139EC1BF1EC8B00CEFD64 /* Memo.txt in Resources */,
 				727C1DB51BF211CF00CE8AA6 /* RSMeOtherCell.xib in Resources */,
 				72C0AC701C1174CB00C817D2 /* RSScanResultViewController.xib in Resources */,
 				727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */,
@@ -1258,6 +1254,7 @@
 				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
+				728134651FD3DCE600057646 /* Memo.md in Resources */,
 				7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */,
 				7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */,
 				72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */,
@@ -1304,7 +1301,6 @@
 				72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */,
 				722D5B101C240D17009F3574 /* officialAccounts.plist in Resources */,
 				726E86771C35553100B82094 /* RSCreatCodeViewController.xib in Resources */,
-				726E37DC1C170224003BE8FF /* Podfile in Resources */,
 				72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */,
 				1BCE65361C3A65C7002AC8D3 /* RSGameACell.xib in Resources */,
 				7288A5541C108BD6009936A7 /* RSPrivateTableViewCell.xib in Resources */,
