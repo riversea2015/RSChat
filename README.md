@@ -13,6 +13,4 @@ he hai, hehai682@126.com
 
 RSChat is available under the MIT license. See the LICENSE file for more info.
 
-### Notes
-
-...
+### Note：此源码仅在github保存，并未在其他网站上传过，引用请尊重原作者，注明出处，谢谢！
