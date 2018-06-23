@@ -1,5 +1,6 @@
 # RSChat
-### 这是一个仿微信客户端的iOS项目，持续更新中...
+### This is a iOS project that imitates a WeChat client.
+
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_0.gif?raw=true)
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_1.gif?raw=true)
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_2.gif?raw=true)
