@@ -88,7 +88,6 @@
 		727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */; };
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
-		728134651FD3DCE600057646 /* Memo.md in Resources */ = {isa = PBXBuildFile; fileRef = 728134641FD3DCE600057646 /* Memo.md */; };
 		72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7A1C33E08D00447B85 /* RSLogoutCell.m */; };
 		72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */; };
 		72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7F1C33E2CD00447B85 /* RSReLoginViewController.m */; };
@@ -329,7 +328,6 @@
 		727C1DCF1BF26B7600CE8AA6 /* RSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeCell.h; sourceTree = "<group>"; };
 		727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeCell.m; sourceTree = "<group>"; };
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
-		728134641FD3DCE600057646 /* Memo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Memo.md; sourceTree = "<group>"; };
 		72881D791C33E08D00447B85 /* RSLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLogoutCell.h; sourceTree = "<group>"; };
 		72881D7A1C33E08D00447B85 /* RSLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLogoutCell.m; sourceTree = "<group>"; };
 		72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLogoutCell.xib; sourceTree = "<group>"; };
@@ -576,12 +574,9 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		7271F9BF1C29286C00FD720B /* RSLogIn */ = {
+		7271F9BF1C29286C00FD720B /* LogInOut */ = {
 			isa = PBXGroup;
 			children = (
-				729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */,
-				729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */,
-				729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */,
 				7271F9C01C2928B400FD720B /* RSLoginViewController.h */,
 				7271F9C11C2928B400FD720B /* RSLoginViewController.m */,
 				7271F9C21C2928B400FD720B /* RSLoginViewController.xib */,
@@ -598,7 +593,17 @@
 				72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */,
 				72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */,
 			);
-			path = RSLogIn;
+			path = LogInOut;
+			sourceTree = "<group>";
+		};
+		7273B62C2228AF02003951A7 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */,
+				729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */,
+				729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		728ED8B31C0B0E2800DE8639 /* ZBarSDK-master */ = {
@@ -683,7 +688,6 @@
 		729139951BF1D44B00CEFD64 = {
 			isa = PBXGroup;
 			children = (
-				728134641FD3DCE600057646 /* Memo.md */,
 				729139A01BF1D44B00CEFD64 /* RSChat */,
 				729139BA1BF1D44C00CEFD64 /* RSChatTests */,
 				7291399F1BF1D44B00CEFD64 /* Products */,
@@ -755,17 +759,18 @@
 		729139CB1BF1D58E00CEFD64 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				7271F9BF1C29286C00FD720B /* RSLogIn */,
-				729139D81BF1D58E00CEFD64 /* RSHome */,
-				729139CC1BF1D58E00CEFD64 /* RSContacts */,
-				729139D21BF1D58E00CEFD64 /* RSDiscover */,
-				729139DE1BF1D58E00CEFD64 /* RSMe */,
+				7273B62C2228AF02003951A7 /* Welcome */,
+				7271F9BF1C29286C00FD720B /* LogInOut */,
+				729139D81BF1D58E00CEFD64 /* Home */,
+				729139CC1BF1D58E00CEFD64 /* Contacts */,
+				729139D21BF1D58E00CEFD64 /* Discover */,
+				729139DE1BF1D58E00CEFD64 /* Mine */,
 				720CE8BF1C07763B00913C5A /* PublicImages.xcassets */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
 		};
-		729139CC1BF1D58E00CEFD64 /* RSContacts */ = {
+		729139CC1BF1D58E00CEFD64 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
 				729139CD1BF1D58E00CEFD64 /* Controllers */,
@@ -773,7 +778,7 @@
 				729139D11BF1D58E00CEFD64 /* Views */,
 				727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */,
 			);
-			path = RSContacts;
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		729139CD1BF1D58E00CEFD64 /* Controllers */ = {
@@ -846,7 +851,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		729139D21BF1D58E00CEFD64 /* RSDiscover */ = {
+		729139D21BF1D58E00CEFD64 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
 				729139D31BF1D58E00CEFD64 /* Controllers */,
@@ -854,7 +859,7 @@
 				729139D71BF1D58E00CEFD64 /* Views */,
 				1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */,
 			);
-			path = RSDiscover;
+			path = Discover;
 			sourceTree = "<group>";
 		};
 		729139D31BF1D58E00CEFD64 /* Controllers */ = {
@@ -945,7 +950,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		729139D81BF1D58E00CEFD64 /* RSHome */ = {
+		729139D81BF1D58E00CEFD64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				729139D91BF1D58E00CEFD64 /* Controllers */,
@@ -953,7 +958,7 @@
 				729139DD1BF1D58E00CEFD64 /* Views */,
 				727C1DCB1BF267E700CE8AA6 /* RSHomeImages.xcassets */,
 			);
-			path = RSHome;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		729139D91BF1D58E00CEFD64 /* Controllers */ = {
@@ -999,7 +1004,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		729139DE1BF1D58E00CEFD64 /* RSMe */ = {
+		729139DE1BF1D58E00CEFD64 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
 				729139DF1BF1D58E00CEFD64 /* Controllers */,
@@ -1007,7 +1012,7 @@
 				729139E31BF1D58E00CEFD64 /* Views */,
 				727C1DB61BF218E200CE8AA6 /* RSMeImages.xcassets */,
 			);
-			path = RSMe;
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		729139DF1BF1D58E00CEFD64 /* Controllers */ = {
@@ -1159,7 +1164,6 @@
 				7291399A1BF1D44B00CEFD64 /* Sources */,
 				7291399B1BF1D44B00CEFD64 /* Frameworks */,
 				7291399C1BF1D44B00CEFD64 /* Resources */,
-				E6CF33CEECA2F8E900B1252A /* [CP] Embed Pods Frameworks */,
 				C8A758540F884144CED6577C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1254,7 +1258,6 @@
 				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
-				728134651FD3DCE600057646 /* Memo.md in Resources */,
 				7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */,
 				7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */,
 				72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */,
@@ -1354,26 +1357,12 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSChat/Pods-RSChat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6CF33CEECA2F8E900B1252A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSChat/Pods-RSChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

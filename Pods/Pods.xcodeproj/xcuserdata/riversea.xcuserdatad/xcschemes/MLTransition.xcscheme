@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5A3DC1C5A6CD24F2A493066CD1BC0D9D'
-               BlueprintName = 'MLTransition'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libMLTransition.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F17A5049818459351EABDBD2CE937F2B"
+               BlueprintName = "MLTransition"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libMLTransition.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
