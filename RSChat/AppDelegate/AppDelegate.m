@@ -4,7 +4,8 @@
 //
 //  Created by hehai on 11/10/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
-//  Github: https://github.com/riversea2015
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import "AppDelegate.h"
@@ -98,18 +99,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSInteger runCount = [ud integerForKey:@"runCount"];
-    if (runCount == 0) {
-        [ud setInteger:++runCount forKey:@"runCount"];
-        [ud synchronize];
-        RSWelcomeViewController *welcomeController = [[RSWelcomeViewController alloc] initWithNibName:@"RSWelcomeViewController" bundle:[NSBundle mainBundle]];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+//    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+//    NSInteger runCount = [ud integerForKey:@"runCount"];
+//    if (runCount == 0) {
+//
+//        [ud setInteger:++runCount forKey:@"runCount"];
+//        [ud synchronize];
+    
+        RSWelcomeViewController *welcomeController = [[RSWelcomeViewController alloc] init];
+        UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:welcomeController];
         self.window.rootViewController = navi;
         [self.window makeKeyAndVisible];
         return;
-    }
-    
+//    }
+
     RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
     self.window.rootViewController = mainTabBarController;
     [self.window makeKeyAndVisible];

@@ -127,7 +127,6 @@
 		7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7291B6231C33CD9B00EBE0E4 /* RSSettingCell.m */; };
 		7291B6261C33CD9B00EBE0E4 /* RSSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7291B6241C33CD9B00EBE0E4 /* RSSettingCell.xib */; };
 		729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */; };
-		729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */; };
 		729D5FFC1C296154000F8C69 /* RSSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FFA1C296154000F8C69 /* RSSignUpViewController.m */; };
 		729D5FFD1C296154000F8C69 /* RSSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D5FFB1C296154000F8C69 /* RSSignUpViewController.xib */; };
 		729D60011C29B587000F8C69 /* RSConformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D5FFF1C29B587000F8C69 /* RSConformViewController.m */; };
@@ -185,6 +184,9 @@
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
+		92DE50D7222915F800E12586 /* RSLngListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D6222915F800E12586 /* RSLngListViewController.m */; };
+		92DE50DA222917DF00E12586 /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D9222917DF00E12586 /* RSViewController.m */; };
+		92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DC2229359C00E12586 /* UIColor+RSExts.m */; };
 		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
@@ -408,7 +410,6 @@
 		7291B6241C33CD9B00EBE0E4 /* RSSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSettingCell.xib; sourceTree = "<group>"; };
 		729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWelcomeViewController.h; sourceTree = "<group>"; };
 		729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWelcomeViewController.m; sourceTree = "<group>"; };
-		729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSWelcomeViewController.xib; sourceTree = "<group>"; };
 		729D5FF91C296154000F8C69 /* RSSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSignUpViewController.h; sourceTree = "<group>"; };
 		729D5FFA1C296154000F8C69 /* RSSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSignUpViewController.m; sourceTree = "<group>"; };
 		729D5FFB1C296154000F8C69 /* RSSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSignUpViewController.xib; sourceTree = "<group>"; };
@@ -494,6 +495,13 @@
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9242E3262228DEE8008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		92DE50D422290D1100E12586 /* RSChatMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSChatMacro.h; sourceTree = "<group>"; };
+		92DE50D5222915F800E12586 /* RSLngListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSLngListViewController.h; sourceTree = "<group>"; };
+		92DE50D6222915F800E12586 /* RSLngListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSLngListViewController.m; sourceTree = "<group>"; };
+		92DE50D8222917DF00E12586 /* RSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSViewController.h; sourceTree = "<group>"; };
+		92DE50D9222917DF00E12586 /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
+		92DE50DB2229359C00E12586 /* UIColor+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RSExts.h"; sourceTree = "<group>"; };
+		92DE50DC2229359C00E12586 /* UIColor+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RSExts.m"; sourceTree = "<group>"; };
 		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -562,6 +570,8 @@
 			children = (
 				7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */,
 				7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */,
+				92DE50D8222917DF00E12586 /* RSViewController.h */,
+				92DE50D9222917DF00E12586 /* RSViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -593,7 +603,8 @@
 			children = (
 				729D5FF41C2943A6000F8C69 /* RSWelcomeViewController.h */,
 				729D5FF51C2943A6000F8C69 /* RSWelcomeViewController.m */,
-				729D5FF61C2943A6000F8C69 /* RSWelcomeViewController.xib */,
+				92DE50D5222915F800E12586 /* RSLngListViewController.h */,
+				92DE50D6222915F800E12586 /* RSLngListViewController.m */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -667,8 +678,11 @@
 		729066A31C0322C600B64EA8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				92DE50D422290D1100E12586 /* RSChatMacro.h */,
 				729066A41C0322C600B64EA8 /* UIImage+RSExts.h */,
 				729066A51C0322C600B64EA8 /* UIImage+RSExts.m */,
+				92DE50DB2229359C00E12586 /* UIColor+RSExts.h */,
+				92DE50DC2229359C00E12586 /* UIColor+RSExts.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1274,7 +1288,6 @@
 				1B26D66B1C3A9E3E00BFC29C /* RSGameDetailHeader.xib in Resources */,
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
-				729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */,
 				1B8773641C3BE3F9000CCEAE /* RSSearchTempView.xib in Resources */,
 				1BCE65341C3A65C7002AC8D3 /* RSFriendsHeaderView.xib in Resources */,
 				7291B6261C33CD9B00EBE0E4 /* RSSettingCell.xib in Resources */,
@@ -1359,8 +1372,11 @@
 			files = (
 				1BCE65351C3A65C7002AC8D3 /* RSGameACell.m in Sources */,
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
+				92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */,
 				72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */,
+				92DE50D7222915F800E12586 /* RSLngListViewController.m in Sources */,
 				1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */,
+				92DE50DA222917DF00E12586 /* RSViewController.m in Sources */,
 				1B87738B1C3D2785000CCEAE /* RSMoneyCollectionView.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,

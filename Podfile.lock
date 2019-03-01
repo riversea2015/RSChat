@@ -28,6 +28,7 @@ PODS:
   - Mantle (2.0.5):
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
+  - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.0.7)
   - MLTransition (2.0.1)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - AFNetworking (= 2.6.3)
   - FMDB (= 2.5)
   - Mantle (= 2.0.5)
+  - Masonry
   - MBProgressHUD (~> 0.9.1)
   - MJRefresh (= 3.0.7)
   - MLTransition (= 2.0.1)
@@ -51,6 +53,7 @@ SPEC REPOS:
     - AFNetworking
     - FMDB
     - Mantle
+    - Masonry
     - MBProgressHUD
     - MJRefresh
     - MLTransition
@@ -61,12 +64,13 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
   MLTransition: 47b87b8bc6077540919dcfc3e0adcc0b4a589910
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
 
-PODFILE CHECKSUM: 96ee78a20e096b383ef77fbdf9ab684c9839a98f
+PODFILE CHECKSUM: 883558206c9b0e7031f4d6993e46e735264b7c09
 
 COCOAPODS: 1.5.3

@@ -42,8 +42,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>MeChat 需要访问您的相机，以便您正常使用扫码、拍摄等服务</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>iOS授权定位</string>
+	<string>MeChat 需要访问您的位置，以便在聊天中发送位置信息</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>MeChat 需要访问您的麦克风，以便您能正常发送语音</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

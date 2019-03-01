@@ -4,11 +4,13 @@
 //
 //  Created by hehai on 12/31/15.
 //  Copyright © 2015 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import <UIKit/UIKit.h>
+#import "RSViewController.h"
 
-@interface RSScanCodeViewController : UIViewController
+@interface RSScanCodeViewController : RSViewController
 
 @end
 
