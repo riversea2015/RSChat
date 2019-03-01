@@ -54,7 +54,6 @@
 		1BCE653C1C3A65C7002AC8D3 /* RSGameDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE652D1C3A65C7002AC8D3 /* RSGameDCell.xib */; };
 		1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */; };
 		1BCE653E1C3A65C7002AC8D3 /* RSGameECell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */; };
-		1BDD2ADC1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */; };
 		720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 720A96181BF5A7B900496666 /* RSContactsModel.m */; };
 		720CE8C01C07763B00913C5A /* PublicImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720CE8BF1C07763B00913C5A /* PublicImages.xcassets */; };
 		720CE92D1C080CC200913C5A /* RSActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 720CE92C1C080CC200913C5A /* RSActionView.m */; };
@@ -79,13 +78,10 @@
 		727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DAE1BF211B600CE8AA6 /* RSMeHeaderCell.xib */; };
 		727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DB21BF211CF00CE8AA6 /* RSMeOtherCell.m */; };
 		727C1DB51BF211CF00CE8AA6 /* RSMeOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DB31BF211CF00CE8AA6 /* RSMeOtherCell.xib */; };
-		727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DB61BF218E200CE8AA6 /* RSMeImages.xcassets */; };
 		727C1DBA1BF232F400CE8AA6 /* RSMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DB91BF232F400CE8AA6 /* RSMeModel.m */; };
 		727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DC41BF255FA00CE8AA6 /* RSDiscoverModel.m */; };
 		727C1DC91BF260AB00CE8AA6 /* RSDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DC71BF260AB00CE8AA6 /* RSDiscoverCell.m */; };
 		727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DC81BF260AB00CE8AA6 /* RSDiscoverCell.xib */; };
-		727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DCB1BF267E700CE8AA6 /* RSHomeImages.xcassets */; };
-		727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */; };
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
 		72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7A1C33E08D00447B85 /* RSLogoutCell.m */; };
@@ -116,8 +112,7 @@
 		728ED8D71C0B0E2800DE8639 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8D01C0B0E2800DE8639 /* zbar-help.html */; };
 		728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8D11C0B0E2800DE8639 /* zbar-helpicons.png */; };
 		728ED8D91C0B0E2800DE8639 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8D21C0B0E2800DE8639 /* zbar-samples.png */; };
-		729066A81C0322C600B64EA8 /* UIImage+RSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 729066A51C0322C600B64EA8 /* UIImage+RSSet.m */; };
-		729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 729066A71C0322C600B64EA8 /* UIViewController+RSExts.m */; };
+		729066A81C0322C600B64EA8 /* UIImage+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 729066A51C0322C600B64EA8 /* UIImage+RSExts.m */; };
 		729066AF1C03711C00B64EA8 /* RSMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 729066AE1C03711C00B64EA8 /* RSMessageModel.m */; };
 		729066B21C03749700B64EA8 /* RSMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 729066B11C03749700B64EA8 /* RSMessageCell.m */; };
 		729139A41BF1D44B00CEFD64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139A31BF1D44B00CEFD64 /* main.m */; };
@@ -185,7 +180,6 @@
 		72DC53961C25E90800D74105 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53951C25E90800D74105 /* UIKit.framework */; };
 		72DC53981C25E91300D74105 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53971C25E91300D74105 /* Security.framework */; };
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
-		72DC539F1C26F3FB00D74105 /* UIImage+RSOriginImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DC539E1C26F3FB00D74105 /* UIImage+RSOriginImage.m */; };
 		72DC53A41C2711F800D74105 /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */; };
 		72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72DC53A31C2711F800D74105 /* PushConfig.plist */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
@@ -276,7 +270,6 @@
 		1BCE652E1C3A65C7002AC8D3 /* RSGameECell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameECell.h; sourceTree = "<group>"; };
 		1BCE652F1C3A65C7002AC8D3 /* RSGameECell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameECell.m; sourceTree = "<group>"; };
 		1BCE65301C3A65C7002AC8D3 /* RSGameECell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSGameECell.xib; sourceTree = "<group>"; };
-		1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSDiscoverImages.xcassets; sourceTree = "<group>"; };
 		65DB0C84EB353A54948878F1 /* Pods-RSChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.release.xcconfig"; sourceTree = "<group>"; };
 		720A96171BF5A7B900496666 /* RSContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactsModel.h; sourceTree = "<group>"; };
 		720A96181BF5A7B900496666 /* RSContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsModel.m; sourceTree = "<group>"; };
@@ -317,7 +310,6 @@
 		727C1DB11BF211CF00CE8AA6 /* RSMeOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeOtherCell.h; sourceTree = "<group>"; };
 		727C1DB21BF211CF00CE8AA6 /* RSMeOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeOtherCell.m; sourceTree = "<group>"; };
 		727C1DB31BF211CF00CE8AA6 /* RSMeOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMeOtherCell.xib; sourceTree = "<group>"; };
-		727C1DB61BF218E200CE8AA6 /* RSMeImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSMeImages.xcassets; sourceTree = "<group>"; };
 		727C1DB81BF232F400CE8AA6 /* RSMeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeModel.h; sourceTree = "<group>"; };
 		727C1DB91BF232F400CE8AA6 /* RSMeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeModel.m; sourceTree = "<group>"; };
 		727C1DC31BF255FA00CE8AA6 /* RSDiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDiscoverModel.h; sourceTree = "<group>"; };
@@ -325,8 +317,6 @@
 		727C1DC61BF260AB00CE8AA6 /* RSDiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDiscoverCell.h; sourceTree = "<group>"; };
 		727C1DC71BF260AB00CE8AA6 /* RSDiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDiscoverCell.m; sourceTree = "<group>"; };
 		727C1DC81BF260AB00CE8AA6 /* RSDiscoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSDiscoverCell.xib; sourceTree = "<group>"; };
-		727C1DCB1BF267E700CE8AA6 /* RSHomeImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSHomeImages.xcassets; sourceTree = "<group>"; };
-		727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RSContactsImages.xcassets; sourceTree = "<group>"; };
 		727C1DCF1BF26B7600CE8AA6 /* RSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeCell.h; sourceTree = "<group>"; };
 		727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeCell.m; sourceTree = "<group>"; };
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
@@ -388,10 +378,8 @@
 		728ED8D01C0B0E2800DE8639 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		728ED8D11C0B0E2800DE8639 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		728ED8D21C0B0E2800DE8639 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
-		729066A41C0322C600B64EA8 /* UIImage+RSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSSet.h"; sourceTree = "<group>"; };
-		729066A51C0322C600B64EA8 /* UIImage+RSSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSSet.m"; sourceTree = "<group>"; };
-		729066A61C0322C600B64EA8 /* UIViewController+RSExts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RSExts.h"; sourceTree = "<group>"; };
-		729066A71C0322C600B64EA8 /* UIViewController+RSExts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RSExts.m"; sourceTree = "<group>"; };
+		729066A41C0322C600B64EA8 /* UIImage+RSExts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSExts.h"; sourceTree = "<group>"; };
+		729066A51C0322C600B64EA8 /* UIImage+RSExts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSExts.m"; sourceTree = "<group>"; };
 		729066AD1C03711C00B64EA8 /* RSMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMessageModel.h; sourceTree = "<group>"; };
 		729066AE1C03711C00B64EA8 /* RSMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMessageModel.m; sourceTree = "<group>"; };
 		729066B01C03749700B64EA8 /* RSMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMessageCell.h; sourceTree = "<group>"; };
@@ -498,8 +486,6 @@
 		72DC53951C25E90800D74105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72DC53971C25E91300D74105 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		72DC53991C25E92400D74105 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		72DC539D1C26F3FB00D74105 /* UIImage+RSOriginImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSOriginImage.h"; sourceTree = "<group>"; };
-		72DC539E1C26F3FB00D74105 /* UIImage+RSOriginImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSOriginImage.m"; sourceTree = "<group>"; };
 		72DC53A11C2711F800D74105 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
 		72DC53A31C2711F800D74105 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
@@ -681,12 +667,8 @@
 		729066A31C0322C600B64EA8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				729066A41C0322C600B64EA8 /* UIImage+RSSet.h */,
-				729066A51C0322C600B64EA8 /* UIImage+RSSet.m */,
-				729066A61C0322C600B64EA8 /* UIViewController+RSExts.h */,
-				729066A71C0322C600B64EA8 /* UIViewController+RSExts.m */,
-				72DC539D1C26F3FB00D74105 /* UIImage+RSOriginImage.h */,
-				72DC539E1C26F3FB00D74105 /* UIImage+RSOriginImage.m */,
+				729066A41C0322C600B64EA8 /* UIImage+RSExts.h */,
+				729066A51C0322C600B64EA8 /* UIImage+RSExts.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -769,7 +751,7 @@
 			children = (
 				7273B62C2228AF02003951A7 /* Welcome */,
 				7271F9BF1C29286C00FD720B /* LogInOut */,
-				729139D81BF1D58E00CEFD64 /* Home */,
+				729139D81BF1D58E00CEFD64 /* Chats */,
 				729139CC1BF1D58E00CEFD64 /* Contacts */,
 				729139D21BF1D58E00CEFD64 /* Discover */,
 				729139DE1BF1D58E00CEFD64 /* Mine */,
@@ -784,7 +766,6 @@
 				729139CD1BF1D58E00CEFD64 /* Controllers */,
 				729139D01BF1D58E00CEFD64 /* Models */,
 				729139D11BF1D58E00CEFD64 /* Views */,
-				727C1DCD1BF268DA00CE8AA6 /* RSContactsImages.xcassets */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -865,7 +846,6 @@
 				729139D31BF1D58E00CEFD64 /* Controllers */,
 				729139D61BF1D58E00CEFD64 /* Models */,
 				729139D71BF1D58E00CEFD64 /* Views */,
-				1BDD2ADB1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -958,15 +938,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		729139D81BF1D58E00CEFD64 /* Home */ = {
+		729139D81BF1D58E00CEFD64 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
 				729139D91BF1D58E00CEFD64 /* Controllers */,
 				72172F191BFE0FB700D6D2FD /* Models */,
 				729139DD1BF1D58E00CEFD64 /* Views */,
-				727C1DCB1BF267E700CE8AA6 /* RSHomeImages.xcassets */,
 			);
-			path = Home;
+			path = Chats;
 			sourceTree = "<group>";
 		};
 		729139D91BF1D58E00CEFD64 /* Controllers */ = {
@@ -1018,7 +997,6 @@
 				729139DF1BF1D58E00CEFD64 /* Controllers */,
 				729139E21BF1D58E00CEFD64 /* Models */,
 				729139E31BF1D58E00CEFD64 /* Views */,
-				727C1DB61BF218E200CE8AA6 /* RSMeImages.xcassets */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1280,7 +1258,6 @@
 				1B87735A1C3BDB42000CCEAE /* RSSearchFriendCell.xib in Resources */,
 				728ED8D31C0B0E2800DE8639 /* .gitignore in Resources */,
 				1B87739F1C3D6C87000CCEAE /* RSAlbumViewController.xib in Resources */,
-				727C1DCE1BF268DA00CE8AA6 /* RSContactsImages.xcassets in Resources */,
 				728ED8D81C0B0E2800DE8639 /* zbar-helpicons.png in Resources */,
 				1BCE653C1C3A65C7002AC8D3 /* RSGameDCell.xib in Resources */,
 				1B8773821C3CFEBE000CCEAE /* RSMoneyCollectionViewController.xib in Resources */,
@@ -1288,7 +1265,6 @@
 				1BCE65381C3A65C7002AC8D3 /* RSGameBCell.xib in Resources */,
 				1B8773871C3D0029000CCEAE /* RSMoneyACell.xib in Resources */,
 				7271F9C41C2928B400FD720B /* RSLoginViewController.xib in Resources */,
-				727C1DB71BF218E200CE8AA6 /* RSMeImages.xcassets in Resources */,
 				1B87739B1C3D52BA000CCEAE /* favorites.plist in Resources */,
 				1B8773701C3CC2B1000CCEAE /* RSAutoDisplayCell.xib in Resources */,
 				72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */,
@@ -1299,14 +1275,12 @@
 				72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */,
 				72A3350C1C06F2A800112FC0 /* RSDetailSecondCell.xib in Resources */,
 				729D5FF81C2943A6000F8C69 /* RSWelcomeViewController.xib in Resources */,
-				727C1DCC1BF267E700CE8AA6 /* RSHomeImages.xcassets in Resources */,
 				1B8773641C3BE3F9000CCEAE /* RSSearchTempView.xib in Resources */,
 				1BCE65341C3A65C7002AC8D3 /* RSFriendsHeaderView.xib in Resources */,
 				7291B6261C33CD9B00EBE0E4 /* RSSettingCell.xib in Resources */,
 				728ED8851C0AF62200DE8639 /* RSShakeViewController.xib in Resources */,
 				1BCE653E1C3A65C7002AC8D3 /* RSGameECell.xib in Resources */,
 				727C1DB01BF211B600CE8AA6 /* RSMeHeaderCell.xib in Resources */,
-				1BDD2ADC1C3E11B000EAFAD1 /* RSDiscoverImages.xcassets in Resources */,
 				72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */,
 				72C404841C23262000852B71 /* RSLabelBlankView.xib in Resources */,
 				1B8773991C3D3EAB000CCEAE /* RSFavoriteCell.xib in Resources */,
@@ -1407,14 +1381,12 @@
 				7288A55C1C1094A5009936A7 /* RSMePrivateModel.m in Sources */,
 				1B26D6741C3ABF7600BFC29C /* RSGameDetailBCell.m in Sources */,
 				729139A41BF1D44B00CEFD64 /* main.m in Sources */,
-				729066A81C0322C600B64EA8 /* UIImage+RSSet.m in Sources */,
+				729066A81C0322C600B64EA8 /* UIImage+RSExts.m in Sources */,
 				1B26D6691C3A9E3400BFC29C /* RSGameDetailHeader.m in Sources */,
 				7291B6211C33CC4300EBE0E4 /* RSSettingViewController.m in Sources */,
 				729139CA1BF1D56100CEFD64 /* AppDelegate.m in Sources */,
 				727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */,
-				72DC539F1C26F3FB00D74105 /* UIImage+RSOriginImage.m in Sources */,
 				729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */,
-				729066A91C0322C600B64EA8 /* UIViewController+RSExts.m in Sources */,
 				1B8773901C3D3BF6000CCEAE /* RSAlbumViewController.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				1B87736A1C3CB05E000CCEAE /* RSEmotionViewController.m in Sources */,

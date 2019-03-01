@@ -7,7 +7,7 @@
 //
 
 #import "RSDiscoverCell.h"
-#import "UIImage+RSSet.h"
+#import "UIImage+RSExts.h"
 
 @implementation RSDiscoverCell
 

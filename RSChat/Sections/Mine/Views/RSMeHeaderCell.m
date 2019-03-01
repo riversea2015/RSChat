@@ -7,12 +7,12 @@
 //
 
 #import "RSMeHeaderCell.h"
-#import "UIImage+RSSet.h"
+#import "UIImage+RSExts.h"
 
 @implementation RSMeHeaderCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

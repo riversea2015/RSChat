@@ -10,7 +10,7 @@
 #import "RSPrivateTableViewCell.h"
 #import "RSPrivateOtherCell.h"
 #import "RSMePrivateModel.h"
-#import "UIImage+RSSet.h"
+#import "UIImage+RSExts.h"
 
 #import "RSCreatCodeViewController.h"
 

@@ -4,6 +4,7 @@
 //
 //  Created by hehai on 12/20/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
+//  Github: https://github.com/riversea2015
 //
 
 #import "RSMainTabBarController.h"
@@ -13,7 +14,7 @@
 #import "RSDiscoverViewController.h"
 #import "RSMeViewController.h"
 
-#import "UIImage+RSOriginImage.h"
+#import "UIImage+RSExts.h"
 
 #define ChatsTitle      NSLocalizedString(@"Chats", @"The title of the first tabbarItem.")
 #define ContactsTitle   NSLocalizedString(@"Contacts", @"The title of the second tabbarItem.")
@@ -63,33 +64,30 @@
     RSChatsViewController *homeVC = [[RSChatsViewController alloc] init];
     [self setOneChildViewController:homeVC
                               image:[UIImage imageNamed:@"tabbar_mainframe"]
-                      selectedImage:[UIImage imageWithOriginalName:@"tabbar_mainframeHL"]
+                      selectedImage:[UIImage originalImageWithName:@"tabbar_mainframeHL"]
                               title:ChatsTitle];
     
     RSContactsViewController *contactsVC = [[RSContactsViewController alloc] init];
     [self setOneChildViewController:contactsVC
                               image:[UIImage imageNamed:@"tabbar_contacts"]
-                      selectedImage:[UIImage imageWithOriginalName:@"tabbar_contactsHL"]
+                      selectedImage:[UIImage originalImageWithName:@"tabbar_contactsHL"]
                               title:ContactsTitle];
     
     RSDiscoverViewController *discoverVC = [[RSDiscoverViewController alloc] init];
     [self setOneChildViewController:discoverVC
                               image:[UIImage imageNamed:@"tabbar_discover"]
-                      selectedImage:[UIImage imageWithOriginalName:@"tabbar_discoverHL"]
+                      selectedImage:[UIImage originalImageWithName:@"tabbar_discoverHL"]
                               title:DiscoverTitle];
     
     RSMeViewController *meVC = [[RSMeViewController alloc] init];
     [self setOneChildViewController:meVC
                               image:[UIImage imageNamed:@"tabbar_mine"]
-                      selectedImage:[UIImage imageWithOriginalName:@"tabbar_mineHL"]
+                      selectedImage:[UIImage originalImageWithName:@"tabbar_mineHL"]
                               title:MineTitle];
     
     [self setSelectedIndex:0];
 }
 
-/**
- * 编码规范：有汉字的放最后边，如此处的"title"（自定义方法时）
- */
 - (void)setOneChildViewController:(UIViewController *)viewController
                             image:(UIImage *)image
                     selectedImage:(UIImage *)selectedImage

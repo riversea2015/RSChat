@@ -7,7 +7,7 @@
 //
 
 #import "RSMeOtherCell.h"
-#import "UIImage+RSSet.h"
+#import "UIImage+RSExts.h"
 
 @implementation RSMeOtherCell
 

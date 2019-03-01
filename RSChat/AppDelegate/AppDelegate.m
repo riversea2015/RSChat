@@ -4,6 +4,7 @@
 //
 //  Created by hehai on 11/10/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
+//  Github: https://github.com/riversea2015
 //
 
 #import "AppDelegate.h"
@@ -123,7 +124,7 @@
 - (void)registerJPushWithOptions:(NSDictionary *)launchOptions {
     // 设置JPush
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        //可以添加自定义categories
+        // 可以添加自定义categories
         [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
                                                        UIUserNotificationTypeSound |
                                                        UIUserNotificationTypeAlert)
