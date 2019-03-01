@@ -26,7 +26,10 @@
 #define RSScreenH [UIScreen mainScreen].bounds.size.height
 
 
-#pragma mark - To be added...
+#pragma mark - ...
 
+#define kIsIPhoneX (@available(iOS 11.0, *) ? [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0 : NO)
+#define kNavBarH ((kIsIPhoneX) ? 88 : 64)
+#define kBottomH ((kIsIPhoneX) ? 34 : 0)
 
 #endif /* RSChatMacro_h */

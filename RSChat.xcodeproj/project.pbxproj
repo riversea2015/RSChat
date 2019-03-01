@@ -187,6 +187,7 @@
 		92DE50D7222915F800E12586 /* RSLngListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D6222915F800E12586 /* RSLngListViewController.m */; };
 		92DE50DA222917DF00E12586 /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D9222917DF00E12586 /* RSViewController.m */; };
 		92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DC2229359C00E12586 /* UIColor+RSExts.m */; };
+		92DE50E022293E0700E12586 /* UIButton+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DF22293E0700E12586 /* UIButton+RSExts.m */; };
 		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
@@ -502,6 +503,8 @@
 		92DE50D9222917DF00E12586 /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
 		92DE50DB2229359C00E12586 /* UIColor+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RSExts.h"; sourceTree = "<group>"; };
 		92DE50DC2229359C00E12586 /* UIColor+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RSExts.m"; sourceTree = "<group>"; };
+		92DE50DE22293E0700E12586 /* UIButton+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+RSExts.h"; sourceTree = "<group>"; };
+		92DE50DF22293E0700E12586 /* UIButton+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RSExts.m"; sourceTree = "<group>"; };
 		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -683,6 +686,8 @@
 				729066A51C0322C600B64EA8 /* UIImage+RSExts.m */,
 				92DE50DB2229359C00E12586 /* UIColor+RSExts.h */,
 				92DE50DC2229359C00E12586 /* UIColor+RSExts.m */,
+				92DE50DE22293E0700E12586 /* UIButton+RSExts.h */,
+				92DE50DF22293E0700E12586 /* UIButton+RSExts.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1428,6 +1433,7 @@
 				72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */,
 				72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */,
 				727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */,
+				92DE50E022293E0700E12586 /* UIButton+RSExts.m in Sources */,
 				729139E71BF1D58E00CEFD64 /* RSChatsViewController.m in Sources */,
 				7230311C1C130000005D9117 /* RSFriendsViewController.m in Sources */,
 				72C404741C23079000852B71 /* RSNewFriendViewController.m in Sources */,

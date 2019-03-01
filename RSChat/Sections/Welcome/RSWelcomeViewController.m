@@ -14,8 +14,10 @@
 #import "RSLngListViewController.h"
 
 #import <Masonry/Masonry.h>
+
 #import "RSChatMacro.h"
 #import "UIColor+RSExts.h"
+#import "UIButton+RSExts.h"
 
 @interface RSWelcomeViewController ()
 
@@ -41,44 +43,43 @@
     bgImgV.frame = self.view.bounds;
     [self.view addSubview:bgImgV];
     
-    UIButton *lngBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [lngBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [lngBtn setTitle:NSLocalizedString(@"LNG", nil) forState:UIControlStateNormal];
-    lngBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    UIButton *lngBtn = [UIButton createBtnWithTitle:NSLocalizedString(@"LNG", nil)
+                                         titleColor:[UIColor lightGrayColor]
+                                               font:[UIFont systemFontOfSize:16]
+                                            bgColor:nil
+                                             target:self
+                                             action:@selector(changeLanguage:)];
     [self.view addSubview:lngBtn];
     [lngBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view).offset(-20);
         make.top.equalTo(self.view).offset(40);
     }];
-    [lngBtn addTarget:self action:@selector(changeLanguage:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *logInBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [logInBtn setTitleColor:[UIColor colorWithRGB:0x07c160] forState:UIControlStateNormal];
-    [logInBtn setTitle:NSLocalizedString(@"Log In", nil) forState:UIControlStateNormal];
-    logInBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    logInBtn.layer.cornerRadius = 5;
-    logInBtn.backgroundColor = [UIColor whiteColor];
+    UIButton *logInBtn = [UIButton createBtnWithTitle:NSLocalizedString(@"Log In", nil)
+                                           titleColor:[UIColor colorWithRGB:0x07c160]
+                                                 font:[UIFont boldSystemFontOfSize:18]
+                                              bgColor:[UIColor whiteColor]
+                                               target:self
+                                               action:@selector(logIn:)];
     [self.view addSubview:logInBtn];
     [logInBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(20);
         make.size.mas_equalTo(CGSizeMake((RSScreenW - 60)*0.5, 47));
-        make.bottom.equalTo(self.view).offset(-20);
+        make.bottom.equalTo(self.view).offset(-20-kBottomH);
     }];
-    [logInBtn addTarget:self action:@selector(logIn:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [registerBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [registerBtn setTitle:NSLocalizedString(@"Sign Up", nil) forState:UIControlStateNormal];
-    registerBtn.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    registerBtn.layer.cornerRadius = 5;
-    registerBtn.backgroundColor = [UIColor colorWithRGB:0x07c160];
+    UIButton *registerBtn = [UIButton createBtnWithTitle:NSLocalizedString(@"Sign Up", nil)
+                                              titleColor:[UIColor whiteColor]
+                                                    font:[UIFont boldSystemFontOfSize:18]
+                                                 bgColor:[UIColor colorWithRGB:0x07c160]
+                                                  target:self
+                                                  action:@selector(signUp:)];
     [self.view addSubview:registerBtn];
     [registerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view).offset(-20);
         make.size.mas_equalTo(CGSizeMake((RSScreenW - 60)*0.5, 47));
-        make.bottom.equalTo(self.view).offset(-20);
+        make.bottom.equalTo(self.view).offset(-20-kBottomH);
     }];
-    [registerBtn addTarget:self action:@selector(signUp:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - Action
