@@ -37,7 +37,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"我";
 
     UIView *contentView = self.view;
     [contentView addSubview:self.tableView];

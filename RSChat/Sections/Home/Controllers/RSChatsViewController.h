@@ -1,5 +1,5 @@
 //
-//  RSHomeViewController.h
+//  RSChatsViewController.h
 //  RSChat
 //
 //  Created by hehai on 11/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RSHomeViewController : UIViewController
+@interface RSChatsViewController : UIViewController
 
 @end

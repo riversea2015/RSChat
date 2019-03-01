@@ -1,12 +1,12 @@
 //
-//  RSHomeViewController.m
+//  RSChatsViewController.m
 //  RSChat
 //
 //  Created by hehai on 11/10/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
 //
 
-#import "RSHomeViewController.h"
+#import "RSChatsViewController.h"
 #import "RSHomeCell.h"
 #import "RSHomeModel.h"
 #import "RSNewsTableViewController.h"
@@ -19,7 +19,15 @@
 #import "UIViewController+RSExts.h" // 测试/调试
 #import <sys/utsname.h>
 
-@interface RSHomeViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, UIBarPositioningDelegate>
+@interface RSChatsViewController ()
+<
+UITableViewDataSource,
+UITableViewDelegate,
+UISearchBarDelegate,
+UISearchResultsUpdating,
+UIBarPositioningDelegate
+>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 @property (nonatomic, strong) UISearchController *searchVC;
@@ -29,17 +37,13 @@
 
 @end
 
-@implementation RSHomeViewController
+@implementation RSChatsViewController
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     NSString *modelStr = [UIDevice currentDevice].model;
     NSLog(@"当前设备：%@", modelStr);
     
@@ -79,7 +83,6 @@
 }
 
 
-
 - (void)viewWillDisappear:(BOOL)animated {
     [self.searchVC.searchBar resignFirstResponder];
 }
@@ -95,8 +98,10 @@
 #pragma mark - NavigationBar
 
 - (void)setBisicInfo {
-    self.navigationItem.title = [NSString stringWithFormat:@"我信(%d)",32];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStyleDone target:self action:@selector(popUp)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(popUp)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
@@ -254,6 +259,5 @@
     }
     return _popView;
 }
-
 
 @end

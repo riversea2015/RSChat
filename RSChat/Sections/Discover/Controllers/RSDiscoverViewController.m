@@ -36,7 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"发现";
     UIView *contentView = self.view;
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSDiscoverCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDiscoverCell cellID]];

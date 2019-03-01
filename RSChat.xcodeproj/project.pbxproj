@@ -126,7 +126,7 @@
 		729139CA1BF1D56100CEFD64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139C91BF1D56100CEFD64 /* AppDelegate.m */; };
 		729139E51BF1D58E00CEFD64 /* RSContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139CF1BF1D58E00CEFD64 /* RSContactsViewController.m */; };
 		729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139D51BF1D58E00CEFD64 /* RSDiscoverViewController.m */; };
-		729139E71BF1D58E00CEFD64 /* RSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */; };
+		729139E71BF1D58E00CEFD64 /* RSChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139DB1BF1D58E00CEFD64 /* RSChatsViewController.m */; };
 		729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729139E11BF1D58E00CEFD64 /* RSMeViewController.m */; };
 		7291B6211C33CC4300EBE0E4 /* RSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7291B6201C33CC4300EBE0E4 /* RSSettingViewController.m */; };
 		7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7291B6231C33CD9B00EBE0E4 /* RSSettingCell.m */; };
@@ -190,6 +190,7 @@
 		72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72DC53A31C2711F800D74105 /* PushConfig.plist */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
+		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
 		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
@@ -408,8 +409,8 @@
 		729139CF1BF1D58E00CEFD64 /* RSContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactsViewController.m; sourceTree = "<group>"; };
 		729139D41BF1D58E00CEFD64 /* RSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDiscoverViewController.h; sourceTree = "<group>"; };
 		729139D51BF1D58E00CEFD64 /* RSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDiscoverViewController.m; sourceTree = "<group>"; };
-		729139DA1BF1D58E00CEFD64 /* RSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeViewController.h; sourceTree = "<group>"; };
-		729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeViewController.m; sourceTree = "<group>"; };
+		729139DA1BF1D58E00CEFD64 /* RSChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSChatsViewController.h; sourceTree = "<group>"; };
+		729139DB1BF1D58E00CEFD64 /* RSChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSChatsViewController.m; sourceTree = "<group>"; };
 		729139E01BF1D58E00CEFD64 /* RSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMeViewController.h; sourceTree = "<group>"; };
 		729139E11BF1D58E00CEFD64 /* RSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMeViewController.m; sourceTree = "<group>"; };
 		7291B61F1C33CC4300EBE0E4 /* RSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSettingViewController.h; sourceTree = "<group>"; };
@@ -505,6 +506,8 @@
 		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9242E3262228DEE8008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -729,6 +732,7 @@
 			children = (
 				729139A21BF1D44B00CEFD64 /* Info.plist */,
 				9242E2E12228D8B1008DDC1F /* InfoPlist.strings */,
+				9242E3252228DEE7008DDC1F /* Localizable.strings */,
 				729139A31BF1D44B00CEFD64 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -968,8 +972,8 @@
 		729139D91BF1D58E00CEFD64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				729139DA1BF1D58E00CEFD64 /* RSHomeViewController.h */,
-				729139DB1BF1D58E00CEFD64 /* RSHomeViewController.m */,
+				729139DA1BF1D58E00CEFD64 /* RSChatsViewController.h */,
+				729139DB1BF1D58E00CEFD64 /* RSChatsViewController.m */,
 				72ABF3D51BFD783100EC17C7 /* RSNewsTableViewController.h */,
 				72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */,
 				728917981C03F346008B3030 /* RSMessageViewController.h */,
@@ -1308,6 +1312,7 @@
 				1B8773991C3D3EAB000CCEAE /* RSFavoriteCell.xib in Resources */,
 				1BCE653A1C3A65C7002AC8D3 /* RSGameCCell.xib in Resources */,
 				72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */,
+				9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */,
 				722D5B101C240D17009F3574 /* officialAccounts.plist in Resources */,
 				726E86771C35553100B82094 /* RSCreatCodeViewController.xib in Resources */,
 				72AE238A1C0B1C1C009CB1AF /* RSLocalViewController.xib in Resources */,
@@ -1435,7 +1440,7 @@
 				72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */,
 				72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */,
 				727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */,
-				729139E71BF1D58E00CEFD64 /* RSHomeViewController.m in Sources */,
+				729139E71BF1D58E00CEFD64 /* RSChatsViewController.m in Sources */,
 				7230311C1C130000005D9117 /* RSFriendsViewController.m in Sources */,
 				72C404741C23079000852B71 /* RSNewFriendViewController.m in Sources */,
 				72172F1F1BFE0FD000D6D2FD /* RSNewsModel.m in Sources */,
@@ -1499,6 +1504,15 @@
 				9242E2E22228D9D3008DDC1F /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9242E3252228DEE7008DDC1F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9242E3242228DEE7008DDC1F /* en */,
+				9242E3262228DEE8008DDC1F /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
