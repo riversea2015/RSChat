@@ -189,6 +189,7 @@
 		72DC53A41C2711F800D74105 /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */; };
 		72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72DC53A31C2711F800D74105 /* PushConfig.plist */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
+		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
@@ -502,6 +503,8 @@
 		72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
 		72DC53A31C2711F800D74105 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -725,6 +728,7 @@
 			isa = PBXGroup;
 			children = (
 				729139A21BF1D44B00CEFD64 /* Info.plist */,
+				9242E2E12228D8B1008DDC1F /* InfoPlist.strings */,
 				729139A31BF1D44B00CEFD64 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1225,6 +1229,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 729139951BF1D44B00CEFD64;
 			productRefGroup = 7291399F1BF1D44B00CEFD64 /* Products */;
@@ -1255,6 +1260,7 @@
 				72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */,
 				1B26D6661C3A91F200BFC29C /* RSGameDetailViewController.xib in Resources */,
 				1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */,
+				9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */,
 				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
@@ -1485,11 +1491,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		9242E2E12228D8B1008DDC1F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9242E2E02228D8B1008DDC1F /* en */,
+				9242E2E22228D9D3008DDC1F /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		729139BF1BF1D44C00CEFD64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1524,7 +1543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "c19de5b0-1a20-4794-81c7-2435bc8a764c";
@@ -1536,6 +1555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1562,7 +1582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1584,7 +1604,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1596,7 +1616,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";
@@ -1618,7 +1638,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = RSChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1630,7 +1650,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";
