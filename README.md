@@ -6,6 +6,14 @@
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_2.gif?raw=true)
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_3.gif?raw=true)
 
+### 
+
+Run the following command:
+
+```
+$ pod install
+```
+
 ### Author
 
 he hai, hehai682@126.com
