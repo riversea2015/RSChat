@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)colorWithRGB:(NSUInteger)rgb;
 
-+ (UIColor*)colorWithRGB:(NSUInteger)rgb alpha:(CGFloat)alpha;
-
 @end
 
 NS_ASSUME_NONNULL_END

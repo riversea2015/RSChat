@@ -65,7 +65,7 @@
     [logInBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(20);
         make.size.mas_equalTo(CGSizeMake((RSScreenW - 60)*0.5, 47));
-        make.bottom.equalTo(self.view).offset(-20-RSBottomH);
+        make.bottom.equalTo(self.view).offset(-20-kBottomH);
     }];
     
     UIButton *registerBtn = [UIButton createBtnWithTitle:NSLocalizedString(@"Sign Up", nil)
@@ -78,7 +78,7 @@
     [registerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view).offset(-20);
         make.size.mas_equalTo(CGSizeMake((RSScreenW - 60)*0.5, 47));
-        make.bottom.equalTo(self.view).offset(-20-RSBottomH);
+        make.bottom.equalTo(self.view).offset(-20-kBottomH);
     }];
 }
 
