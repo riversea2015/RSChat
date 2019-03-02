@@ -25,11 +25,12 @@
 #define RSScreenW [UIScreen mainScreen].bounds.size.width
 #define RSScreenH [UIScreen mainScreen].bounds.size.height
 
-
-#pragma mark - ...
-
 #define kIsIPhoneX (@available(iOS 11.0, *) ? [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0 : NO)
-#define kNavBarH ((kIsIPhoneX) ? 88 : 64)
-#define kBottomH ((kIsIPhoneX) ? 34 : 0)
+
+#define RSNavBarH ((kIsIPhoneX) ? 88 : 64)
+
+#define RSBottomH ((kIsIPhoneX) ? 34 : 0)
+
+#define RSStatusBarH [[UIApplication sharedApplication] statusBarFrame].size.height
 
 #endif /* RSChatMacro_h */
