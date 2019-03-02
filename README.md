@@ -6,9 +6,15 @@
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_2.gif?raw=true)
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_3.gif?raw=true)
 
-### 
+### How To Get Started
 
-Run the following command:
+- [Download RSChat](https://github.com/riversea2015/RSChat/archive/master.zip), or clone it with the following command:
+
+```
+git clone https://github.com/riversea2015/RSChat.git
+```
+
+- Then, run the following command in the working directory:
 
 ```
 $ pod install
