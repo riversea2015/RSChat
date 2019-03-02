@@ -11,7 +11,7 @@
 - [Download RSChat](https://github.com/riversea2015/RSChat/archive/master.zip), or clone it with the following command:
 
 ```
-git clone https://github.com/riversea2015/RSChat.git
+$ git clone https://github.com/riversea2015/RSChat.git
 ```
 
 - Then, run the following command in the working directory:
