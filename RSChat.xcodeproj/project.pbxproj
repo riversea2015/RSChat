@@ -84,6 +84,11 @@
 		727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DC81BF260AB00CE8AA6 /* RSDiscoverCell.xib */; };
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
+		727C604B222BE4B300E4A95E /* RSIMMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C604A222BE4B300E4A95E /* RSIMMacro.m */; };
+		727C604E222BEC0400E4A95E /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C604D222BEC0400E4A95E /* AppDelegate+Push.m */; };
+		727C6051222BEF4500E4A95E /* AppDelegate+IM.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6050222BEF4500E4A95E /* AppDelegate+IM.m */; };
+		727C6054222BF0DB00E4A95E /* AppDelegate+Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6053222BF0DB00E4A95E /* AppDelegate+Content.m */; };
+		727C605A222BF37B00E4A95E /* AppDelegate+Temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6059222BF37B00E4A95E /* AppDelegate+Temp.m */; };
 		72881D7C1C33E08D00447B85 /* RSLogoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7A1C33E08D00447B85 /* RSLogoutCell.m */; };
 		72881D7D1C33E08D00447B85 /* RSLogoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */; };
 		72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72881D7F1C33E2CD00447B85 /* RSReLoginViewController.m */; };
@@ -323,6 +328,16 @@
 		727C1DCF1BF26B7600CE8AA6 /* RSHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeCell.h; sourceTree = "<group>"; };
 		727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeCell.m; sourceTree = "<group>"; };
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
+		727C6049222BE4B300E4A95E /* RSIMMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSIMMacro.h; sourceTree = "<group>"; };
+		727C604A222BE4B300E4A95E /* RSIMMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSIMMacro.m; sourceTree = "<group>"; };
+		727C604C222BEC0400E4A95E /* AppDelegate+Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Push.h"; sourceTree = "<group>"; };
+		727C604D222BEC0400E4A95E /* AppDelegate+Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
+		727C604F222BEF4500E4A95E /* AppDelegate+IM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+IM.h"; sourceTree = "<group>"; };
+		727C6050222BEF4500E4A95E /* AppDelegate+IM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+IM.m"; sourceTree = "<group>"; };
+		727C6052222BF0DB00E4A95E /* AppDelegate+Content.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Content.h"; sourceTree = "<group>"; };
+		727C6053222BF0DB00E4A95E /* AppDelegate+Content.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Content.m"; sourceTree = "<group>"; };
+		727C6058222BF37B00E4A95E /* AppDelegate+Temp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Temp.h"; sourceTree = "<group>"; };
+		727C6059222BF37B00E4A95E /* AppDelegate+Temp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Temp.m"; sourceTree = "<group>"; };
 		72881D791C33E08D00447B85 /* RSLogoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSLogoutCell.h; sourceTree = "<group>"; };
 		72881D7A1C33E08D00447B85 /* RSLogoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSLogoutCell.m; sourceTree = "<group>"; };
 		72881D7B1C33E08D00447B85 /* RSLogoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLogoutCell.xib; sourceTree = "<group>"; };
@@ -564,6 +579,8 @@
 				722D5B0F1C240D17009F3574 /* officialAccounts.plist */,
 				1B8773651C3C46BC000CCEAE /* homeNaviContacts.plist */,
 				1B87739A1C3D52BA000CCEAE /* favorites.plist */,
+				727C6049222BE4B300E4A95E /* RSIMMacro.h */,
+				727C604A222BE4B300E4A95E /* RSIMMacro.m */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -761,6 +778,14 @@
 			children = (
 				729139C81BF1D56100CEFD64 /* AppDelegate.h */,
 				729139C91BF1D56100CEFD64 /* AppDelegate.m */,
+				727C604C222BEC0400E4A95E /* AppDelegate+Push.h */,
+				727C604D222BEC0400E4A95E /* AppDelegate+Push.m */,
+				727C604F222BEF4500E4A95E /* AppDelegate+IM.h */,
+				727C6050222BEF4500E4A95E /* AppDelegate+IM.m */,
+				727C6052222BF0DB00E4A95E /* AppDelegate+Content.h */,
+				727C6053222BF0DB00E4A95E /* AppDelegate+Content.m */,
+				727C6058222BF37B00E4A95E /* AppDelegate+Temp.h */,
+				727C6059222BF37B00E4A95E /* AppDelegate+Temp.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1393,7 +1418,9 @@
 				1B8773941C3D3C70000CCEAE /* RSFavoritesViewController.m in Sources */,
 				72C404711C226C3C00852B71 /* RSPopView.m in Sources */,
 				72B6AB301C3848FB00EAFA27 /* RSAddFriendViewController.m in Sources */,
+				727C604B222BE4B300E4A95E /* RSIMMacro.m in Sources */,
 				1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */,
+				727C6054222BF0DB00E4A95E /* AppDelegate+Content.m in Sources */,
 				7291B6251C33CD9B00EBE0E4 /* RSSettingCell.m in Sources */,
 				72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */,
 				72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */,
@@ -1426,6 +1453,7 @@
 				1B8773771C3CF0E7000CCEAE /* RSEmotionACell.m in Sources */,
 				7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */,
 				1B26D6651C3A91F200BFC29C /* RSGameDetailViewController.m in Sources */,
+				727C604E222BEC0400E4A95E /* AppDelegate+Push.m in Sources */,
 				72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */,
 				1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */,
 				1B8773981C3D3EAB000CCEAE /* RSFavoriteCell.m in Sources */,
@@ -1441,6 +1469,7 @@
 				1BCE653B1C3A65C7002AC8D3 /* RSGameDCell.m in Sources */,
 				1BCE65391C3A65C7002AC8D3 /* RSGameCCell.m in Sources */,
 				72AB93A41BF708DD005A212C /* RSContactCell.m in Sources */,
+				727C6051222BEF4500E4A95E /* AppDelegate+IM.m in Sources */,
 				726E86761C35553100B82094 /* RSCreatCodeViewController.m in Sources */,
 				727C1DBA1BF232F400CE8AA6 /* RSMeModel.m in Sources */,
 				729066B21C03749700B64EA8 /* RSMessageCell.m in Sources */,
@@ -1462,6 +1491,7 @@
 				72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */,
 				1BCE65331C3A65C7002AC8D3 /* RSFriendsHeaderView.m in Sources */,
 				726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */,
+				727C605A222BF37B00E4A95E /* AppDelegate+Temp.m in Sources */,
 				72C4047C1C2321CD00852B71 /* RSGroupChatViewController.m in Sources */,
 				727C1DC91BF260AB00CE8AA6 /* RSDiscoverCell.m in Sources */,
 				726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */,
