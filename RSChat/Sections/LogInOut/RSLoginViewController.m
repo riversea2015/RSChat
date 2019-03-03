@@ -14,6 +14,7 @@
 #import "RSQuestionViewController.h"
 
 @interface RSLoginViewController ()<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *telNumber;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
@@ -25,9 +26,8 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {
@@ -43,22 +43,18 @@
     // 再次点击文本框时，清空之前的内容
 //    self.telNumber.clearsOnBeginEditing = YES;
 //    self.password.clearsOnBeginEditing = YES;
-     
-}
-
-// regist notification
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openKeyboard:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification object:nil];
+    [self registerNotification];
 }
 
-// remove notification
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+- (void)registerNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(openKeyboard:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 #pragma mark - Private Method
@@ -67,7 +63,7 @@
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationOptions option = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
     
-    self.constraint.constant = 10; // 原为 80
+    self.constraint.constant = 10;
     
     [UIView animateWithDuration:duration delay:0 options:option animations:^{
         [self.view layoutIfNeeded];
@@ -78,7 +74,7 @@
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationOptions option = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
     
-    self.constraint.constant = 80; // 原为 10
+    self.constraint.constant = 80;
     
     [UIView animateWithDuration:duration delay:0 options:option animations:^{
         [self.view layoutIfNeeded];
@@ -137,6 +133,8 @@
 }
 
 #pragma mark - delegate
+
+#pragma mark - UITextField delegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     self.errorLabel.text = nil;
