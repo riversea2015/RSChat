@@ -85,7 +85,6 @@
 		727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C1DD01BF26B7600CE8AA6 /* RSHomeCell.m */; };
 		727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */; };
 		727C604B222BE4B300E4A95E /* RSIMMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C604A222BE4B300E4A95E /* RSIMMacro.m */; };
-		727C604E222BEC0400E4A95E /* AppDelegate+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C604D222BEC0400E4A95E /* AppDelegate+Push.m */; };
 		727C6051222BEF4500E4A95E /* AppDelegate+IM.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6050222BEF4500E4A95E /* AppDelegate+IM.m */; };
 		727C6054222BF0DB00E4A95E /* AppDelegate+Content.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6053222BF0DB00E4A95E /* AppDelegate+Content.m */; };
 		727C605A222BF37B00E4A95E /* AppDelegate+Temp.m in Sources */ = {isa = PBXBuildFile; fileRef = 727C6059222BF37B00E4A95E /* AppDelegate+Temp.m */; };
@@ -184,8 +183,6 @@
 		72DC53961C25E90800D74105 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53951C25E90800D74105 /* UIKit.framework */; };
 		72DC53981C25E91300D74105 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53971C25E91300D74105 /* Security.framework */; };
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
-		72DC53A41C2711F800D74105 /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */; };
-		72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72DC53A31C2711F800D74105 /* PushConfig.plist */; };
 		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
@@ -330,8 +327,6 @@
 		727C1DD11BF26B7600CE8AA6 /* RSHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSHomeCell.xib; sourceTree = "<group>"; };
 		727C6049222BE4B300E4A95E /* RSIMMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSIMMacro.h; sourceTree = "<group>"; };
 		727C604A222BE4B300E4A95E /* RSIMMacro.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSIMMacro.m; sourceTree = "<group>"; };
-		727C604C222BEC0400E4A95E /* AppDelegate+Push.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Push.h"; sourceTree = "<group>"; };
-		727C604D222BEC0400E4A95E /* AppDelegate+Push.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Push.m"; sourceTree = "<group>"; };
 		727C604F222BEF4500E4A95E /* AppDelegate+IM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+IM.h"; sourceTree = "<group>"; };
 		727C6050222BEF4500E4A95E /* AppDelegate+IM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+IM.m"; sourceTree = "<group>"; };
 		727C6052222BF0DB00E4A95E /* AppDelegate+Content.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Content.h"; sourceTree = "<group>"; };
@@ -503,9 +498,6 @@
 		72DC53951C25E90800D74105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72DC53971C25E91300D74105 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		72DC53991C25E92400D74105 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		72DC53A11C2711F800D74105 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
-		72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
-		72DC53A31C2711F800D74105 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -529,7 +521,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DC53A41C2711F800D74105 /* libPushSDK-1.8.8.a in Frameworks */,
 				72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */,
 				72DC53981C25E91300D74105 /* Security.framework in Frameworks */,
 				72DC53961C25E90800D74105 /* UIKit.framework in Frameworks */,
@@ -778,8 +769,6 @@
 			children = (
 				729139C81BF1D56100CEFD64 /* AppDelegate.h */,
 				729139C91BF1D56100CEFD64 /* AppDelegate.m */,
-				727C604C222BEC0400E4A95E /* AppDelegate+Push.h */,
-				727C604D222BEC0400E4A95E /* AppDelegate+Push.m */,
 				727C604F222BEF4500E4A95E /* AppDelegate+IM.h */,
 				727C6050222BEF4500E4A95E /* AppDelegate+IM.m */,
 				727C6052222BF0DB00E4A95E /* AppDelegate+Content.h */,
@@ -1128,7 +1117,6 @@
 		729139E41BF1D58E00CEFD64 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				72DC53A01C2711F800D74105 /* lib */,
 				728ED8B31C0B0E2800DE8639 /* ZBarSDK-master */,
 			);
 			path = Vendors;
@@ -1144,16 +1132,6 @@
 				728ED8A91C0B05F200DE8639 /* AVFoundation.framework */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		72DC53A01C2711F800D74105 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				72DC53A11C2711F800D74105 /* APService.h */,
-				72DC53A21C2711F800D74105 /* libPushSDK-1.8.8.a */,
-				72DC53A31C2711F800D74105 /* PushConfig.plist */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		8FBAA1737F82DE84B2DB5479 /* Pods */ = {
@@ -1283,7 +1261,6 @@
 				727C1DB51BF211CF00CE8AA6 /* RSMeOtherCell.xib in Resources */,
 				72C0AC701C1174CB00C817D2 /* RSScanResultViewController.xib in Resources */,
 				727C1DCA1BF260AB00CE8AA6 /* RSDiscoverCell.xib in Resources */,
-				72DC53A51C2711F800D74105 /* PushConfig.plist in Resources */,
 				1B26D6661C3A91F200BFC29C /* RSGameDetailViewController.xib in Resources */,
 				1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */,
 				9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */,
@@ -1453,7 +1430,6 @@
 				1B8773771C3CF0E7000CCEAE /* RSEmotionACell.m in Sources */,
 				7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */,
 				1B26D6651C3A91F200BFC29C /* RSGameDetailViewController.m in Sources */,
-				727C604E222BEC0400E4A95E /* AppDelegate+Push.m in Sources */,
 				72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */,
 				1BCE653D1C3A65C7002AC8D3 /* RSGameECell.m in Sources */,
 				1B8773981C3D3EAB000CCEAE /* RSFavoriteCell.m in Sources */,

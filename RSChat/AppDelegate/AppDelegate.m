@@ -9,7 +9,6 @@
 //
 
 #import "AppDelegate.h"
-#import "AppDelegate+Push.h"
 #import "AppDelegate+IM.h"
 #import "AppDelegate+Content.h"
 
@@ -30,8 +29,6 @@
     [self handleIMLogicWithApplication:application options:launchOptions];
     
     [self setupContentVC];
-    
-    [self handleAPNsWithApplication:application options:launchOptions];
     
     [self beginMonitorNetStatus];
     
