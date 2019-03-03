@@ -13,29 +13,25 @@
 #import "RSQuestionViewController.h"
 
 @interface RSSignUpViewController ()<UIAlertViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *countryCode;
 @property (weak, nonatomic) IBOutlet UITextField *telNumber;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraint;
-
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraint;
+
 @end
+
 
 @implementation RSSignUpViewController
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.telNumber.keyboardType = UIKeyboardTypeNumberPad;
     
+    self.telNumber.keyboardType = UIKeyboardTypeNumberPad;
     self.telNumber.clearButtonMode = UITextFieldViewModeAlways;
 }
 
@@ -71,8 +67,6 @@
         return;
     }
     
-    // 以上可以确保到这里的一定是11位数字（键盘已经固定为 数字键盘）
-    
     self.errorLabel.text = nil;
     NSString *messageStr = [NSString stringWithFormat:@"我们将发送验证码短信到这个号码：+86 %@", self.telNumber.text];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"确认手机号码" message:messageStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"好", nil];
@@ -80,15 +74,12 @@
 }
 
 - (IBAction)showRules:(id)sender {
-//    RSRuleViewController *ruleVC = [[RSRuleViewController alloc] init];
-//    [self presentViewController:ruleVC animated:YES completion:nil];
-    
+
     RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] init];
     questionVC.url = [NSURL URLWithString:@"http://weixin.qq.com/cgi-bin/readtemplate?uin=&stype=&promote=&fr=&lang=zh_CN&ADTAG=&check=false&nav=faq&t=weixin_agreement&s=default"];
     questionVC.titleText = @"使用条款和隐私政策";
     
     [self presentViewController:questionVC animated:YES completion:nil];
-    
 }
 
 #pragma mark - alertView delegate

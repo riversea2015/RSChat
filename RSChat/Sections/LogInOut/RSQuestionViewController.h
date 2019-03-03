@@ -11,6 +11,7 @@
 #import "RSViewController.h"
 
 @interface RSQuestionViewController : RSViewController
+
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, copy) NSString *titleText;
 

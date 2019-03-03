@@ -12,6 +12,7 @@
 #import "RSMainTabBarController.h"
 
 @interface RSConformViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *authCode;
 @property (weak, nonatomic) IBOutlet UITextField *telNumber;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;

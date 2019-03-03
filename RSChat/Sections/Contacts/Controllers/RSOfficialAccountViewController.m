@@ -12,6 +12,7 @@
 #import "RSOfficialCell.h"
 
 @interface RSOfficialAccountViewController ()<UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, copy) NSArray *accountArray;
 @property (nonatomic, copy) NSMutableArray *sectionIndexArray;

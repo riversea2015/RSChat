@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 
 @interface RSQuestionViewController ()<UIWebViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIWebView *questionView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *alertLabel;
