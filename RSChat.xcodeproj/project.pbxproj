@@ -105,10 +105,6 @@
 		728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728ED87D1C0AF46900DE8639 /* RSScanViewController.m */; };
 		728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728ED8821C0AF62200DE8639 /* RSShakeViewController.m */; };
 		728ED8851C0AF62200DE8639 /* RSShakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8831C0AF62200DE8639 /* RSShakeViewController.xib */; };
-		728ED8AA1C0B05F200DE8639 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728ED8A91C0B05F200DE8639 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		728ED8AC1C0B061B00DE8639 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728ED8AB1C0B061B00DE8639 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		728ED8AE1C0B062B00DE8639 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728ED8AD1C0B062B00DE8639 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		728ED8B01C0B063D00DE8639 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728ED8AF1C0B063D00DE8639 /* QuartzCore.framework */; };
 		728ED8D31C0B0E2800DE8639 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8B41C0B0E2800DE8639 /* .gitignore */; };
 		728ED8D41C0B0E2800DE8639 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 728ED8CC1C0B0E2800DE8639 /* libzbar.a */; };
 		728ED8D51C0B0E2800DE8639 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8CD1C0B0E2800DE8639 /* README */; };
@@ -183,7 +179,6 @@
 		72DC53961C25E90800D74105 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53951C25E90800D74105 /* UIKit.framework */; };
 		72DC53981C25E91300D74105 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53971C25E91300D74105 /* Security.framework */; };
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
-		72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
 		92DE50D7222915F800E12586 /* RSLngListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D6222915F800E12586 /* RSLngListViewController.m */; };
@@ -360,10 +355,6 @@
 		728ED8811C0AF62200DE8639 /* RSShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSShakeViewController.h; sourceTree = "<group>"; };
 		728ED8821C0AF62200DE8639 /* RSShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSShakeViewController.m; sourceTree = "<group>"; };
 		728ED8831C0AF62200DE8639 /* RSShakeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSShakeViewController.xib; sourceTree = "<group>"; };
-		728ED8A91C0B05F200DE8639 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		728ED8AB1C0B061B00DE8639 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		728ED8AD1C0B062B00DE8639 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		728ED8AF1C0B063D00DE8639 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		728ED8B41C0B0E2800DE8639 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		728ED8B81C0B0E2800DE8639 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		728ED8B91C0B0E2800DE8639 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
@@ -498,7 +489,6 @@
 		72DC53951C25E90800D74105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72DC53971C25E91300D74105 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		72DC53991C25E92400D74105 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -531,12 +521,7 @@
 				72DC538C1C25E8C500D74105 /* CoreFoundation.framework in Frameworks */,
 				72DC538A1C25E8B500D74105 /* CFNetwork.framework in Frameworks */,
 				72C4046C1C22611E00852B71 /* libiconv.tbd in Frameworks */,
-				72FAC59F1C0B293900FAC8B9 /* libiconv.dylib in Frameworks */,
-				728ED8B01C0B063D00DE8639 /* QuartzCore.framework in Frameworks */,
 				728ED8D41C0B0E2800DE8639 /* libzbar.a in Frameworks */,
-				728ED8AE1C0B062B00DE8639 /* CoreVideo.framework in Frameworks */,
-				728ED8AC1C0B061B00DE8639 /* CoreMedia.framework in Frameworks */,
-				728ED8AA1C0B05F200DE8639 /* AVFoundation.framework in Frameworks */,
 				9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,7 +708,6 @@
 		729139A01BF1D44B00CEFD64 /* RSChat */ = {
 			isa = PBXGroup;
 			children = (
-				729139ED1BF1EE2000CEFD64 /* Frameworks */,
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
 				729066A31C0322C600B64EA8 /* Utilities */,
@@ -1120,18 +1104,6 @@
 				728ED8B31C0B0E2800DE8639 /* ZBarSDK-master */,
 			);
 			path = Vendors;
-			sourceTree = "<group>";
-		};
-		729139ED1BF1EE2000CEFD64 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				72FAC59E1C0B293900FAC8B9 /* libiconv.dylib */,
-				728ED8AF1C0B063D00DE8639 /* QuartzCore.framework */,
-				728ED8AD1C0B062B00DE8639 /* CoreVideo.framework */,
-				728ED8AB1C0B061B00DE8639 /* CoreMedia.framework */,
-				728ED8A91C0B05F200DE8639 /* AVFoundation.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		8FBAA1737F82DE84B2DB5479 /* Pods */ = {

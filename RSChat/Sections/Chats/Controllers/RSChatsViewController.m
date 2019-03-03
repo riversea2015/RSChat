@@ -9,15 +9,18 @@
 //
 
 #import "RSChatsViewController.h"
-#import "RSHomeCell.h"
-#import "RSHomeModel.h"
 #import "RSNewsTableViewController.h"
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
 #import "RSScanViewController.h"
 #import "RSAddFriendViewController.h"
+
+#import "RSHomeCell.h"
 #import "RSSearchTempView.h"
 #import "RSPopView.h"
+
+#import "RSHomeModel.h"
+
 #import <sys/utsname.h>
 
 @interface RSChatsViewController ()
@@ -190,12 +193,13 @@ UIBarPositioningDelegate
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@: section:%ld, row:%ld",self, indexPath.section, indexPath.row);
     
-    self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if (indexPath.row == 0) {
+        
         RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        newsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:newsVC animated:YES];
 
     } else {
@@ -203,29 +207,25 @@ UIBarPositioningDelegate
         RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
         RSHomeModel *model = self.allDatas[indexPath.row];
         messageVC.homeModel = model;
+        messageVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageVC animated:YES];
     }
-    
-    self.hidesBottomBarWhenPushed = NO;
-    [tableView deselectRowAtIndexPath:indexPath animated:NO]; // 取消选中状态
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
 
-// 设置分割线的长度
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsMake(0, 10, 0, 0)];
     }
     
-    // Prevent the cell from inheriting the Table View's margin settings
     if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
         [cell setPreservesSuperviewLayoutMargins:NO];
     }
     
-    // Explictly set your cell's layout margins
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
