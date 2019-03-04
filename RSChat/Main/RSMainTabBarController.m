@@ -29,8 +29,8 @@
 
 + (void)initialize {
     
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
     UITabBarItem *item = [UITabBarItem appearance];
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];

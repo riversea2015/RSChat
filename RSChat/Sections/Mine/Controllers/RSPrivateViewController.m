@@ -9,14 +9,24 @@
 //
 
 #import "RSPrivateViewController.h"
-#import "RSPrivateTableViewCell.h"
-#import "RSPrivateOtherCell.h"
-#import "RSMePrivateModel.h"
-#import "UIImage+RSExts.h"
-
 #import "RSCreatCodeViewController.h"
 
-@interface RSPrivateViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+#import "RSPrivateTableViewCell.h"
+#import "RSPrivateOtherCell.h"
+
+#import "UIImage+RSExts.h"
+
+#import "RSMePrivateModel.h"
+
+@interface RSPrivateViewController ()
+<
+UITableViewDataSource,
+UITableViewDelegate,
+UIActionSheetDelegate,
+UINavigationControllerDelegate,
+UIImagePickerControllerDelegate
+>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) NSArray *demoArray;
 
@@ -26,14 +36,14 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人信息";
+    
+    [self setupMainViews];
+}
+
+- (void)setupMainViews {
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateOtherCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSPrivateTableViewCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSPrivateTableViewCell cellID]];
     [self.view addSubview:self.tableView];
@@ -53,6 +63,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (indexPath.section == 0 && indexPath.row == 0) {
         RSPrivateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSPrivateTableViewCell cellID] forIndexPath:indexPath];
         // cell相关设置。。。
@@ -76,26 +87,28 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 15;
+    return CGFLOAT_MIN;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
         return [RSPrivateTableViewCell rowheight];
     }
+    
 #warning TODO 应改为自动变高
     if (indexPath.section == 1 && indexPath.row == 2) {
         return 100;
     }
+    
     return [RSPrivateOtherCell rowheight];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if (indexPath.section == 0 && indexPath.row == 0) {
         UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照", @"从手机相册选择", nil];
@@ -105,15 +118,15 @@
     
     if (indexPath.section == 0 && indexPath.row == 3) {
         RSCreatCodeViewController *codeVC = [[RSCreatCodeViewController alloc] init];
+        codeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:codeVC animated:YES];
     }
-  
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - ActionSheet Delegate
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    NSLog(@"点击了ActionSheet。。。");
+
     if (buttonIndex == 1) {
         UIImagePickerController *photoVC = [[UIImagePickerController alloc] init];
         photoVC.delegate = self;
@@ -153,7 +166,12 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        _tableView.tableFooterView = [[UIView alloc] init];
+        
+#ifdef __IPHONE_11_0
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+#endif
     }
     return _tableView;
 }

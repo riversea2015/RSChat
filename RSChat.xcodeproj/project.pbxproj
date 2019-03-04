@@ -42,7 +42,7 @@
 		1BCE64D51C3A3510002AC8D3 /* RSGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE64D41C3A3510002AC8D3 /* RSGameViewController.m */; };
 		1BCE65311C3A65C7002AC8D3 /* RSFriendsACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */; };
 		1BCE65321C3A65C7002AC8D3 /* RSFriendsACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE651E1C3A65C7002AC8D3 /* RSFriendsACell.xib */; };
-		1BCE65331C3A65C7002AC8D3 /* RSFriendsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE65201C3A65C7002AC8D3 /* RSFriendsHeaderView.m */; };
+		1BCE65331C3A65C7002AC8D3 /* RSFriendsCircleHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE65201C3A65C7002AC8D3 /* RSFriendsCircleHeader.m */; };
 		1BCE65341C3A65C7002AC8D3 /* RSFriendsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE65211C3A65C7002AC8D3 /* RSFriendsHeaderView.xib */; };
 		1BCE65351C3A65C7002AC8D3 /* RSGameACell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCE65231C3A65C7002AC8D3 /* RSGameACell.m */; };
 		1BCE65361C3A65C7002AC8D3 /* RSGameACell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCE65241C3A65C7002AC8D3 /* RSGameACell.xib */; };
@@ -63,7 +63,7 @@
 		722D5B071C23BFAF009F3574 /* RSOfficialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722D5B051C23BFAF009F3574 /* RSOfficialCell.m */; };
 		722D5B081C23BFAF009F3574 /* RSOfficialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722D5B061C23BFAF009F3574 /* RSOfficialCell.xib */; };
 		722D5B101C240D17009F3574 /* officialAccounts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 722D5B0F1C240D17009F3574 /* officialAccounts.plist */; };
-		7230311C1C130000005D9117 /* RSFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230311B1C130000005D9117 /* RSFriendsViewController.m */; };
+		7230311C1C130000005D9117 /* RSFriendsCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230311B1C130000005D9117 /* RSFriendsCircleViewController.m */; };
 		7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */; };
 		726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726A95281C21DF910065EA8D /* RSBuyViewController.m */; };
 		726E37DA1C16E94A003BE8FF /* RSFriendsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 726E37D91C16E94A003BE8FF /* RSFriendsModel.m */; };
@@ -244,8 +244,8 @@
 		1BCE651C1C3A65C7002AC8D3 /* RSFriendsACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsACell.h; sourceTree = "<group>"; };
 		1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsACell.m; sourceTree = "<group>"; };
 		1BCE651E1C3A65C7002AC8D3 /* RSFriendsACell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSFriendsACell.xib; sourceTree = "<group>"; };
-		1BCE651F1C3A65C7002AC8D3 /* RSFriendsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsHeaderView.h; sourceTree = "<group>"; };
-		1BCE65201C3A65C7002AC8D3 /* RSFriendsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsHeaderView.m; sourceTree = "<group>"; };
+		1BCE651F1C3A65C7002AC8D3 /* RSFriendsCircleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsCircleHeader.h; sourceTree = "<group>"; };
+		1BCE65201C3A65C7002AC8D3 /* RSFriendsCircleHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsCircleHeader.m; sourceTree = "<group>"; };
 		1BCE65211C3A65C7002AC8D3 /* RSFriendsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSFriendsHeaderView.xib; sourceTree = "<group>"; };
 		1BCE65221C3A65C7002AC8D3 /* RSGameACell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSGameACell.h; sourceTree = "<group>"; };
 		1BCE65231C3A65C7002AC8D3 /* RSGameACell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGameACell.m; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 		722D5B051C23BFAF009F3574 /* RSOfficialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOfficialCell.m; sourceTree = "<group>"; };
 		722D5B061C23BFAF009F3574 /* RSOfficialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSOfficialCell.xib; sourceTree = "<group>"; };
 		722D5B0F1C240D17009F3574 /* officialAccounts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = officialAccounts.plist; sourceTree = "<group>"; };
-		7230311A1C130000005D9117 /* RSFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsViewController.h; sourceTree = "<group>"; };
-		7230311B1C130000005D9117 /* RSFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsViewController.m; sourceTree = "<group>"; };
+		7230311A1C130000005D9117 /* RSFriendsCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFriendsCircleViewController.h; sourceTree = "<group>"; };
+		7230311B1C130000005D9117 /* RSFriendsCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFriendsCircleViewController.m; sourceTree = "<group>"; };
 		7234C34F1C08491E00C9009C /* RSHomeSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeSearchResultController.h; sourceTree = "<group>"; };
 		7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeSearchResultController.m; sourceTree = "<group>"; };
 		726A95271C21DF910065EA8D /* RSBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBuyViewController.h; sourceTree = "<group>"; };
@@ -873,8 +873,8 @@
 				72C0AC341C115B6200C817D2 /* RSBottleViewController.h */,
 				72C0AC351C115B6200C817D2 /* RSBottleViewController.m */,
 				72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */,
-				7230311A1C130000005D9117 /* RSFriendsViewController.h */,
-				7230311B1C130000005D9117 /* RSFriendsViewController.m */,
+				7230311A1C130000005D9117 /* RSFriendsCircleViewController.h */,
+				7230311B1C130000005D9117 /* RSFriendsCircleViewController.m */,
 				726A95271C21DF910065EA8D /* RSBuyViewController.h */,
 				726A95281C21DF910065EA8D /* RSBuyViewController.m */,
 				1BCE64D31C3A3510002AC8D3 /* RSGameViewController.h */,
@@ -908,8 +908,8 @@
 				1BCE651C1C3A65C7002AC8D3 /* RSFriendsACell.h */,
 				1BCE651D1C3A65C7002AC8D3 /* RSFriendsACell.m */,
 				1BCE651E1C3A65C7002AC8D3 /* RSFriendsACell.xib */,
-				1BCE651F1C3A65C7002AC8D3 /* RSFriendsHeaderView.h */,
-				1BCE65201C3A65C7002AC8D3 /* RSFriendsHeaderView.m */,
+				1BCE651F1C3A65C7002AC8D3 /* RSFriendsCircleHeader.h */,
+				1BCE65201C3A65C7002AC8D3 /* RSFriendsCircleHeader.m */,
 				1BCE65211C3A65C7002AC8D3 /* RSFriendsHeaderView.xib */,
 				1BCE65221C3A65C7002AC8D3 /* RSGameACell.h */,
 				1BCE65231C3A65C7002AC8D3 /* RSGameACell.m */,
@@ -1395,7 +1395,7 @@
 				727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */,
 				92DE50E022293E0700E12586 /* UIButton+RSExts.m in Sources */,
 				729139E71BF1D58E00CEFD64 /* RSChatsViewController.m in Sources */,
-				7230311C1C130000005D9117 /* RSFriendsViewController.m in Sources */,
+				7230311C1C130000005D9117 /* RSFriendsCircleViewController.m in Sources */,
 				72C404741C23079000852B71 /* RSNewFriendViewController.m in Sources */,
 				72172F1F1BFE0FD000D6D2FD /* RSNewsModel.m in Sources */,
 				1BCE653B1C3A65C7002AC8D3 /* RSGameDCell.m in Sources */,
@@ -1421,7 +1421,7 @@
 				72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */,
 				729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */,
 				72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */,
-				1BCE65331C3A65C7002AC8D3 /* RSFriendsHeaderView.m in Sources */,
+				1BCE65331C3A65C7002AC8D3 /* RSFriendsCircleHeader.m in Sources */,
 				726A95291C21DF910065EA8D /* RSBuyViewController.m in Sources */,
 				727C605A222BF37B00E4A95E /* AppDelegate+Temp.m in Sources */,
 				72C4047C1C2321CD00852B71 /* RSGroupChatViewController.m in Sources */,

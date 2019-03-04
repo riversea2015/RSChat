@@ -58,7 +58,6 @@ UIBarPositioningDelegate
     
     [self setBisicInfo];
     
-    [RSHomeCell registToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
     [self startSearch];
@@ -241,6 +240,14 @@ UIBarPositioningDelegate
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.tableFooterView = [[UIView alloc] init];
+        
+        [RSHomeCell registToTableView:_tableView];
+        
+#ifdef __IPHONE_11_0
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+#endif
     }
     return _tableView;
 }

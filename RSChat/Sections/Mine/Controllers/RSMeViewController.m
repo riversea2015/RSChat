@@ -32,11 +32,6 @@
 
 #pragma mark - lifeCycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -99,49 +94,34 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 15;
+    return CGFLOAT_MIN;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
-    
-    // 打开个人信息页面
-    if (indexPath.section == 0) {
-        RSPrivateViewController *privateVC = [[RSPrivateViewController alloc] init];
-        [self.navigationController pushViewController:privateVC animated:YES];
-    }
-    
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        RSAlbumViewController *albumVC = [[RSAlbumViewController alloc] init];
-        [self.navigationController pushViewController:albumVC animated:YES];
-    }
-    
-    if (indexPath.section == 1 && indexPath.row == 1) {
-        RSFavoritesViewController *favoritesVC = [[RSFavoritesViewController alloc] init];
-        [self.navigationController pushViewController:favoritesVC animated:YES];
-    }
-    
-    if (indexPath.section == 1 && indexPath.row == 2) {
-        RSMoneyCollectionViewController *moneyVC = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:moneyVC animated:YES];
-    }
-    
-    if (indexPath.section == 2) {
-        RSEmotionViewController *emotionVC = [[RSEmotionViewController alloc] init];
-        [self.navigationController pushViewController:emotionVC animated:YES];
-    }
-    
-    if (indexPath.section == 3) {
-        RSSettingViewController *settingVC = [[RSSettingViewController alloc] init];
-        [self.navigationController pushViewController:settingVC animated:YES];
-    }
-    
-    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    UIViewController *destVC = nil;
+    
+    if (indexPath.section == 0) {
+        destVC = [[RSPrivateViewController alloc] init];
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
+        destVC = [[RSAlbumViewController alloc] init];
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
+        destVC = [[RSFavoritesViewController alloc] init];
+    } else if (indexPath.section == 1 && indexPath.row == 2) {
+        destVC = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:[NSBundle mainBundle]];
+    } else if (indexPath.section == 2) {
+        destVC = [[RSEmotionViewController alloc] init];
+    } else if (indexPath.section == 3) {
+        destVC = [[RSSettingViewController alloc] init];
+    }
+    
+    destVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:destVC animated:YES];
 }
 
 #pragma mark - setter & getter
@@ -151,6 +131,13 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        
+#ifdef __IPHONE_11_0
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+#endif
+
     }
     return _tableView;
 }
@@ -161,4 +148,5 @@
     }
     return _model;
 }
+
 @end

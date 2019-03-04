@@ -9,19 +9,22 @@
 //
 
 #import "RSContactsViewController.h"
-#import "RSContactsModel.h"
-#import "RSContactCell.h"
-
 #import "RSDetailTableViewController.h"
 #import "RSNewFriendViewController.h"
-#import "RSNewFriendCell.h"
 #import "RSGroupChatViewController.h"
 #import "RSLabelViewController.h"
 #import "RSOfficialAccountViewController.h"
-
 #import "RSAddFriendViewController.h"
 
+#import "RSContactCell.h"
+#import "RSNewFriendCell.h"
+
+#import "RSContactsModel.h"
+
+#import "RSChatMacro.h"
+
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 @property (nonatomic, strong) NSMutableArray *indexArr;
@@ -33,50 +36,43 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNavView];
+    
+    [self setupMainViews];
+}
+
+#pragma mark - View
+
+- (void)setupNavView {
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add_cube"]
                                                                   style:UIBarButtonItemStyleDone
                                                                  target:self
                                                                  action:@selector(addFriend)];
     self.navigationItem.rightBarButtonItem = rightItem;
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
-    label.backgroundColor = [UIColor clearColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor lightGrayColor];
-    label.text = @"9位联系人";
+}
 
-    self.tableView.tableFooterView = label;
-    
+- (void)setupMainViews {
     [self.view addSubview:self.tableView];
+    
+    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
     
     if ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    [self.tableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 #pragma mark - 导航栏背景渐变
-/**
- * 当手势向下滑动时，delta的值从1开始逐渐减小，甚至可能小于0，MAX()和MIN()，是为了保证只取0~1之间的值，小于0的都按0算。
- */
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    CGFloat offset = self.tableView.contentOffset.y;
-    CGFloat delta = offset / 64.f + 1.f;
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    CGFloat offsetY = self.tableView.contentOffset.y;
+    CGFloat delta = offsetY/RSNavBarH  + 1.f;
     delta = MAX(0, delta);
     self.navigationController.navigationBar.alpha = MIN(1, delta);
-//    NSLog(@"屏幕发生滚动：%f", self.tableView.contentOffset.y);
 }
 
 #pragma mark - private method
@@ -88,18 +84,16 @@
     self.hidesBottomBarWhenPushed = NO;
 }
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     }
     
-    // Prevent the cell from inheriting the Table View's margin settings
     if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
         [cell setPreservesSuperviewLayoutMargins:NO];
     }
     
-    // Explictly set your cell's layout margins
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
@@ -114,28 +108,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 4;
-    }
-    if (section == 7) {
+    } else if (section == 7) {
         return 2;
+    } else {
+        return 1;
     }
-    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellID = [RSContactCell cellID];
     RSContactCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    // 显示好友逻辑
     RSContactsModel *model = [[RSContactsModel alloc] init];
     if (indexPath.section == 0) {
         model = self.allDatas[indexPath.row];
-    }
-    
-    if (indexPath.section <= 7 && indexPath.section > 0) {
+    } else if (indexPath.section <= 7 && indexPath.section > 0) {
         model = self.allDatas[3 + indexPath.section + indexPath.row];
-    }
-    
-    if (indexPath.section > 7) {
+    } else if (indexPath.section > 7) {
         model = self.allDatas[3 + indexPath.section + indexPath.row + 1];
     }
     
@@ -173,9 +162,7 @@
     }
     
     RSContactsModel *model = [[RSContactsModel alloc] init];
-//    if (indexPath.section == 0) {
-//        model = self.allDatas[indexPath.row];
-//    }
+
     if (indexPath.section <= 7 && indexPath.section > 0) {
         model = self.allDatas[3 + indexPath.section + indexPath.row];
     }
@@ -230,7 +217,7 @@
 - (UITableView *)tableView {
     if (!_tableView) {
         
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -241,6 +228,19 @@
         _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
         
         [_tableView registerNib:[UINib nibWithNibName:[RSContactCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSContactCell cellID]];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor lightGrayColor];
+        label.text = @"9位联系人";
+        _tableView.tableFooterView = label;
+        
+#ifdef __IPHONE_11_0
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+#endif
     }
     return _tableView;
 }

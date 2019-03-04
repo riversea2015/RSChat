@@ -1,5 +1,5 @@
 //
-//  RSFriendsViewController.h
+//  RSFriendsCircleViewController.h
 //  RSChat
 //
 //  Created by hehai on 12/5/15.
@@ -10,6 +10,6 @@
 
 #import "RSViewController.h"
 
-@interface RSFriendsViewController : RSViewController
+@interface RSFriendsCircleViewController : RSViewController
 
 @end

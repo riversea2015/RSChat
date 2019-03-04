@@ -17,11 +17,12 @@
 #import "RSShakeViewController.h"
 #import "RSLocalViewController.h"
 #import "RSBottleViewController.h"
-#import "RSFriendsViewController.h"
+#import "RSFriendsCircleViewController.h"
 #import "RSBuyViewController.h"
 #import "RSGameViewController.h"
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 
@@ -31,26 +32,17 @@
 
 #pragma mark - lifeCycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIView *contentView = self.view;
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSDiscoverCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDiscoverCell cellID]];
+    [self.view addSubview:self.tableView];
     
-    [contentView addSubview:self.tableView];
-    
-    // 确保View（此处是tableView）不会延伸至导航栏和tabBar的区域之内
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 7.0) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
+#ifdef __IPHONE_11_0
+    self.tableView.estimatedRowHeight = 0;
+    self.tableView.estimatedSectionFooterHeight = 0;
+    self.tableView.estimatedSectionHeaderHeight = 0;
+#endif
 }
 
 #pragma mark - tableView dataSource delegate
@@ -105,54 +97,36 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 15;
+    return CGFLOAT_MIN;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@: section:%ld, row:%ld",self, (long)indexPath.section, (long)indexPath.row);
-    self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    RSViewController *destVC = nil;
     
     if (indexPath.section == 0) {
-        RSFriendsViewController *friendsVC = [[RSFriendsViewController alloc] init];
-        [self.navigationController pushViewController:friendsVC animated:YES];
+        destVC = [[RSFriendsCircleViewController alloc] init];
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
+        destVC = [[RSScanViewController alloc] init];
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
+        destVC = [[RSShakeViewController alloc] initWithNibName:@"RSShakeViewController" bundle:[NSBundle mainBundle]];
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        destVC = [[RSLocalViewController alloc] initWithNibName:@"RSLocalViewController" bundle:[NSBundle mainBundle]];
+    } else if (indexPath.section == 2 && indexPath.row == 1) {
+        destVC = [[RSBottleViewController alloc] initWithNibName:@"RSBottleViewController" bundle:[NSBundle mainBundle]];
+    } else if (indexPath.section == 3 && indexPath.row == 0) {
+        destVC = [[RSBuyViewController alloc] init];
+    } else if (indexPath.section == 3 && indexPath.row == 1) {
+        destVC = [[RSGameViewController alloc] init];
     }
     
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        RSScanViewController *scanVC = [[RSScanViewController alloc] init];
-        [self.navigationController pushViewController:scanVC animated:YES];
-    }
-    
-    if (indexPath.section == 1 && indexPath.row == 1) {
-        RSShakeViewController *shakeVC = [[RSShakeViewController alloc] initWithNibName:@"RSShakeViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:shakeVC animated:YES];
-    }
-    
-    if (indexPath.section == 2 && indexPath.row == 0) {
-        RSLocalViewController *localVC = [[RSLocalViewController alloc] initWithNibName:@"RSLocalViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:localVC animated:YES];
-    }
-    
-    if (indexPath.section == 2 && indexPath.row == 1) {
-        RSBottleViewController *bottleVC = [[RSBottleViewController alloc] initWithNibName:@"RSBottleViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:bottleVC animated:YES];
-    }
-    
-    if (indexPath.section == 3 && indexPath.row == 0) {
-        RSBuyViewController *buyVC = [[RSBuyViewController alloc] init];//WithNibName:@"RSBuyViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:buyVC animated:YES];
-    }
-    
-    if (indexPath.section == 3 && indexPath.row == 1) {
-        RSGameViewController *gameVC = [[RSGameViewController alloc] init];
-        [self.navigationController pushViewController:gameVC animated:YES];
-    }
-    
-    self.hidesBottomBarWhenPushed = NO;
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    destVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:destVC animated:YES];
 }
 
 #pragma mark - setter & getter

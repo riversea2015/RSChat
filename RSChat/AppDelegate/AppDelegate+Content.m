@@ -24,7 +24,7 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSInteger runCount = [ud integerForKey:@"runCount"];
-//    if (runCount == 0) {
+    if (runCount == 0) {
     
         [ud setInteger:++runCount forKey:@"runCount"];
         [ud synchronize];
@@ -34,7 +34,7 @@
         self.window.rootViewController = navi;
         [self.window makeKeyAndVisible];
         return;
-//    }
+    }
     
     RSMainTabBarController *mainTabBarController = [[RSMainTabBarController alloc] init];
     self.window.rootViewController = mainTabBarController;
