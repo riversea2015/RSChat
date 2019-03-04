@@ -172,6 +172,7 @@
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
+		92DC47C8222CD1C500C9686D /* RSCountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */; };
 		92DE50D7222915F800E12586 /* RSLngListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D6222915F800E12586 /* RSLngListViewController.m */; };
 		92DE50DA222917DF00E12586 /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D9222917DF00E12586 /* RSViewController.m */; };
 		92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DC2229359C00E12586 /* UIColor+RSExts.m */; };
@@ -482,6 +483,8 @@
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9242E3262228DEE8008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		92DC47C6222CD1C500C9686D /* RSCountryListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSCountryListViewController.h; sourceTree = "<group>"; };
+		92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSCountryListViewController.m; sourceTree = "<group>"; };
 		92DE50D422290D1100E12586 /* RSChatMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSChatMacro.h; sourceTree = "<group>"; };
 		92DE50D5222915F800E12586 /* RSLngListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSLngListViewController.h; sourceTree = "<group>"; };
 		92DE50D6222915F800E12586 /* RSLngListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSLngListViewController.m; sourceTree = "<group>"; };
@@ -569,6 +572,8 @@
 				72BDB3791C2A52CA002AE29F /* RSQuestionViewController.h */,
 				72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */,
 				72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */,
+				92DC47C6222CD1C500C9686D /* RSCountryListViewController.h */,
+				92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */,
 			);
 			path = LogInOut;
 			sourceTree = "<group>";
@@ -1374,6 +1379,7 @@
 				7271F9BE1C29282D00FD720B /* RSMainTabBarController.m in Sources */,
 				7288A5531C108BD6009936A7 /* RSPrivateTableViewCell.m in Sources */,
 				729D5FFC1C296154000F8C69 /* RSSignUpViewController.m in Sources */,
+				92DC47C8222CD1C500C9686D /* RSCountryListViewController.m in Sources */,
 				727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */,
 				72172F1C1BFE0FB700D6D2FD /* RSHomeModel.m in Sources */,
 				722D5B071C23BFAF009F3574 /* RSOfficialCell.m in Sources */,

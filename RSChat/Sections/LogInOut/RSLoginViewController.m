@@ -12,6 +12,7 @@
 #import "RSMainTabBarController.h"
 #import "RSOtherLoginViewController.h"
 #import "RSQuestionViewController.h"
+#import "RSCountryListViewController.h"
 
 @interface RSLoginViewController ()<UITextFieldDelegate>
 
@@ -117,18 +118,47 @@
     }
 }
 
+- (IBAction)chooseCountry:(UIButton *)sender {
+    RSCountryListViewController *tempVC = [[RSCountryListViewController alloc] init];
+    [self presentViewController:tempVC animated:YES completion:nil];
+}
+
 - (IBAction)cancel:(UIButton *)sender {
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)otherLoginMethod:(id)sender {
-    RSOtherLoginViewController *other = [[RSOtherLoginViewController alloc] init];
-    [self presentViewController:other animated:YES completion:nil];
+- (IBAction)moreOptions:(UIButton *)sender {
+    
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *freeze = [UIAlertAction actionWithTitle:@"紧急冻结" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] init];
+        questionVC.titleText = @"冻结账号";
+        questionVC.url = [NSURL URLWithString:@"https://support.weixin.qq.com/security/readtemplate?t=account_frozen/w_intro&from=sec&type=frozen&wechat_real_lang=zh_CN&rid=55ee85fd37a18fe405355d10f63b95d0_1551668600"];
+        [self presentViewController:questionVC animated:YES completion:nil];
+    }];
+    
+    UIAlertAction *securityCenter = [UIAlertAction actionWithTitle:@"前往微信安全中心" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] init];
+        questionVC.titleText = @"微信安全中心";
+        questionVC.url = [NSURL URLWithString:@"https://weixin110.qq.com/security/readtemplate?t=w_security_center_website/index&lang=zh_CN"];
+        [self presentViewController:questionVC animated:YES completion:nil];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertC addAction:freeze];
+    [alertC addAction:securityCenter];
+    [alertC addAction:cancel];
+    
+    [self presentViewController:alertC animated:YES completion:nil];
 }
 
 - (IBAction)question:(id)sender {
     RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] init];
+    questionVC.titleText = @"找回账号密码";
+    questionVC.url = [NSURL URLWithString:@"https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=find_password/w_index&lang=zh_CN"];
     [self presentViewController:questionVC animated:YES completion:nil];
 }
 

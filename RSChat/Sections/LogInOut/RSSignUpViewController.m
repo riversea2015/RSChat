@@ -11,6 +11,7 @@
 #import "RSSignUpViewController.h"
 #import "RSConformViewController.h"
 #import "RSQuestionViewController.h"
+#import "RSCountryListViewController.h"
 
 @interface RSSignUpViewController ()<UIAlertViewDelegate>
 
@@ -71,6 +72,11 @@
     NSString *messageStr = [NSString stringWithFormat:@"我们将发送验证码短信到这个号码：+86 %@", self.telNumber.text];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"确认手机号码" message:messageStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"好", nil];
     [alertView show];
+}
+
+- (IBAction)chooseCountry:(UIButton *)sender {
+    RSCountryListViewController *tempVC = [[RSCountryListViewController alloc] init];
+    [self presentViewController:tempVC animated:YES completion:nil];
 }
 
 - (IBAction)showRules:(id)sender {

@@ -168,6 +168,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0O-Ek-sMu">
                             <rect key="frame" x="0.0" y="79" width="345" height="37"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="chooseCountry:" destination="-1" eventType="touchUpInside" id="7J3-xv-OgD"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用手机号码登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN6-lN-hXy">
                             <rect key="frame" x="62.5" y="10" width="220" height="29"/>
@@ -233,11 +236,11 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-vC-lJF">
-                    <rect key="frame" x="45" y="607" width="108" height="30"/>
+                    <rect key="frame" x="105" y="607" width="62" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="DNP-cn-kp0"/>
                     </constraints>
-                    <state key="normal" title="登陆遇到问题？">
+                    <state key="normal" title="找回密码">
                         <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -245,23 +248,23 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L9M-LX-5jN">
-                    <rect key="frame" x="187" y="607" width="1" height="30"/>
+                    <rect key="frame" x="187" y="612" width="1" height="20"/>
                     <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="7AE-D9-cKe"/>
-                        <constraint firstAttribute="height" constant="30" id="oaI-ez-nxY"/>
+                        <constraint firstAttribute="height" constant="20" id="oaI-ez-nxY"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r67-oA-ESO">
-                    <rect key="frame" x="238" y="607" width="92" height="30"/>
+                    <rect key="frame" x="208" y="607" width="62" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="c9B-Cj-5H7"/>
                     </constraints>
-                    <state key="normal" title="其他方式登陆">
+                    <state key="normal" title="更多选项">
                         <color key="titleColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="otherLoginMethod:" destination="-1" eventType="touchUpInside" id="clW-WX-HdN"/>
+                        <action selector="moreOptions:" destination="-1" eventType="touchUpInside" id="FBj-H1-yo2"/>
                     </connections>
                 </button>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-DE-6Rz">
@@ -290,15 +293,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hg9-Dg-sZq" firstAttribute="leading" secondItem="rCY-WN-mfM" secondAttribute="leading" constant="8" id="12L-U8-yKa"/>
+                <constraint firstItem="L9M-LX-5jN" firstAttribute="leading" secondItem="Ksh-vC-lJF" secondAttribute="trailing" constant="20" id="8as-Ed-lc9"/>
                 <constraint firstItem="hg9-Dg-sZq" firstAttribute="top" secondItem="rCY-WN-mfM" secondAttribute="topMargin" constant="20" id="9by-x3-wFK"/>
                 <constraint firstItem="L9M-LX-5jN" firstAttribute="centerX" secondItem="rCY-WN-mfM" secondAttribute="centerX" id="9on-wj-9wL"/>
-                <constraint firstItem="Ksh-vC-lJF" firstAttribute="leading" secondItem="rCY-WN-mfM" secondAttribute="leading" constant="45" id="Fj4-iQ-ulM"/>
                 <constraint firstItem="9u7-Ps-TFB" firstAttribute="top" secondItem="rCY-WN-mfM" secondAttribute="top" constant="80" id="GDl-0Q-0fs"/>
                 <constraint firstAttribute="bottom" secondItem="r67-oA-ESO" secondAttribute="bottom" constant="30" id="GXE-5s-Fi5"/>
                 <constraint firstItem="cGC-DE-6Rz" firstAttribute="top" secondItem="rCY-WN-mfM" secondAttribute="top" id="MWf-H0-faD"/>
                 <constraint firstAttribute="bottom" secondItem="Ksh-vC-lJF" secondAttribute="bottom" constant="30" id="NjW-JQ-vcM"/>
-                <constraint firstAttribute="trailing" secondItem="r67-oA-ESO" secondAttribute="trailing" constant="45" id="RZH-PD-n41"/>
-                <constraint firstAttribute="bottom" secondItem="L9M-LX-5jN" secondAttribute="bottom" constant="30" id="YbZ-cW-Kpb"/>
+                <constraint firstAttribute="bottom" secondItem="L9M-LX-5jN" secondAttribute="bottom" constant="35" id="YbZ-cW-Kpb"/>
+                <constraint firstItem="r67-oA-ESO" firstAttribute="leading" secondItem="L9M-LX-5jN" secondAttribute="trailing" constant="20" id="Zbz-FB-pS2"/>
                 <constraint firstItem="cGC-DE-6Rz" firstAttribute="leading" secondItem="rCY-WN-mfM" secondAttribute="leading" id="kXc-U9-Gt6"/>
                 <constraint firstItem="9u7-Ps-TFB" firstAttribute="leading" secondItem="rCY-WN-mfM" secondAttribute="leading" constant="15" id="nBG-aO-Mom"/>
                 <constraint firstAttribute="trailing" secondItem="cGC-DE-6Rz" secondAttribute="trailing" id="oQS-xp-LEg"/>
