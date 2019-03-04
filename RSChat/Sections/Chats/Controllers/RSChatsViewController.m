@@ -32,7 +32,6 @@ UISearchResultsUpdating,
 UIBarPositioningDelegate
 >
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 @property (nonatomic, strong) UISearchController *searchVC;
 @property (nonatomic, strong) RSHomeSearchResultController *resultTVC;
@@ -48,19 +47,18 @@ UIBarPositioningDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *modelStr = [UIDevice currentDevice].model;
-    NSLog(@"当前设备：%@", modelStr);
-    
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    NSLog(@"设备型号：%@", deviceString);
-    
     [self setBisicInfo];
     
+    [self setupMainViews];
+}
+
+- (void)setupMainViews {
+    
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    [RSHomeCell registToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
-    [self startSearch];
+    [self setupSearchView];
     
     for (UIButton *button in self.popView.popButtons) {
         [button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
@@ -120,7 +118,7 @@ UIBarPositioningDelegate
 
 #pragma mark - SearchMethod & UISearchResultsUpdating
 
-- (void)startSearch {
+- (void)setupSearchView {
 
     self.resultTVC = [[RSHomeSearchResultController alloc] init];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:self.resultTVC];
@@ -231,26 +229,6 @@ UIBarPositioningDelegate
 }
 
 #pragma mark - setter getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        _tableView.tableFooterView = [[UIView alloc] init];
-        
-        [RSHomeCell registToTableView:_tableView];
-        
-#ifdef __IPHONE_11_0
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-#endif
-    }
-    return _tableView;
-}
 
 - (NSMutableArray *)allDatas {
     if (!_allDatas) {

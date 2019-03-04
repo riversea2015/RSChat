@@ -27,7 +27,6 @@ UINavigationControllerDelegate,
 UIImagePickerControllerDelegate
 >
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) NSArray *demoArray;
 
 @end
@@ -158,23 +157,6 @@ UIImagePickerControllerDelegate
 }
 
 #pragma mark - setter getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        
-#ifdef __IPHONE_11_0
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-#endif
-    }
-    return _tableView;
-}
 
 - (NSArray *)demoArray {
     if (!_demoArray) {

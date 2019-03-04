@@ -23,7 +23,7 @@
 #import "RSFavoritesViewController.h"
 
 @interface RSMeViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) RSMeModel *model;
 
 @end
@@ -125,22 +125,6 @@
 }
 
 #pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        
-#ifdef __IPHONE_11_0
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-#endif
-
-    }
-    return _tableView;
-}
 
 - (RSMeModel *)model {
     if (!_model) {

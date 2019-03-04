@@ -15,7 +15,6 @@
 #import "RSReLoginViewController.h"
 
 @interface RSSettingViewController ()<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -130,17 +129,6 @@
         
         [self presentViewController:reLogin animated:YES completion:nil];
     }
-}
-
-#pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-    }
-    return _tableView;
 }
 
 @end

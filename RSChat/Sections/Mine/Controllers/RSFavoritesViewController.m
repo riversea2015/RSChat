@@ -12,7 +12,7 @@
 #import "RSFavoriteCell.h"
 
 @interface RSFavoritesViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) NSArray *demoArray;
 
 @end
@@ -80,15 +80,6 @@
 }
 
 #pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-    }
-    return _tableView;
-}
 
 - (NSArray *)demoArray {
     if (!_demoArray) {

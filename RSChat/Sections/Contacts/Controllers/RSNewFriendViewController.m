@@ -13,18 +13,12 @@
 #import "RSAddFriendViewController.h"
 
 @interface RSNewFriendViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation RSNewFriendViewController
 
 #pragma mark - Life Cycle
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +27,7 @@
     
     [RSNewFriendCell registToTableView:self.tableView];
     [self.view addSubview:self.tableView];
-    
+    [self addTableHeaderView];
     [self addRightItem];
 }
 
@@ -83,18 +77,6 @@
 }
 
 #pragma mark - setter getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-//        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        
-        [self addTableHeaderView];
-    }
-    return _tableView;
-}
 
 - (void)addTableHeaderView {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, [UIScreen mainScreen].bounds.size.width - 30, 75)];

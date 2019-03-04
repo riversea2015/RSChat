@@ -26,4 +26,21 @@
     NSLog(@"🎉 %s 🎉", __FUNCTION__);
 }
 
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
+        _tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.dataSource = (id<UITableViewDataSource>)self;
+        _tableView.delegate = (id<UITableViewDelegate>)self;
+        
+#ifdef __IPHONE_11_0
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+#endif
+    }
+    return _tableView;
+}
+
 @end

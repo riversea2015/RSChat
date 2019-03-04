@@ -13,7 +13,6 @@
 
 @interface RSAddFriendViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *naviContacts;
 
 @end
@@ -31,7 +30,8 @@
     self.title = @"添加朋友";
     [self.view addSubview:self.tableView];
     
-    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [RSAddFriendCell registToTableView:self.tableView];
 }
 
 #pragma mark - TableView Dalegate & Delegate
@@ -100,24 +100,6 @@
 }
 
 #pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-        [RSAddFriendCell registToTableView:_tableView];
-        
-#ifdef __IPHONE_11_0
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-#endif
-    }
-    return _tableView;
-}
 
 - (NSArray *)naviContacts {
     if (!_naviContacts) {

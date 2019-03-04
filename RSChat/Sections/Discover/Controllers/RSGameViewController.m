@@ -19,7 +19,6 @@
 #import "RSGameDetailViewController.h"
 
 @interface RSGameViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -160,17 +159,6 @@
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-    }
-    return _tableView;
 }
 
 @end

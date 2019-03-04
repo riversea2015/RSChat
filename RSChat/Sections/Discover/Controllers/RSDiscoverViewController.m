@@ -23,7 +23,6 @@
 
 @interface RSDiscoverViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 
 @end
@@ -130,15 +129,6 @@
 }
 
 #pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-    }
-    return _tableView;
-}
 
 - (NSMutableArray *)allDatas {
     if (!_allDatas) {

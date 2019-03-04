@@ -64,6 +64,21 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
+    // 索引列文字、背景颜色
+    self.tableView.sectionIndexColor = [UIColor greenColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:[RSContactCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSContactCell cellID]];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor lightGrayColor];
+    label.text = @"9位联系人";
+    self.tableView.tableFooterView = label;
 }
 
 #pragma mark - 导航栏背景渐变
@@ -213,37 +228,6 @@
 }
 
 #pragma mark - setter & getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.tableFooterView = [[UIView alloc] init];
-        
-        // 索引列文字、背景颜色
-        _tableView.sectionIndexColor = [UIColor greenColor];
-        _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
-        
-        [_tableView registerNib:[UINib nibWithNibName:[RSContactCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSContactCell cellID]];
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
-        label.backgroundColor = [UIColor clearColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = [UIColor lightGrayColor];
-        label.text = @"9位联系人";
-        _tableView.tableFooterView = label;
-        
-#ifdef __IPHONE_11_0
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-#endif
-    }
-    return _tableView;
-}
 
 - (NSMutableArray *)allDatas {
     if (!_allDatas) {

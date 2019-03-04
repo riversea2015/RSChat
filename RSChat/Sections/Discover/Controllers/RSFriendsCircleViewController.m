@@ -16,7 +16,6 @@
 
 @interface RSFriendsCircleViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITableViewCell *prototypeCell;
 @property (nonatomic, strong) RSFriendsCircleHeader *headerView;
 
@@ -69,6 +68,9 @@
     self.tableView.tableHeaderView = self.headerView;
 
     [self.view addSubview:self.tableView];
+    
+    [RSFriendsACell registToTableView:self.tableView];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 #pragma mark - tableView dataSource & Delegate
@@ -113,22 +115,6 @@
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
-}
-
-#pragma mark - setter getter
-
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        
-        [RSFriendsACell registToTableView:_tableView];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    }
-    return _tableView;
 }
 
 @end
