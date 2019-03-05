@@ -47,8 +47,7 @@ UIBarPositioningDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setBisicInfo];
-    
+    [self setupNavView];
     [self setupMainViews];
 }
 
@@ -78,17 +77,18 @@ UIBarPositioningDelegate
     
     if (button.tag == 1) {
         RSAddFriendViewController *addFriendVC = [[RSAddFriendViewController alloc] init];
+        addFriendVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:addFriendVC animated:YES];
     }
     
     if (button.tag == 2) {
         RSScanViewController *scanVC = [[RSScanViewController alloc] init];
+        scanVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:scanVC animated:YES];
     }
     
     self.popView.flag = 0;
     [self.popView removeFromSuperview];
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -101,7 +101,7 @@ UIBarPositioningDelegate
 
 #pragma mark - NavigationBar
 
-- (void)setBisicInfo {
+- (void)setupNavView {
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
                                                                   style:UIBarButtonItemStyleDone
                                                                  target:self

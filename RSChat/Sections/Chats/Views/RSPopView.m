@@ -8,11 +8,26 @@
 
 #import "RSPopView.h"
 #import "RSScanViewController.h"
+#import "RSChatMacro.h"
+
+@interface RSPopView ()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentY;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgY;
+
+@end
 
 @implementation RSPopView
 
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    _bgY.constant = RSNavBarH;
+    _contentY.constant = RSNavBarH + 20;
 }
 
 @end

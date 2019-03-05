@@ -1586,7 +1586,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";
@@ -1620,7 +1620,7 @@
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp123;
+				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/RSChat/Vendors/lib";

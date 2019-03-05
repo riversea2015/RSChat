@@ -25,7 +25,12 @@
 #define RSScreenW [UIScreen mainScreen].bounds.size.width
 #define RSScreenH [UIScreen mainScreen].bounds.size.height
 
-#define kIsIPhoneX (@available(iOS 11.0, *) ? [[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0 : NO)
+#define kIsIPhoneX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
 
 #define RSNavBarH ((kIsIPhoneX) ? 88 : 64)
 

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface RSPopView : UIView
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *popButtons;
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *popButtons;
 @property (nonatomic, assign) NSInteger flag;
 
 @end
