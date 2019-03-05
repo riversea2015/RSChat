@@ -1,5 +1,5 @@
 
-# RSChat
+# RSChat (old vision)
 ### This is an iOS project that imitates a WeChat client.
 
 ![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_0.gif?raw=true)
