@@ -1,10 +1,11 @@
 # RSChat
 ### This is an iOS project that imitates a WeChat client.
 
-![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_0.gif?raw=true)
-![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_1.gif?raw=true)
-![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_2.gif?raw=true)
-![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShots/test_3.gif?raw=true)
+![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShot/IMG_001.JPG?raw=true)
+![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShot/IMG_002.JPG?raw=true)
+![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShot/IMG_003.JPG?raw=true)
+![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShot/IMG_004.JPG?raw=true)
+![Mou icon](https://github.com/riversea2015/RSChat/blob/master/ScreenShot/IMG_005.JPG?raw=true)
 
 ### How To Get Started
 
