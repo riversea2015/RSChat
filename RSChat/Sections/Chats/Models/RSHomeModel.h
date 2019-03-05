@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface RSHomeModel : NSObject
+
 @property (nonatomic, copy) NSString *leftImageName;
 @property (nonatomic, copy) NSString *leftText;
 @property (nonatomic, copy) NSString *rightText;

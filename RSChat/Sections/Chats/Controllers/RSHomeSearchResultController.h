@@ -8,9 +8,9 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import <UIKit/UIKit.h>
+#import "RSViewController.h"
 
-@interface RSHomeSearchResultController : UITableViewController
+@interface RSHomeSearchResultController : RSViewController
 
 @property (nonatomic, strong) NSArray *resultArray;
 

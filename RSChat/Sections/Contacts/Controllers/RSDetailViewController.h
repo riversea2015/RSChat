@@ -8,10 +8,10 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import <UIKit/UIKit.h>
+#import "RSViewController.h"
 #import "RSContactsModel.h"
 
-@interface RSDetailViewController : UITableViewController
+@interface RSDetailViewController : RSViewController
 @property (nonatomic, strong) RSContactsModel *contactMdel;
 
 @end

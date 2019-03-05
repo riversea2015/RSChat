@@ -132,7 +132,7 @@
 		729D60021C29B587000F8C69 /* RSConformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729D60001C29B587000F8C69 /* RSConformViewController.xib */; };
 		72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */; };
 		72A334EE1C069B3A00112FC0 /* RSNewsDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */; };
-		72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */; };
+		72A334F31C06E9AA00112FC0 /* RSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F21C06E9AA00112FC0 /* RSDetailViewController.m */; };
 		72A334F71C06EDE800112FC0 /* RSDetailFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */; };
 		72A334F81C06EDE800112FC0 /* RSDetailFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */; };
 		72A3350B1C06F2A800112FC0 /* RSDetailSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A335091C06F2A800112FC0 /* RSDetailSecondCell.m */; };
@@ -141,7 +141,7 @@
 		72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A3350F1C07035000112FC0 /* RSMessageVideoCell.xib */; };
 		72AB93A41BF708DD005A212C /* RSContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB93A21BF708DD005A212C /* RSContactCell.m */; };
 		72AB93A51BF708DD005A212C /* RSContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AB93A31BF708DD005A212C /* RSContactCell.xib */; };
-		72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */; };
+		72ABF3D71BFD783100EC17C7 /* RSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3D61BFD783100EC17C7 /* RSNewsViewController.m */; };
 		72ABF3E51BFD78B100EC17C7 /* RSNewsContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ABF3E31BFD78B100EC17C7 /* RSNewsContentCell.m */; };
 		72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ABF3E41BFD78B100EC17C7 /* RSNewsContentCell.xib */; };
 		72ADF33A1C060F730002CB08 /* RSNewsHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADF3381C060F730002CB08 /* RSNewsHeaderCell.m */; };
@@ -411,8 +411,8 @@
 		72A334EA1C069B1D00112FC0 /* RSNewsDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsDateView.h; sourceTree = "<group>"; };
 		72A334EB1C069B1D00112FC0 /* RSNewsDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsDateView.m; sourceTree = "<group>"; };
 		72A334ED1C069B3A00112FC0 /* RSNewsDateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsDateView.xib; sourceTree = "<group>"; };
-		72A334F11C06E9AA00112FC0 /* RSDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailTableViewController.h; sourceTree = "<group>"; };
-		72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailTableViewController.m; sourceTree = "<group>"; };
+		72A334F11C06E9AA00112FC0 /* RSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailViewController.h; sourceTree = "<group>"; };
+		72A334F21C06E9AA00112FC0 /* RSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailViewController.m; sourceTree = "<group>"; };
 		72A334F41C06EDE800112FC0 /* RSDetailFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDetailFirstCell.h; sourceTree = "<group>"; };
 		72A334F51C06EDE800112FC0 /* RSDetailFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDetailFirstCell.m; sourceTree = "<group>"; };
 		72A334F61C06EDE800112FC0 /* RSDetailFirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSDetailFirstCell.xib; sourceTree = "<group>"; };
@@ -425,8 +425,8 @@
 		72AB93A11BF708DD005A212C /* RSContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSContactCell.h; sourceTree = "<group>"; };
 		72AB93A21BF708DD005A212C /* RSContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSContactCell.m; sourceTree = "<group>"; };
 		72AB93A31BF708DD005A212C /* RSContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSContactCell.xib; sourceTree = "<group>"; };
-		72ABF3D51BFD783100EC17C7 /* RSNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsTableViewController.h; sourceTree = "<group>"; };
-		72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsTableViewController.m; sourceTree = "<group>"; };
+		72ABF3D51BFD783100EC17C7 /* RSNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsViewController.h; sourceTree = "<group>"; };
+		72ABF3D61BFD783100EC17C7 /* RSNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsViewController.m; sourceTree = "<group>"; };
 		72ABF3E21BFD78B100EC17C7 /* RSNewsContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewsContentCell.h; sourceTree = "<group>"; };
 		72ABF3E31BFD78B100EC17C7 /* RSNewsContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewsContentCell.m; sourceTree = "<group>"; };
 		72ABF3E41BFD78B100EC17C7 /* RSNewsContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSNewsContentCell.xib; sourceTree = "<group>"; };
@@ -776,8 +776,8 @@
 			children = (
 				729139CE1BF1D58E00CEFD64 /* RSContactsViewController.h */,
 				729139CF1BF1D58E00CEFD64 /* RSContactsViewController.m */,
-				72A334F11C06E9AA00112FC0 /* RSDetailTableViewController.h */,
-				72A334F21C06E9AA00112FC0 /* RSDetailTableViewController.m */,
+				72A334F11C06E9AA00112FC0 /* RSDetailViewController.h */,
+				72A334F21C06E9AA00112FC0 /* RSDetailViewController.m */,
 				728ED8771C0AD36900DE8639 /* RSVideoViewController.h */,
 				728ED8781C0AD36900DE8639 /* RSVideoViewController.m */,
 				728ED8791C0AD36900DE8639 /* RSVideoViewController.xib */,
@@ -954,8 +954,8 @@
 			children = (
 				729139DA1BF1D58E00CEFD64 /* RSChatsViewController.h */,
 				729139DB1BF1D58E00CEFD64 /* RSChatsViewController.m */,
-				72ABF3D51BFD783100EC17C7 /* RSNewsTableViewController.h */,
-				72ABF3D61BFD783100EC17C7 /* RSNewsTableViewController.m */,
+				72ABF3D51BFD783100EC17C7 /* RSNewsViewController.h */,
+				72ABF3D61BFD783100EC17C7 /* RSNewsViewController.m */,
 				728917981C03F346008B3030 /* RSMessageViewController.h */,
 				728917991C03F346008B3030 /* RSMessageViewController.m */,
 				7289179A1C03F346008B3030 /* RSMessageViewController.xib */,
@@ -1391,7 +1391,7 @@
 				1B8773981C3D3EAB000CCEAE /* RSFavoriteCell.m in Sources */,
 				729D60011C29B587000F8C69 /* RSConformViewController.m in Sources */,
 				72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */,
-				72ABF3D71BFD783100EC17C7 /* RSNewsTableViewController.m in Sources */,
+				72ABF3D71BFD783100EC17C7 /* RSNewsViewController.m in Sources */,
 				727C1DB41BF211CF00CE8AA6 /* RSMeOtherCell.m in Sources */,
 				92DE50E022293E0700E12586 /* UIButton+RSExts.m in Sources */,
 				729139E71BF1D58E00CEFD64 /* RSChatsViewController.m in Sources */,
@@ -1418,7 +1418,7 @@
 				72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */,
 				72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */,
 				7288A5581C1090E3009936A7 /* RSPrivateOtherCell.m in Sources */,
-				72A334F31C06E9AA00112FC0 /* RSDetailTableViewController.m in Sources */,
+				72A334F31C06E9AA00112FC0 /* RSDetailViewController.m in Sources */,
 				729139E81BF1D58E00CEFD64 /* RSMeViewController.m in Sources */,
 				72881D811C33E2CD00447B85 /* RSReLoginViewController.m in Sources */,
 				1BCE65331C3A65C7002AC8D3 /* RSFriendsCircleHeader.m in Sources */,

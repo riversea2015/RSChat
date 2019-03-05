@@ -1,5 +1,5 @@
 //
-//  RSNewsTableViewController.h
+//  RSNewsViewController.h
 //  RSChat
 //
 //  Created by hehai on 11/19/15.
@@ -8,8 +8,8 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import <UIKit/UIKit.h>
+#import "RSViewController.h"
 
-@interface RSNewsTableViewController : UITableViewController
+@interface RSNewsViewController : RSViewController
 
 @end

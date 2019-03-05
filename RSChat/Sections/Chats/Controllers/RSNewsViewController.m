@@ -1,5 +1,5 @@
 //
-//  RSNewsTableViewController.m
+//  RSNewsViewController.m
 //  RSChat
 //
 //  Created by hehai on 11/19/15.
@@ -8,7 +8,7 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import "RSNewsTableViewController.h"
+#import "RSNewsViewController.h"
 #import "RSNewsHeaderCell.h"
 #import "RSNewsDateView.h"
 #import "RSNewsContentCell.h"
@@ -21,9 +21,8 @@
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
-@interface RSNewsTableViewController () // <NSURLConnectionDataDelegate>
+@interface RSNewsViewController ()
 
-#warning 这里决不能用copy，否则，后边addObject: 的时候会报错
 @property (nonatomic, strong) NSMutableArray *newsArr;
 
 @property (nonatomic, strong) NSURLConnection *connection;
@@ -36,18 +35,11 @@
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, assign) NSInteger job;
 
-// NSString *const filterItemCityIDKey = @"filterItemCityIDKey"; 格式参考
-
 @end
 
-@implementation RSNewsTableViewController
+@implementation RSNewsViewController
 
 #pragma mark - Life Cycle
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,25 +54,23 @@
     
     [self headerRefresh];
     [self footerRefresh];
-
 }
 
-// 跳出此界面时，撤销网络请求
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.operation cancel];     // 使用 AFNetworking
+    [self.operation cancel];
 }
 
 #pragma mark - private method
 
 - (void)setBasicData {
     self.title = @"腾讯新闻";
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = item;
     
     [self.tableView registerNib:[UINib nibWithNibName:[RSNewsContentCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsContentCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSNewsHeaderCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsHeaderCell cellID]];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)startProgressAnimation {
@@ -95,7 +85,6 @@
 #pragma mark - send request & parse data
 
 - (void)setRequestParameters {
-    // 网络请求的原始参数，用于拼接url
     self.pagesize = 20;
     self.p = 1;
     self.docurl = @"http%3A%2F%2Fnews.ifeng.com%2Fmainland%2Fspecial%2Fxjpg20%2F";
@@ -103,9 +92,6 @@
     self.job = 9;
 }
 
-/**
- * 发送网络请求：第二种方式 AFNetworking
- */
 - (void)sendRequestGetJSON {
     
     NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%d&p=%d&docurl=%@&type=%@&job=%d", self.pagesize, self.p, self.docurl, self.type, self.job];
@@ -113,8 +99,7 @@
     self.request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer]; // [AFHTTPResponseSerializer serializer];
     WEAKSELF
     
     self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -181,7 +166,6 @@
 #pragma mark - private method
 
 - (void)setting {
-#warning TODO settings
     NSLog(@"设置腾讯新闻。。。");
 }
 
@@ -231,23 +215,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-// 设置分割线的长度
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    }
-    
-    // Prevent the cell from inheriting the Table View's margin settings
-    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
-        [cell setPreservesSuperviewLayoutMargins:NO];
-    }
-    
-    // Explictly set your cell's layout margins
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
@@ -269,7 +236,5 @@
     
     return dateView;
 }
-
-#pragma mark - getter setter
 
 @end

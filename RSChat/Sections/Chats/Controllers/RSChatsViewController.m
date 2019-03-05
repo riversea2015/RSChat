@@ -9,7 +9,7 @@
 //
 
 #import "RSChatsViewController.h"
-#import "RSNewsTableViewController.h"
+#import "RSNewsViewController.h"
 #import "RSMessageViewController.h"
 #import "RSHomeSearchResultController.h"
 #import "RSScanViewController.h"
@@ -20,7 +20,7 @@
 #import "RSPopView.h"
 
 #import "RSHomeModel.h"
-
+#import "RSChatMacro.h"
 #import <sys/utsname.h>
 
 @interface RSChatsViewController ()
@@ -52,7 +52,15 @@ UIBarPositioningDelegate
     [self setupMainViews];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.searchVC.searchBar resignFirstResponder];
+}
+
+#pragma mark -
+
 - (void)setupMainViews {
+    
+    self.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
     
     self.tableView.tableFooterView = [[UIView alloc] init];
     [RSHomeCell registToTableView:self.tableView];
@@ -81,11 +89,6 @@ UIBarPositioningDelegate
     self.popView.flag = 0;
     [self.popView removeFromSuperview];
     self.hidesBottomBarWhenPushed = NO;
-}
-
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.searchVC.searchBar resignFirstResponder];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -163,12 +166,14 @@ UIBarPositioningDelegate
     NSLog(@"方法调用 %s ", __func__);
     
     _tmpView = [[[NSBundle mainBundle] loadNibNamed:@"RSSearchTempView" owner:self options:nil] lastObject];
+    _tmpView.frame = [UIScreen mainScreen].bounds;
     [self.view addSubview:_tmpView];
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar { // 点击cancel按钮时
     NSLog(@"方法调用 %s ", __func__);
     [_tmpView removeFromSuperview];
+    _tmpView = nil;
 }
 
 #pragma mark - tableView DataSource & Delegate
@@ -195,7 +200,7 @@ UIBarPositioningDelegate
     
     if (indexPath.row == 0) {
         
-        RSNewsTableViewController *newsVC = [[RSNewsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        RSNewsViewController *newsVC = [[RSNewsViewController alloc] init];
         newsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:newsVC animated:YES];
 
@@ -211,21 +216,6 @@ UIBarPositioningDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return CGFLOAT_MIN;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, 10, 0, 0)];
-    }
-    
-    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
-        [cell setPreservesSuperviewLayoutMargins:NO];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
 }
 
 #pragma mark - setter getter

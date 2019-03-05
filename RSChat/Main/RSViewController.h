@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RSViewController : UIViewController
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) UIEdgeInsets separatorInset;
 
 @end
 

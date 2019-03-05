@@ -20,17 +20,12 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell1"];
+    [self.view addSubview:self.tableView];
 }
-
 
 #pragma mark - TableView dataSource Delegate
 
@@ -54,20 +49,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"点击了搜索内容...");
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
     RSHomeModel *model = self.resultArray[indexPath.row];
     messageVC.homeModel = model;
     
-//    [self.navigationController pushViewController:messageVC animated:NO];
-    
     self.navi = [[UINavigationController alloc] initWithRootViewController:messageVC];
     [self.navigationController presentViewController:self.navi animated:NO completion:nil];
-
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
-
-#pragma mark - setter getter
 
 @end

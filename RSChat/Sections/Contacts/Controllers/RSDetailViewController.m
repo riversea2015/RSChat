@@ -1,5 +1,5 @@
 //
-//  RSDetailTableViewController.m
+//  RSDetailViewController.m
 //  RSChat
 //
 //  Created by hehai on 11/26/15.
@@ -8,7 +8,7 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import "RSDetailTableViewController.h"
+#import "RSDetailViewController.h"
 #import "RSDetailFirstCell.h"
 #import "RSDetailSecondCell.h"
 #import "RSMessageVideoCell.h"
@@ -17,20 +17,16 @@
 #import "RSHomeModel.h"
 #import "RSVideoViewController.h"
 
-@interface RSDetailTableViewController ()<UIActionSheetDelegate>
+@interface RSDetailViewController ()<UIActionSheetDelegate>
+
 @property (nonatomic, strong) RSActionView *actionView;
 @property (nonatomic, strong) NSArray *homeModelArray;
 
 @end
 
-@implementation RSDetailTableViewController
+@implementation RSDetailViewController
 
 #pragma mark - Life Cycle
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,8 +38,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailFirstCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailFirstCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSDetailSecondCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailSecondCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMessageVideoCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMessageVideoCell cellID]];
-    
     [self SetTableFooterView];
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - private method
@@ -194,25 +190,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 5;
-}
-
-// 设置分割线的长度
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    }
-
-    // Prevent the cell from inheriting the Table View's margin settings
-    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
-        [cell setPreservesSuperviewLayoutMargins:NO];
-    }
-    
-    // Explictly set your cell's layout margins
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

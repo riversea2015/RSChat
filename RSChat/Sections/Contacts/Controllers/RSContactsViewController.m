@@ -9,7 +9,7 @@
 //
 
 #import "RSContactsViewController.h"
-#import "RSDetailTableViewController.h"
+#import "RSDetailViewController.h"
 #import "RSNewFriendViewController.h"
 #import "RSGroupChatViewController.h"
 #import "RSLabelViewController.h"
@@ -99,21 +99,6 @@
     self.hidesBottomBarWhenPushed = NO;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    }
-    
-    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
-        [cell setPreservesSuperviewLayoutMargins:NO];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
-
 #pragma mark - tableView dataSource delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -185,7 +170,7 @@
         model = self.allDatas[3 + indexPath.section + indexPath.row + 1];
     }
     
-    RSDetailTableViewController *detailVC = [[RSDetailTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    RSDetailViewController *detailVC = [[RSDetailViewController alloc] init];
     detailVC.contactMdel = model;
     [self.navigationController pushViewController:detailVC animated:YES];
     
