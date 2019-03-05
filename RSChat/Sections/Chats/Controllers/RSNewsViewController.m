@@ -17,18 +17,13 @@
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"
 #import "MJRefresh.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface RSNewsViewController ()
 
 @property (nonatomic, strong) NSMutableArray *newsArr;
-
-@property (nonatomic, strong) NSURLConnection *connection;
-@property (nonatomic, strong) NSURLRequest *request;
-@property (nonatomic, strong) AFHTTPRequestOperation *operation;
-
 @property (nonatomic, assign) NSUInteger pagesize;
 @property (nonatomic, assign) NSUInteger p;
 @property (nonatomic, copy) NSString *docurl;
@@ -54,10 +49,6 @@
     
     [self headerRefresh];
     [self footerRefresh];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [self.operation cancel];
 }
 
 #pragma mark - private method
@@ -95,21 +86,25 @@
 - (void)sendRequestGetJSON {
     
     NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%lu&p=%lu&docurl=%@&type=%@&job=%ld", (unsigned long)self.pagesize, (unsigned long)self.p, self.docurl, self.type, (long)self.job];
-    NSURL *url = [NSURL URLWithString:urlStr];
-    self.request = [NSURLRequest requestWithURL:url];
+    NSURL *URL = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer]; // [AFHTTPResponseSerializer serializer];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
     WEAKSELF
-    
-    self.operation = [manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"AFN json:%@", responseObject);
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
-        [weakSelf getResult:responseObject];
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            [weakSelf getResult:responseObject];
+            NSLog(@"%@ %@", response, responseObject);
+        }
         
-    } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-        NSLog(@"AFN 返回失败：%@", error.userInfo);
     }];
+                                      
+    [dataTask resume];
 }
 
 - (void)getResult:(NSDictionary *)jsonDic {
@@ -139,8 +134,7 @@
     }];
 }
 
-- (void)loadNewData
-{
+- (void)loadNewData {
     [self.newsArr removeAllObjects];
     [self sendRequestGetJSON];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
