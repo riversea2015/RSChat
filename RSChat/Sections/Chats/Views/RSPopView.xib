@@ -15,6 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoreFunctionFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-1f-PD2">
+                    <rect key="frame" x="240" y="64" width="130" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="5fu-0H-1iu"/>
+                        <constraint firstAttribute="width" constant="130" id="pS7-oe-3KT"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-jf-dpv">
                     <rect key="frame" x="260" y="159" width="103" height="29"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,13 +78,6 @@
                     <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="leP-mc-p2N"/>
-                    </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoreFunctionFrame" translatesAutoresizingMaskIntoConstraints="NO" id="ji0-1f-PD2">
-                    <rect key="frame" x="240" y="64" width="130" height="180"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="180" id="5fu-0H-1iu"/>
-                        <constraint firstAttribute="width" constant="130" id="pS7-oe-3KT"/>
                     </constraints>
                 </imageView>
             </subviews>
