@@ -9,7 +9,7 @@
 //
 
 #import "RSMainTabBarController.h"
-
+#import "RSNavigationController.h"
 #import "RSChatsViewController.h"
 #import "RSContactsViewController.h"
 #import "RSDiscoverViewController.h"
@@ -81,7 +81,7 @@
 
     viewController.navigationItem.title = title;
     
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:viewController];
+    RSNavigationController *navi = [[RSNavigationController alloc] initWithRootViewController:viewController];
     navi.tabBarItem.image = image;
     navi.tabBarItem.selectedImage = selectedImage;
     navi.title = title;

@@ -35,9 +35,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIView *contentView = self.view;
-    [contentView addSubview:self.tableView];
-    
+    [self setupMainViews];
+}
+
+#pragma mark -
+
+- (void)setupMainViews {
+    [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeHeaderCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeHeaderCell cellID]];
     [self.tableView registerNib:[UINib nibWithNibName:[RSMeOtherCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMeOtherCell cellID]];
 }

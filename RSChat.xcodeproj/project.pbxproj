@@ -169,6 +169,7 @@
 		72C404821C23261300852B71 /* RSLabelBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C404811C23261300852B71 /* RSLabelBlankView.m */; };
 		72C404841C23262000852B71 /* RSLabelBlankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C404831C23262000852B71 /* RSLabelBlankView.xib */; };
 		72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CA7E441C23B3070072C91E /* RSOfficialAccountViewController.m */; };
+		72DA33CD222EF30F00759BDE /* RSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DA33CC222EF30F00759BDE /* RSNavigationController.m */; };
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
@@ -470,6 +471,8 @@
 		72C404831C23262000852B71 /* RSLabelBlankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSLabelBlankView.xib; sourceTree = "<group>"; };
 		72CA7E431C23B3070072C91E /* RSOfficialAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOfficialAccountViewController.h; sourceTree = "<group>"; };
 		72CA7E441C23B3070072C91E /* RSOfficialAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOfficialAccountViewController.m; sourceTree = "<group>"; };
+		72DA33CB222EF30F00759BDE /* RSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSNavigationController.h; sourceTree = "<group>"; };
+		72DA33CC222EF30F00759BDE /* RSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSNavigationController.m; sourceTree = "<group>"; };
 		72DC53891C25E8B500D74105 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		72DC538B1C25E8C500D74105 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		72DC538D1C25E8D300D74105 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -550,6 +553,8 @@
 				7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */,
 				92DE50D8222917DF00E12586 /* RSViewController.h */,
 				92DE50D9222917DF00E12586 /* RSViewController.m */,
+				72DA33CB222EF30F00759BDE /* RSNavigationController.h */,
+				72DA33CC222EF30F00759BDE /* RSNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1415,6 +1420,7 @@
 				728ED8841C0AF62200DE8639 /* RSShakeViewController.m in Sources */,
 				1B8773861C3D0029000CCEAE /* RSMoneyACell.m in Sources */,
 				728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */,
+				72DA33CD222EF30F00759BDE /* RSNavigationController.m in Sources */,
 				72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */,
 				72A334EC1C069B1D00112FC0 /* RSNewsDateView.m in Sources */,
 				7288A5581C1090E3009936A7 /* RSPrivateOtherCell.m in Sources */,
