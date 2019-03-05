@@ -14,9 +14,9 @@
 #import "RSNewsContentCell.h"
 #import "RSNewsModel.h"
 
-#import "UIImageView+WebCache.h"
-#import "MBProgressHUD.h"
-#import "MJRefresh.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
 #import <AFNetworking/AFNetworking.h>
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
@@ -66,11 +66,10 @@
 
 - (void)startProgressAnimation {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading";
-    hud.labelColor = [UIColor grayColor];
-    hud.xOffset = 0;
-    hud.yOffset = 20;
-    hud.color = [UIColor greenColor];
+    hud.label.text = @"Loading";
+    hud.label.textColor = [UIColor grayColor];
+    hud.offset = CGPointMake(0, 20);
+    hud.bezelView.color = [UIColor greenColor];
 }
 
 #pragma mark - send request & parse data
