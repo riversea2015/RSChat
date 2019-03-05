@@ -25,7 +25,6 @@
 
 @interface RSContactsViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allDatas;
 @property (nonatomic, strong) NSMutableArray *indexArr;
 @property (nonatomic, strong) CALayer *layer;

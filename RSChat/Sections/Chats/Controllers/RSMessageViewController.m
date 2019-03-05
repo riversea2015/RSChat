@@ -60,7 +60,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification object:nil];
     
-#warning TODO 在iPhone 5s 上还有一点偏差，被底下一行挡住了一部分
     [self scrollToTableViewBottom];
 }
 

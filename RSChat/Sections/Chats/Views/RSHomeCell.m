@@ -28,9 +28,7 @@
     self.leftLabel.text = model.leftText;
     self.rightLabel.text = model.rightText;
     self.bottomLabel.text = model.bottomText;
-//    self.badgeNumberImageView.image = [UIImage imageName:model.badgeNumberImageName];
 
-#warning TODO 实现头像角标的红色区域大小随badgeNum的位数多少变化？
     if (model.badgeNumberText.length == 0) {
         self.badgeNumLabel.hidden = YES;
     } else {

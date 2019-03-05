@@ -11,6 +11,7 @@
 #import "RSScanResultViewController.h"
 
 @interface RSScanResultViewController ()<UIWebViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 
@@ -20,26 +21,17 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.webView.delegate = self;
     
-    NSLog(@"扫描的链接是：%@", self.openStr);
-    
-    // 测试用例：https://www.baidu.com/
     NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
-    
-#warning TODO 实际用例：如下，实际跳转时，还需要进行设置。。。
-//    NSURL *url = [NSURL URLWithString:self.openStr];
+    if (self.openStr) {
+        url = [NSURL URLWithString:self.openStr];
+    }
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
-    
 }
 
 #pragma mark - UIWebViewDelegate

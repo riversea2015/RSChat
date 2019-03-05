@@ -98,7 +98,6 @@ UIImagePickerControllerDelegate
         return [RSPrivateTableViewCell rowheight];
     }
     
-#warning TODO 应改为自动变高
     if (indexPath.section == 1 && indexPath.row == 2) {
         return 100;
     }
@@ -146,7 +145,6 @@ UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
-#warning TODO 替换数据，即头像图片？
     UIImage *testImage = info[UIImagePickerControllerOriginalImage];
     
     if (picker.allowsEditing) {

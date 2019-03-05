@@ -11,7 +11,7 @@
 @implementation RSMoneyACell
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
 }
 
 + (NSString *)cellID {

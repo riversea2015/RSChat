@@ -94,7 +94,7 @@
 
 - (void)sendRequestGetJSON {
     
-    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%d&p=%d&docurl=%@&type=%@&job=%d", self.pagesize, self.p, self.docurl, self.type, self.job];
+    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%lu&p=%lu&docurl=%@&type=%@&job=%ld", (unsigned long)self.pagesize, (unsigned long)self.p, self.docurl, self.type, (long)self.job];
     NSURL *url = [NSURL URLWithString:urlStr];
     self.request = [NSURLRequest requestWithURL:url];
     

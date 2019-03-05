@@ -41,10 +41,10 @@
 }
 
 #pragma mark - UIImagePickerControllerDelegate
-// 图片捕捉
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    
-}
+// 图片捕捉(方法过期)
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+//
+//}
 
 // 视频捕捉
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{

@@ -16,6 +16,8 @@
 @implementation RSGameDetailACell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.scrollView.delegate = self;
     self.scrollView.contentSize = CGSizeMake(5*160 + 6*10, 284);
     self.scrollView.bounces = YES;

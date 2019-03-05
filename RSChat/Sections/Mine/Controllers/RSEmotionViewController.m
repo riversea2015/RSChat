@@ -94,33 +94,27 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    self.hidesBottomBarWhenPushed = YES;
     
     NSNumber *number = [object valueForKeyPath:keyPath];
     NSInteger num = [number integerValue];
-    NSLog(@"%ld", num);
-    NSLog(@"%@", keyPath);
     
-    if (num == 1) {
-        RSAlbumViewController *album = [[RSAlbumViewController alloc] init];
-        [self.navigationController pushViewController:album animated:YES];
-        return;
+    UIViewController *destVC = nil;
+    switch (num) {
+        case 1:
+            destVC = [[RSAlbumViewController alloc] init];
+            break;
+        case 2:
+            destVC = [[RSFavoritesViewController alloc] init];
+            break;
+        case 3:
+            destVC = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:nil];
+            break;
+        default:
+            break;
     }
     
-    if (num == 2) {
-        RSFavoritesViewController *album = [[RSFavoritesViewController alloc] init];
-        [self.navigationController pushViewController:album animated:YES];
-        return;
-    }
-    
-    if (num == 3) {
-        RSMoneyCollectionViewController *album = [[RSMoneyCollectionViewController alloc] initWithNibName:@"RSMoneyCollectionViewController" bundle:nil];
-        [self.navigationController pushViewController:album animated:YES];
-        return;
-    }
-    
-#warning TODO cell 重用，就会出现问题？--- 会连续推出多个相同的界面，重用几次，就推出几个。
-    
+    destVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:destVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

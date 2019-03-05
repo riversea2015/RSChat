@@ -125,8 +125,6 @@
         self.titleImageView.frame = frameOfTitleImage;
         self.titleImageView.image = nil;
         
-        // cell bounds
-#warning TODO 易错点：
         // 易错点：如果下边使用了self.popImageView.frame而不是frameOfImageView的话，后边动态改变cell的高度时，将无法改变，如果po的话，会提示：property 'bounds' not found on object of type 'RSMessageCell *'.
         CGRect bounds = self.bounds;
         bounds.size.height = frameOfImageView.size.height + 2 * CELL_MARGIN_TB;

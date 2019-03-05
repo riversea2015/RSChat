@@ -17,6 +17,8 @@
 @implementation RSAutoDisplayCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.scrollView.delegate = self;
     self.scrollView.contentSize = CGSizeMake(3*self.frame.size.width, 120);
     self.scrollView.bounces = NO;

@@ -11,7 +11,7 @@
 @implementation RSFriendsACell
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
     
 }
 

@@ -11,7 +11,7 @@
 @implementation RSMoneyCollectionView
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
 }
 
 @end

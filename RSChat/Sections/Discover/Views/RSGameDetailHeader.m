@@ -11,6 +11,8 @@
 @implementation RSGameDetailHeader
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.firstImageView.layer.cornerRadius = 25;
     self.firstImageView.layer.masksToBounds = YES;
     self.secondImageView.layer.cornerRadius = 25;
