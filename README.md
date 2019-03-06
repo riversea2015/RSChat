@@ -25,6 +25,10 @@ $ pod install
 
 he hai, hehai682@126.com
 
+### Note
+
+Here is the old vision [readme.md](https://github.com/riversea2015/RSChat/README_OLD.md)
+
 ### License
 
 RSChat is available under the MIT license. See the LICENSE file for more info.
