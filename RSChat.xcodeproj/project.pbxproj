@@ -563,6 +563,12 @@
 				923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */,
 				923E865C222F78A600ADC71A /* UICollectionViewCell+RSExts.h */,
 				923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */,
+				729066A41C0322C600B64EA8 /* UIImage+RSExts.h */,
+				729066A51C0322C600B64EA8 /* UIImage+RSExts.m */,
+				92DE50DB2229359C00E12586 /* UIColor+RSExts.h */,
+				92DE50DC2229359C00E12586 /* UIColor+RSExts.m */,
+				92DE50DE22293E0700E12586 /* UIButton+RSExts.h */,
+				92DE50DF22293E0700E12586 /* UIButton+RSExts.m */,
 			);
 			path = BaseUI;
 			sourceTree = "<group>";
@@ -668,18 +674,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		729066A31C0322C600B64EA8 /* Utilities */ = {
+		729066A31C0322C600B64EA8 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
 				92DE50D422290D1100E12586 /* RSChatMacro.h */,
-				729066A41C0322C600B64EA8 /* UIImage+RSExts.h */,
-				729066A51C0322C600B64EA8 /* UIImage+RSExts.m */,
-				92DE50DB2229359C00E12586 /* UIColor+RSExts.h */,
-				92DE50DC2229359C00E12586 /* UIColor+RSExts.m */,
-				92DE50DE22293E0700E12586 /* UIButton+RSExts.h */,
-				92DE50DF22293E0700E12586 /* UIButton+RSExts.m */,
 			);
-			path = Utilities;
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		729139951BF1D44B00CEFD64 = {
@@ -707,7 +707,7 @@
 			children = (
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
-				729066A31C0322C600B64EA8 /* Utilities */,
+				729066A31C0322C600B64EA8 /* Macro */,
 				7271F9BB1C29282D00FD720B /* BaseUI */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				722D5B0E1C240D17009F3574 /* Resource */,
