@@ -28,12 +28,6 @@
 
 @implementation RSMessageCell
 
-#pragma mark - private method
-
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]); // 其他地方依此改动
-}
-
 #pragma setter getter
 
 - (UIImageView *)popImageView {

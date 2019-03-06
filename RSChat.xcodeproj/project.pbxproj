@@ -171,6 +171,8 @@
 		72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CA7E441C23B3070072C91E /* RSOfficialAccountViewController.m */; };
 		72DA33CD222EF30F00759BDE /* RSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DA33CC222EF30F00759BDE /* RSNavigationController.m */; };
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
+		923E865B222F759400ADC71A /* UITableViewCell+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */; };
+		923E865E222F78A600ADC71A /* UICollectionViewCell+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
 		92DC47C8222CD1C500C9686D /* RSCountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */; };
@@ -482,6 +484,10 @@
 		72DC53951C25E90800D74105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72DC53971C25E91300D74105 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		72DC53991C25E92400D74105 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		923E8659222F759400ADC71A /* UITableViewCell+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+RSExts.h"; sourceTree = "<group>"; };
+		923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+RSExts.m"; sourceTree = "<group>"; };
+		923E865C222F78A600ADC71A /* UICollectionViewCell+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+RSExts.h"; sourceTree = "<group>"; };
+		923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+RSExts.m"; sourceTree = "<group>"; };
 		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -546,17 +552,19 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		7271F9BB1C29282D00FD720B /* Main */ = {
+		7271F9BB1C29282D00FD720B /* BaseUI */ = {
 			isa = PBXGroup;
 			children = (
-				7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */,
-				7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */,
 				92DE50D8222917DF00E12586 /* RSViewController.h */,
 				92DE50D9222917DF00E12586 /* RSViewController.m */,
 				72DA33CB222EF30F00759BDE /* RSNavigationController.h */,
 				72DA33CC222EF30F00759BDE /* RSNavigationController.m */,
+				923E8659222F759400ADC71A /* UITableViewCell+RSExts.h */,
+				923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */,
+				923E865C222F78A600ADC71A /* UICollectionViewCell+RSExts.h */,
+				923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */,
 			);
-			path = Main;
+			path = BaseUI;
 			sourceTree = "<group>";
 		};
 		7271F9BF1C29286C00FD720B /* LogInOut */ = {
@@ -700,7 +708,7 @@
 				729139E41BF1D58E00CEFD64 /* Vendors */,
 				729139C71BF1D56100CEFD64 /* AppDelegate */,
 				729066A31C0322C600B64EA8 /* Utilities */,
-				7271F9BB1C29282D00FD720B /* Main */,
+				7271F9BB1C29282D00FD720B /* BaseUI */,
 				729139CB1BF1D58E00CEFD64 /* Sections */,
 				722D5B0E1C240D17009F3574 /* Resource */,
 				729139AE1BF1D44B00CEFD64 /* Images.xcassets */,
@@ -755,6 +763,8 @@
 		729139CB1BF1D58E00CEFD64 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				7271F9BC1C29282D00FD720B /* RSMainTabBarController.h */,
+				7271F9BD1C29282D00FD720B /* RSMainTabBarController.m */,
 				7273B62C2228AF02003951A7 /* Welcome */,
 				7271F9BF1C29286C00FD720B /* LogInOut */,
 				729139D81BF1D58E00CEFD64 /* Chats */,
@@ -1338,6 +1348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923E865B222F759400ADC71A /* UITableViewCell+RSExts.m in Sources */,
 				1BCE65351C3A65C7002AC8D3 /* RSGameACell.m in Sources */,
 				729139E61BF1D58E00CEFD64 /* RSDiscoverViewController.m in Sources */,
 				92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */,
@@ -1370,6 +1381,7 @@
 				1B26D6691C3A9E3400BFC29C /* RSGameDetailHeader.m in Sources */,
 				7291B6211C33CC4300EBE0E4 /* RSSettingViewController.m in Sources */,
 				729139CA1BF1D56100CEFD64 /* AppDelegate.m in Sources */,
+				923E865E222F78A600ADC71A /* UICollectionViewCell+RSExts.m in Sources */,
 				727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */,
 				729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */,
 				1B8773901C3D3BF6000CCEAE /* RSAlbumViewController.m in Sources */,

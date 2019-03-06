@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITableViewCell+RSExts.h"
 
 @interface RSNewsHeaderCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *headerTextLabel;
-
-+ (NSString *)cellID;
-+ (CGFloat)rowHeight;
 
 @end

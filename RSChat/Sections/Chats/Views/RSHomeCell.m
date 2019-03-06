@@ -11,16 +11,8 @@
 
 @implementation RSHomeCell
 
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
-}
-
 + (CGFloat)rowHeight {
     return 65;
-}
-
-+ (void)registToTableView:(UITableView *)tableView {
-    [tableView registerNib:[UINib nibWithNibName:[RSHomeCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSHomeCell cellID]];
 }
 
 - (void)setCellWithModel:(RSHomeModel *)model {

@@ -62,7 +62,7 @@ UIBarPositioningDelegate
     self.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
     
     self.tableView.tableFooterView = [[UIView alloc] init];
-    [RSHomeCell registToTableView:self.tableView];
+    [RSHomeCell registerNibToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
     [self setupSearchView];

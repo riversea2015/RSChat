@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RSHomeModel.h"
+#import "UITableViewCell+RSExts.h"
 
 @interface RSHomeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
@@ -19,11 +20,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *badgeImageWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *badgeLabelWidth;
-
-
-+ (NSString *)cellID;
-+ (CGFloat)rowHeight;
-+ (void)registToTableView:(UITableView *)tableView;
 
 - (void)setCellWithModel:(RSHomeModel *)model;
 

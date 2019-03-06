@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self hideBlackLine];
+}
+     
+- (void)hideBlackLine {
     UINavigationBar *navigationBar = self.navigationBar;
     [navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackground"]
                        forBarPosition:UIBarPositionAny

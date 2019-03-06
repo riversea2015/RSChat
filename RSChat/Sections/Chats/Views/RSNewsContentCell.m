@@ -14,8 +14,4 @@
     return 60;
 }
 
-+ (NSString *)cellID {
-    return NSStringFromClass([RSNewsContentCell class]);
-}
-
 @end

@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "RSMessageModel.h"
+#import "UITableViewCell+RSExts.h"
 
 @interface RSMessageCell : UITableViewCell
 @property (nonatomic, strong) RSMessageModel *message;
 @property (nonatomic, strong) UIImageView *titleImageView;
-
-+ (NSString *)cellID;
 
 @end
 
