@@ -59,7 +59,7 @@
     if (message.fromMe) {
         // 右边气泡
         self.popLabel.textColor = [UIColor whiteColor];
-        self.popImageView.image = [UIImage imageNamed:@"SenderTextNodeBkg"];
+        self.popImageView.image = [[UIImage imageNamed:@"SenderTextNodeBkg"] resizableImageWithCapInsets:UIEdgeInsetsMake(CELL_CORNER + 10, CELL_CORNER + CELL_TAIL_WIDTH, CELL_CORNER, CELL_CORNER)];
         
         // 1.文本frame
         CGRect rectOfText = [self.popLabel textRectForBounds:CGRectMake(0, 0, MAX_WIDES_OF_TEXT, 999) limitedToNumberOfLines:0];

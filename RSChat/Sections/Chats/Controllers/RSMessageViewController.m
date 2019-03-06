@@ -11,14 +11,15 @@
 #import "RSMessageViewController.h"
 #import "RSMessageCell.h"
 #import "RSMessageModel.h"
+#import "RSChatToolBar.h"
+#import <Masonry/Masonry.h>
+#import "RSChatMacro.h"
 
 @interface RSMessageViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
 @property (nonatomic, strong) RSMessageCell *prototypeCell;
-
 @property (nonatomic, strong) NSMutableArray *allMessages;
+@property (nonatomic, strong) RSChatToolBar *toolBar;
 
 @end
 
@@ -38,8 +39,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    [self scrollToTableViewBottom];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -75,8 +74,37 @@
 }
 
 - (void)setupMainViews {
+    
+    _toolBar = [RSChatToolBar creatWithframe:CGRectZero];
+    [self.view addSubview:_toolBar];
+    [_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.height.mas_equalTo(45+RSBottomH);
+        make.bottom.equalTo(self.view);
+    }];
+    __weak typeof(self) weakSelf = self;
+    _toolBar.sendBlock = ^(NSString * _Nonnull msg) {
+        [weakSelf sendMessage:msg];
+    };
+    
     [RSMessageCell registerClassToTableView:self.tableView];
     self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:[RSMessageCell cellID]];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.top.equalTo(self.view);
+        make.bottom.equalTo(self.toolBar.mas_top);
+    }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    [self.tableView addGestureRecognizer:tap];
+}
+
+- (void)tapAction {
+    [self.view endEditing:YES];
 }
 
 - (void)registerNotification {
@@ -104,7 +132,12 @@
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationOptions option = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
     
-    self.bottomLayoutConstraint.constant = keyboardFrame.size.height;
+    [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.height.mas_equalTo(45);
+        make.bottom.equalTo(self.view).offset(-keyboardFrame.size.height);
+    }];
     
     [UIView animateWithDuration:duration delay:0 options:option animations:^{
         [self.view layoutIfNeeded];
@@ -116,7 +149,12 @@
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     UIViewAnimationOptions option = [notification.userInfo[UIKeyboardAnimationCurveUserInfoKey] intValue];
     
-    self.bottomLayoutConstraint.constant = 0;
+    [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view);
+        make.left.equalTo(self.view);
+        make.height.mas_equalTo(45+RSBottomH);
+        make.bottom.equalTo(self.view);
+    }];
     
     [UIView animateWithDuration:duration delay:0 options:option animations:^{
         [self.view layoutIfNeeded];
@@ -124,26 +162,27 @@
     } completion:nil];
 }
 
-- (IBAction)sendMessage:(UITextField *)sender {
-    NSString *newContent = sender.text;
-    if (newContent.length < 1) {
+- (void)sendMessage:(NSString *)text {
+    NSString *newContent = text;
+    if (text.length < 1) {
         return;
     }
+    
     RSMessageModel *newMessage = [[RSMessageModel alloc] init];
     newMessage.content = newContent;
     newMessage.fromMe = YES;
 
     [self.allMessages addObject:newMessage];
-    sender.text = @"";
 
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.allMessages.count - 1 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+    [self scrollToTableViewBottom];
 }
 
 - (void)scrollToTableViewBottom {
     
     NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.allMessages.count - 1 inSection:0];
-    [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - tableView dataSource delegate
@@ -153,6 +192,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    [tableView setContentOffset:CGPointMake(0, tableView.contentSize.height-tableView.frame.size.height) animated:NO];
     return self.allMessages.count;
 }
 
@@ -176,8 +216,15 @@
     RSMessageModel *message = self.allMessages[indexPath.row];
     self.prototypeCell.message = message;
     
-    NSLog(@"%f", self.prototypeCell.bounds.size.height);
     return self.prototypeCell.bounds.size.height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
 }
 
 #pragma mark - setter getter

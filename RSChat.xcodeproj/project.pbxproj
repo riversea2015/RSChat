@@ -98,7 +98,6 @@
 		7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7288A5571C1090E3009936A7 /* RSPrivateOtherCell.xib */; };
 		7288A55C1C1094A5009936A7 /* RSMePrivateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7288A55B1C1094A5009936A7 /* RSMePrivateModel.m */; };
 		7289179B1C03F346008B3030 /* RSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728917991C03F346008B3030 /* RSMessageViewController.m */; };
-		7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7289179A1C03F346008B3030 /* RSMessageViewController.xib */; };
 		728ED87A1C0AD36900DE8639 /* RSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728ED8781C0AD36900DE8639 /* RSVideoViewController.m */; };
 		728ED87B1C0AD36900DE8639 /* RSVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728ED8791C0AD36900DE8639 /* RSVideoViewController.xib */; };
 		728ED87F1C0AF46900DE8639 /* RSScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728ED87D1C0AF46900DE8639 /* RSScanViewController.m */; };
@@ -173,6 +172,7 @@
 		72DC539A1C25E92400D74105 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DC53991C25E92400D74105 /* libz.tbd */; };
 		923E865B222F759400ADC71A /* UITableViewCell+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */; };
 		923E865E222F78A600ADC71A /* UICollectionViewCell+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */; };
+		923E8684222FB66E00ADC71A /* RSChatToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 923E8683222FB66E00ADC71A /* RSChatToolBar.m */; };
 		9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E2E12228D8B1008DDC1F /* InfoPlist.strings */; };
 		9242E3232228DEE7008DDC1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9242E3252228DEE7008DDC1F /* Localizable.strings */; };
 		92DC47C8222CD1C500C9686D /* RSCountryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */; };
@@ -339,7 +339,6 @@
 		7288A55B1C1094A5009936A7 /* RSMePrivateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMePrivateModel.m; sourceTree = "<group>"; };
 		728917981C03F346008B3030 /* RSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMessageViewController.h; sourceTree = "<group>"; };
 		728917991C03F346008B3030 /* RSMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMessageViewController.m; sourceTree = "<group>"; };
-		7289179A1C03F346008B3030 /* RSMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSMessageViewController.xib; sourceTree = "<group>"; };
 		728ED8771C0AD36900DE8639 /* RSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVideoViewController.h; sourceTree = "<group>"; };
 		728ED8781C0AD36900DE8639 /* RSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVideoViewController.m; sourceTree = "<group>"; };
 		728ED8791C0AD36900DE8639 /* RSVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSVideoViewController.xib; sourceTree = "<group>"; };
@@ -488,6 +487,8 @@
 		923E865A222F759400ADC71A /* UITableViewCell+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+RSExts.m"; sourceTree = "<group>"; };
 		923E865C222F78A600ADC71A /* UICollectionViewCell+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+RSExts.h"; sourceTree = "<group>"; };
 		923E865D222F78A600ADC71A /* UICollectionViewCell+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+RSExts.m"; sourceTree = "<group>"; };
+		923E8682222FB66E00ADC71A /* RSChatToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSChatToolBar.h; sourceTree = "<group>"; };
+		923E8683222FB66E00ADC71A /* RSChatToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSChatToolBar.m; sourceTree = "<group>"; };
 		9242E2E02228D8B1008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9242E2E22228D9D3008DDC1F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9242E3242228DEE7008DDC1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -973,7 +974,6 @@
 				72ABF3D61BFD783100EC17C7 /* RSNewsViewController.m */,
 				728917981C03F346008B3030 /* RSMessageViewController.h */,
 				728917991C03F346008B3030 /* RSMessageViewController.m */,
-				7289179A1C03F346008B3030 /* RSMessageViewController.xib */,
 				7234C34F1C08491E00C9009C /* RSHomeSearchResultController.h */,
 				7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */,
 			);
@@ -1003,6 +1003,8 @@
 				1B8773601C3BE3E9000CCEAE /* RSSearchTempView.h */,
 				1B8773611C3BE3E9000CCEAE /* RSSearchTempView.m */,
 				1B8773631C3BE3F9000CCEAE /* RSSearchTempView.xib */,
+				923E8682222FB66E00ADC71A /* RSChatToolBar.h */,
+				923E8683222FB66E00ADC71A /* RSChatToolBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1238,7 +1240,6 @@
 				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
-				7289179C1C03F346008B3030 /* RSMessageViewController.xib in Resources */,
 				7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */,
 				72ADF33B1C060F730002CB08 /* RSNewsHeaderCell.xib in Resources */,
 				727C1DD31BF26B7600CE8AA6 /* RSHomeCell.xib in Resources */,
@@ -1400,6 +1401,7 @@
 				727C1DAF1BF211B600CE8AA6 /* RSMeHeaderCell.m in Sources */,
 				72172F1C1BFE0FB700D6D2FD /* RSHomeModel.m in Sources */,
 				722D5B071C23BFAF009F3574 /* RSOfficialCell.m in Sources */,
+				923E8684222FB66E00ADC71A /* RSChatToolBar.m in Sources */,
 				1B8773771C3CF0E7000CCEAE /* RSEmotionACell.m in Sources */,
 				7234C3511C08491E00C9009C /* RSHomeSearchResultController.m in Sources */,
 				1B26D6651C3A91F200BFC29C /* RSGameDetailViewController.m in Sources */,
@@ -1623,6 +1625,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
+					"$(PROJECT_DIR)/RSChat/Sections/ZBarSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1657,6 +1660,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/RSChat/lib",
 					"$(PROJECT_DIR)/RSChat/Vendors/lib",
+					"$(PROJECT_DIR)/RSChat/Sections/ZBarSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.river.pushtmp1234;
 				PRODUCT_NAME = "$(TARGET_NAME)";
