@@ -13,9 +13,9 @@
 #import "RSMessageModel.h"
 
 @interface RSMessageViewController ()<UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLayoutConstraint;
-
 @property (nonatomic, strong) RSMessageCell *prototypeCell;
 
 @property (nonatomic, strong) NSMutableArray *allMessages;
@@ -30,44 +30,66 @@
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    // tabelView内容不会延伸至navigationBar和tabBar之下,默认为 UIRectEdgeAll 是延伸的
     
-//    self.automaticallyAdjustsScrollViewInsets = YES;
-//    // automaticallyAdjustsScrollViewInsets 为YES 时，tableView 上下滑动时，是可以穿过导航栏&状态栏的，在他们下面有淡淡的浅浅红色,实际测试：YES和NO都有浅红色。
+    [self setupNavView];
+    [self setupMainViews];
+    [self registerNotification];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self scrollToTableViewBottom];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - View
+
+- (void)setupNavView {
     
     self.title = self.homeModel.leftText;
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_InfoSingle"] style:UIBarButtonItemStyleDone target:self action:@selector(showUserInfo)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_InfoSingle"]
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(showUserInfo)];
     self.navigationItem.rightBarButtonItem = rightItem;
-        
-    [self.tableView registerClass:[RSMessageCell class] forCellReuseIdentifier:[RSMessageCell cellID]];
     
-    self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:[RSMessageCell cellID]];
     if (self.navigationController && self.navigationController.viewControllers.count == 1) {
-        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(goBack)];
-        self.navigationItem.leftBarButtonItem = leftItem; // leftItem;
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                                     style:UIBarButtonItemStyleDone
+                                                                    target:self
+                                                                    action:@selector(goBack)];
+        self.navigationItem.leftBarButtonItem = leftItem;
     }
-    
 }
 
 - (void)goBack {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-// regist notification
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openKeyboard:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeKeyboard:) name:UIKeyboardWillHideNotification object:nil];
-    
-    [self scrollToTableViewBottom];
+- (void)setupMainViews {
+    [RSMessageCell registerClassToTableView:self.tableView];
+    self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:[RSMessageCell cellID]];
 }
 
-// remove notification
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+- (void)registerNotification {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(openKeyboard:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(closeKeyboard:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 #pragma mark - private method
@@ -102,7 +124,6 @@
     } completion:nil];
 }
 
-// Send chat messages
 - (IBAction)sendMessage:(UITextField *)sender {
     NSString *newContent = sender.text;
     if (newContent.length < 1) {
@@ -119,13 +140,10 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
 }
 
-// Scroll to the bottom row
 - (void)scrollToTableViewBottom {
     
     NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.allMessages.count - 1 inSection:0];
     [self.tableView scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
-    
-//    [self.tableView scrollRectToVisible:CGRectMake(0, self.tableView.contentSize.height - 1, self.tableView.bounds.size.width, 1) animated:NO];
 }
 
 #pragma mark - tableView dataSource delegate
@@ -154,7 +172,6 @@
     return cell;
 }
 
-// Calculate the height of rows
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     RSMessageModel *message = self.allMessages[indexPath.row];
     self.prototypeCell.message = message;

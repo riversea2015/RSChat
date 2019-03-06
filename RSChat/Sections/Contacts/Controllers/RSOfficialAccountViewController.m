@@ -13,7 +13,6 @@
 
 @interface RSOfficialAccountViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, copy) NSArray *accountArray;
 @property (nonatomic, copy) NSMutableArray *sectionIndexArray;
 
@@ -23,22 +22,21 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"公众号";
 
-    [RSOfficialCell registToTableView:self.tableview];
-    [self.view addSubview:self.tableview];
+    [self setupMainView];
 }
 
-#pragma mark - Private Method
+#pragma mark - mainView
 
-// ...
+- (void)setupMainView {
+    [RSOfficialCell registToTableView:self.tableView];
+    self.tableView.sectionIndexColor = [UIColor redColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.tableView];
+}
 
 #pragma mark - tableView DataSource & Delegate
 
@@ -99,31 +97,12 @@
     return self.sectionIndexArray;
 }
 
-/**
- * 点击某个OfficialAccount时，执行的逻辑...
- */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - setter & getter
 
-- (UITableView *)tableview {
-    if (!_tableview) {
-        _tableview = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
-        _tableview.dataSource = self;
-        _tableview.delegate = self;
-        
-        _tableview.sectionIndexColor = [UIColor redColor];
-        _tableview.sectionIndexBackgroundColor = [UIColor clearColor];
-    }
-    return _tableview;
-}
-
-/**
- * 这次，使用plist存储数据。
- */
 - (NSArray *)accountArray {
     if (!_accountArray) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"officialAccounts" ofType:@"plist"];

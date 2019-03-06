@@ -11,6 +11,7 @@
 #import "UITableViewCell+RSExts.h"
 
 @interface RSMessageCell : UITableViewCell
+
 @property (nonatomic, strong) RSMessageModel *message;
 @property (nonatomic, strong) UIImageView *titleImageView;
 
