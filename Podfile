@@ -1,5 +1,7 @@
 platform :ios, '8.1'
 
+inhibit_all_warnings!
+
 target "RSChat" do
     
 pod 'AFNetworking', '3.2.1'

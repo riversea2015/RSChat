@@ -14,8 +14,13 @@
 #import "RSGameDetailACell.h"
 #import "RSGameDetailBCell.h"
 
+#import "RSChatMacro.h"
+#import "UIButton+RSExts.h"
+
+static const CGFloat kRSGameListBottomH = 60;
+
 @interface RSGameDetailViewController ()<UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (nonatomic, strong) NSArray *demoArr;
 
 @end
@@ -28,12 +33,17 @@
     [super viewDidLoad];
     self.title = @"游戏详情";
     
-    self.tableView.tableHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"RSGameDetailHeader" owner:self options:nil] lastObject];
-    
-    [RSGameDetailACell registToTableView:self.tableView];
-    [RSGameDetailBCell registToTableView:self.tableView];
-    
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
+    [self setupNavView];
+    [self setupMainViews];
+}
+
+#pragma mark - Navigation
+
+- (void)setupNavView {
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"]
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(settings)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
@@ -41,7 +51,34 @@
     // ...
 }
 
-#pragma mark - Navigation
+#pragma mark - MainView
+
+- (void)setupMainViews {
+    
+    self.tableView.tableHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"RSGameDetailHeader" owner:self options:nil] lastObject];
+    self.tableView.frame = CGRectMake(0, 0, RSScreenW, RSScreenH - kRSGameListBottomH - RSBottomH);
+    [RSGameDetailACell registToTableView:self.tableView];
+    [RSGameDetailBCell registToTableView:self.tableView];
+    [self.view addSubview:self.tableView];
+    
+    UIView *bottomBgView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                    RSScreenH - kRSGameListBottomH - RSBottomH,
+                                                                    RSScreenW,
+                                                                    kRSGameListBottomH + RSBottomH)];
+    bottomBgView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:bottomBgView];
+    
+    UIButton *enterBtn = [UIButton createBtnWithTitle:@"进入游戏"
+                                           titleColor:[UIColor whiteColor]
+                                                 font:[UIFont systemFontOfSize:17]
+                                              bgColor:[UIColor greenColor]
+                                               target:self
+                                               action:@selector(enterItunesStore:)];
+    enterBtn.frame = CGRectMake(40, 10, RSScreenW - 80, 40);
+    [bottomBgView addSubview:enterBtn];
+}
+
+#pragma mark -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -66,7 +103,6 @@
     
     RSGameDetailBCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSGameDetailBCell cellID] forIndexPath:indexPath];
     return cell;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,9 +147,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - 进入游戏下载页面
+#pragma mark - Enter
 
-- (IBAction)enterItunesStore:(id)sender {
+- (void)enterItunesStore:(UIButton *)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/wo-jiaomt2-zhou-nian-xiang/id932346202?l=en&mt=8"]];
 }
 

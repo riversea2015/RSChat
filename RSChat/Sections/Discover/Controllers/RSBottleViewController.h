@@ -11,6 +11,5 @@
 #import "RSViewController.h"
 
 @interface RSBottleViewController : RSViewController
-@property (weak, nonatomic) IBOutlet UIImageView *bkImageView;
 
 @end

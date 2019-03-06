@@ -26,10 +26,6 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"游戏";
@@ -150,15 +146,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section > 0) {
-        RSGameDetailViewController *detailVC = [[RSGameDetailViewController alloc] initWithNibName:@"RSGameDetailViewController" bundle:[NSBundle mainBundle]];
-        
+        RSGameDetailViewController *detailVC = [[RSGameDetailViewController alloc] init];
+        detailVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:detailVC animated:YES];
     }
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -12,6 +12,8 @@
 
 @interface RSBottleViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *bkImageView;
+
 @end
 
 @implementation RSBottleViewController
@@ -21,11 +23,6 @@
     self.title = @"漂流瓶";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.navigationController.navigationBarHidden == NO) {
         [self.navigationController setNavigationBarHidden:YES animated:YES];
@@ -33,15 +30,5 @@
         [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
