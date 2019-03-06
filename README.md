@@ -27,7 +27,7 @@ he hai, hehai682@126.com
 
 ### Note
 
-Here is the old vision [readme.md](https://github.com/riversea2015/RSChat/blob/master/README_OLD.md)
+Here is the old vision [README.md](https://github.com/riversea2015/RSChat/blob/master/README_OLD.md)
 
 ### License
 
