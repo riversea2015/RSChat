@@ -15,7 +15,6 @@
 #import "RSNewsModel.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <MBProgressHUD/MBProgressHUD.h>
 #import <MJRefresh/MJRefresh.h>
 #import <AFNetworking/AFNetworking.h>
 
@@ -25,10 +24,7 @@
 
 @property (nonatomic, strong) NSMutableArray *newsArr;
 @property (nonatomic, assign) NSUInteger pagesize;
-@property (nonatomic, assign) NSUInteger p;
-@property (nonatomic, copy) NSString *docurl;
-@property (nonatomic, copy) NSString *type;
-@property (nonatomic, assign) NSInteger job;
+@property (nonatomic, assign) NSUInteger currentPage;
 
 @end
 
@@ -38,53 +34,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setBasicData];
     
-    self.newsArr = [[NSMutableArray alloc] init];
+    [self initVariables];
+    [self setupNavView];
+    [self setupMainViews];
+    [self setupRefreshView];
     
-    [self startProgressAnimation];
-    
-    [self setRequestParameters];
     [self sendRequestGetJSON];
-    
-    [self headerRefresh];
-    [self footerRefresh];
 }
 
 #pragma mark - private method
 
-- (void)setBasicData {
+- (void)initVariables {
+    self.newsArr = [[NSMutableArray alloc] init];
+    _pagesize = 20;
+    _currentPage = 1;
+}
+
+- (void)setupNavView {
     self.title = @"腾讯新闻";
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"]
+                                                             style:UIBarButtonItemStyleDone
+                                                            target:self
+                                                            action:@selector(setting)];
     self.navigationItem.rightBarButtonItem = item;
-    
-    [self.tableView registerNib:[UINib nibWithNibName:[RSNewsContentCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsContentCell cellID]];
-    [self.tableView registerNib:[UINib nibWithNibName:[RSNewsHeaderCell cellID] bundle:nil] forCellReuseIdentifier:[RSNewsHeaderCell cellID]];
+}
+
+- (void)setupMainViews {
+    [RSNewsContentCell registerNibToTableView:self.tableView];
+    [RSNewsHeaderCell registerNibToTableView:self.tableView];
     [self.view addSubview:self.tableView];
 }
 
-- (void)startProgressAnimation {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.label.text = @"Loading";
-    hud.label.textColor = [UIColor grayColor];
-    hud.offset = CGPointMake(0, 20);
-    hud.bezelView.color = [UIColor greenColor];
-}
-
-#pragma mark - send request & parse data
-
-- (void)setRequestParameters {
-    self.pagesize = 20;
-    self.p = 1;
-    self.docurl = @"http%3A%2F%2Fnews.ifeng.com%2Fmainland%2Fspecial%2Fxjpg20%2F";
-    self.type = @"all";
-    self.job = 9;
-}
+#pragma mark - request
 
 - (void)sendRequestGetJSON {
     
-    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%lu&p=%lu&docurl=%@&type=%@&job=%ld", (unsigned long)self.pagesize, (unsigned long)self.p, self.docurl, self.type, (long)self.job];
+    [self showHUD];
+    
+    NSString *docurl = @"http%3A%2F%2Fnews.ifeng.com%2Fmainland%2Fspecial%2Fxjpg20%2F";
+    NSString *type = @"all";
+    NSInteger job = 9;
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://icomment.ifeng.com/geti.php?pagesize=%lu&p=%lu&docurl=%@&type=%@&job=%ld", (unsigned long)self.pagesize, (unsigned long)self.currentPage, docurl, type, (long)job];
     NSURL *URL = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
@@ -93,21 +86,39 @@
     
     WEAKSELF
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        
+        [weakSelf hideHUD];
         if (error) {
             NSLog(@"Error: %@", error);
+            [weakSelf handleFailureResult:responseObject];
         } else {
-            [weakSelf getResult:responseObject];
+            [weakSelf handleSuccessResult:responseObject];
             NSLog(@"%@ %@", response, responseObject);
         }
-        
     }];
                                       
     [dataTask resume];
 }
 
-- (void)getResult:(NSDictionary *)jsonDic {
+- (void)handleFailureResult:(NSDictionary *)jsonDic {
+    [self endMJRefreshing];
+}
+
+- (void)endMJRefreshing {
+    if ([self.tableView.mj_header isRefreshing]) {
+        [self.tableView.mj_header endRefreshing];
+    } else if ([self.tableView.mj_footer isRefreshing]) {
+        [self.tableView.mj_footer endRefreshing];
+    }
+}
+
+- (void)handleSuccessResult:(NSDictionary *)jsonDic {
+    
+    if (_currentPage == 1) {
+        [self.newsArr removeAllObjects];
+    }
+    
     NSArray *testArr = jsonDic[@"comments"][@"hottest"];
+    
     for (NSDictionary *dic in testArr) {
         RSNewsModel *newsModel = [RSNewsModel parseJSONData:dic];
         NSLog(@"%@", newsModel.comment_contents);
@@ -121,39 +132,31 @@
     }
     
     [self.tableView reloadData];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [self endMJRefreshing];
 }
 
-#pragma mark - headerRefresh footerRefresh
+#pragma mark - headerRefresh & footerRefresh
 
-- (void)headerRefresh {
+- (void)setupRefreshView {
     __weak __typeof(self) weakSelf = self;
+    
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadNewData];
     }];
-}
-
-- (void)loadNewData {
-    [self.newsArr removeAllObjects];
-    [self sendRequestGetJSON];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView reloadData];
-        [self.tableView.mj_header endRefreshing];
-    });
-}
-
-- (void)footerRefresh {
-    __weak __typeof(self) weakSelf = self;
+    
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [weakSelf loadMoreData];
     }];
 }
 
-- (void)loadMoreData {
-    self.p++;
+- (void)loadNewData {
+    _currentPage = 1;
     [self sendRequestGetJSON];
-    [self.tableView reloadData];
-    [self.tableView.mj_footer endRefreshing];
+}
+
+- (void)loadMoreData {
+    _currentPage++;
+    [self sendRequestGetJSON];
 }
 
 #pragma mark - private method

@@ -28,7 +28,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"🎉 %s 🎉", __FUNCTION__);
+    NSLog(@"🎉 %@ dealloc 🎉", self);
 }
 
 #pragma mark - TableView delegate & dataSource
@@ -68,11 +68,13 @@
 
 - (MBProgressHUD *)hudView {
     if (!_hudView) {
-        _hudView = [MBProgressHUD HUDForView:self.view];
+        _hudView = [[MBProgressHUD alloc] initWithView:self.view];
         _hudView.label.text = @"Loading";
         _hudView.label.textColor = [UIColor whiteColor];
         _hudView.offset = CGPointZero;
-        _hudView.bezelView.color = [UIColor grayColor];
+        _hudView.bezelView.color = [UIColor lightGrayColor];
+        _hudView.removeFromSuperViewOnHide = YES;
+        [self.view addSubview:_hudView];
     }
     return _hudView;
 }
