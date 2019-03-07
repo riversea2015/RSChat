@@ -122,22 +122,18 @@ UIBarPositioningDelegate
 
     self.resultTVC = [[RSHomeSearchResultController alloc] init];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:self.resultTVC];
+    
     self.searchVC = [[UISearchController alloc] initWithSearchResultsController:navi];
-    
     [self.searchVC.searchBar sizeToFit];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"]; // 将searchBar的cancel按钮改成中文的
-    [self.searchVC.searchBar setBackgroundImage:[UIImage new]]; // 去除上下边界的黑线
+    [self.searchVC.searchBar setBackgroundImage:[UIImage new]];
     self.searchVC.searchBar.placeholder = @"搜索";
-    self.searchVC.searchBar.tintColor = [UIColor greenColor]; // 文字颜色
-    
+    self.searchVC.searchBar.tintColor = [UIColor greenColor];
     self.searchVC.searchBar.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
-
-    self.searchVC.searchResultsUpdater = self; // 设置 搜索控制器 的结果更新代理对象
+    self.searchVC.searchResultsUpdater = self;
     self.searchVC.searchBar.delegate = self;
-    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
     self.tableView.tableHeaderView = self.searchVC.searchBar;
     
-    // 开启 在当前控制器中，允许切换另一个视图做呈现
     self.definesPresentationContext = YES;
 }
 
@@ -154,21 +150,17 @@ UIBarPositioningDelegate
     
     self.resultTVC.resultArray = searchResultArray;
     [self.resultTVC.tableView reloadData];
-    
 }
 
 #pragma mark - UISearchBarDelegate
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar { // 点击搜索框时
-    NSLog(@"方法调用 %s ", __func__);
-    
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     _tmpView = [[[NSBundle mainBundle] loadNibNamed:@"RSSearchTempView" owner:self options:nil] lastObject];
     _tmpView.frame = [UIScreen mainScreen].bounds;
     [self.view addSubview:_tmpView];
 }
 
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar { // 点击cancel按钮时
-    NSLog(@"方法调用 %s ", __func__);
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     [_tmpView removeFromSuperview];
     _tmpView = nil;
 }
