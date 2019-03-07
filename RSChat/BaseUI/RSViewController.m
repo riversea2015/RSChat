@@ -9,12 +9,17 @@
 //
 
 #import "RSViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface RSViewController ()
+
+@property (nonatomic, strong) MBProgressHUD *hudView;
 
 @end
 
 @implementation RSViewController
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +31,7 @@
     NSLog(@"🎉 %s 🎉", __FUNCTION__);
 }
 
-#pragma mark -
+#pragma mark - TableView delegate & dataSource
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -41,6 +46,35 @@
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+}
+
+#pragma mark - HUD
+
+- (void)showHUD {
+    [self showHUDInView:self.view animated:YES];
+}
+
+- (void)hideHUD {
+    [self hideHUDInView:self.view animated:YES];
+}
+
+- (void)showHUDInView:(UIView *)view animated:(BOOL)animated {
+    [self.hudView showAnimated:YES];
+}
+
+- (void)hideHUDInView:(UIView *)view animated:(BOOL)animated {
+    [self.hudView hideAnimated:YES];
+}
+
+- (MBProgressHUD *)hudView {
+    if (!_hudView) {
+        _hudView = [MBProgressHUD HUDForView:self.view];
+        _hudView.label.text = @"Loading";
+        _hudView.label.textColor = [UIColor whiteColor];
+        _hudView.offset = CGPointZero;
+        _hudView.bezelView.color = [UIColor grayColor];
+    }
+    return _hudView;
 }
 
 #pragma mark - Setter & Getter

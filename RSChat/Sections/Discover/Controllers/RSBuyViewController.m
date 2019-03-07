@@ -9,7 +9,6 @@
 //
 
 #import "RSBuyViewController.h"
-#import "MBProgressHUD.h"
 
 @interface RSBuyViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
@@ -51,29 +50,17 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     NSLog(@"%s", __func__);
-    [self startProgressAnimation];
+    [self showHUD];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"%s", __func__);
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    [self hideHUD];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    NSLog(@"%s", __func__);
-    NSLog(@"购物页面加载失败:%@", error.userInfo);
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-}
-
-#pragma mark - Private method
-
-- (void)startProgressAnimation {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading";
-    hud.labelColor = [UIColor whiteColor];
-    hud.xOffset = 0;
-    hud.yOffset = 0;
-    hud.color = [UIColor grayColor];
+    NSLog(@"%s - 购物页面加载失败:%@", __func__, error.userInfo);
+    [self hideHUD];
 }
 
 @end

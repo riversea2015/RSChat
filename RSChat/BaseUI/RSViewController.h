@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) UIEdgeInsets separatorInset;
 
+- (void)showHUD;
+- (void)hideHUD;
+- (void)showHUDInView:(UIView *)view animated:(BOOL)animated;
+- (void)hideHUDInView:(UIView *)view animated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

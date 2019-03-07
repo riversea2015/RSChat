@@ -9,7 +9,6 @@
 //
 
 #import "RSQuestionViewController.h"
-#import "MBProgressHUD.h"
 
 @interface RSQuestionViewController ()<UIWebViewDelegate>
 
@@ -59,17 +58,15 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading...";
-    hud.color = [UIColor lightGrayColor];
+    [self showHUD];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    [self hideHUD];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    [self hideHUD];
 }
 
 @end
