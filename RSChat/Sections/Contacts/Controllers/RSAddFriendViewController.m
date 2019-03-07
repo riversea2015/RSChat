@@ -21,10 +21,6 @@
 
 #pragma mark - Life Cycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"添加朋友";

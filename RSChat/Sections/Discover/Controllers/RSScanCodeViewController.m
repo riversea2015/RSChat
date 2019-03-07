@@ -21,11 +21,6 @@
 
 #pragma mark - LifeCycle
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 1. 实例化拍摄设备
