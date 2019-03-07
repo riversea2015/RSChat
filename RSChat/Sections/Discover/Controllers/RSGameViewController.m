@@ -150,7 +150,6 @@
     
     if (indexPath.section > 0) {
         RSGameDetailViewController *detailVC = [[RSGameDetailViewController alloc] init];
-        detailVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:detailVC animated:YES];
     }
 }

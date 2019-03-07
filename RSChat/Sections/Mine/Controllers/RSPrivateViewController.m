@@ -116,7 +116,6 @@ UIImagePickerControllerDelegate
     
     if (indexPath.section == 0 && indexPath.row == 3) {
         RSCreatCodeViewController *codeVC = [[RSCreatCodeViewController alloc] init];
-        codeVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:codeVC animated:YES];
     }
 }

@@ -92,10 +92,8 @@
 #pragma mark - private method
 
 - (void)addFriend {
-    self.hidesBottomBarWhenPushed = YES;
     RSAddFriendViewController *addVC = [[RSAddFriendViewController alloc] init];
     [self.navigationController pushViewController:addVC animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - tableView dataSource delegate
@@ -132,7 +130,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -155,8 +153,6 @@
             [self.navigationController pushViewController:officialVC animated:YES];
         }
         
-        self.hidesBottomBarWhenPushed = NO;
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
         return;
     }
     
@@ -173,7 +169,6 @@
     detailVC.contactMdel = model;
     [self.navigationController pushViewController:detailVC animated:YES];
     
-    self.hidesBottomBarWhenPushed = NO;
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

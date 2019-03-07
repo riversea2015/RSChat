@@ -113,7 +113,6 @@
             break;
     }
     
-    destVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:destVC animated:YES];
 }
 

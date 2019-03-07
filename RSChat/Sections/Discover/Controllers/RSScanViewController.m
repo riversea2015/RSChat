@@ -121,7 +121,6 @@ ZBarReaderViewDelegate>
 #pragma mark - ZBarReaderViewDelegate
 // 对扫到的数据进行处理
 - (void)readerView:(ZBarReaderView *)readerView didReadSymbols:(ZBarSymbolSet *)symbols fromImage:(UIImage *)image {
-    self.hidesBottomBarWhenPushed = YES;
     for (ZBarSymbol *symbol in symbols) {
         NSLog(@"%@", symbol.data);
         

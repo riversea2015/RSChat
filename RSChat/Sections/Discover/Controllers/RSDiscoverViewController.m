@@ -124,7 +124,6 @@
         destVC = [[RSGameViewController alloc] init];
     }
     
-    destVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:destVC animated:YES];
 }
 

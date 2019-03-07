@@ -73,17 +73,14 @@ UIBarPositioningDelegate
 }
 
 - (void)action:(UIButton *)button {
-    self.hidesBottomBarWhenPushed = YES;
     
     if (button.tag == 1) {
         RSAddFriendViewController *addFriendVC = [[RSAddFriendViewController alloc] init];
-        addFriendVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:addFriendVC animated:YES];
     }
     
     if (button.tag == 2) {
         RSScanViewController *scanVC = [[RSScanViewController alloc] init];
-        scanVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:scanVC animated:YES];
     }
     
@@ -201,7 +198,6 @@ UIBarPositioningDelegate
     if (indexPath.row == 0) {
         
         RSNewsViewController *newsVC = [[RSNewsViewController alloc] init];
-        newsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:newsVC animated:YES];
 
     } else {
@@ -209,7 +205,6 @@ UIBarPositioningDelegate
         RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
         RSHomeModel *model = self.allDatas[indexPath.row];
         messageVC.homeModel = model;
-        messageVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageVC animated:YES];
     }
 }

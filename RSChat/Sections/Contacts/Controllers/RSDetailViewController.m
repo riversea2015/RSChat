@@ -57,7 +57,6 @@
 
 - (void)sendMessage {
     NSLog(@"发消息。。。");
-    self.hidesBottomBarWhenPushed = YES;
     
     RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
     for (RSHomeModel *homeModel in self.homeModelArray) {
@@ -66,8 +65,6 @@
         }
     }
     [self.navigationController pushViewController:messageVC animated:YES];
-    
-    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)videoChat {
@@ -83,14 +80,11 @@
     NSLog(@"%@",title);
     
     if (buttonIndex == 0) {
-        self.hidesBottomBarWhenPushed = YES;
         RSVideoViewController *videoVC = [[RSVideoViewController alloc] initWithNibName:@"RSVideoViewController" bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:videoVC animated:NO];
-        self.hidesBottomBarWhenPushed = NO;
     } else {
         NSLog(@"语音聊天。。。");
     }
-    
 }
 
 - (void)setDetails {

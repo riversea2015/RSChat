@@ -69,8 +69,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
-
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
     RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] initWithNibName:@"RSQuestionViewController" bundle:[NSBundle mainBundle]];
     
     if (indexPath.section == 0) {

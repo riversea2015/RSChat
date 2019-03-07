@@ -39,7 +39,6 @@
 }
 
 - (void)addFriends {
-    self.hidesBottomBarWhenPushed = YES;
     RSAddFriendViewController *addVC = [[RSAddFriendViewController alloc] init];
     [self.navigationController pushViewController:addVC animated:YES];
 }
