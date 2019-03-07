@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)registerClassToTableView:(UITableView *)tableView;
 
-/// Need to be override by subclass
+/// Need to be overrided by subclass
 + (CGFloat)rowHeight;
 
 @end

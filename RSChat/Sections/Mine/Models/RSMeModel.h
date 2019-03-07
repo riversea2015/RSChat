@@ -4,11 +4,14 @@
 //
 //  Created by hehai on 11/10/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import <Foundation/Foundation.h>
 
 @interface RSMeModel : NSObject
+
 @property (nonatomic, copy) NSString *leftImageName; // 公用
 @property (nonatomic, copy) NSString *topText;
 @property (nonatomic, copy) NSString *bottomText;

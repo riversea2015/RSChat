@@ -36,7 +36,7 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(help)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
-    [RSMoneyACell registToCollectionView:self.collectionView];
+    [RSMoneyACell registerNibToCollectionView:self.collectionView];
     [self.collectionView registerNib:[UINib nibWithNibName:@"RSMoneyCollectionView" bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"RSMoneyCollectionView"];
     // Do any additional setup after loading the view.
 }

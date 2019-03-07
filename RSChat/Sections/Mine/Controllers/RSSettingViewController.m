@@ -31,8 +31,8 @@
     [super viewDidLoad];
     self.title = @"设置";
     
-    [RSSettingCell registToTableView:self.tableView];
-    [RSLogoutCell registToTableView:self.tableView];
+    [RSSettingCell registerNibToTableView:self.tableView];
+    [RSLogoutCell registerNibToTableView:self.tableView];
     
     [self.view addSubview:self.tableView];
 }
@@ -99,7 +99,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [RSSettingCell cellHeight];
+    return [RSSettingCell rowHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

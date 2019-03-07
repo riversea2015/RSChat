@@ -21,10 +21,6 @@
     // Configure the view for the selected state
 }
 
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
-}
-
 - (void)setWithModel:(RSMeModel *)model {
     self.leftImageView.image = [UIImage imageName:model.leftImageName];
     self.topLabel.text = model.topText;

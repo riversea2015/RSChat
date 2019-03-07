@@ -17,7 +17,8 @@
 }
 
 + (void)registerNibToCollectionView:(UICollectionView *)collectionView {
-    [collectionView registerNib:[UINib nibWithNibName:[self cellID] bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:[self cellID]];
+    [collectionView registerNib:[UINib nibWithNibName:[self cellID] bundle:[NSBundle mainBundle]]
+     forCellWithReuseIdentifier:[self cellID]];
 }
 
 + (void)registerClassToCollectionView:(UICollectionView *)collectionView {

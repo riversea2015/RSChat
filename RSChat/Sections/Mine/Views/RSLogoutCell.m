@@ -4,6 +4,8 @@
 //
 //  Created by hehai on 12/30/15.
 //  Copyright © 2015 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import "RSLogoutCell.h"
@@ -12,14 +14,6 @@
 
 + (CGFloat)cellHeight {
     return 43;
-}
-
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
-}
-
-+ (void)registToTableView:(UITableView *)tableView {
-    [tableView registerNib:[UINib nibWithNibName:@"RSLogoutCell" bundle:nil] forCellReuseIdentifier:@"RSLogoutCell"];
 }
 
 @end

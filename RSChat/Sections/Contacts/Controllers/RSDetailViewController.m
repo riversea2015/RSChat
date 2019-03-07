@@ -31,20 +31,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"详细资料";
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(setDetails)];
-    self.navigationItem.rightBarButtonItem = rightItem;
-    
-    [self.tableView registerNib:[UINib nibWithNibName:[RSDetailFirstCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailFirstCell cellID]];
-    [self.tableView registerNib:[UINib nibWithNibName:[RSDetailSecondCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDetailSecondCell cellID]];
-    [self.tableView registerNib:[UINib nibWithNibName:[RSMessageVideoCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSMessageVideoCell cellID]];
-    [self SetTableFooterView];
-    [self.view addSubview:self.tableView];
+    [self setupNavView];
+    [self setupMainViews];
 }
 
 #pragma mark - private method
 
-- (void)SetTableFooterView {
+- (void)setupNavView {
+    self.title = @"详细资料";
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleDone target:self action:@selector(setDetails)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)setupMainViews {
+    
+    [RSDetailFirstCell registerNibToTableView:self.tableView];
+    [RSDetailSecondCell registerNibToTableView:self.tableView];
+    [RSMessageVideoCell registerNibToTableView:self.tableView];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 123)];
     [view addSubview:self.actionView];
@@ -53,10 +56,17 @@
     [self.actionView.videoChat addTarget:self action:@selector(videoChat) forControlEvents:UIControlEventTouchUpInside];
     
     [self.tableView setTableFooterView:view];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)sendMessage {
     NSLog(@"发消息。。。");
+    
+    if ([_lastVCName isEqualToString:@"RSMessageViewController"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
     
     RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
     for (RSHomeModel *homeModel in self.homeModelArray) {
@@ -74,7 +84,7 @@
 
 #pragma mark - UIActionSheetDelegate
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSLog(@"%ld",buttonIndex);
     NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
     NSLog(@"%@",title);
@@ -111,14 +121,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         RSDetailFirstCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSDetailFirstCell cellID] forIndexPath:indexPath];
-        cell.leftImageView.image = [UIImage imageNamed:self.contactMdel.contactImageName];
-        cell.topLabel.text = self.contactMdel.contactName;
-        cell.bottomLabel.text = self.contactMdel.idStr;
-        if (self.contactMdel.isMale) {
-            cell.rightImageView.image = [UIImage imageNamed:@"Contact_Male"];
-        } else {
-            cell.rightImageView.image = [UIImage imageNamed:@"Contact_Female"];
-        }
+        cell.contact = self.contactMdel;
         
         return cell;
     }
@@ -178,11 +181,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 15;
+    return CGFLOAT_MIN;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 5;
+    return 10;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

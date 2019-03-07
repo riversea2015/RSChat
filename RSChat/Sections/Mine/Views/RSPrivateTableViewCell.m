@@ -22,12 +22,8 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)rowheight {
++ (CGFloat)rowHeight {
     return 81;
-}
-
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
 }
 
 @end

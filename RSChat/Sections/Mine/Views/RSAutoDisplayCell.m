@@ -4,11 +4,14 @@
 //
 //  Created by hehai on 1/6/16.
 //  Copyright © 2016 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import "RSAutoDisplayCell.h"
 
 @interface RSAutoDisplayCell ()<UIScrollViewDelegate>
+
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -104,16 +107,8 @@
     }
 }
 
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
-}
-
-+ (CGFloat)cellHeight {
++ (CGFloat)rowHeight {
     return 120;
-}
-
-+ (void)registToTableView:(UITableView *)tableView {
-    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([self class])];
 }
 
 #pragma mark - ScrollView delegate

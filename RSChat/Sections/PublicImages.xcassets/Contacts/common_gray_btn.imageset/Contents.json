@@ -5,6 +5,20 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 13,
+          "top" : 13,
+          "right" : 8,
+          "left" : 8
+        }
+      },
       "idiom" : "universal",
       "filename" : "common_gray_btn@2x.png",
       "scale" : "2x"

@@ -95,14 +95,14 @@ UIImagePickerControllerDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
-        return [RSPrivateTableViewCell rowheight];
+        return [RSPrivateTableViewCell rowHeight];
     }
     
     if (indexPath.section == 1 && indexPath.row == 2) {
         return 100;
     }
     
-    return [RSPrivateOtherCell rowheight];
+    return [RSPrivateOtherCell rowHeight];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

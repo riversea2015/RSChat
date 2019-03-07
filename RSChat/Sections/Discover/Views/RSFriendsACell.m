@@ -4,6 +4,8 @@
 //
 //  Created by hehai on 12/5/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import "RSFriendsACell.h"
@@ -25,11 +27,7 @@
     [tableView registerNib:[UINib nibWithNibName:@"RSFriendsACell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RSFriendsACell"];
 }
 
-+ (NSString *)cellID {
-    return NSStringFromClass([self class]);
-}
-
-+ (CGFloat)cellHeight {
++ (CGFloat)rowHeight {
     return 126;
 }
 

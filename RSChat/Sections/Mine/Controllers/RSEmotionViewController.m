@@ -46,8 +46,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    [RSAutoDisplayCell registToTableView:self.tableView];
-    [RSEmotionACell registToTableView:self.tableView];
+    [RSAutoDisplayCell registerNibToTableView:self.tableView];
+    [RSEmotionACell registerNibToTableView:self.tableView];
 }
 
 - (void)setEmontions {
@@ -118,9 +118,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return [RSAutoDisplayCell cellHeight];
+        return [RSAutoDisplayCell rowHeight];
     }
-    return [RSEmotionACell cellHeight];
+    return [RSEmotionACell rowHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

@@ -156,12 +156,11 @@
         return;
     }
     
-    RSContactsModel *model = [[RSContactsModel alloc] init];
+    RSContactsModel *model = nil;
 
     if (indexPath.section <= 7 && indexPath.section > 0) {
         model = self.allDatas[3 + indexPath.section + indexPath.row];
-    }
-    if (indexPath.section > 7) {
+    } else if (indexPath.section > 7) {
         model = self.allDatas[3 + indexPath.section + indexPath.row + 1];
     }
     

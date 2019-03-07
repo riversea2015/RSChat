@@ -8,13 +8,10 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import <UIKit/UIKit.h>
+#import "UITableViewCell+RSExts.h"
 
 @interface RSPrivateTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *titleButton;
-
-+ (CGFloat)rowheight;
-+ (NSString *)cellID;
 
 @end

@@ -32,11 +32,11 @@
     
     [self.view addSubview:self.tableView];
     
-    [RSGameACell registToTableView:self.tableView];
-    [RSGameBCell registToTableView:self.tableView];
-    [RSGameCCell registToTableView:self.tableView];
-    [RSGameDCell registToTableView:self.tableView];
-    [RSGameECell registToTableView:self.tableView];
+    [RSGameACell registerNibToTableView:self.tableView];
+    [RSGameBCell registerNibToTableView:self.tableView];
+    [RSGameCCell registerNibToTableView:self.tableView];
+    [RSGameDCell registerNibToTableView:self.tableView];
+    [RSGameECell registerNibToTableView:self.tableView];
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleDone target:self action:@selector(settings)];
     self.navigationItem.rightBarButtonItem = rightItem;
@@ -95,20 +95,20 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            return [RSGameACell cellHeight];
+            return [RSGameACell rowHeight];
         }
-        return [RSGameBCell cellHeight];
+        return [RSGameBCell rowHeight];
     }
     
     if (indexPath.section == 1) {
-        return [RSGameCCell cellHeight];
+        return [RSGameCCell rowHeight];
     }
     
     if (indexPath.row < 3) {
-        return [RSGameDCell cellHeight];
+        return [RSGameDCell rowHeight];
     }
     
-    return [RSGameECell cellHeight];
+    return [RSGameECell rowHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

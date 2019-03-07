@@ -57,8 +57,8 @@ static const CGFloat kRSGameListBottomH = 60;
     
     self.tableView.tableHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"RSGameDetailHeader" owner:self options:nil] lastObject];
     self.tableView.frame = CGRectMake(0, 0, RSScreenW, RSScreenH - kRSGameListBottomH - RSBottomH);
-    [RSGameDetailACell registToTableView:self.tableView];
-    [RSGameDetailBCell registToTableView:self.tableView];
+    [RSGameDetailACell registerNibToTableView:self.tableView];
+    [RSGameDetailBCell registerNibToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
     UIView *bottomBgView = [[UIView alloc] initWithFrame:CGRectMake(0,
@@ -107,9 +107,9 @@ static const CGFloat kRSGameListBottomH = 60;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return [RSGameDetailACell cellHeight];
+        return [RSGameDetailACell rowHeight];
     }
-    return [RSGameDetailBCell cellHeight];
+    return [RSGameDetailBCell rowHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

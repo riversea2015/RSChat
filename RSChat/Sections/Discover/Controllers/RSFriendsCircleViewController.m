@@ -69,7 +69,7 @@
 
     [self.view addSubview:self.tableView];
     
-    [RSFriendsACell registToTableView:self.tableView];
+    [RSFriendsACell registerNibToTableView:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 

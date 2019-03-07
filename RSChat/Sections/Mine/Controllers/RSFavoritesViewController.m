@@ -30,7 +30,7 @@
     self.title = @"收藏";
     
     [self.view addSubview:self.tableView];
-    [RSFavoriteCell registToTableView:self.tableView];
+    [RSFavoriteCell registerNibToTableView:self.tableView];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStyleDone target:self action:@selector(addAcontents)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -63,7 +63,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [RSFavoriteCell cellHeight];
+    return [RSFavoriteCell rowHeight];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

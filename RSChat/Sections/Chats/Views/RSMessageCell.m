@@ -4,6 +4,8 @@
 //
 //  Created by hehai on 11/24/15.
 //  Copyright (c) 2015 hehai. All rights reserved.
+//  GitHub: https://github.com/riversea2015
+//  源码地址: https://github.com/riversea2015/RSChat
 //
 
 #import "RSMessageCell.h"
@@ -28,29 +30,7 @@
 
 @implementation RSMessageCell
 
-#pragma setter getter
-
-- (UIImageView *)popImageView {
-    if (!_popImageView) {
-        _popImageView = [[UIImageView alloc] init];
-    }
-    return _popImageView;
-}
-
-- (UILabel *)popLabel {
-    if (!_popLabel) {
-        _popLabel = [[UILabel alloc] init];
-        _popLabel.numberOfLines = 0;
-    }
-    return _popLabel;
-}
-
-- (UIImageView *)titleImageView {
-    if (!_titleImageView) {
-        _titleImageView = [[UIImageView alloc] init];
-    }
-    return _titleImageView;
-}
+#pragma mark - Model
 
 - (void)setMessage:(RSMessageModel *)message {
     _message = message;
@@ -129,5 +109,40 @@
     [self.contentView addSubview:self.popLabel];
     [self.contentView addSubview:self.titleImageView];
 }
+
+- (void)tapAction {
+    if (_clickLogoBlock) {
+        _clickLogoBlock();
+    }
+}
+
+#pragma setter getter
+
+- (UIImageView *)popImageView {
+    if (!_popImageView) {
+        _popImageView = [[UIImageView alloc] init];
+    }
+    return _popImageView;
+}
+
+- (UILabel *)popLabel {
+    if (!_popLabel) {
+        _popLabel = [[UILabel alloc] init];
+        _popLabel.numberOfLines = 0;
+    }
+    return _popLabel;
+}
+
+- (UIImageView *)titleImageView {
+    if (!_titleImageView) {
+        _titleImageView = [[UIImageView alloc] init];
+        _titleImageView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+        [_titleImageView addGestureRecognizer:tap];
+    }
+    return _titleImageView;
+}
+
 
 @end

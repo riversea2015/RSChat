@@ -12,6 +12,8 @@
 #import "RSContactsModel.h"
 
 @interface RSDetailViewController : RSViewController
+
+@property (nonatomic, copy) NSString *lastVCName;
 @property (nonatomic, strong) RSContactsModel *contactMdel;
 
 @end

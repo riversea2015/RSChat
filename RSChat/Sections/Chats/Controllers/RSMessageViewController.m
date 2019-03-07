@@ -9,6 +9,8 @@
 //
 
 #import "RSMessageViewController.h"
+#import "RSDetailViewController.h"
+
 #import "RSMessageCell.h"
 #import "RSMessageModel.h"
 #import "RSChatToolBar.h"
@@ -208,6 +210,24 @@
         UIImage *image = [UIImage imageNamed:self.homeModel.leftImageName];
         cell.titleImageView.image = image;
     }
+    
+    __weak typeof(self) weakSelf = self;
+    cell.clickLogoBlock = ^{
+        
+        RSContactsModel *tempContact = [RSContactsModel new];
+        tempContact.contactImageName = @"cartoon_2";
+        tempContact.contactName = @"聊天->联系人信息";
+        tempContact.indexStr = @"M";
+        tempContact.idStr = @"xyz";
+        tempContact.telNumStr = @"11111111111";
+        tempContact.district = @"安徽 芜湖";
+        tempContact.isMale = YES;
+        
+        RSDetailViewController *detailVC = [[RSDetailViewController alloc] init];
+        detailVC.contactMdel = tempContact;
+        detailVC.lastVCName = NSStringFromClass([weakSelf class]);
+        [weakSelf.navigationController pushViewController:detailVC animated:YES];
+    };
     
     return cell;
 }

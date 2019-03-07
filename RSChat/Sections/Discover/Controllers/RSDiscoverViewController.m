@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:[RSDiscoverCell cellID] bundle:[NSBundle mainBundle]] forCellReuseIdentifier:[RSDiscoverCell cellID]];
+    [RSDiscoverCell registerNibToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
 #ifdef __IPHONE_11_0
