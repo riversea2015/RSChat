@@ -93,7 +93,6 @@ UIBarPositioningDelegate
         self.popView.flag = 0;
         [self.popView removeFromSuperview];
     }
-    // ...
 }
 
 #pragma mark - NavigationBar

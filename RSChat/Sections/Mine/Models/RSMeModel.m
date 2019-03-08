@@ -16,9 +16,9 @@
 - (NSArray *)headerArr {
     if (!_headerArr) {
         RSMeModel *model1 = [RSMeModel new];
-        model1.leftImageName = @"hehai";
-        model1.topText = @"seamonster";
-        model1.bottomText = @"riversea2015";
+        model1.leftImageName = @"https://avatars1.githubusercontent.com/u/13641317?s=460&v=4";
+        model1.topText = @"RiverSea";
+        model1.bottomText = @"Sea364138";
         _headerArr = @[model1];
     }
     return _headerArr;

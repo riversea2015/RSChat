@@ -65,7 +65,7 @@ UIImagePickerControllerDelegate
     
     if (indexPath.section == 0 && indexPath.row == 0) {
         RSPrivateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[RSPrivateTableViewCell cellID] forIndexPath:indexPath];
-        // cell相关设置。。。
+        cell.logoImgName = @"https://avatars1.githubusercontent.com/u/13641317?s=460&v=4";
         return cell;
     }
     

@@ -102,7 +102,7 @@
         _titleLab = [[UILabel alloc] init];
         _titleLab.textAlignment = NSTextAlignmentRight;
         _titleLab.textColor = [UIColor whiteColor];
-        _titleLab.text = @"seamonster";
+        _titleLab.text = @"RiverSea";
         [self addSubview:_titleLab];
     }
     return _titleLab;

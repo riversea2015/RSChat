@@ -8,6 +8,11 @@
 
 #import "RSMeHeaderCell.h"
 #import "UIImage+RSExts.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface RSMeHeaderCell ()
+
+@end
 
 @implementation RSMeHeaderCell
 
@@ -22,7 +27,7 @@
 }
 
 - (void)setWithModel:(RSMeModel *)model {
-    self.leftImageView.image = [UIImage imageName:model.leftImageName];
+    [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:model.leftImageName] placeholderImage:[UIImage imageNamed:@"placeholder_logo"]];
     self.topLabel.text = model.topText;
     self.bottomLabel.text = model.bottomText;
 }

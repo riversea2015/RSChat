@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *titleButton;
 
+@property (nonatomic, copy) NSString *logoImgName;
+
 @end

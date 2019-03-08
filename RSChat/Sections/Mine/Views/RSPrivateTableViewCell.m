@@ -9,6 +9,13 @@
 //
 
 #import "RSPrivateTableViewCell.h"
+#import <SDWebImage/UIButton+WebCache.h>
+
+@interface RSPrivateTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIButton *logoBtn;
+
+@end
 
 @implementation RSPrivateTableViewCell
 
@@ -24,6 +31,12 @@
 
 + (CGFloat)rowHeight {
     return 81;
+}
+
+- (void)setLogoImgName:(NSString *)logoImgName {
+    _logoImgName = logoImgName;
+    
+    [_logoBtn sd_setImageWithURL:[NSURL URLWithString:logoImgName] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"placeholder_logo"]];
 }
 
 @end

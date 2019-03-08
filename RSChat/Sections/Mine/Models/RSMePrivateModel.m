@@ -15,10 +15,10 @@
 + (NSArray *)demoData {
     RSMePrivateModel *model1 = [[RSMePrivateModel alloc] init];
     model1.leftText = @"名字";
-    model1.rightText = @"seamonster";
+    model1.rightText = @"RiverSea";
     RSMePrivateModel *model2 = [[RSMePrivateModel alloc] init];
     model2.leftText = @"微信号";
-    model2.rightText = @"riversea2015";
+    model2.rightText = @"Sea364138";
     RSMePrivateModel *model3 = [[RSMePrivateModel alloc] init];
     model3.leftText = @"我的二维码";
     model3.rightImageName = @"setting_myQR";

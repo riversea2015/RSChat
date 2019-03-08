@@ -31,7 +31,6 @@ static const CGFloat kRSGameListBottomH = 60;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"游戏详情";
     
     [self setupNavView];
     [self setupMainViews];

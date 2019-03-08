@@ -10,8 +10,11 @@
 
 #import "RSCreatCodeViewController.h"
 #import <CoreImage/CoreImage.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface RSCreatCodeViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *logoImgView;
 
 @end
 
@@ -23,6 +26,7 @@
     [super viewDidLoad];
     self.title = @"我的二维码";
     
+    [_logoImgView sd_setImageWithURL:[NSURL URLWithString:@"https://avatars1.githubusercontent.com/u/13641317?s=460&v=4"] placeholderImage:[UIImage imageNamed:@"placeholder_logo"]];
     [self showCode];
 }
 

@@ -76,7 +76,7 @@
     model10.isMale = YES;
     RSContactsModel *model11 = [RSContactsModel new];
     model11.contactImageName = @"hehai";
-    model11.contactName = @"SeaMonster";
+    model11.contactName = @"RiverSea";
     model11.indexStr = @"S";
     model11.idStr = @"sea4678383";
     model11.telNumStr = @"15678909876";
