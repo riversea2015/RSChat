@@ -34,6 +34,6 @@ RSChat is available under the MIT license. See the [LICENSE](https://github.com/
 
 ## Note
 
-Here is the old vision [README.md](https://github.com/riversea2015/RSChat/blob/master/README_OLD.md)
+🍎 Here is the old vision [README.md](https://github.com/riversea2015/RSChat/blob/master/README_OLD.md)
 
 ⚠️ The source code uploaded on github only，please indicate the source of the reference，thank you！
