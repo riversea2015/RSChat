@@ -151,7 +151,6 @@
 		72BDB3771C2A3584002AE29F /* RSOtherLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB3751C2A3584002AE29F /* RSOtherLoginViewController.m */; };
 		72BDB3781C2A3584002AE29F /* RSOtherLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */; };
 		72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */; };
-		72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */; };
 		72C0AC331C11489900C817D2 /* RSAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC321C11489900C817D2 /* RSAnnotation.m */; };
 		72C0AC371C115B6200C817D2 /* RSBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C0AC351C115B6200C817D2 /* RSBottleViewController.m */; };
 		72C0AC381C115B6200C817D2 /* RSBottleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C0AC361C115B6200C817D2 /* RSBottleViewController.xib */; };
@@ -445,7 +444,6 @@
 		72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSOtherLoginViewController.xib; sourceTree = "<group>"; };
 		72BDB3791C2A52CA002AE29F /* RSQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSQuestionViewController.h; sourceTree = "<group>"; };
 		72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSQuestionViewController.m; sourceTree = "<group>"; };
-		72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSQuestionViewController.xib; sourceTree = "<group>"; };
 		72C0AC311C11489900C817D2 /* RSAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAnnotation.h; sourceTree = "<group>"; };
 		72C0AC321C11489900C817D2 /* RSAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAnnotation.m; sourceTree = "<group>"; };
 		72C0AC341C115B6200C817D2 /* RSBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBottleViewController.h; sourceTree = "<group>"; };
@@ -591,7 +589,6 @@
 				72BDB3761C2A3584002AE29F /* RSOtherLoginViewController.xib */,
 				72BDB3791C2A52CA002AE29F /* RSQuestionViewController.h */,
 				72BDB37A1C2A52CA002AE29F /* RSQuestionViewController.m */,
-				72BDB37B1C2A52CA002AE29F /* RSQuestionViewController.xib */,
 				92DC47C6222CD1C500C9686D /* RSCountryListViewController.h */,
 				92DC47C7222CD1C500C9686D /* RSCountryListViewController.m */,
 			);
@@ -1237,7 +1234,6 @@
 				1B26D6661C3A91F200BFC29C /* RSGameDetailViewController.xib in Resources */,
 				1B26D6701C3ABC5C00BFC29C /* RSGameDetailACell.xib in Resources */,
 				9242E2DF2228D8B1008DDC1F /* InfoPlist.strings in Resources */,
-				72BDB37D1C2A52CA002AE29F /* RSQuestionViewController.xib in Resources */,
 				72C4046E1C2267F200852B71 /* RSPopView.xib in Resources */,
 				72ABF3E61BFD78B100EC17C7 /* RSNewsContentCell.xib in Resources */,
 				7288A5591C1090E3009936A7 /* RSPrivateOtherCell.xib in Resources */,

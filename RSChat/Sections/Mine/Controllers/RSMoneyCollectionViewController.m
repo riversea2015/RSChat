@@ -66,7 +66,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
-    RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] initWithNibName:@"RSQuestionViewController" bundle:[NSBundle mainBundle]];
+    RSQuestionViewController *questionVC = [[RSQuestionViewController alloc] init];
     
     if (indexPath.section == 0) {
         questionVC.url = [NSURL URLWithString:@"http://m.meilishuo.com/"];
