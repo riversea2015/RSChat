@@ -180,6 +180,10 @@
 		92DE50DA222917DF00E12586 /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50D9222917DF00E12586 /* RSViewController.m */; };
 		92DE50DD2229359C00E12586 /* UIColor+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DC2229359C00E12586 /* UIColor+RSExts.m */; };
 		92DE50E022293E0700E12586 /* UIButton+RSExts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE50DF22293E0700E12586 /* UIButton+RSExts.m */; };
+		92EF9C7C223635FE0008EA17 /* AppDelegate+Weex.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EF9C7B223635FE0008EA17 /* AppDelegate+Weex.m */; };
+		92EF9C7E2236462C0008EA17 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 92EF9C7D2236462C0008EA17 /* index.js */; };
+		92EF9C81223647330008EA17 /* RSWeexImgLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EF9C80223647330008EA17 /* RSWeexImgLoader.m */; };
+		92EF9C84223650D80008EA17 /* WEEXDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EF9C83223650D80008EA17 /* WEEXDemoVC.m */; };
 		9A47BBAD1C350DC5718820B2 /* libPods-RSChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */; };
 /* End PBXBuildFile section */
 
@@ -504,6 +508,13 @@
 		92DE50DC2229359C00E12586 /* UIColor+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RSExts.m"; sourceTree = "<group>"; };
 		92DE50DE22293E0700E12586 /* UIButton+RSExts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+RSExts.h"; sourceTree = "<group>"; };
 		92DE50DF22293E0700E12586 /* UIButton+RSExts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RSExts.m"; sourceTree = "<group>"; };
+		92EF9C7A223635FE0008EA17 /* AppDelegate+Weex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Weex.h"; sourceTree = "<group>"; };
+		92EF9C7B223635FE0008EA17 /* AppDelegate+Weex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Weex.m"; sourceTree = "<group>"; };
+		92EF9C7D2236462C0008EA17 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		92EF9C7F223647330008EA17 /* RSWeexImgLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSWeexImgLoader.h; sourceTree = "<group>"; };
+		92EF9C80223647330008EA17 /* RSWeexImgLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSWeexImgLoader.m; sourceTree = "<group>"; };
+		92EF9C82223650D80008EA17 /* WEEXDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WEEXDemoVC.h; sourceTree = "<group>"; };
+		92EF9C83223650D80008EA17 /* WEEXDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WEEXDemoVC.m; sourceTree = "<group>"; };
 		A8BCD4A1B71D41BC1FCD1896 /* Pods-RSChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSChat/Pods-RSChat.debug.xcconfig"; sourceTree = "<group>"; };
 		C191D6322AFBE0C69321EEC6 /* libPods-RSChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -757,6 +768,8 @@
 				727C6053222BF0DB00E4A95E /* AppDelegate+Content.m */,
 				727C6058222BF37B00E4A95E /* AppDelegate+Temp.h */,
 				727C6059222BF37B00E4A95E /* AppDelegate+Temp.m */,
+				92EF9C7A223635FE0008EA17 /* AppDelegate+Weex.h */,
+				92EF9C7B223635FE0008EA17 /* AppDelegate+Weex.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -976,6 +989,7 @@
 				728917991C03F346008B3030 /* RSMessageViewController.m */,
 				7234C34F1C08491E00C9009C /* RSHomeSearchResultController.h */,
 				7234C3501C08491E00C9009C /* RSHomeSearchResultController.m */,
+				92EF9C85223651AE0008EA17 /* WEEXDemo */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1114,6 +1128,18 @@
 				65DB0C84EB353A54948878F1 /* Pods-RSChat.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		92EF9C85223651AE0008EA17 /* WEEXDemo */ = {
+			isa = PBXGroup;
+			children = (
+				92EF9C7F223647330008EA17 /* RSWeexImgLoader.h */,
+				92EF9C80223647330008EA17 /* RSWeexImgLoader.m */,
+				92EF9C82223650D80008EA17 /* WEEXDemoVC.h */,
+				92EF9C83223650D80008EA17 /* WEEXDemoVC.m */,
+				92EF9C7D2236462C0008EA17 /* index.js */,
+			);
+			path = WEEXDemo;
 			sourceTree = "<group>";
 		};
 		940B36A99488C9CF0C658FAC /* Frameworks */ = {
@@ -1287,6 +1313,7 @@
 				728ED8D91C0B0E2800DE8639 /* zbar-samples.png in Resources */,
 				72A335111C07035000112FC0 /* RSMessageVideoCell.xib in Resources */,
 				729D60021C29B587000F8C69 /* RSConformViewController.xib in Resources */,
+				92EF9C7E2236462C0008EA17 /* index.js in Resources */,
 				728ED8D71C0B0E2800DE8639 /* zbar-help.html in Resources */,
 				728ED87B1C0AD36900DE8639 /* RSVideoViewController.xib in Resources */,
 				1B87738C1C3D2785000CCEAE /* RSMoneyCollectionView.xib in Resources */,
@@ -1358,7 +1385,9 @@
 				1B8773621C3BE3EA000CCEAE /* RSSearchTempView.m in Sources */,
 				92DE50DA222917DF00E12586 /* RSViewController.m in Sources */,
 				1B87738B1C3D2785000CCEAE /* RSMoneyCollectionView.m in Sources */,
+				92EF9C81223647330008EA17 /* RSWeexImgLoader.m in Sources */,
 				720A96191BF5A7B900496666 /* RSContactsModel.m in Sources */,
+				92EF9C7C223635FE0008EA17 /* AppDelegate+Weex.m in Sources */,
 				72C0AC6F1C1174CB00C817D2 /* RSScanResultViewController.m in Sources */,
 				726E867B1C35683D00B82094 /* RSScanCodeViewController.m in Sources */,
 				72BDB37C1C2A52CA002AE29F /* RSQuestionViewController.m in Sources */,
@@ -1386,6 +1415,7 @@
 				727C1DD21BF26B7600CE8AA6 /* RSHomeCell.m in Sources */,
 				729D5FF71C2943A6000F8C69 /* RSWelcomeViewController.m in Sources */,
 				1B8773901C3D3BF6000CCEAE /* RSAlbumViewController.m in Sources */,
+				92EF9C84223650D80008EA17 /* WEEXDemoVC.m in Sources */,
 				727C1DC51BF255FA00CE8AA6 /* RSDiscoverModel.m in Sources */,
 				1B87736A1C3CB05E000CCEAE /* RSEmotionViewController.m in Sources */,
 				72CA7E451C23B3070072C91E /* RSOfficialAccountViewController.m in Sources */,

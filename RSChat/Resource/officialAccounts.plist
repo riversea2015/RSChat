@@ -28,9 +28,9 @@
 	</dict>
 	<dict>
 		<key>titleImageName</key>
-		<string>public_bugly</string>
+		<string>public_weex</string>
 		<key>name</key>
-		<string>腾讯Bugly</string>
+		<string>WEEX测试</string>
 		<key>word</key>
 		<string>T</string>
 	</dict>

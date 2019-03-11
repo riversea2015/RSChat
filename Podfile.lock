@@ -28,6 +28,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - WeexSDK (0.18.0.3)
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - MLTransition (= 2.1.3)
   - SAMKeychain (= 1.5.3)
   - SDWebImage (= 4.4.2)
+  - WeexSDK
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -51,6 +53,7 @@ SPEC REPOS:
     - MLTransition
     - SAMKeychain
     - SDWebImage
+    - WeexSDK
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   MLTransition: 8ebe393aedfb61507202085a5bb16c7b17363e43
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  WeexSDK: 173541f2d0042664168b305952398145c0c6039c
 
-PODFILE CHECKSUM: 9f3193e0ce497fd1ac1fca8ef496cdb84ac82cce
+PODFILE CHECKSUM: 3b55905896740874cfa5be3d372a9ae2b7cf83c1
 
 COCOAPODS: 1.5.3

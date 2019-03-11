@@ -55,21 +55,41 @@ UIBarPositioningDelegate
     [self.searchVC.searchBar resignFirstResponder];
 }
 
-#pragma mark -
+#pragma mark - NavigationBar
+
+- (void)setupNavView {
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
+                                                                  style:UIBarButtonItemStyleDone
+                                                                 target:self
+                                                                 action:@selector(popUp)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)popUp {
+    if (self.popView.flag == 1) {
+        self.popView.flag = 0;
+        [self.popView removeFromSuperview];
+        return;
+    }
+    self.popView.flag = 1;
+    [self.view addSubview:self.popView];
+    
+    for (UIButton *button in self.popView.popButtons) {
+        [button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+#pragma mark - Main Views
 
 - (void)setupMainViews {
     
     self.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
-    
+
     self.tableView.tableFooterView = [[UIView alloc] init];
     [RSHomeCell registerNibToTableView:self.tableView];
     [self.view addSubview:self.tableView];
     
     [self setupSearchView];
-    
-    for (UIButton *button in self.popView.popButtons) {
-        [button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
-    }
 }
 
 - (void)action:(UIButton *)button {
@@ -93,26 +113,6 @@ UIBarPositioningDelegate
         self.popView.flag = 0;
         [self.popView removeFromSuperview];
     }
-}
-
-#pragma mark - NavigationBar
-
-- (void)setupNavView {
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
-                                                                  style:UIBarButtonItemStyleDone
-                                                                 target:self
-                                                                 action:@selector(popUp)];
-    self.navigationItem.rightBarButtonItem = rightItem;
-}
-
-- (void)popUp {
-    if (self.popView.flag == 1) {
-        self.popView.flag = 0;
-        [self.popView removeFromSuperview];
-        return;
-    }
-    self.popView.flag = 1;
-    [self.view addSubview:self.popView];
 }
 
 #pragma mark - SearchMethod & UISearchResultsUpdating
@@ -186,17 +186,28 @@ UIBarPositioningDelegate
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.row == 0) {
-        
-        RSNewsViewController *newsVC = [[RSNewsViewController alloc] init];
-        [self.navigationController pushViewController:newsVC animated:YES];
-
-    } else {
-        
-        RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
-        RSHomeModel *model = self.allDatas[indexPath.row];
-        messageVC.homeModel = model;
-        [self.navigationController pushViewController:messageVC animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            RSNewsViewController *newsVC = [[RSNewsViewController alloc] init];
+            [self.navigationController pushViewController:newsVC animated:YES];
+            break;
+        }
+        case 1:
+        {
+            Class cls = NSClassFromString(@"WEEXDemoVC");
+            UIViewController *vc = [[cls alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        default:
+        {
+            RSMessageViewController *messageVC = [[RSMessageViewController alloc] init];
+            RSHomeModel *model = self.allDatas[indexPath.row];
+            messageVC.homeModel = model;
+            [self.navigationController pushViewController:messageVC animated:YES];
+            break;
+        }
     }
 }
 
@@ -208,7 +219,7 @@ UIBarPositioningDelegate
     return CGFLOAT_MIN;
 }
 
-#pragma mark - setter getter
+#pragma mark - setter & getter
 
 - (NSMutableArray *)allDatas {
     if (!_allDatas) {

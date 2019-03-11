@@ -14,4 +14,6 @@ pod 'SAMKeychain', '1.5.3'
 pod 'MLTransition', '2.1.3'
 pod 'Masonry', '1.1.0'
 
+pod 'WeexSDK'
+
 end

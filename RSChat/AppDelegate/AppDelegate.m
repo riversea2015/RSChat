@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+IM.h"
 #import "AppDelegate+Content.h"
-
+#import "AppDelegate+Weex.h"
 #import "AppDelegate+Temp.h" // temporary file
 
 
@@ -31,6 +31,8 @@
     [self setupContentVC];
     
     [self beginMonitorNetStatus];
+    
+    [self registerWeex];
     
     return YES;
 }

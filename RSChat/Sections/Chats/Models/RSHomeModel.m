@@ -20,7 +20,7 @@
     model1.bottomText = @"新版百元钞票印制流程曝光";
     model1.badgeNumberText = @"5";
     RSHomeModel *model2 = [RSHomeModel new];
-    model2.leftImageName = @"bugly";
+    model2.leftImageName = @"public_weex";
     model2.leftText = @"腾讯Bugly";
     model2.rightText = @"13:24";
     model2.bottomText = @"内存泄露从入门到精通三部曲之基础知识篇";
