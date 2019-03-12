@@ -21,7 +21,7 @@
     model1.badgeNumberText = @"5";
     RSHomeModel *model2 = [RSHomeModel new];
     model2.leftImageName = @"public_weex";
-    model2.leftText = @"腾讯Bugly";
+    model2.leftText = @"WEEX测试";
     model2.rightText = @"13:24";
     model2.bottomText = @"内存泄露从入门到精通三部曲之基础知识篇";
     model2.badgeNumberText = @"12  ";
