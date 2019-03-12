@@ -1,5 +1,5 @@
 //
-//  AppDelegate+Temp.h
+//  AppDelegate+NetMonitor.h
 //  RSChat
 //
 //  Created by hehai on 2019/3/3.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppDelegate (Temp)
+@interface AppDelegate (NetMonitor)
 
 - (void)beginMonitorNetStatus;
 

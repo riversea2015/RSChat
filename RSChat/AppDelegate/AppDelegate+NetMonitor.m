@@ -1,5 +1,5 @@
 //
-//  AppDelegate+Temp.m
+//  AppDelegate+NetMonitor.m
 //  RSChat
 //
 //  Created by hehai on 2019/3/3.
@@ -8,11 +8,11 @@
 //  源码地址: https://github.com/riversea2015/RSChat
 //
 
-#import "AppDelegate+Temp.h"
+#import "AppDelegate+NetMonitor.h"
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
-@implementation AppDelegate (Temp)
+@implementation AppDelegate (NetMonitor)
 
 /**
  临时放这里，之后会移除

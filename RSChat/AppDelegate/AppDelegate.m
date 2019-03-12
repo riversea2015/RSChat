@@ -12,7 +12,7 @@
 #import "AppDelegate+IM.h"
 #import "AppDelegate+Content.h"
 #import "AppDelegate+Weex.h"
-#import "AppDelegate+Temp.h" // temporary file
+#import "AppDelegate+NetMonitor.h"
 
 
 @interface AppDelegate ()
