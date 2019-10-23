@@ -1,6 +1,6 @@
 ![](https://github.com/riversea2015/RSChat/blob/master/RSChat/Images.xcassets/AppIcon.appiconset/AppIcon_60x60_@2x.png?raw=true)
 
-# RSChat -- 代码重构中，暂未上传...
+# RSChat
 
 ### This is an iOS project that imitates a WeChat client.
 
